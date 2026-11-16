@@ -160,6 +160,39 @@ function vueAdmin() {
   <section class="bandeau info"><b>Mode essai.</b> Tout ce que tu saisis ici reste dans ce navigateur : rien n'est envoyé, la page des joueurs ne change pas. La publication sera branchée plus tard.</section>
   <div id="a-message"></div>
 
+  <section class="carte aide" data-sec="a-aide">
+    <h2>Mode d'emploi de l'administrateur</h2>
+    <h3>1. En début d'année : les listes</h3>
+    <ol>
+      <li>Bloc « Listes par tableur Excel » : clique « Tableur vierge ${prochaine} ». Le fichier contient déjà les joueurs de l'année d'avant, 15 lignes chacun.</li>
+      <li>Ouvre-le dans Excel et remplis Personnalité, Pays (FRA, USA...) et Âge au 1er janvier. Ne touche pas à la ligne des titres.</li>
+      <li>Nouveau joueur : ajoute des lignes en bas avec son prénom dans la colonne Joueur. Joueur qui arrête : laisse ses lignes vides.</li>
+      <li>Enregistre, puis « Importer un tableur rempli ». La page lit l'année du fichier, la crée si besoin, et montre ce qui est à vérifier (nom en double, liste incomplète, trop de vieux, pas de jeune...). Un nom en double bloque l'import : corrige le tableur et recommence.</li>
+      <li>Tu peux réimporter autant de fois que tu veux : les listes des joueurs du fichier sont remplacées.</li>
+      <li>Sans tableur : bloc « Fossoyeurs et listes noires », « Ajouter un joueur » puis « Saisir la liste » (une personne par ligne : nom ; pays ; âge).</li>
+    </ol>
+    <h3>2. Pendant l'année : les décès</h3>
+    <ol>
+      <li>Bloc « Signer un certificat de décès » : tape quelques lettres du nom, choisis la personne. La page dit qui l'avait nommée et ce que ça rapporte.</li>
+      <li>Mets la date du décès (référence : sa page Wikipédia) et, si tu veux, le lien de la source. Clique « Ajouter le décès » : points, classements et courbes se recalculent tout seuls.</li>
+      <li>Erreur : bouton « Retirer » sur la ligne du décès.</li>
+    </ol>
+    <h3>3. Vérifier puis publier</h3>
+    <ol>
+      <li>Tout ce que tu fais est gardé dans un brouillon, dans ce navigateur, sur cet ordinateur (même si tu fermes la page). La liste de tes modifications est dans « Brouillon du registre ».</li>
+      <li>Coche « Voir les onglets de suivi avec mes modifications » pour regarder le Suivi mortuaire et les fiches comme les joueurs les verront.</li>
+      <li>« Publier » (bientôt) : envoie le brouillon en ligne ; les joueurs voient la mise à jour au bout de 1 à 2 minutes. Un bouton permettra d'annuler la dernière publication.</li>
+      <li>« Abandonner mes modifications » : efface le brouillon et revient à la version en ligne.</li>
+    </ol>
+    <h3>Rappels</h3>
+    <ul>
+      <li>Points (depuis 2024) : 2 points si la personne n'est que dans une liste, 1,5 si elle est dans deux, 1 si elle est dans trois ou plus. Égalité : nombre de décès, puis moyenne d'âge la plus basse.</li>
+      <li>Change d'ordinateur ou de navigateur seulement après avoir publié : le brouillon ne suit pas.</li>
+      <li>« Sauvegarde technique (.json) » : le fichier de données de la page, pas un tableur. Utile seulement si Quentin te le demande.</li>
+      <li>Un souci, un doute : préviens Quentin avant de publier.</li>
+    </ul>
+  </section>
+
   <section class="carte" data-sec="a-tableur">
     <h2>Listes par tableur Excel</h2>
     <div class="barre boutons">

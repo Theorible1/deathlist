@@ -143,3 +143,4 @@ label.case{display:flex;gap:8px;align-items:center;margin:10px 0}
 tr.choisi td{background:var(--surface-2)}
 td.actions{white-space:nowrap;text-align:right}
 .marque span{font-family:Impact,"Arial Black",sans-serif;letter-spacing:.04em;font-weight:400;font-size:17px}
+section.aide{font-size:13px}section.aide h3{margin:12px 0 4px;font-size:14px}section.aide ol,section.aide ul{margin:0;padding-left:22px}section.aide li{margin:3px 0}

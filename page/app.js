@@ -103,7 +103,7 @@ function miniCourbe(rangs, nbJoueurs, nom) {
 }
 
 // Blocs enroulables : clic sur le titre ; état gardé dans le navigateur de chacun.
-const REPLIS_DEFAUT = { deces: true, global: true };
+const REPLIS_DEFAUT = { deces: true, global: true, "a-aide": true };
 const CLE_REPLIS = "deathlist.replis";
 function lireReplis() { try { return JSON.parse(localStorage.getItem(CLE_REPLIS)) || {}; } catch (e) { return {}; } }
 function appliquerReplis() {

@@ -72,6 +72,28 @@ function brancherPuces(id, rappel) {
   });
 }
 
+// Tracé lissé (interpolation cubique monotone, Fritsch-Carlson) : arrondi entre les points, sans jamais dépasser
+// les valeurs réelles (pas de rang au-dessus du 1er ni de bosse inventée entre deux mois égaux).
+function cheminLisse(p) {
+  const r = v => Math.round(v * 10) / 10;
+  if (p.length < 3) return "M" + p.map(([x, y]) => r(x) + " " + r(y)).join(" L");
+  const n = p.length, d = [], m = [];
+  for (let i = 0; i < n - 1; i++) d.push((p[i + 1][1] - p[i][1]) / (p[i + 1][0] - p[i][0]));
+  m[0] = d[0]; m[n - 1] = d[n - 2];
+  for (let i = 1; i < n - 1; i++) m[i] = d[i - 1] * d[i] <= 0 ? 0 : (d[i - 1] + d[i]) / 2;
+  for (let i = 0; i < n - 1; i++) {
+    if (d[i] === 0) { m[i] = 0; m[i + 1] = 0; continue; }
+    const a = m[i] / d[i], b = m[i + 1] / d[i], s = a * a + b * b;
+    if (s > 9) { const t = 3 / Math.sqrt(s); m[i] = t * a * d[i]; m[i + 1] = t * b * d[i]; }
+  }
+  let chemin = "M" + r(p[0][0]) + " " + r(p[0][1]);
+  for (let i = 0; i < n - 1; i++) {
+    const h = (p[i + 1][0] - p[i][0]) / 3;
+    chemin += ` C${r(p[i][0] + h)} ${r(p[i][1] + m[i] * h)} ${r(p[i + 1][0] - h)} ${r(p[i + 1][1] - m[i + 1] * h)} ${r(p[i + 1][0])} ${r(p[i + 1][1])}`;
+  }
+  return chemin;
+}
+
 // Courbe à une seule série (le titre de la carte la nomme). points : [{x, y, info}].
 // inverse : le rang 1 en haut.
 function courbe(points, { inverse = false, yMin, yMax, entier = false } = {}) {
@@ -89,7 +111,7 @@ function courbe(points, { inverse = false, yMin, yMax, entier = false } = {}) {
     ${graduations.map(v => `<line class="grille-l" x1="${g}" x2="${L - d}" y1="${Y(v)}" y2="${Y(v)}"/>
       <text class="axe" x="${g - 8}" y="${Y(v) + 4}" text-anchor="end">${nb(v)}</text>`).join("")}
     ${points.map((p, i) => `<text class="axe" x="${X(i)}" y="${Ht - 8}" text-anchor="middle">${esc(p.x)}</text>`).join("")}
-    <polyline class="ligne" points="${points.map((p, i) => X(i) + "," + Y(p.y)).join(" ")}"/>
+    <path class="ligne" d="${cheminLisse(points.map((p, i) => [X(i), Y(p.y)]))}"/>
     ${points.map((p, i) => `<circle class="point" cx="${X(i)}" cy="${Y(p.y)}" r="4.5"/>`).join("")}
     <text class="etiq" x="${X(points.length - 1)}" y="${Y(points[points.length - 1].y) - 10}" text-anchor="middle">${nb(points[points.length - 1].y)}</text>
     ${points.map((p, i) => `<rect class="cible" data-i="${i}" x="${X(i) - (L - g - d) / Math.max(1, points.length - 1) / 2}" y="0" width="${(L - g - d) / Math.max(1, points.length - 1)}" height="${Ht}"/>`).join("")}
@@ -118,7 +140,7 @@ function miniCourbe(rangs, nbJoueurs, nom) {
   return `<svg class="mini" viewBox="0 0 ${L} ${Ht}" role="img" aria-label="rang de ${esc(nom)} à la fin de chaque mois">
     ${rep.map(r => `<line class="grille-l" x1="${g}" x2="${L - d}" y1="${Y(r)}" y2="${Y(r)}"/><text class="axe" x="${g - 5}" y="${Y(r) + 3.5}" text-anchor="end">${r}</text>`).join("")}
     ${rangs.map((r, i) => `<text class="axe" x="${X(i)}" y="${Ht - 4}" text-anchor="middle">${MOIS[i][0].toUpperCase()}</text>`).join("")}
-    <polyline class="ligne" points="${rangs.map((r, i) => X(i) + "," + Y(r)).join(" ")}"/>
+    <path class="ligne" d="${cheminLisse(rangs.map((r, i) => [X(i), Y(r)]))}"/>
     ${rangs.map((r, i) => `<circle class="${i === der ? "point" : "cible-mini"}" cx="${X(i)}" cy="${Y(r)}" r="${i === der ? 4 : 7}"><title>fin ${MOIS[i]} : ${r}${r === 1 ? "er" : "e"}</title></circle>`).join("")}
   </svg>`;
 }

@@ -154,6 +154,13 @@ function vueAdmin() {
       <button type="button" data-act="abandonner"${nbModifs ? "" : " disabled"}>Abandonner mes modifications</button>
     </div>
     <p class="sous">Publier : bientôt. Ce bouton mettra la page à jour pour tout le monde (visible au bout de 1 à 2 minutes), avec un bouton pour annuler la dernière publication. Télécharger : une copie du fichier avec tes modifications, à garder ou à envoyer.</p>
+    <h3>Listes ${anneeAdmin} par tableur Excel</h3>
+    <div class="barre boutons">
+      <button type="button" data-act="modele-tableur">Télécharger le tableur à remplir (${anneeAdmin})</button>
+      <button type="button" data-act="importer-tableur">Importer le tableur rempli</button>
+      <input type="file" id="a-fichier-tableur" accept=".xlsx,.csv" hidden>
+    </div>
+    <p class="sous">Le tableur contient déjà les joueurs inscrits en ${anneeAdmin} (${REGLES_LISTE[ed.epoque] && REGLES_LISTE[ed.epoque].noms || 15} lignes chacun) et ce qui est déjà saisi. Remplis les colonnes Personnalité, Pays et Âge sans toucher aux titres, enregistre, puis importe-le ici : les listes de tous les joueurs du fichier sont mises à jour d'un coup. Un nouveau joueur : écris son prénom dans la colonne Joueur. L'année se choisit plus bas.</p>
   </section>
 
   <section class="carte" data-sec="a-annee">
@@ -313,10 +320,28 @@ const ACTIONS = {
   telecharger() {
     const d = cloner(brouillon().donnees);
     normaliser(d);
-    const url = URL.createObjectURL(new Blob([JSON.stringify(d, null, 1)], { type: "application/json" }));
-    const lien = document.createElement("a");
-    lien.href = url; lien.download = "deathlist.json"; document.body.appendChild(lien); lien.click(); lien.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    telechargerBlob(new Blob([JSON.stringify(d, null, 1)], { type: "application/json" }), "deathlist.json");
+  },
+  "modele-tableur"() {
+    const ed = edB(brouillon().donnees), a = ed.annee, n = (REGLES_LISTE[ed.epoque] || {}).noms || 15;
+    const lignes = [
+      [{ v: `Listes ${a} : une ligne par personnalité`, s: 2 }],
+      [{ v: `Remplir Personnalité, Pays (FRA, USA...) et Âge au 1er janvier ${a}. Ne pas modifier la ligne des titres. Nouveau joueur : son prénom dans la colonne Joueur.`, s: 3 }],
+      [{ v: "Joueur", s: 1 }, { v: "Personnalité", s: 1 }, { v: "Pays", s: 1 }, { v: `Âge au 1er janvier ${a}`, s: 1 }],
+    ];
+    ed.participants.slice().sort((x, y) => x.joueurs[0].localeCompare(y.joueurs[0], "fr")).forEach(p => {
+      const total = Math.max(n, p.liste.length);
+      for (let i = 0; i < total; i++) {
+        const x = p.liste[i] ? ed.personnalites[p.liste[i]] || {} : {};
+        lignes.push([{ v: p.joueurs[0] }, { v: x.nom || "", s: 4 }, { v: x.pays || "", s: 4 }, { v: x.age != null ? x.age : "", s: 4 }]);
+      }
+    });
+    const blob = Tableur.creer({ feuille: `Listes ${a}`, lignes, largeurs: [18, 34, 10, 22], figer: 3,
+      validationEntier: { plage: "D4:D3000", min: 0, max: 130, message: "Un âge en nombre entier, entre 0 et 130." } });
+    telechargerBlob(blob, `listes_${a}.xlsx`);
+  },
+  "importer-tableur"() {
+    document.getElementById("a-fichier-tableur").click();
   },
   abandonner() {
     if (!confirm("Abandonner toutes les modifications du brouillon ? On revient à la version publiée.")) return;
@@ -324,6 +349,71 @@ const ACTIONS = {
     B = null; joueurEdite = null; regler(false); installer(PUBLIE); rendreAdmin();
   },
 };
+
+function telechargerBlob(blob, nom) {
+  const url = URL.createObjectURL(blob), lien = document.createElement("a");
+  lien.href = url; lien.download = nom; document.body.appendChild(lien); lien.click(); lien.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+// Relit un tableur rempli : repère la ligne des titres (Joueur, Personnalité), regroupe les lignes par joueur
+// (une case Joueur vide reprend le joueur de la ligne du dessus), vérifie chaque liste, puis remplace les listes
+// des joueurs présents dans le fichier. Les joueurs absents du fichier ou sans aucun nom ne sont pas touchés.
+async function importerTableur(fichier) {
+  let lignes;
+  try { lignes = await Tableur.lire(fichier); } catch (e) { alert("Fichier illisible : " + e.message); return; }
+  const norm = s => slugJs(String(s || ""));
+  const iTitre = lignes.findIndex(l => l && l.some(c => norm(c) === "joueur") && l.some(c => norm(c).startsWith("personnalite")));
+  if (iTitre < 0) { alert("Ligne des titres introuvable (Joueur, Personnalité, Pays, Âge). Repars du tableur téléchargé ici."); return; }
+  const titres = lignes[iTitre].map(norm);
+  const col = { joueur: titres.indexOf("joueur"), nom: titres.findIndex(t => t.startsWith("personnalite")),
+    pays: titres.findIndex(t => t.startsWith("pays")), age: titres.findIndex(t => t.startsWith("age")) };
+  const parJoueur = new Map();
+  let courant = "";
+  lignes.slice(iTitre + 1).forEach(l => {
+    if (!l) return;
+    const j = String(l[col.joueur] || "").trim().replace(/\s+/g, " ");
+    if (j) courant = j;
+    const nom = String(l[col.nom] || "").trim();
+    if (!courant) return;
+    if (!parJoueur.has(courant)) parJoueur.set(courant, []);
+    if (nom) parJoueur.get(courant).push([nom, col.pays >= 0 ? String(l[col.pays] || "").trim() : "",
+      col.age >= 0 ? String(l[col.age] || "").trim().replace(/[.,]0+$/, "") : ""].join("\t"));
+  });
+  const d = brouillon().donnees, ed = edB(d);
+  const aImporter = [...parJoueur].filter(([, ls]) => ls.length);
+  if (!aImporter.length) { alert("Aucune personnalité trouvée dans le tableur."); return; }
+  const erreurs = [], alertes = [], nouveaux = [], resultats = [];
+  aImporter.forEach(([saisi, ls]) => {
+    const connu = d.joueurs.find(j => slugJs(j) === slugJs(saisi));
+    const nom = connu || saisi;
+    if (!connu) nouveaux.push(nom);
+    const an = analyserListe(ls.join("\n"), ed, nom);
+    an.erreurs.forEach(x => erreurs.push(`${nom} : ${x}`));
+    an.alertes.forEach(x => alertes.push(`${nom} : ${x}`));
+    resultats.push({ nom, lignes: an.lignes });
+  });
+  if (erreurs.length) { alert("Rien n'a été importé. À corriger dans le tableur :\n\n" + erreurs.join("\n")); return; }
+  const nbNoms = resultats.reduce((s, r) => s + r.lignes.length, 0);
+  const message = `Importer ${resultats.length} liste(s) ${anneeAdmin} (${nbNoms} noms) ?`
+    + (nouveaux.length ? `\n\nNouveaux joueurs : ${nouveaux.join(", ")}` : "")
+    + (alertes.length ? `\n\nÀ vérifier (n'empêche pas l'import) :\n${alertes.slice(0, 15).join("\n")}${alertes.length > 15 ? `\n... et ${alertes.length - 15} autre(s)` : ""}` : "")
+    + "\n\nLes listes de ces joueurs seront remplacées par celles du tableur.";
+  if (!confirm(message)) return;
+  joueurEdite = null;
+  modifier(`${anneeAdmin} : tableur importé (${resultats.length} listes, ${nbNoms} noms${nouveaux.length ? ", nouveaux : " + nouveaux.join(", ") : ""})`, dd => {
+    const e = edB(dd);
+    resultats.forEach(r => {
+      let p = e.participants.find(x => x.joueurs[0] === r.nom);
+      if (!p) { p = { joueurs: [r.nom], points: 0, deces: 0, liste: [] }; e.participants.push(p); }
+      p.liste = r.lignes.map(l => l.id);
+      r.lignes.forEach(l => {
+        const avant = e.personnalites[l.id] || {};
+        e.personnalites[l.id] = { nom: l.nom, pays: l.pays || avant.pays || null, age: l.age != null ? l.age : (avant.age != null ? avant.age : null) };
+      });
+    });
+  });
+}
 
 function ajouterDeces(f) {
   const d = brouillon().donnees, ed = edB(d);
@@ -355,6 +445,11 @@ document.addEventListener("click", ev => {
   const f = ACTIONS[el.dataset.act]; if (f) f(el);
 });
 document.addEventListener("change", ev => {
+  if (ev.target.id === "a-fichier-tableur" && ev.target.files[0]) {
+    const f = ev.target.files[0]; ev.target.value = "";
+    importerTableur(f);
+    return;
+  }
   if (ev.target.matches && ev.target.matches('input[data-act="apercu"]')) {
     regler(ev.target.checked);
     installer(donneesAffichees());

@@ -18,14 +18,20 @@ let PUBLIE, D, H, AUJ, ANNEE, EV; // PUBLIE : version publiée ; D : données af
 
 // ───────────── éléments réutilisés ─────────────
 
+// Podium « qui glisse » (choix de Quentin) : les marches se remplissent dans l'ordre des rangs réels jusqu'au 4e ;
+// à égalité, les joueurs partagent une marche et la suivante prend le rang d'après (1er, 2e ex aequo, puis 4e sur
+// la 3e marche). L'étiquette et l'image (numérotée) suivent le vrai rang ; une marche sans personne n'est pas affichée.
 function podium(lignes, valeur) {
-  const top = lignes.filter(l => l.rang <= 4);
-  if (!top.length) return "";
-  const parRang = [1, 2, 3, 4].map(r => top.filter(l => l.rang === r));
-  return `<div class="podium">${parRang.map((ls, i) => ls.length ? `<div class="marche r${i + 1}">
-      <div class="med"><img src="images/podium_${i + 1}.webp" alt="${MEDAILLES[i]}" width="240" height="200" loading="lazy"></div>
+  const rangs = [...new Set(lignes.map(l => l.rang))].filter(r => r <= 4).sort((a, b) => a - b);
+  if (!rangs.length) return "";
+  const marches = rangs.map(r => lignes.filter(l => l.rang === r));
+  return `<div class="podium" style="grid-template-columns:repeat(${marches.length},minmax(0,1fr))">${marches.map((ls, i) => {
+    const r = ls[0].rang;
+    return `<div class="marche r${i + 1}">
+      <div class="med"><img src="images/podium_${r}.webp" alt="${MEDAILLES[r - 1]}" width="240" height="200" loading="lazy"></div>
       <div class="qui">${ls.map(l => esc(l.nom)).join(", ")}</div>
-      <div class="combien">${i + 1}${i ? "e" : "er"} · ${valeur(ls[0])}</div></div>` : `<div class="marche r${i + 1}"></div>`).join("")}</div>`;
+      <div class="combien">${r}${r === 1 ? "er" : "e"}${ls.length > 1 ? " ex aequo" : ""} · ${valeur(ls[0])}</div></div>`;
+  }).join("")}</div>`;
 }
 
 function barre(v, max) {

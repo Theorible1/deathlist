@@ -172,7 +172,7 @@ function vueAdmin() {
   </section>
 
   <section class="carte" data-sec="a-etat">
-    <h2>Brouillon${nbModifs ? ` (${nbModifs} modification${nbModifs > 1 ? "s" : ""} non publiée${nbModifs > 1 ? "s" : ""})` : ""}</h2>
+    <h2>Brouillon du registre${nbModifs ? ` (${nbModifs} modification${nbModifs > 1 ? "s" : ""} non publiée${nbModifs > 1 ? "s" : ""})` : ""}</h2>
     ${nbModifs ? `<ol class="journal">${b.journal.map(t => `<li>${esc(t)}</li>`).join("")}</ol>` : `<p>Aucune modification : le brouillon est identique à la version publiée.</p>`}
     ${baseChangee ? `<div class="bandeau att">La version publiée a changé depuis le début de ce brouillon. Publier ce brouillon écraserait ces changements.</div>` : ""}
     <label class="case"><input type="checkbox" data-act="apercu"${apercuActif() ? " checked" : ""}${nbModifs ? "" : " disabled"}> Voir les onglets de suivi avec mes modifications (aperçu)</label>
@@ -203,7 +203,7 @@ function blocDecesAdmin(d, ed) {
     .map(([, p]) => p.nom).sort((x, y) => x.localeCompare(y, "fr"));
   const parDefaut = AUJ.startsWith(String(a)) ? AUJ : "";
   return `<section class="carte" data-sec="a-deces">
-    <h2>Déclarer un décès (${a})</h2>
+    <h2>Signer un certificat de décès (${a})</h2>
     ${Object.keys(ed.personnalites).length ? `<form data-form="deces" class="formulaire" autocomplete="off">
       <label>Personnalité <input name="nom" list="dl-vivants" required placeholder="taper quelques lettres"></label>
       <datalist id="dl-vivants">${vivants.map(n => `<option value="${esc(n)}">`).join("")}</datalist>
@@ -255,7 +255,7 @@ function blocListesAdmin(d, ed) {
   }
 
   return `<section class="carte" data-sec="a-listes">
-    <h2>Joueurs et listes ${a} (${ed.participants.length} joueur${ed.participants.length > 1 ? "s" : ""})</h2>
+    <h2>Fossoyeurs et listes noires ${a} (${ed.participants.length} joueur${ed.participants.length > 1 ? "s" : ""})</h2>
     ${ed.participants.length ? `<div class="defil"><table>
       <thead><tr><th>Joueur</th><th class="num">Noms</th><th class="num">Âge moy.</th><th class="num">Points</th><th></th></tr></thead>
       <tbody>${lignes}</tbody></table></div>` : `<p>Personne n'est encore inscrit pour ${a}.</p>`}

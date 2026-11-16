@@ -147,15 +147,15 @@ function vueGlobale() {
 
   return `
   <section class="kpis">
-    <div class="tuile-kpi"><span class="lib">En tête</span><span class="val">${et.principal.filter(l => l.rang === 1).map(l => esc(l.nom)).join(", ")}</span><span class="note">${pts(et.principal[0].points)}</span></div>
-    <div class="tuile-kpi"><span class="lib">Décès ${ANNEE}</span><span class="val">${decesAnnee.length} <small>sur ${nbNommes}</small></span><span class="note">personnalités nommées</span></div>
-    <div class="tuile-kpi"><span class="lib">Dernier décès</span><span class="val" style="font-size:18px">${dernier ? esc(dernier.nom) : "aucun"}</span><span class="note">${dernier ? dateFr(dernier.date) : ""}</span></div>
-    <div class="tuile-kpi"><span class="lib">Joueurs ${ANNEE}</span><span class="val">${et.principal.length}</span><span class="note">listes de ${D.epoques.find(e => e.id === et.epoque).noms_par_liste} noms</span></div>
+    <div class="tuile-kpi"><span class="lib">Croque-mort en chef</span><span class="val">${et.principal.filter(l => l.rang === 1).map(l => esc(l.nom)).join(", ")}</span><span class="note">${pts(et.principal[0].points)}</span></div>
+    <div class="tuile-kpi"><span class="lib">Macchabées ${ANNEE}</span><span class="val">${decesAnnee.length} <small>sur ${nbNommes}</small></span><span class="note">personnalités nommées</span></div>
+    <div class="tuile-kpi"><span class="lib">Dernier parti</span><span class="val" style="font-size:18px">${dernier ? esc(dernier.nom) : "aucun"}</span><span class="note">${dernier ? dateFr(dernier.date) : ""}</span></div>
+    <div class="tuile-kpi"><span class="lib">Fossoyeurs ${ANNEE}</span><span class="val">${et.principal.length}</span><span class="note">listes de ${D.epoques.find(e => e.id === et.epoque).noms_par_liste} noms</span></div>
   </section>
 
   <div class="grille">
     <section class="carte" data-sec="classement">
-      <h2>Classement ${ANNEE}${et.enCours ? " (en cours)" : ""}</h2>
+      <h2>Classement des fossoyeurs ${ANNEE}${et.enCours ? " (en cours)" : ""}</h2>
       ${podium(et.principal, l => pts(l.points))}
       <div class="defil"><table>
         <thead><tr><th class="centre">Rang</th><th>Joueur</th><th>Points</th><th class="num">Décès</th><th class="num" title="âge moyen de la liste au 1er janvier">Âge moy.</th><th class="centre" title="depuis la fin du mois précédent">Évol.</th></tr></thead>
@@ -167,7 +167,7 @@ function vueGlobale() {
     </section>
 
     <section class="carte" data-sec="annexe">
-      <h2>Classement annexe ${ANNEE} (nombre de décès)</h2>
+      <h2>Tableau de chasse ${ANNEE} (nombre de décès)</h2>
       ${podium(et.annexe, l => l.deces + " décès")}
       <div class="defil"><table>
         <thead><tr><th class="centre">Rang</th><th>Joueur</th><th>Décès</th></tr></thead>
@@ -177,7 +177,7 @@ function vueGlobale() {
   </div>
 
   <section class="carte" data-sec="montees">
-    <h2>Montées et descentes ${ANNEE}</h2>
+    <h2>Résurrections et mises en bière ${ANNEE} (montées et descentes)</h2>
     <div class="cases-joueurs">${et.principal.map(l => { const j = EV.joueurs[l.joueur], meilleur = Math.min(...j.rangs.slice(1));
       return `<div class="case-joueur">
         <div class="case-tete"><span class="place">${l.rang}<small>${l.rang === 1 ? "er" : "e"}</small></span>
@@ -189,7 +189,7 @@ function vueGlobale() {
   </section>
 
   <section class="carte" data-sec="deces">
-    <h2>Décès ${ANNEE} (${decesAnnee.length})</h2>
+    <h2>Avis de décès ${ANNEE} (${decesAnnee.length})</h2>
     <div class="defil"><table>
       <thead><tr><th class="num">Date</th><th>Personnalité</th><th>Nommée par</th><th class="num">Valeur</th></tr></thead>
       <tbody>${parDeces || `<tr><td colspan="4" class="vide">Aucun décès pour l'instant.</td></tr>`}</tbody>
@@ -205,14 +205,14 @@ function blocHistorique(annee) {
   const et = H.find(e => e.annee === Number(annee));
   const maxP = Math.max(...et.principal.map(l => l.points)) || 1;
   document.getElementById("bloc-histo").innerHTML = `
-    <h2>Historique, année par année</h2>
+    <h2>Les archives du cimetière, année par année</h2>
     <div class="barre">${puces("p-histo", H.map(e => [e.annee, e.annee + (e.enCours ? " (en cours)" : "")]), annee)}</div>
     <p class="sous">${esc(D.epoques.find(e => e.id === et.epoque).libelle)} : ${esc(D.epoques.find(e => e.id === et.epoque).bareme)}.</p>
     <div class="grille">
       <div><h3>Classement</h3>${podium(et.principal, l => pts(l.points))}
         <table><thead><tr><th class="centre">Rang</th><th>Joueur</th><th>Points</th><th class="num">Décès</th></tr></thead>
         <tbody>${et.principal.map(l => `<tr><td class="rang">${l.rang}</td><td>${esc(l.nom)}</td><td>${barre(l.points, maxP)}</td><td class="num">${l.deces}</td></tr>`).join("")}</tbody></table></div>
-      <div><h3>Classement annexe</h3>${podium(et.annexe, l => l.deces + " décès")}
+      <div><h3>Tableau de chasse</h3>${podium(et.annexe, l => l.deces + " décès")}
         <table><thead><tr><th class="centre">Rang</th><th>Joueur</th><th class="num">Décès</th></tr></thead>
         <tbody>${et.annexe.map(l => `<tr><td class="rang">${l.rang}</td><td>${esc(l.nom)}</td><td class="num">${l.deces}</td></tr>`).join("")}</tbody></table></div>
     </div>`;
@@ -223,7 +223,7 @@ function blocGlobal() {
   const g = M.classementGlobal(H);
   const maxP = g[0].points;
   document.getElementById("bloc-global").innerHTML = `
-    <h2>Classement global brut (toutes les années, année en cours comprise)</h2>
+    <h2>Le grand ossuaire (toutes les années, année en cours comprise)</h2>
     <div class="defil"><table>
       <thead><tr><th class="centre">Rang</th><th>Joueur</th><th>Points</th><th class="num">Participations</th><th class="num">Décès</th><th class="num">Victoires</th><th class="num">Podiums</th></tr></thead>
       <tbody>${g.map(c => `<tr><td class="rang">${c.rang}</td><td>${esc(c.joueur)}</td><td>${barre(c.points, maxP)}</td>
@@ -239,7 +239,7 @@ function blocTaux() {
   const t = M.classementTaux(etats, tauxCle);
   const max = Math.max(...t.map(c => c[tauxCle])) || 1;
   document.getElementById("bloc-taux").innerHTML = `
-    <h2>Taux de réussite par époque</h2>
+    <h2>Le flair du charognard, par époque (taux de réussite)</h2>
     <div class="barre">${puces("p-epoque", D.epoques.map(e => [e.id, e.libelle]), tauxEpoque)}
       ${puces("p-cle", [["tauxPoints", "Points par participation"], ["tauxDeces", "Décès par participation"]], tauxCle)}</div>
     <div class="defil"><table>
@@ -269,19 +269,19 @@ function fiche() {
   const meilleur = finies.length ? Math.min(...finies.map(p => p.rang)) : null;
   const courant = parcours.find(p => p.annee === ANNEE);
   let html = `<section class="kpis">
-    <div class="tuile-kpi"><span class="lib">Participations</span><span class="val">${parcours.length}</span><span class="note">${parcours.map(p => p.annee).join(", ")}</span></div>
-    <div class="tuile-kpi"><span class="lib">Victoires</span><span class="val">${finies.filter(p => p.rang === 1).length}</span><span class="note">podiums : ${finies.filter(p => p.rang <= 3).length}</span></div>
+    <div class="tuile-kpi"><span class="lib">Saisons de chasse</span><span class="val">${parcours.length}</span><span class="note">${parcours.map(p => p.annee).join(", ")}</span></div>
+    <div class="tuile-kpi"><span class="lib">Couronnes mortuaires</span><span class="val">${finies.filter(p => p.rang === 1).length}</span><span class="note">podiums : ${finies.filter(p => p.rang <= 3).length}</span></div>
     <div class="tuile-kpi"><span class="lib">Meilleur rang</span><span class="val">${meilleur != null ? meilleur : "·"}</span><span class="note">années terminées</span></div>
     <div class="tuile-kpi"><span class="lib">${ANNEE}</span><span class="val">${courant ? courant.rang + "<small>" + (courant.rang === 1 ? "er" : "e") + " / " + courant.participants + "</small>" : "·"}</span><span class="note">${courant ? pts(courant.points) : "ne joue pas cette année"}</span></div>
   </section>
-  <section class="carte" data-sec="j-parcours"><h2>Parcours</h2><div class="defil"><table>
+  <section class="carte" data-sec="j-parcours"><h2>Carrière funèbre</h2><div class="defil"><table>
     <thead><tr><th>Année</th><th class="num">Rang</th><th class="num">Points</th><th class="num">Décès</th><th class="num">Rang annexe</th></tr></thead>
     <tbody>${parcours.map(p => `<tr><td>${p.annee}${p.enCours ? " (en cours)" : ""}${p.nom !== j ? ` <span class="badge neutre">${esc(p.nom)}</span>` : ""}</td>
       <td class="num">${p.rang} / ${p.participants}</td><td class="num">${nb(p.points)}</td><td class="num">${p.deces}</td><td class="num">${p.rangAnnexe}</td></tr>`).join("")}</tbody>
   </table></div></section>`;
 
   if (M.aJoueDeuxAnneesDeSuite(H, j)) {
-    html += `<section class="carte" data-sec="j-rang"><h2>Rang de ${esc(j)} année par année</h2>
+    html += `<section class="carte" data-sec="j-rang"><h2>Rang de ${esc(j)} année par année, d'outre-tombe</h2>
       ${courbe(parcours.map(p => ({ x: String(p.annee), y: p.rang, info: `<b>${p.annee}</b> : ${p.rang}${p.rang === 1 ? "er" : "e"} sur ${p.participants}, ${pts(p.points)}` })), { inverse: true, yMin: 1, entier: true })}
       <p class="sous">Le rang se compare mieux que les points d'une époque à l'autre. Années sans édition ou non jouées : absentes.</p></section>`;
   } else {
@@ -290,7 +290,7 @@ function fiche() {
 
   if (courant) {
     const ev = EV.joueurs[j];
-    html += `<section class="carte" data-sec="j-points"><h2>Points de ${esc(j)} en ${ANNEE}, fin de chaque mois</h2>
+    html += `<section class="carte" data-sec="j-points"><h2>Récolte de ${esc(j)} en ${ANNEE}, fin de chaque mois (points)</h2>
       ${courbe(EV.mois.map((m, i) => ({ x: MOIS[m.mois - 1], y: ev.points[i], info: `<b>fin ${MOIS[m.mois - 1]}</b> : ${pts(ev.points[i])}, ${ev.rangs[i]}${ev.rangs[i] === 1 ? "er" : "e"}` })), { yMin: 0 })}
     </section>`;
     const et = H.find(e => e.annee === ANNEE);
@@ -300,7 +300,7 @@ function fiche() {
     const nomin = {}; ed.participants.forEach(p => p.liste.forEach(id => { nomin[id] = (nomin[id] || 0) + 1; }));
     const liste = ed.participants.find(p => p.joueurs[0] === j).liste;
     const morts = M.decesDeLAnnee(D, ANNEE, AUJ);
-    html += `<section class="carte" data-sec="j-liste"><h2>Liste ${ANNEE} de ${esc(j)}</h2><div class="defil"><table>
+    html += `<section class="carte" data-sec="j-liste"><h2>Liste noire ${ANNEE} de ${esc(j)}</h2><div class="defil"><table>
       <thead><tr><th>Personnalité</th><th>Pays</th><th class="num">Âge</th><th class="num">Listes</th><th class="num">Valeur</th><th>Décès</th></tr></thead>
       <tbody>${liste.map(id => { const p = perso[id], mort = morts[id] && morts[id].date;
         return `<tr><td class="${mort ? "mort" : ""}">${esc(p.nom)}</td><td>${esc(p.pays || "")}</td><td class="num">${p.age != null ? p.age : ""}</td>
@@ -317,24 +317,24 @@ function afficher() {
   const onglet = location.hash === "#joueur" ? "joueur" : location.hash === "#admin" ? "admin" : "global";
   document.querySelectorAll("nav.menu a").forEach(a => a.toggleAttribute("aria-current", a.dataset.onglet === onglet));
   if (onglet === "admin") {
-    document.getElementById("titre").textContent = "Administration";
+    document.getElementById("titre").textContent = "La morgue (administration)";
     rendreAdmin();
   } else if (onglet === "global") {
-    document.getElementById("titre").textContent = "Suivi global";
+    document.getElementById("titre").textContent = "Suivi mortuaire";
     document.getElementById("contenu").innerHTML = vueGlobale();
     blocHistorique(ANNEE);
     blocGlobal();
     blocTaux();
     appliquerReplis();
   } else {
-    document.getElementById("titre").textContent = "Suivi par joueur";
+    document.getElementById("titre").textContent = "Fiche du fossoyeur";
     document.getElementById("contenu").innerHTML = vueJoueur();
     document.getElementById("choix-joueur").addEventListener("change", ev => { joueurChoisi = ev.target.value; fiche(); });
     fiche();
   }
   if (onglet !== "admin" && D !== PUBLIE) {
     document.getElementById("contenu").insertAdjacentHTML("afterbegin",
-      `<section class="bandeau att"><b>Aperçu :</b> tu vois tes modifications non publiées. Les joueurs voient encore la version publiée. <a href="#admin">Retour à l'administration</a></section>`);
+      `<section class="bandeau att"><b>Aperçu :</b> tu vois tes modifications non publiées. Les joueurs voient encore la version publiée. <a href="#admin">Retour à la morgue</a></section>`);
   }
   document.querySelectorAll("nav.menu a[aria-current]").forEach(a => a.setAttribute("aria-current", "page"));
 }

@@ -281,7 +281,7 @@ function fiche() {
   </table></div></section>`;
 
   if (M.aJoueDeuxAnneesDeSuite(H, j)) {
-    html += `<section class="carte" data-sec="j-rang"><h2>Rang de ${esc(j)} année par année, d'outre-tombe</h2>
+    html += `<section class="carte" data-sec="j-rang"><h2>Rang dans l'au-delà <small class="glose">(année par année)</small></h2>
       ${courbe(parcours.map(p => ({ x: String(p.annee), y: p.rang, info: `<b>${p.annee}</b> : ${p.rang}${p.rang === 1 ? "er" : "e"} sur ${p.participants}, ${pts(p.points)}` })), { inverse: true, yMin: 1, entier: true })}
       <p class="sous">Le rang se compare mieux que les points d'une époque à l'autre. Années sans édition ou non jouées : absentes.</p></section>`;
   } else {

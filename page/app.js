@@ -237,10 +237,10 @@ function blocHistorique(annee) {
     <div class="barre">${puces("p-histo", H.map(e => [e.annee, e.annee + (e.enCours ? " (en cours)" : "")]), annee)}</div>
     <p class="sous">${esc(D.epoques.find(e => e.id === et.epoque).libelle)} : ${esc(D.epoques.find(e => e.id === et.epoque).bareme)}.</p>
     <div class="grille">
-      <div><h3>Classement</h3>${podium(et.principal, l => pts(l.points))}
+      <div class="sous-bloc"><h3>Classement des fossoyeurs <small class="glose">(points)</small></h3>${podium(et.principal, l => pts(l.points))}
         <table><thead><tr><th class="centre">Rang</th><th>Joueur</th><th>Points</th><th class="num">Décès</th></tr></thead>
         <tbody>${et.principal.map(l => `<tr><td class="rang">${l.rang}</td><td>${esc(l.nom)}</td><td>${barre(l.points, maxP)}</td><td class="num">${l.deces}</td></tr>`).join("")}</tbody></table></div>
-      <div><h3>Tableau de chasse</h3>${podium(et.annexe, l => l.deces + " décès")}
+      <div class="sous-bloc"><h3>Tableau de chasse <small class="glose">(nombre de décès)</small></h3>${podium(et.annexe, l => l.deces + " décès")}
         <table><thead><tr><th class="centre">Rang</th><th>Joueur</th><th class="num">Décès</th></tr></thead>
         <tbody>${et.annexe.map(l => `<tr><td class="rang">${l.rang}</td><td>${esc(l.nom)}</td><td class="num">${l.deces}</td></tr>`).join("")}</tbody></table></div>
     </div>`;

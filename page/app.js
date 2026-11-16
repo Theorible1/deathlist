@@ -167,7 +167,7 @@ function vueGlobale() {
     </section>
 
     <section class="carte" data-sec="annexe">
-      <h2>Tableau de chasse ${ANNEE} (nombre de décès)</h2>
+      <h2>Tableau de chasse ${ANNEE} <small class="glose">(nombre de décès)</small></h2>
       ${podium(et.annexe, l => l.deces + " décès")}
       <div class="defil"><table>
         <thead><tr><th class="centre">Rang</th><th>Joueur</th><th>Décès</th></tr></thead>
@@ -177,7 +177,7 @@ function vueGlobale() {
   </div>
 
   <section class="carte" data-sec="montees">
-    <h2>Résurrections et mises en bière ${ANNEE} (montées et descentes)</h2>
+    <h2>Résurrections et mises en bière ${ANNEE} <small class="glose">(montées et descentes)</small></h2>
     <div class="cases-joueurs">${et.principal.map(l => { const j = EV.joueurs[l.joueur], meilleur = Math.min(...j.rangs.slice(1));
       return `<div class="case-joueur">
         <div class="case-tete"><span class="place">${l.rang}<small>${l.rang === 1 ? "er" : "e"}</small></span>
@@ -223,7 +223,7 @@ function blocGlobal() {
   const g = M.classementGlobal(H);
   const maxP = g[0].points;
   document.getElementById("bloc-global").innerHTML = `
-    <h2>Le grand ossuaire (toutes les années, année en cours comprise)</h2>
+    <h2>Le grand ossuaire <small class="glose">(toutes les années, année en cours comprise)</small></h2>
     <div class="defil"><table>
       <thead><tr><th class="centre">Rang</th><th>Joueur</th><th>Points</th><th class="num">Participations</th><th class="num">Décès</th><th class="num">Victoires</th><th class="num">Podiums</th></tr></thead>
       <tbody>${g.map(c => `<tr><td class="rang">${c.rang}</td><td>${esc(c.joueur)}</td><td>${barre(c.points, maxP)}</td>
@@ -239,7 +239,7 @@ function blocTaux() {
   const t = M.classementTaux(etats, tauxCle);
   const max = Math.max(...t.map(c => c[tauxCle])) || 1;
   document.getElementById("bloc-taux").innerHTML = `
-    <h2>Le flair du charognard, par époque (taux de réussite)</h2>
+    <h2>Le flair du charognard, par époque <small class="glose">(taux de réussite)</small></h2>
     <div class="barre">${puces("p-epoque", D.epoques.map(e => [e.id, e.libelle]), tauxEpoque)}
       ${puces("p-cle", [["tauxPoints", "Points par participation"], ["tauxDeces", "Décès par participation"]], tauxCle)}</div>
     <div class="defil"><table>
@@ -290,7 +290,7 @@ function fiche() {
 
   if (courant) {
     const ev = EV.joueurs[j];
-    html += `<section class="carte" data-sec="j-points"><h2>Récolte de ${esc(j)} en ${ANNEE}, fin de chaque mois (points)</h2>
+    html += `<section class="carte" data-sec="j-points"><h2>Récolte de ${esc(j)} en ${ANNEE}, fin de chaque mois <small class="glose">(points)</small></h2>
       ${courbe(EV.mois.map((m, i) => ({ x: MOIS[m.mois - 1], y: ev.points[i], info: `<b>fin ${MOIS[m.mois - 1]}</b> : ${pts(ev.points[i])}, ${ev.rangs[i]}${ev.rangs[i] === 1 ? "er" : "e"}` })), { yMin: 0 })}
     </section>`;
     const et = H.find(e => e.annee === ANNEE);

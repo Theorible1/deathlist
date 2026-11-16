@@ -151,3 +151,19 @@ h2 .glose{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;text-shadow:
 .info:hover::after,.info:focus-visible::after{content:attr(data-info);position:absolute;left:-10px;top:calc(100% + 8px);width:max-content;max-width:min(340px,82vw);background:var(--surface);color:var(--ink);border:1px solid var(--border-strong);border-radius:8px;padding:9px 11px;font:400 12.5px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;font-style:normal;text-transform:none;letter-spacing:0;text-align:left;white-space:normal;box-shadow:0 8px 24px rgba(0,0,0,.4);z-index:40;pointer-events:none}
 .info.vers-gauche:hover::after,.info.vers-gauche:focus-visible::after{left:auto;right:-10px}
 .marque img.logo{width:48px;height:48px;margin:-4px 0;display:block;filter:drop-shadow(0 0 6px rgba(200,0,0,.35))}
+
+/* Thème Death Metal : les émojis décoratifs du thème (copie THEMATOR3000, non modifiée) sont remplacés ici par les
+   icônes dessinées pour la page (page\images\ic_*.webp, planche import\yoyo.png). Mêmes sélecteurs, chargés après themes.css. */
+:root[data-theme="death-metal"] .marque span::after{content:"";display:inline-block;width:4.2em;height:1.35em;vertical-align:-.3em;margin-left:.35em;
+  background:url(images/ic_cercueil.webp) 0 50%/auto 1.3em no-repeat,url(images/ic_chauve-souris.webp) 1.15em 50%/auto 1em no-repeat,url(images/ic_crane.webp) 3em 50%/auto 1.3em no-repeat}
+:root[data-theme="death-metal"] h1::before,:root[data-theme="death-metal"] h1::after{content:"";display:inline-block;width:.85em;height:1.15em;vertical-align:-.15em;
+  background:url(images/ic_cercueil.webp) 50% 50%/contain no-repeat}
+:root[data-theme="death-metal"] h1::before{margin-right:.3em}:root[data-theme="death-metal"] h1::after{margin-left:.3em}
+:root[data-theme="death-metal"] h2::after{content:"";display:inline-block;width:.8em;height:1.2em;vertical-align:-.25em;margin-left:.4em;
+  background:url(images/ic_goutte.webp) 50% 50%/contain no-repeat}
+:root[data-theme="death-metal"] .carte::after{content:"";width:34px;height:22px;top:-12px;right:-8px;
+  background:url(images/ic_chauve-souris.webp) 50% 50%/contain no-repeat;filter:drop-shadow(0 0 4px rgba(255,0,0,.6))}
+:root[data-theme="death-metal"] .tuile-kpi::after{content:"";width:18px;height:22px;
+  background:url(images/ic_bougie.webp) 50% 50%/contain no-repeat}
+:root[data-theme="death-metal"] body::before{content:"";background:url(images/motif_fond.webp) 0 0/560px 240px repeat;filter:none;opacity:.16}
+:root[data-theme="death-metal"] body::after{content:"";width:100%;background:url(images/motif_chauves-souris.webp) 0 50%/420px 60px repeat-x;filter:none;opacity:.55}

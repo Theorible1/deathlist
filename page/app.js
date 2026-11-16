@@ -5,7 +5,19 @@
 const URL_DONNEES = "../donnees/deathlist.json";
 
 const MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."];
-const MEDAILLES = ["🥇", "🥈", "🥉"];
+// Podium : cercueil d'or, crâne d'argent, croix à l'envers de bronze (dessins SVG, dégradés métalliques).
+const METAL = (id, clair, fonce) => `<defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${clair}"/><stop offset=".5" stop-color="${fonce}"/><stop offset="1" stop-color="${clair}"/></linearGradient></defs>`;
+const MEDAILLES = [
+  `<svg viewBox="0 0 24 32" role="img" aria-label="cercueil d'or">${METAL("m-or", "#fff1a8", "#c8941c")}
+    <polygon points="8,1 16,1 21,8 17,31 7,31 3,8" fill="url(#m-or)" stroke="#7a5a10" stroke-width="1.2"/>
+    <path d="M12 9v12M8.5 13h7" stroke="#7a5a10" stroke-width="2" stroke-linecap="round"/></svg>`,
+  `<svg viewBox="0 0 28 30" role="img" aria-label="crâne d'argent">${METAL("m-argent", "#ffffff", "#9aa0a6")}
+    <path d="M14 1C7 1 2 6 2 13c0 4 2 7 5 8.5V27c0 1 1 2 2 2h10c1 0 2-1 2-2v-5.5c3-1.5 5-4.5 5-8.5C26 6 21 1 14 1z" fill="url(#m-argent)" stroke="#5f6368" stroke-width="1.2"/>
+    <circle cx="9" cy="13.5" r="3.2" fill="#2b2b2b"/><circle cx="19" cy="13.5" r="3.2" fill="#2b2b2b"/>
+    <path d="M14 17l-2 3.5h4z" fill="#2b2b2b"/><path d="M11 24.5v3M14 24.5v3M17 24.5v3" stroke="#5f6368" stroke-width="1.2"/></svg>`,
+  `<svg viewBox="0 0 22 32" role="img" aria-label="croix à l'envers de bronze">${METAL("m-bronze", "#f3b77a", "#8a4b1f")}
+    <path d="M8 1h6v19h6v6h-6v5H8v-5H2v-6h6z" fill="url(#m-bronze)" stroke="#5a2f10" stroke-width="1.2" stroke-linejoin="round"/></svg>`,
+];
 
 const esc = s => String(s).replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
 const nb = x => (Math.round(x * 100) / 100).toLocaleString("fr-FR");
@@ -38,6 +50,20 @@ function evo(e) {
   if (e < 0) return `<span class="evo baisse" title="descend de ${-e} place(s)">▼ ${-e}</span>`;
   return `<span class="evo" title="même place">=</span>`;
 }
+
+// Titre de bloc : le jeu de mots en gros, ce que c'est exactement en petit entre parenthèses, et un « i »
+// qui ouvre une bulle d'explication (survol, ou toucher sur téléphone). detail : HTML déjà échappé ; info : texte brut.
+function titre(jeu, detail, info) {
+  return esc(jeu) + (detail ? ` <small class="glose">(${detail})</small>` : "")
+    + (info ? ` <span class="info" tabindex="0" role="note" aria-label="${esc(info)}" data-info="${esc(info)}">i</span>` : "");
+}
+// Bulle ouverte vers la gauche quand le « i » est dans la moitié droite de l'écran (pour ne pas sortir de la page).
+function placerBulle(ev) {
+  const i = ev.target.closest && ev.target.closest(".info"); if (!i) return;
+  i.classList.toggle("vers-gauche", i.getBoundingClientRect().left > innerWidth / 2);
+}
+document.addEventListener("mouseover", placerBulle);
+document.addEventListener("focusin", placerBulle);
 
 function puces(id, options, actif) {
   return `<div class="puces" id="${id}">${options.map(([v, l]) =>
@@ -122,8 +148,12 @@ function basculer(h) {
   h.setAttribute("aria-expanded", String(!memo[s.dataset.sec]));
   try { localStorage.setItem(CLE_REPLIS, JSON.stringify(memo)); } catch (e) { /* mémoire refusée : vaut pour cette visite */ }
 }
-document.addEventListener("click", ev => { const h = ev.target.closest("section.carte[data-sec] > h2"); if (h) basculer(h); });
+document.addEventListener("click", ev => {
+  if (ev.target.closest(".info")) return; // le « i » ouvre sa bulle sans enrouler le bloc
+  const h = ev.target.closest("section.carte[data-sec] > h2"); if (h) basculer(h);
+});
 document.addEventListener("keydown", ev => {
+  if (ev.target.closest && ev.target.closest(".info")) return;
   const h = ev.target.closest && ev.target.closest("section.carte[data-sec] > h2");
   if (h && (ev.key === "Enter" || ev.key === " ")) { ev.preventDefault(); basculer(h); }
 });
@@ -155,7 +185,8 @@ function vueGlobale() {
 
   <div class="grille">
     <section class="carte" data-sec="classement">
-      <h2>Classement des fossoyeurs ${ANNEE}${et.enCours ? " (en cours)" : ""}</h2>
+      <h2>${titre("Classement des fossoyeurs", `classement ${ANNEE}${et.enCours ? ", en cours" : ""}`,
+        `Points de l'année. ${D.epoques.find(e => e.id === et.epoque).bareme}. Égalité : nombre de décès, puis moyenne d'âge de la liste la plus basse (âge au 1er janvier). Évol. : places gagnées ou perdues depuis la fin du mois précédent.`)}</h2>
       ${podium(et.principal, l => pts(l.points))}
       <div class="defil"><table>
         <thead><tr><th class="centre">Rang</th><th>Joueur</th><th>Points</th><th class="num">Décès</th><th class="num" title="âge moyen de la liste au 1er janvier">Âge moy.</th><th class="centre" title="depuis la fin du mois précédent">Évol.</th></tr></thead>
@@ -163,11 +194,11 @@ function vueGlobale() {
           <td class="num">${l.deces}</td><td class="num">${l.ageMoyen != null ? nb(l.ageMoyen) : ""}</td>
           <td class="centre">${evo(EV.joueurs[l.joueur].ecarts[dernierMois])}</td></tr>`).join("")}</tbody>
       </table></div>
-      <p class="sous">Égalité : nombre de décès, puis moyenne d'âge de la liste la plus basse (règles 2026).</p>
     </section>
 
     <section class="carte" data-sec="annexe">
-      <h2>Tableau de chasse ${ANNEE} <small class="glose">(nombre de décès)</small></h2>
+      <h2>${titre("Tableau de chasse", `classement ${ANNEE} au nombre de décès`,
+        "Classement annexe : seul compte le nombre de personnes de la liste qui sont mortes cette année, sans les points.")}</h2>
       ${podium(et.annexe, l => l.deces + " décès")}
       <div class="defil"><table>
         <thead><tr><th class="centre">Rang</th><th>Joueur</th><th>Décès</th></tr></thead>
@@ -177,7 +208,8 @@ function vueGlobale() {
   </div>
 
   <section class="carte" data-sec="montees">
-    <h2>Résurrections et mises en bière ${ANNEE} <small class="glose">(montées et descentes)</small></h2>
+    <h2>${titre("Résurrections et mises en bière", `montées et descentes ${ANNEE}`,
+      `▲ / ▼ : places gagnées ou perdues depuis la fin du mois précédent (le mois en cours compte jusqu'à aujourd'hui). La courbe suit le rang à la fin de chaque mois, 1er en haut, ${et.principal.length}e en bas ; survoler un point pour le détail. Meilleure place : à partir de février (en janvier, sans décès, l'ordre ne suit que l'âge des listes).`)}</h2>
     <div class="cases-joueurs">${et.principal.map(l => { const j = EV.joueurs[l.joueur], meilleur = Math.min(...j.rangs.slice(1));
       return `<div class="case-joueur">
         <div class="case-tete"><span class="place">${l.rang}<small>${l.rang === 1 ? "er" : "e"}</small></span>
@@ -185,11 +217,11 @@ function vueGlobale() {
         ${miniCourbe(j.rangs, et.principal.length, l.nom)}
         <div class="sous">${pts(l.points)} · meilleure place : ${meilleur}${meilleur === 1 ? "er" : "e"}</div>
       </div>`; }).join("")}</div>
-    <p class="sous">▲ / ▼ : places gagnées ou perdues depuis la fin du mois précédent (le mois en cours est compté jusqu'à aujourd'hui). La courbe suit le rang à la fin de chaque mois, 1er en haut, ${et.principal.length}e en bas ; survoler un point pour le détail. Meilleure place : à partir de février (en janvier, sans décès, l'ordre ne suit que l'âge des listes).</p>
   </section>
 
   <section class="carte" data-sec="deces">
-    <h2>Avis de décès ${ANNEE} (${decesAnnee.length})</h2>
+    <h2>${titre("Avis de décès", `décès ${ANNEE} : ${decesAnnee.length}`,
+      "Les personnalités nommées qui sont mortes cette année, la plus récente en haut. Valeur : points rapportés à chaque joueur qui l'avait nommée (selon le nombre de listes).")}</h2>
     <div class="defil"><table>
       <thead><tr><th class="num">Date</th><th>Personnalité</th><th>Nommée par</th><th class="num">Valeur</th></tr></thead>
       <tbody>${parDeces || `<tr><td colspan="4" class="vide">Aucun décès pour l'instant.</td></tr>`}</tbody>
@@ -205,7 +237,8 @@ function blocHistorique(annee) {
   const et = H.find(e => e.annee === Number(annee));
   const maxP = Math.max(...et.principal.map(l => l.points)) || 1;
   document.getElementById("bloc-histo").innerHTML = `
-    <h2>Les archives du cimetière, année par année</h2>
+    <h2>${titre("Les archives du cimetière", "classements année par année",
+      "Classement et tableau de chasse de chaque année. Les règles ont changé selon les époques (rappel sous les boutons). Pas d'édition en 2019.")}</h2>
     <div class="barre">${puces("p-histo", H.map(e => [e.annee, e.annee + (e.enCours ? " (en cours)" : "")]), annee)}</div>
     <p class="sous">${esc(D.epoques.find(e => e.id === et.epoque).libelle)} : ${esc(D.epoques.find(e => e.id === et.epoque).bareme)}.</p>
     <div class="grille">
@@ -223,13 +256,14 @@ function blocGlobal() {
   const g = M.classementGlobal(H);
   const maxP = g[0].points;
   document.getElementById("bloc-global").innerHTML = `
-    <h2>Le grand ossuaire <small class="glose">(toutes les années, année en cours comprise)</small></h2>
+    <h2>${titre("Le grand ossuaire", "total de toutes les années, année en cours comprise",
+      "Les points ne se comparent pas d'une époque à l'autre (barèmes et longueur des listes différents) : ce total additionne des choses différentes. Victoires et podiums : années terminées seulement.")}</h2>
     <div class="defil"><table>
       <thead><tr><th class="centre">Rang</th><th>Joueur</th><th>Points</th><th class="num">Participations</th><th class="num">Décès</th><th class="num">Victoires</th><th class="num">Podiums</th></tr></thead>
       <tbody>${g.map(c => `<tr><td class="rang">${c.rang}</td><td>${esc(c.joueur)}</td><td>${barre(c.points, maxP)}</td>
         <td class="num">${c.participations}</td><td class="num">${c.deces}</td><td class="num">${c.victoires}</td><td class="num">${c.podiums}</td></tr>`).join("")}</tbody>
     </table></div>
-    <p class="sous">Les points ne se comparent pas d'une époque à l'autre (barèmes et longueur des listes différents) : ce total additionne des choses différentes. Victoires et podiums : années terminées seulement.</p>`;
+`;
 }
 
 let tauxEpoque = "epoque2", tauxCle = "tauxPoints";
@@ -239,14 +273,15 @@ function blocTaux() {
   const t = M.classementTaux(etats, tauxCle);
   const max = Math.max(...t.map(c => c[tauxCle])) || 1;
   document.getElementById("bloc-taux").innerHTML = `
-    <h2>Le flair du charognard, par époque <small class="glose">(taux de réussite)</small></h2>
+    <h2>${titre("Le flair du charognard", "taux de réussite par époque",
+      `Points (ou décès) divisés par le nombre d'années jouées, époque par époque, car les règles changent d'une époque à l'autre. Pas de minimum de participations : un taux sur une ou deux années dépend beaucoup de l'année jouée.${etats.some(e => e.enCours) ? " L'année en cours est comptée." : ""}`)}</h2>
     <div class="barre">${puces("p-epoque", D.epoques.map(e => [e.id, e.libelle]), tauxEpoque)}
       ${puces("p-cle", [["tauxPoints", "Points par participation"], ["tauxDeces", "Décès par participation"]], tauxCle)}</div>
     <div class="defil"><table>
       <thead><tr><th class="centre">Rang</th><th>Joueur</th><th>${tauxCle === "tauxPoints" ? "Points" : "Décès"} par participation</th><th class="num">Participations</th></tr></thead>
       <tbody>${t.map(c => `<tr><td class="rang">${c.rang}</td><td>${esc(c.joueur)}</td><td>${barre(c[tauxCle], max)}</td><td class="num">${c.participations}</td></tr>`).join("")}</tbody>
     </table></div>
-    <p class="sous">Pas de minimum de participations : un taux sur une ou deux années dépend beaucoup de l'année jouée.${etats.some(e => e.enCours) ? " L'année en cours est comptée." : ""}</p>`;
+`;
   brancherPuces("p-epoque", v => { tauxEpoque = v; blocTaux(); });
   brancherPuces("p-cle", v => { tauxCle = v; blocTaux(); });
 }
@@ -274,23 +309,25 @@ function fiche() {
     <div class="tuile-kpi"><span class="lib">Meilleur rang</span><span class="val">${meilleur != null ? meilleur : "·"}</span><span class="note">années terminées</span></div>
     <div class="tuile-kpi"><span class="lib">${ANNEE}</span><span class="val">${courant ? courant.rang + "<small>" + (courant.rang === 1 ? "er" : "e") + " / " + courant.participants + "</small>" : "·"}</span><span class="note">${courant ? pts(courant.points) : "ne joue pas cette année"}</span></div>
   </section>
-  <section class="carte" data-sec="j-parcours"><h2>Carrière funèbre</h2><div class="defil"><table>
+  <section class="carte" data-sec="j-parcours"><h2>${titre("Carrière funèbre", `${esc(j)}, toutes ses années`,
+    "Rang, points et décès de chaque année jouée. Rang annexe : rang au tableau de chasse (nombre de décès). Un badge signale une année jouée en liste commune.")}</h2><div class="defil"><table>
     <thead><tr><th>Année</th><th class="num">Rang</th><th class="num">Points</th><th class="num">Décès</th><th class="num">Rang annexe</th></tr></thead>
     <tbody>${parcours.map(p => `<tr><td>${p.annee}${p.enCours ? " (en cours)" : ""}${p.nom !== j ? ` <span class="badge neutre">${esc(p.nom)}</span>` : ""}</td>
       <td class="num">${p.rang} / ${p.participants}</td><td class="num">${nb(p.points)}</td><td class="num">${p.deces}</td><td class="num">${p.rangAnnexe}</td></tr>`).join("")}</tbody>
   </table></div></section>`;
 
   if (M.aJoueDeuxAnneesDeSuite(H, j)) {
-    html += `<section class="carte" data-sec="j-rang"><h2>Rang dans l'au-delà <small class="glose">(année par année)</small></h2>
-      ${courbe(parcours.map(p => ({ x: String(p.annee), y: p.rang, info: `<b>${p.annee}</b> : ${p.rang}${p.rang === 1 ? "er" : "e"} sur ${p.participants}, ${pts(p.points)}` })), { inverse: true, yMin: 1, entier: true })}
-      <p class="sous">Le rang se compare mieux que les points d'une époque à l'autre. Années sans édition ou non jouées : absentes.</p></section>`;
+    html += `<section class="carte" data-sec="j-rang"><h2>${titre("Rang dans l'au-delà", `${esc(j)}, année par année`,
+      "Le rang se compare mieux que les points d'une époque à l'autre. Années sans édition ou non jouées : absentes.")}</h2>
+      ${courbe(parcours.map(p => ({ x: String(p.annee), y: p.rang, info: `<b>${p.annee}</b> : ${p.rang}${p.rang === 1 ? "er" : "e"} sur ${p.participants}, ${pts(p.points)}` })), { inverse: true, yMin: 1, entier: true })}</section>`;
   } else {
     html += `<section class="bandeau info">La courbe d'évolution apparaît quand un joueur a joué deux années de suite.</section>`;
   }
 
   if (courant) {
     const ev = EV.joueurs[j];
-    html += `<section class="carte" data-sec="j-points"><h2>Récolte de ${esc(j)} en ${ANNEE}, fin de chaque mois <small class="glose">(points)</small></h2>
+    html += `<section class="carte" data-sec="j-points"><h2>${titre("Récolte moribonde", `${esc(j)} ${ANNEE}, fin de chaque mois`,
+      "Points cumulés à la fin de chaque mois ; le mois en cours compte jusqu'à aujourd'hui. Survoler un point pour le détail.")}</h2>
       ${courbe(EV.mois.map((m, i) => ({ x: MOIS[m.mois - 1], y: ev.points[i], info: `<b>fin ${MOIS[m.mois - 1]}</b> : ${pts(ev.points[i])}, ${ev.rangs[i]}${ev.rangs[i] === 1 ? "er" : "e"}` })), { yMin: 0 })}
     </section>`;
     const et = H.find(e => e.annee === ANNEE);
@@ -300,7 +337,8 @@ function fiche() {
     const nomin = {}; ed.participants.forEach(p => p.liste.forEach(id => { nomin[id] = (nomin[id] || 0) + 1; }));
     const liste = ed.participants.find(p => p.joueurs[0] === j).liste;
     const morts = M.decesDeLAnnee(D, ANNEE, AUJ);
-    html += `<section class="carte" data-sec="j-liste"><h2>Liste noire ${ANNEE} de ${esc(j)}</h2><div class="defil"><table>
+    html += `<section class="carte" data-sec="j-liste"><h2>${titre("Liste noire", `${esc(j)} ${ANNEE}`,
+      "Les personnalités nommées, barrées quand elles sont mortes. Âge : au 1er janvier. Listes : nombre de joueurs qui ont nommé la personne ; la valeur (points si elle meurt) en dépend.")}</h2><div class="defil"><table>
       <thead><tr><th>Personnalité</th><th>Pays</th><th class="num">Âge</th><th class="num">Listes</th><th class="num">Valeur</th><th>Décès</th></tr></thead>
       <tbody>${liste.map(id => { const p = perso[id], mort = morts[id] && morts[id].date;
         return `<tr><td class="${mort ? "mort" : ""}">${esc(p.nom)}</td><td>${esc(p.pays || "")}</td><td class="num">${p.age != null ? p.age : ""}</td>

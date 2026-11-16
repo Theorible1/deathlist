@@ -161,10 +161,10 @@ function vueAdmin() {
   <div id="a-message"></div>
 
   <section class="carte aide" data-sec="a-aide">
-    <h2>Mode d'emploi de l'administrateur</h2>
+    <h2>${titre("Le manuel du croque-mort", "mode d'emploi de l'administrateur", "Tout ce qu'il faut faire dans la morgue, étape par étape : listes en début d'année, décès pendant l'année, vérification et publication.")}</h2>
     <h3>1. En début d'année : les listes</h3>
     <ol>
-      <li>Bloc « Listes par tableur Excel » : clique « Tableur vierge ${prochaine} ». Le fichier contient déjà les joueurs de l'année d'avant, 15 lignes chacun.</li>
+      <li>Bloc « Le registre des inhumations » : clique « Tableur vierge ${prochaine} ». Le fichier contient déjà les joueurs de l'année d'avant, 15 lignes chacun.</li>
       <li>Ouvre-le dans Excel et remplis Personnalité, Pays (FRA, USA...) et Âge au 1er janvier. Ne touche pas à la ligne des titres.</li>
       <li>Nouveau joueur : ajoute des lignes en bas avec son prénom dans la colonne Joueur. Joueur qui arrête : laisse ses lignes vides.</li>
       <li>Enregistre, puis « Importer un tableur rempli ». La page lit l'année du fichier, la crée si besoin, et montre ce qui est à vérifier (nom en double, liste incomplète, trop de vieux, pas de jeune...). Un nom en double bloque l'import : corrige le tableur et recommence.</li>
@@ -179,7 +179,7 @@ function vueAdmin() {
     </ol>
     <h3>3. Vérifier puis publier</h3>
     <ol>
-      <li>Tout ce que tu fais est gardé dans un brouillon, dans ce navigateur, sur cet ordinateur (même si tu fermes la page). La liste de tes modifications est dans « Brouillon du registre ».</li>
+      <li>Tout ce que tu fais est gardé dans un brouillon, dans ce navigateur, sur cet ordinateur (même si tu fermes la page). La liste de tes modifications est dans « Les cendres encore chaudes ».</li>
       <li>Coche « Voir les onglets de suivi avec mes modifications » pour regarder le Suivi mortuaire et les fiches comme les joueurs les verront.</li>
       <li>« Publier » (bientôt) : envoie le brouillon en ligne ; les joueurs voient la mise à jour au bout de 1 à 2 minutes. Un bouton permettra d'annuler la dernière publication.</li>
       <li>« Abandonner mes modifications » : efface le brouillon et revient à la version en ligne.</li>
@@ -194,18 +194,17 @@ function vueAdmin() {
   </section>
 
   <section class="carte" data-sec="a-tableur">
-    <h2>Listes par tableur Excel</h2>
+    <h2>${titre("Le registre des inhumations", "listes par tableur Excel", `Tableur vierge ${prochaine} : les joueurs de ${derniere.annee} déjà écrits (${(REGLES_LISTE[derniere.epoque] || {}).noms || 15} lignes chacun), les personnalités à remplir. Remplis Personnalité, Pays et Âge sans toucher aux titres, enregistre, puis importe-le : la page reconnaît l'année du tableur (et la crée si besoin) et met à jour d'un coup les listes de tous les joueurs du fichier. Nouveau joueur : son prénom dans la colonne Joueur. Joueur qui ne rejoue pas : lignes vides.`)}</h2>
     <div class="barre boutons">
       <button type="button" class="principal" data-act="modele-tableur" data-a="${prochaine}">📄 Tableur vierge ${prochaine} (listes_${prochaine}.xlsx)</button>
       <button type="button" data-act="modele-tableur" data-a="${anneeAdmin}">📊 Tableur ${anneeAdmin} (avec ce qui est déjà saisi)</button>
       <button type="button" class="principal" data-act="importer-tableur">📥 Importer un tableur rempli</button>
       <input type="file" id="a-fichier-tableur" accept=".xlsx,.csv" hidden>
     </div>
-    <p class="sous">Tableur vierge ${prochaine} : les joueurs de ${derniere.annee} déjà écrits (${(REGLES_LISTE[derniere.epoque] || {}).noms || 15} lignes chacun), les personnalités à remplir. Remplis les colonnes Personnalité, Pays et Âge sans toucher aux titres, enregistre, puis importe-le ici : la page reconnaît l'année du tableur (et la crée si besoin), et met à jour les listes de tous les joueurs du fichier d'un coup. Un nouveau joueur : écris son prénom dans la colonne Joueur ; un joueur qui ne rejoue pas : laisse ses lignes vides.</p>
   </section>
 
   <section class="carte" data-sec="a-etat">
-    <h2>Brouillon du registre${nbModifs ? ` (${nbModifs} modification${nbModifs > 1 ? "s" : ""} non publiée${nbModifs > 1 ? "s" : ""})` : ""}</h2>
+    <h2>${titre("Les cendres encore chaudes", nbModifs ? `brouillon : ${nbModifs} modification${nbModifs > 1 ? "s" : ""} non publiée${nbModifs > 1 ? "s" : ""}` : "brouillon", "Tes modifications sont gardées dans ce navigateur, sur cet ordinateur, même si tu fermes la page. Publier (bientôt) : met la page à jour pour tout le monde au bout de 1 à 2 minutes, avec un bouton pour annuler la dernière publication. Sauvegarde technique : le fichier de données de la page (pas un tableur), utile seulement en cas de souci.")}</h2>
     ${nbModifs ? `<ol class="journal">${b.journal.map(t => `<li>${esc(t)}</li>`).join("")}</ol>` : `<p>Aucune modification : le brouillon est identique à la version publiée.</p>`}
     ${baseChangee ? `<div class="bandeau att">La version publiée a changé depuis le début de ce brouillon. Publier ce brouillon écraserait ces changements.</div>` : ""}
     <label class="case"><input type="checkbox" data-act="apercu"${apercuActif() ? " checked" : ""}${nbModifs ? "" : " disabled"}> Voir les onglets de suivi avec mes modifications (aperçu)</label>
@@ -214,11 +213,10 @@ function vueAdmin() {
       <button type="button" data-act="abandonner"${nbModifs ? "" : " disabled"}>Abandonner mes modifications</button>
       <button type="button" class="petit" data-act="telecharger" title="Fichier technique lu par la page, pas un tableur">Sauvegarde technique (.json)</button>
     </div>
-    <p class="sous">Publier : bientôt. Ce bouton mettra la page à jour pour tout le monde (visible au bout de 1 à 2 minutes), avec un bouton pour annuler la dernière publication. Sauvegarde technique : le fichier de données de la page avec tes modifications (pas un tableur), utile seulement en cas de souci.</p>
   </section>
 
   <section class="carte" data-sec="a-annee">
-    <h2>Année</h2>
+    <h2>${titre("Le calendrier funèbre", "année travaillée", "L'année choisie ici sert aux blocs du dessous (décès, joueurs et listes). Nouvelle année : crée l'année suivante avec les mêmes règles.")}</h2>
     <div class="barre">${puces("p-annee-admin", annees.map(a => [a, String(a)]), anneeAdmin)}
       <button type="button" data-act="nouvelle-annee">+ Nouvelle année ${Math.max(...d.editions.map(e => e.annee)) + 1}</button></div>
     <p class="sous">${esc((d.epoques.find(e => e.id === ed.epoque) || {}).libelle || ed.epoque)} : ${esc((d.epoques.find(e => e.id === ed.epoque) || {}).bareme || "")}.</p>
@@ -236,7 +234,7 @@ function blocDecesAdmin(d, ed) {
     .map(([, p]) => p.nom).sort((x, y) => x.localeCompare(y, "fr"));
   const parDefaut = AUJ.startsWith(String(a)) ? AUJ : "";
   return `<section class="carte" data-sec="a-deces">
-    <h2>Signer un certificat de décès (${a})</h2>
+    <h2>${titre("Signer un certificat de décès", `déclarer un décès ${a}`, "Tape quelques lettres du nom et choisis la personne : la page dit qui l'avait nommée et ce que ça rapporte. Date : celle de sa page Wikipédia. Erreur : bouton Retirer sur la ligne du décès.")}</h2>
     ${Object.keys(ed.personnalites).length ? `<form data-form="deces" class="formulaire" autocomplete="off">
       <label>Personnalité <input name="nom" list="dl-vivants" required placeholder="taper quelques lettres"></label>
       <datalist id="dl-vivants">${vivants.map(n => `<option value="${esc(n)}">`).join("")}</datalist>
@@ -288,7 +286,7 @@ function blocListesAdmin(d, ed) {
   }
 
   return `<section class="carte" data-sec="a-listes">
-    <h2>Fossoyeurs et listes noires ${a} (${ed.participants.length} joueur${ed.participants.length > 1 ? "s" : ""})</h2>
+    <h2>${titre("Fossoyeurs et listes noires", `joueurs et listes ${a} : ${ed.participants.length} joueur${ed.participants.length > 1 ? "s" : ""}`, "Inscrire ou retirer un joueur, saisir ou corriger une liste à la main (une personne par ligne : nom ; pays ; âge). Pour tout saisir d'un coup, passer par le tableur Excel.")}</h2>
     ${ed.participants.length ? `<div class="defil"><table>
       <thead><tr><th>Joueur</th><th class="num">Noms</th><th class="num">Âge moy.</th><th class="num">Points</th><th></th></tr></thead>
       <tbody>${lignes}</tbody></table></div>` : `<p>Personne n'est encore inscrit pour ${a}.</p>`}

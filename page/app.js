@@ -5,19 +5,8 @@
 const URL_DONNEES = "../donnees/deathlist.json";
 
 const MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."];
-// Podium : cercueil d'or, crâne d'argent, croix à l'envers de bronze (dessins SVG, dégradés métalliques).
-const METAL = (id, clair, fonce) => `<defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${clair}"/><stop offset=".5" stop-color="${fonce}"/><stop offset="1" stop-color="${clair}"/></linearGradient></defs>`;
-const MEDAILLES = [
-  `<svg viewBox="0 0 24 32" role="img" aria-label="cercueil d'or">${METAL("m-or", "#fff1a8", "#c8941c")}
-    <polygon points="8,1 16,1 21,8 17,31 7,31 3,8" fill="url(#m-or)" stroke="#7a5a10" stroke-width="1.2"/>
-    <path d="M12 9v12M8.5 13h7" stroke="#7a5a10" stroke-width="2" stroke-linecap="round"/></svg>`,
-  `<svg viewBox="0 0 28 30" role="img" aria-label="crâne d'argent">${METAL("m-argent", "#ffffff", "#9aa0a6")}
-    <path d="M14 1C7 1 2 6 2 13c0 4 2 7 5 8.5V27c0 1 1 2 2 2h10c1 0 2-1 2-2v-5.5c3-1.5 5-4.5 5-8.5C26 6 21 1 14 1z" fill="url(#m-argent)" stroke="#5f6368" stroke-width="1.2"/>
-    <circle cx="9" cy="13.5" r="3.2" fill="#2b2b2b"/><circle cx="19" cy="13.5" r="3.2" fill="#2b2b2b"/>
-    <path d="M14 17l-2 3.5h4z" fill="#2b2b2b"/><path d="M11 24.5v3M14 24.5v3M17 24.5v3" stroke="#5f6368" stroke-width="1.2"/></svg>`,
-  `<svg viewBox="0 0 22 32" role="img" aria-label="croix à l'envers de bronze">${METAL("m-bronze", "#f3b77a", "#8a4b1f")}
-    <path d="M8 1h6v19h6v6h-6v5H8v-5H2v-6h6z" fill="url(#m-bronze)" stroke="#5a2f10" stroke-width="1.2" stroke-linejoin="round"/></svg>`,
-];
+// Podium à 4 marches : images de page\images (cercueil d'or, crâne d'argent, croix à l'envers de bronze, tombe violette).
+const MEDAILLES = ["1re place : cercueil d'or", "2e place : crâne d'argent", "3e place : croix à l'envers de bronze", "4e place : tombe"];
 
 const esc = s => String(s).replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
 const nb = x => (Math.round(x * 100) / 100).toLocaleString("fr-FR");
@@ -30,11 +19,11 @@ let PUBLIE, D, H, AUJ, ANNEE, EV; // PUBLIE : version publiée ; D : données af
 // ───────────── éléments réutilisés ─────────────
 
 function podium(lignes, valeur) {
-  const top = lignes.filter(l => l.rang <= 3);
+  const top = lignes.filter(l => l.rang <= 4);
   if (!top.length) return "";
-  const parRang = [1, 2, 3].map(r => top.filter(l => l.rang === r));
+  const parRang = [1, 2, 3, 4].map(r => top.filter(l => l.rang === r));
   return `<div class="podium">${parRang.map((ls, i) => ls.length ? `<div class="marche r${i + 1}">
-      <div class="med" aria-hidden="true">${MEDAILLES[i]}</div>
+      <div class="med"><img src="images/podium_${i + 1}.webp" alt="${MEDAILLES[i]}" width="240" height="200" loading="lazy"></div>
       <div class="qui">${ls.map(l => esc(l.nom)).join(", ")}</div>
       <div class="combien">${i + 1}${i ? "e" : "er"} · ${valeur(ls[0])}</div></div>` : `<div class="marche r${i + 1}"></div>`).join("")}</div>`;
 }

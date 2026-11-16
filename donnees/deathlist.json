@@ -1,0 +1,1889 @@
+{
+ "version": 2,
+ "genere_par": "outils/construire_donnees.py, 16/11/2026",
+ "epoques": [
+  {
+   "id": "test2018",
+   "libelle": "Année test (2018)",
+   "annees": [
+    2018
+   ],
+   "noms_par_liste": 12,
+   "bareme": "1 point par décès, pas de point doublé",
+   "age": "aucune contrainte connue"
+  },
+  {
+   "id": "epoque1",
+   "libelle": "Époque 1 (2020 à 2023)",
+   "annees": [
+    2020,
+    2021,
+    2022,
+    2023
+   ],
+   "noms_par_liste": 12,
+   "bareme": "1 point, 2 points si le joueur est seul à avoir nommé la personne",
+   "age": "règles 2020 : 5 personnes de 85 ans et plus au plus, un seul centenaire, au moins une personne de moins de 55 ans (2021 à 2023 : supposé identique, à confirmer)"
+  },
+  {
+   "id": "epoque2",
+   "libelle": "Époque 2 (2024 à aujourd'hui)",
+   "annees": [
+    2024,
+    2025,
+    2026
+   ],
+   "noms_par_liste": 15,
+   "bareme": "1 point si nommée dans plus de deux listes, 1,5 point si exactement deux, 2 points si une seule",
+   "age": "règles 2026 : 8 personnes de 85 ans et plus au plus, un seul centenaire, au moins une personne de moins de 65 ans"
+  }
+ ],
+ "joueurs": [
+  "Alexis",
+  "Capucine",
+  "Charles",
+  "Charlène",
+  "Eva",
+  "Fabien",
+  "Flore",
+  "François",
+  "Gaël",
+  "Jean-Baptiste",
+  "Julie",
+  "Karen",
+  "Marion",
+  "Maxime",
+  "Nicolas",
+  "Nina",
+  "Philippe",
+  "Pierre",
+  "Pierre-Yves",
+  "Sezni",
+  "Simon",
+  "Sophie",
+  "Thibaut",
+  "Thomas",
+  "Émeline",
+  "Étienne"
+ ],
+ "deces": [
+  {
+   "id": "brad-arnold",
+   "nom": "Brad Arnold",
+   "date": "2026-02-07",
+   "confiance": "haute",
+   "source": "https://www.nbcnews.com/news/us-news/3-doors-founder-brad-arnold-dies-47-rcna257945",
+   "validee_par": "Gaël, 16/11/2026"
+  },
+  {
+   "id": "marie-rose-tessier",
+   "nom": "Marie-Rose Tessier",
+   "date": "2026-02-10",
+   "confiance": "haute",
+   "source": "https://www.grg-supercentenarians.org/marie-rose-tessier/",
+   "validee_par": "Gaël, 16/11/2026"
+  },
+  {
+   "id": "james-van-der-beek",
+   "nom": "James Van der Beek",
+   "date": "2026-02-11",
+   "confiance": "moyenne",
+   "source": "https://www.cbsnews.com/amp/news/james-van-der-beek-dies-dawsons-creek (date déduite : mercredi, articles datés du 11/02)",
+   "validee_par": "Gaël, 16/11/2026"
+  },
+  {
+   "id": "jesse-jackson",
+   "nom": "Jesse Jackson",
+   "date": "2026-02-17",
+   "confiance": "haute",
+   "source": "https://www.npr.org/2026/02/17/963124454/jesse-jackson-civil-rights-leader-rainbow-coalition-dies",
+   "validee_par": "Gaël, 16/11/2026"
+  },
+  {
+   "id": "eric-dane",
+   "nom": "Eric Dane",
+   "date": "2026-02-19",
+   "confiance": "haute",
+   "source": "https://www.tvinsider.com/1246825/eric-dane-dead-als-greys-anatomy",
+   "validee_par": "Gaël, 16/11/2026"
+  },
+  {
+   "id": "song-ping",
+   "nom": "Song Ping",
+   "date": "2026-03-04",
+   "confiance": "haute",
+   "source": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/03/10/china039s-leaders-mourn-the-death-of-109-year-old-communist-party-elder",
+   "validee_par": "Gaël, 16/11/2026"
+  },
+  {
+   "id": "loana",
+   "nom": "Loana",
+   "date": "2026-03-25",
+   "confiance": "faible",
+   "source": "https://www.letemps.ch/monde/loana-premiere-vedette-de-la-telerealite-francaise-est-decedee-a-nice (corps retrouvé, mort possiblement plusieurs jours avant)",
+   "validee_par": "Gaël, 16/11/2026"
+  },
+  {
+   "id": "desmond-morris",
+   "nom": "Desmond Morris",
+   "date": "2026-04-19",
+   "confiance": "haute",
+   "source": "https://www.wolfson.ox.ac.uk/news/desmond-morris-former-wolfson-rf-dies-aged-98/ (une source donne le 20)",
+   "validee_par": "Gaël, 16/11/2026"
+  },
+  {
+   "id": "dave-mason",
+   "nom": "Dave Mason",
+   "date": "2026-04-19",
+   "confiance": "haute",
+   "source": "https://www.udiscovermusic.com/news/dave-mason-rip/",
+   "validee_par": "Gaël, 16/11/2026"
+  },
+  {
+   "id": "michael-tilson-thomas",
+   "nom": "Michael Tilson Thomas",
+   "date": "2026-04-22",
+   "confiance": "haute",
+   "source": "https://www.ksat.com/entertainment/2026/04/23/michael-tilson-thomas-renowned-conductor-and-composer-dies-at-81/",
+   "validee_par": "Gaël, 16/11/2026"
+  },
+  {
+   "id": "ted-turner",
+   "nom": "Ted Turner",
+   "date": "2026-05-06",
+   "confiance": "haute",
+   "source": "https://www.tedturner.com/?p=4004",
+   "validee_par": "Gaël, 16/11/2026"
+  },
+  {
+   "id": "jason-collins",
+   "nom": "Jason Collins",
+   "date": "2026-05-12",
+   "confiance": "haute",
+   "source": "https://www.nba.com/news/jason-collins-obit-dies-47-brain-cancer",
+   "validee_par": "Gaël, 16/11/2026"
+  },
+  {
+   "id": "edgar-morin",
+   "nom": "Edgar Morin",
+   "date": "2026-05-29",
+   "confiance": "haute",
+   "source": "https://www.thelocal.fr/20260530/edgar-morin-frances-intellectual-grandfather-dies-at-104",
+   "validee_par": "Gaël, 16/11/2026"
+  },
+  {
+   "id": "julio-le-parc",
+   "nom": "Julio Le Parc",
+   "date": "2026-05-30",
+   "confiance": "haute",
+   "source": "https://www.finestresullarte.info/en/news/farewell-to-julio-le-parc-master-of-kinetic-and-op-art",
+   "validee_par": "Gaël, 16/11/2026"
+  },
+  {
+   "id": "bernadette-chirac",
+   "nom": "Bernadette Chirac",
+   "date": "2026-06-05",
+   "confiance": "haute",
+   "source": "https://lcp.fr/actualites/bernadette-chirac-veuve-du-president-chirac-est-morte-a-93-ans-437371",
+   "validee_par": "Gaël, 16/11/2026"
+  },
+  {
+   "id": "alan-greenspan",
+   "nom": "Alan Greenspan",
+   "date": "2026-06-22",
+   "confiance": "haute",
+   "source": "https://fortune.com/2026/06/22/alan-greenspan-obituary-death-100-fed-chair-oracle-bank-regulation-financial-crisis/",
+   "validee_par": "Gaël, 16/11/2026"
+  },
+  {
+   "id": "philippe-bouvard",
+   "nom": "Philippe Bouvard",
+   "date": "2026-08-24",
+   "confiance": "haute",
+   "source": "https://118500.fr/blog/article/philippe-bouvard-est-mort-a-96-ans-la-voix-historique-des-grosses-tetes-s-est-eteinte",
+   "validee_par": "Gaël, 16/11/2026"
+  },
+  {
+   "id": "edouard-balladur",
+   "nom": "Edouard Balladur",
+   "date": "2026-08-31",
+   "confiance": "haute",
+   "source": "https://lcp.fr/index%2ephp/actualites/edouard-balladur-est-mort-a-l-age-de-97-ans-440727",
+   "validee_par": "Gaël, 16/11/2026"
+  },
+  {
+   "id": "andre-brasilier",
+   "nom": "André Brasilier",
+   "date": "2026-09-08",
+   "confiance": "moyenne",
+   "source": "https://www.operagallery.com/news/in-memoriam-andre-brasilier-1929-2026 (galerie, pas de presse)",
+   "validee_par": "Gaël, 16/11/2026"
+  },
+  {
+   "id": "lucien-lazare",
+   "nom": "Lucien Lazare",
+   "date": "2026-09-22",
+   "confiance": "moyenne",
+   "source": "https://dnyuz.com/2026/10/01/lucien-lazare-jewish-resistance-fighter-in-occupied-france-dies-at-101/",
+   "validee_par": "Gaël, 16/11/2026"
+  },
+  {
+   "id": "esther-rantzen",
+   "nom": "Esther Rantzen",
+   "date": "2026-09-30",
+   "confiance": "haute",
+   "source": "https://www.timesofisrael.com/campaigning-british-jewish-broadcaster-esther-rantzen-dies-at-86/",
+   "validee_par": "Gaël, 16/11/2026"
+  },
+  {
+   "id": "herbert-blomstedt",
+   "nom": "Herbert Blomstedt",
+   "date": "2026-11-04",
+   "confiance": "haute",
+   "source": "https://www.thestrad.com/news/obituary-herbert-blomstedt-1927-2026/22044.article",
+   "validee_par": null
+  }
+ ],
+ "editions": [
+  {
+   "annee": 2018,
+   "epoque": "test2018",
+   "source_points": "tableur Alumni (test), identique aux PDF finaux 2023 à 2025",
+   "participants": [
+    {
+     "joueurs": [
+      "Charles"
+     ],
+     "points": 1,
+     "deces": 1
+    },
+    {
+     "joueurs": [
+      "Flore"
+     ],
+     "points": 2,
+     "deces": 2,
+     "liste_commune_avec": "Sophie"
+    },
+    {
+     "joueurs": [
+      "François"
+     ],
+     "points": 2,
+     "deces": 2
+    },
+    {
+     "joueurs": [
+      "Jean-Baptiste"
+     ],
+     "points": 0,
+     "deces": 0
+    },
+    {
+     "joueurs": [
+      "Pierre-Yves"
+     ],
+     "points": 4,
+     "deces": 4
+    },
+    {
+     "joueurs": [
+      "Thomas"
+     ],
+     "points": 0,
+     "deces": 0
+    }
+   ]
+  },
+  {
+   "annee": 2020,
+   "epoque": "epoque1",
+   "source_points": "tableur Alumni (test), identique aux PDF finaux 2023 à 2025",
+   "participants": [
+    {
+     "joueurs": [
+      "Charles"
+     ],
+     "points": 2,
+     "deces": 2
+    },
+    {
+     "joueurs": [
+      "François"
+     ],
+     "points": 4,
+     "deces": 2
+    },
+    {
+     "joueurs": [
+      "Gaël"
+     ],
+     "points": 1,
+     "deces": 1
+    },
+    {
+     "joueurs": [
+      "Jean-Baptiste"
+     ],
+     "points": 5,
+     "deces": 3
+    },
+    {
+     "joueurs": [
+      "Marion"
+     ],
+     "points": 2,
+     "deces": 1
+    },
+    {
+     "joueurs": [
+      "Pierre"
+     ],
+     "points": 4,
+     "deces": 3
+    },
+    {
+     "joueurs": [
+      "Pierre-Yves"
+     ],
+     "points": 0,
+     "deces": 0
+    }
+   ]
+  },
+  {
+   "annee": 2021,
+   "epoque": "epoque1",
+   "source_points": "tableur Alumni (test), identique aux PDF finaux 2023 à 2025",
+   "participants": [
+    {
+     "joueurs": [
+      "Capucine"
+     ],
+     "points": 3,
+     "deces": 3
+    },
+    {
+     "joueurs": [
+      "Charles"
+     ],
+     "points": 5,
+     "deces": 3
+    },
+    {
+     "joueurs": [
+      "Charlène"
+     ],
+     "points": 2,
+     "deces": 2
+    },
+    {
+     "joueurs": [
+      "François"
+     ],
+     "points": 8,
+     "deces": 5
+    },
+    {
+     "joueurs": [
+      "Gaël"
+     ],
+     "points": 5,
+     "deces": 4
+    },
+    {
+     "joueurs": [
+      "Jean-Baptiste"
+     ],
+     "points": 14,
+     "deces": 9
+    },
+    {
+     "joueurs": [
+      "Marion"
+     ],
+     "points": 2,
+     "deces": 2
+    },
+    {
+     "joueurs": [
+      "Philippe"
+     ],
+     "points": 2,
+     "deces": 2
+    },
+    {
+     "joueurs": [
+      "Pierre"
+     ],
+     "points": 4,
+     "deces": 3
+    },
+    {
+     "joueurs": [
+      "Pierre-Yves"
+     ],
+     "points": 5,
+     "deces": 5
+    }
+   ]
+  },
+  {
+   "annee": 2022,
+   "epoque": "epoque1",
+   "source_points": "tableur Alumni (test), identique aux PDF finaux 2023 à 2025",
+   "participants": [
+    {
+     "joueurs": [
+      "Charles"
+     ],
+     "points": 3,
+     "deces": 2
+    },
+    {
+     "joueurs": [
+      "François"
+     ],
+     "points": 3,
+     "deces": 2
+    },
+    {
+     "joueurs": [
+      "Gaël"
+     ],
+     "points": 5,
+     "deces": 4
+    },
+    {
+     "joueurs": [
+      "Jean-Baptiste"
+     ],
+     "points": 10,
+     "deces": 5
+    },
+    {
+     "joueurs": [
+      "Julie"
+     ],
+     "points": 4,
+     "deces": 3
+    },
+    {
+     "joueurs": [
+      "Marion"
+     ],
+     "points": 3,
+     "deces": 3
+    },
+    {
+     "joueurs": [
+      "Nina"
+     ],
+     "points": 4,
+     "deces": 4,
+     "liste_commune_avec": "Étienne"
+    },
+    {
+     "joueurs": [
+      "Philippe"
+     ],
+     "points": 5,
+     "deces": 4
+    },
+    {
+     "joueurs": [
+      "Pierre"
+     ],
+     "points": 7,
+     "deces": 6
+    },
+    {
+     "joueurs": [
+      "Pierre-Yves"
+     ],
+     "points": 1,
+     "deces": 1
+    }
+   ]
+  },
+  {
+   "annee": 2023,
+   "epoque": "epoque1",
+   "source_points": "tableur Alumni (test), identique aux PDF finaux 2023 à 2025",
+   "participants": [
+    {
+     "joueurs": [
+      "Alexis"
+     ],
+     "points": 2,
+     "deces": 2
+    },
+    {
+     "joueurs": [
+      "Charles"
+     ],
+     "points": 4,
+     "deces": 3
+    },
+    {
+     "joueurs": [
+      "Eva"
+     ],
+     "points": 2,
+     "deces": 2
+    },
+    {
+     "joueurs": [
+      "François"
+     ],
+     "points": 5,
+     "deces": 3
+    },
+    {
+     "joueurs": [
+      "Gaël"
+     ],
+     "points": 5,
+     "deces": 3
+    },
+    {
+     "joueurs": [
+      "Jean-Baptiste"
+     ],
+     "points": 6,
+     "deces": 4
+    },
+    {
+     "joueurs": [
+      "Karen"
+     ],
+     "points": 2,
+     "deces": 2
+    },
+    {
+     "joueurs": [
+      "Nina"
+     ],
+     "points": 1,
+     "deces": 1
+    },
+    {
+     "joueurs": [
+      "Philippe"
+     ],
+     "points": 3,
+     "deces": 2
+    },
+    {
+     "joueurs": [
+      "Pierre"
+     ],
+     "points": 4,
+     "deces": 2
+    },
+    {
+     "joueurs": [
+      "Pierre-Yves"
+     ],
+     "points": 4,
+     "deces": 4
+    },
+    {
+     "joueurs": [
+      "Sophie"
+     ],
+     "points": 5,
+     "deces": 4
+    },
+    {
+     "joueurs": [
+      "Thibaut"
+     ],
+     "points": 0,
+     "deces": 0
+    },
+    {
+     "joueurs": [
+      "Étienne"
+     ],
+     "points": 3,
+     "deces": 2
+    }
+   ]
+  },
+  {
+   "annee": 2024,
+   "epoque": "epoque2",
+   "source_points": "tableur Alumni (test), identique aux PDF finaux 2023 à 2025",
+   "participants": [
+    {
+     "joueurs": [
+      "Alexis"
+     ],
+     "points": 5.5,
+     "deces": 5
+    },
+    {
+     "joueurs": [
+      "Charles"
+     ],
+     "points": 6.5,
+     "deces": 5
+    },
+    {
+     "joueurs": [
+      "Eva"
+     ],
+     "points": 5.5,
+     "deces": 5
+    },
+    {
+     "joueurs": [
+      "François"
+     ],
+     "points": 3,
+     "deces": 2
+    },
+    {
+     "joueurs": [
+      "Gaël"
+     ],
+     "points": 9,
+     "deces": 6
+    },
+    {
+     "joueurs": [
+      "Jean-Baptiste"
+     ],
+     "points": 6,
+     "deces": 4
+    },
+    {
+     "joueurs": [
+      "Karen"
+     ],
+     "points": 5.5,
+     "deces": 5
+    },
+    {
+     "joueurs": [
+      "Marion"
+     ],
+     "points": 5,
+     "deces": 4
+    },
+    {
+     "joueurs": [
+      "Maxime"
+     ],
+     "points": 1,
+     "deces": 1
+    },
+    {
+     "joueurs": [
+      "Philippe"
+     ],
+     "points": 5,
+     "deces": 4
+    },
+    {
+     "joueurs": [
+      "Pierre"
+     ],
+     "points": 3,
+     "deces": 3
+    },
+    {
+     "joueurs": [
+      "Pierre-Yves"
+     ],
+     "points": 5.5,
+     "deces": 4
+    },
+    {
+     "joueurs": [
+      "Sezni"
+     ],
+     "points": 7,
+     "deces": 5
+    },
+    {
+     "joueurs": [
+      "Sophie"
+     ],
+     "points": 7,
+     "deces": 5
+    },
+    {
+     "joueurs": [
+      "Émeline"
+     ],
+     "points": 5,
+     "deces": 4
+    },
+    {
+     "joueurs": [
+      "Étienne"
+     ],
+     "points": 10.5,
+     "deces": 7,
+     "liste_commune_avec": "Nina"
+    }
+   ]
+  },
+  {
+   "annee": 2025,
+   "epoque": "epoque2",
+   "source_points": "tableur Alumni (test), identique aux PDF finaux 2023 à 2025",
+   "participants": [
+    {
+     "joueurs": [
+      "Alexis"
+     ],
+     "points": 5.5,
+     "deces": 4
+    },
+    {
+     "joueurs": [
+      "Charles"
+     ],
+     "points": 6,
+     "deces": 5
+    },
+    {
+     "joueurs": [
+      "Eva"
+     ],
+     "points": 4,
+     "deces": 3
+    },
+    {
+     "joueurs": [
+      "Fabien"
+     ],
+     "points": 0,
+     "deces": 0
+    },
+    {
+     "joueurs": [
+      "Gaël"
+     ],
+     "points": 1.5,
+     "deces": 1
+    },
+    {
+     "joueurs": [
+      "Jean-Baptiste"
+     ],
+     "points": 5,
+     "deces": 3
+    },
+    {
+     "joueurs": [
+      "Karen"
+     ],
+     "points": 6.5,
+     "deces": 4
+    },
+    {
+     "joueurs": [
+      "Nicolas"
+     ],
+     "points": 2.5,
+     "deces": 2
+    },
+    {
+     "joueurs": [
+      "Pierre"
+     ],
+     "points": 4,
+     "deces": 4
+    },
+    {
+     "joueurs": [
+      "Pierre-Yves"
+     ],
+     "points": 2,
+     "deces": 1
+    },
+    {
+     "joueurs": [
+      "Sezni"
+     ],
+     "points": 5.5,
+     "deces": 4
+    },
+    {
+     "joueurs": [
+      "Simon"
+     ],
+     "points": 1.5,
+     "deces": 1
+    },
+    {
+     "joueurs": [
+      "Sophie"
+     ],
+     "points": 8.5,
+     "deces": 5
+    },
+    {
+     "joueurs": [
+      "Thibaut"
+     ],
+     "points": 1.5,
+     "deces": 1
+    },
+    {
+     "joueurs": [
+      "Émeline"
+     ],
+     "points": 3,
+     "deces": 2
+    },
+    {
+     "joueurs": [
+      "Étienne"
+     ],
+     "points": 1,
+     "deces": 1
+    }
+   ]
+  },
+  {
+   "annee": 2026,
+   "epoque": "epoque2",
+   "source_points": "listes 2026 + décès (recalculé ; identique au PDF, plus les décès postérieurs au PDF)",
+   "participants": [
+    {
+     "joueurs": [
+      "Gaël"
+     ],
+     "points": 10,
+     "deces": 6,
+     "liste": [
+      "lucien-lazare",
+      "david-attenborough",
+      "herbert-blomstedt",
+      "anthea-fraser",
+      "marisa-borini",
+      "simon-gronowski",
+      "bernadette-chirac",
+      "jean-renard",
+      "miriam-margolyes",
+      "jesse-jackson",
+      "daniel-barenboim",
+      "renaud-detressan",
+      "eric-dane",
+      "lewis-moody",
+      "brad-arnold"
+     ]
+    },
+    {
+     "joueurs": [
+      "Charles"
+     ],
+     "points": 3,
+     "deces": 3,
+     "liste": [
+      "jacques-salome",
+      "eddy-mitchell",
+      "joe-biden",
+      "barry-manilow",
+      "charles-iii",
+      "vladimir-poutine",
+      "chris-foreman",
+      "eric-dane",
+      "pone",
+      "asma-al-assad",
+      "chris-hoy",
+      "ramzan-kadyrov",
+      "james-van-der-beek",
+      "jason-collins",
+      "jeremy-flores"
+     ]
+    },
+    {
+     "joueurs": [
+      "Jean-Baptiste"
+     ],
+     "points": 4,
+     "deces": 3,
+     "liste": [
+      "song-ping",
+      "leontyne-price",
+      "jacques-borel",
+      "ahmad-jannati",
+      "philippe-bouvard",
+      "berry-gordy",
+      "jean-becker",
+      "pat-boone",
+      "richard-bohringer",
+      "barry-manilow",
+      "richard-dreyfuss",
+      "andy-taylor",
+      "jimmy-cherizier",
+      "jason-collins",
+      "gaelynn-lea"
+     ]
+    },
+    {
+     "joueurs": [
+      "Pierre"
+     ],
+     "points": 1.5,
+     "deces": 1,
+     "liste": [
+      "edgar-morin",
+      "ahmad-jannati",
+      "fernanda-montenegro",
+      "marisa-borini",
+      "jean-tulard",
+      "akihito",
+      "ralph-lauren",
+      "barry-manilow",
+      "nigel-starmer-smith",
+      "yasuhiko-funago",
+      "billy-porter",
+      "narges-mohammadi",
+      "pone",
+      "chris-hoy",
+      "abdelhak-nouri"
+     ]
+    },
+    {
+     "joueurs": [
+      "Fabien"
+     ],
+     "points": 3,
+     "deces": 3,
+     "liste": [
+      "ginette-kolinka",
+      "abdoulaye-wade",
+      "line-renaud",
+      "costa-gavras",
+      "yoko-ono",
+      "bernadette-chirac",
+      "akihito",
+      "hassanal-bolkiah",
+      "harvey-weinstein",
+      "pierre-menes",
+      "mohammed-vi",
+      "eric-dane",
+      "olivier-goy",
+      "james-van-der-beek",
+      "vladimir-ossetchkine"
+     ]
+    },
+    {
+     "joueurs": [
+      "Eva"
+     ],
+     "points": 3,
+     "deces": 2,
+     "liste": [
+      "dick-van-dyke",
+      "mel-brooks",
+      "rosemary-harris",
+      "line-renaud",
+      "clint-eastwood",
+      "john-towner-williams",
+      "bernadette-chirac",
+      "ted-turner",
+      "keith-richards",
+      "charles-iii",
+      "harvey-weinstein",
+      "bruce-willis",
+      "asma-al-assad",
+      "chris-hoy",
+      "lil-wayne"
+     ]
+    },
+    {
+     "joueurs": [
+      "Karen"
+     ],
+     "points": 6,
+     "deces": 5,
+     "liste": [
+      "dick-van-dyke",
+      "judith-magre",
+      "mel-brooks",
+      "edouard-balladur",
+      "philippe-bouvard",
+      "akihito",
+      "sophia-loren",
+      "esther-rantzen",
+      "miriam-margolyes",
+      "nigel-starmer-smith",
+      "harvey-weinstein",
+      "eric-dane",
+      "asma-al-assad",
+      "chris-hoy",
+      "james-van-der-beek"
+     ]
+    },
+    {
+     "joueurs": [
+      "Pierre-Yves"
+     ],
+     "points": 2.5,
+     "deces": 2,
+     "liste": [
+      "marie-rose-tessier",
+      "abdoulaye-wade",
+      "noam-chomsky",
+      "george-soros",
+      "jose-sarney",
+      "raul-castro",
+      "jany-le-pen",
+      "bernadette-chirac",
+      "bob-dylan",
+      "hu-jintao",
+      "joe-biden",
+      "john-major",
+      "omar-el-bechir",
+      "harvey-weinstein",
+      "asma-al-assad"
+     ]
+    },
+    {
+     "joueurs": [
+      "Simon"
+     ],
+     "points": 5,
+     "deces": 3,
+     "liste": [
+      "ethel-caterham",
+      "alan-greenspan",
+      "abdoulaye-wade",
+      "desmond-morris",
+      "edouard-balladur",
+      "stuart-hall",
+      "joe-biden",
+      "michel-drucker",
+      "jacques-dutronc",
+      "nigel-starmer-smith",
+      "donald-trump",
+      "harvey-weinstein",
+      "khalil-al-hayya",
+      "ben-sasse",
+      "chris-hoy"
+     ]
+    },
+    {
+     "joueurs": [
+      "Thibaut"
+     ],
+     "points": 4,
+     "deces": 3,
+     "liste": [
+      "ethel-caterham",
+      "mel-brooks",
+      "line-renaud",
+      "edouard-balladur",
+      "hugues-aufray",
+      "buzz-aldrin",
+      "clint-eastwood",
+      "bernadette-chirac",
+      "bob-dylan",
+      "joe-biden",
+      "gerard-depardieu",
+      "harvey-weinstein",
+      "olivia-williams",
+      "pone",
+      "loana"
+     ]
+    },
+    {
+     "joueurs": [
+      "Émeline"
+     ],
+     "points": 3.5,
+     "deces": 3,
+     "liste": [
+      "marie-rose-tessier",
+      "line-renaud",
+      "edouard-balladur",
+      "clint-eastwood",
+      "marthe-villalonga",
+      "bernadette-chirac",
+      "pierre-richard",
+      "nana-mouskouri",
+      "michel-drucker",
+      "keith-richards",
+      "camilla-parker-bowles",
+      "bruce-willis",
+      "michael-j.-fox",
+      "charlie-sheen",
+      "adam-pearson"
+     ]
+    },
+    {
+     "joueurs": [
+      "Sezni"
+     ],
+     "points": 3.5,
+     "deces": 3,
+     "liste": [
+      "edgar-morin",
+      "david-attenborough",
+      "mel-brooks",
+      "edouard-balladur",
+      "buzz-aldrin",
+      "bernadette-chirac",
+      "morgan-freeman",
+      "paddy-reilly",
+      "richard-bohringer",
+      "daniel-barenboim",
+      "joe-biden",
+      "gerard-depardieu",
+      "harvey-weinstein",
+      "bruce-willis",
+      "asma-al-assad"
+     ]
+    },
+    {
+     "joueurs": [
+      "Sophie"
+     ],
+     "points": 9,
+     "deces": 5,
+     "liste": [
+      "naomi-whitehead",
+      "monique-levi-strauss",
+      "alex-katz",
+      "pierre-alechinsky",
+      "julio-le-parc",
+      "alejandro-jodorowsky",
+      "andre-brasilier",
+      "jasper-johns",
+      "joni-mitchell",
+      "michael-tilson-thomas",
+      "dave-mason",
+      "michael-bolton",
+      "naim-qassem",
+      "ben-sasse",
+      "jason-collins"
+     ]
+    },
+    {
+     "joueurs": [
+      "Alexis"
+     ],
+     "points": 2,
+     "deces": 2,
+     "liste": [
+      "ethel-caterham",
+      "david-attenborough",
+      "mel-brooks",
+      "william-shatner",
+      "yoko-ono",
+      "willie-nelson",
+      "barry-manilow",
+      "charles-iii",
+      "harvey-weinstein",
+      "olivia-williams",
+      "ben-sasse",
+      "eric-dane",
+      "asma-al-assad",
+      "james-van-der-beek",
+      "caroline-receveur"
+     ]
+    },
+    {
+     "joueurs": [
+      "Nicolas"
+     ],
+     "points": 4,
+     "deces": 4,
+     "liste": [
+      "dick-van-dyke",
+      "line-renaud",
+      "philippe-bouvard",
+      "jany-le-pen",
+      "bernadette-chirac",
+      "edward-de-kent",
+      "phil-collins",
+      "olivier-lejeune",
+      "renaud",
+      "david-hasselhoff",
+      "james-pickens-jr.",
+      "bruce-willis",
+      "dolph-lundgren",
+      "eric-dane",
+      "james-van-der-beek"
+     ]
+    }
+   ],
+   "en_cours": true,
+   "personnalites": {
+    "lucien-lazare": {
+     "nom": "Lucien Lazare",
+     "pays": "FRA",
+     "age": 101
+    },
+    "david-attenborough": {
+     "nom": "David Attenborough",
+     "pays": "ANG",
+     "age": 99
+    },
+    "herbert-blomstedt": {
+     "nom": "Herbert Blomstedt",
+     "pays": "SUE",
+     "age": 98
+    },
+    "anthea-fraser": {
+     "nom": "Anthea Fraser",
+     "pays": "ANG",
+     "age": 95
+    },
+    "marisa-borini": {
+     "nom": "Marisa Borini",
+     "pays": "ITA",
+     "age": 95
+    },
+    "simon-gronowski": {
+     "nom": "Simon Gronowski",
+     "pays": "BEL",
+     "age": 94
+    },
+    "bernadette-chirac": {
+     "nom": "Bernadette Chirac",
+     "pays": "FRA",
+     "age": 92
+    },
+    "jean-renard": {
+     "nom": "Jean Renard",
+     "pays": "FRA",
+     "age": 92
+    },
+    "miriam-margolyes": {
+     "nom": "Miriam Margolyes",
+     "pays": "ANG",
+     "age": 84
+    },
+    "jesse-jackson": {
+     "nom": "Jesse Jackson",
+     "pays": "USA",
+     "age": 84
+    },
+    "daniel-barenboim": {
+     "nom": "Daniel Barenboim",
+     "pays": "ARG",
+     "age": 83
+    },
+    "renaud-detressan": {
+     "nom": "Renaud Detressan",
+     "pays": "FRA",
+     "age": 69
+    },
+    "eric-dane": {
+     "nom": "Eric Dane",
+     "pays": "USA",
+     "age": 53
+    },
+    "lewis-moody": {
+     "nom": "Lewis Moody",
+     "pays": "ANG",
+     "age": 47
+    },
+    "brad-arnold": {
+     "nom": "Brad Arnold",
+     "pays": "USA",
+     "age": 47
+    },
+    "jacques-salome": {
+     "nom": "Jacques Salomé",
+     "pays": "FRA",
+     "age": 90
+    },
+    "eddy-mitchell": {
+     "nom": "Eddy Mitchell",
+     "pays": "FRA",
+     "age": 83
+    },
+    "joe-biden": {
+     "nom": "Joe Biden",
+     "pays": "USA",
+     "age": 83
+    },
+    "barry-manilow": {
+     "nom": "Barry Manilow",
+     "pays": "USA",
+     "age": 82
+    },
+    "charles-iii": {
+     "nom": "Charles III",
+     "pays": "ANG",
+     "age": 77
+    },
+    "vladimir-poutine": {
+     "nom": "Vladimir Poutine",
+     "pays": "RUS",
+     "age": 73
+    },
+    "chris-foreman": {
+     "nom": "Chris Foreman",
+     "pays": "ANG",
+     "age": 69
+    },
+    "pone": {
+     "nom": "Pone",
+     "pays": "FRA",
+     "age": 52
+    },
+    "asma-al-assad": {
+     "nom": "Asma al-Assad",
+     "pays": "SYR",
+     "age": 50
+    },
+    "chris-hoy": {
+     "nom": "Chris Hoy",
+     "pays": "ECO",
+     "age": 49
+    },
+    "ramzan-kadyrov": {
+     "nom": "Ramzan Kadyrov",
+     "pays": "RUS",
+     "age": 49
+    },
+    "james-van-der-beek": {
+     "nom": "James Van der Beek",
+     "pays": "USA",
+     "age": 48
+    },
+    "jason-collins": {
+     "nom": "Jason Collins",
+     "pays": "USA",
+     "age": 47
+    },
+    "jeremy-flores": {
+     "nom": "Jérémy Florès",
+     "pays": "FRA",
+     "age": 37
+    },
+    "song-ping": {
+     "nom": "Song Ping",
+     "pays": "CHI",
+     "age": 108
+    },
+    "leontyne-price": {
+     "nom": "Leontyne Price",
+     "pays": "USA",
+     "age": 98
+    },
+    "jacques-borel": {
+     "nom": "Jacques Borel",
+     "pays": "FRA",
+     "age": 98
+    },
+    "ahmad-jannati": {
+     "nom": "Ahmad Jannati",
+     "pays": "IRN",
+     "age": 98
+    },
+    "philippe-bouvard": {
+     "nom": "Philippe Bouvard",
+     "pays": "FRA",
+     "age": 96
+    },
+    "berry-gordy": {
+     "nom": "Berry Gordy",
+     "pays": "USA",
+     "age": 96
+    },
+    "jean-becker": {
+     "nom": "Jean Becker",
+     "pays": "FRA",
+     "age": 92
+    },
+    "pat-boone": {
+     "nom": "Pat  Boone",
+     "pays": "USA",
+     "age": 91
+    },
+    "richard-bohringer": {
+     "nom": "Richard Bohringer",
+     "pays": "FRA",
+     "age": 83
+    },
+    "richard-dreyfuss": {
+     "nom": "Richard Dreyfuss",
+     "pays": "USA",
+     "age": 78
+    },
+    "andy-taylor": {
+     "nom": "Andy Taylor",
+     "pays": "ANG",
+     "age": 64
+    },
+    "jimmy-cherizier": {
+     "nom": "Jimmy Chérizier",
+     "pays": "HAI",
+     "age": 48
+    },
+    "gaelynn-lea": {
+     "nom": "Gaelynn Lea",
+     "pays": "USA",
+     "age": 41
+    },
+    "edgar-morin": {
+     "nom": "Edgar Morin",
+     "pays": "FRA",
+     "age": 104
+    },
+    "fernanda-montenegro": {
+     "nom": "Fernanda Montenegro",
+     "pays": "BRA",
+     "age": 96
+    },
+    "jean-tulard": {
+     "nom": "Jean Tulard",
+     "pays": "FRA",
+     "age": 92
+    },
+    "akihito": {
+     "nom": "Akihito",
+     "pays": "JPN",
+     "age": 92
+    },
+    "ralph-lauren": {
+     "nom": "Ralph Lauren",
+     "pays": "USA",
+     "age": 86
+    },
+    "nigel-starmer-smith": {
+     "nom": "Nigel Starmer-Smith",
+     "pays": "ANG",
+     "age": 81
+    },
+    "yasuhiko-funago": {
+     "nom": "Yasuhiko Funago",
+     "pays": "JAP",
+     "age": 68
+    },
+    "billy-porter": {
+     "nom": "Billy Porter",
+     "pays": "USA",
+     "age": 56
+    },
+    "narges-mohammadi": {
+     "nom": "Narges Mohammadi",
+     "pays": "IRN",
+     "age": 53
+    },
+    "abdelhak-nouri": {
+     "nom": "Abdelhak Nouri",
+     "pays": "NLD",
+     "age": 28
+    },
+    "ginette-kolinka": {
+     "nom": "Ginette Kolinka",
+     "pays": "FRA",
+     "age": 100
+    },
+    "abdoulaye-wade": {
+     "nom": "Abdoulaye Wade",
+     "pays": "SEN",
+     "age": 99
+    },
+    "line-renaud": {
+     "nom": "Line Renaud",
+     "pays": "FRA",
+     "age": 97
+    },
+    "costa-gavras": {
+     "nom": "Costa-Gavras",
+     "pays": "GRC",
+     "age": 92
+    },
+    "yoko-ono": {
+     "nom": "Yoko Ono",
+     "pays": "USA",
+     "age": 92
+    },
+    "hassanal-bolkiah": {
+     "nom": "Hassanal Bolkiah",
+     "pays": "BRU",
+     "age": 79
+    },
+    "harvey-weinstein": {
+     "nom": "Harvey Weinstein",
+     "pays": "USA",
+     "age": 73
+    },
+    "pierre-menes": {
+     "nom": "Pierre Ménès",
+     "pays": "FRA",
+     "age": 62
+    },
+    "mohammed-vi": {
+     "nom": "Mohammed VI",
+     "pays": "MAR",
+     "age": 62
+    },
+    "olivier-goy": {
+     "nom": "Olivier Goy",
+     "pays": "FRA",
+     "age": 51
+    },
+    "vladimir-ossetchkine": {
+     "nom": "Vladimir Ossetchkine",
+     "pays": "RUS",
+     "age": 44
+    },
+    "dick-van-dyke": {
+     "nom": "Dick Van  Dyke",
+     "pays": "USA",
+     "age": 100
+    },
+    "mel-brooks": {
+     "nom": "Mel Brooks",
+     "pays": "USA",
+     "age": 99
+    },
+    "rosemary-harris": {
+     "nom": "Rosemary Harris",
+     "pays": "ANG",
+     "age": 98
+    },
+    "clint-eastwood": {
+     "nom": "Clint Eastwood",
+     "pays": "USA",
+     "age": 95
+    },
+    "john-towner-williams": {
+     "nom": "John Towner Williams",
+     "pays": "USA",
+     "age": 93
+    },
+    "ted-turner": {
+     "nom": "Ted Turner",
+     "pays": "USA",
+     "age": 87
+    },
+    "keith-richards": {
+     "nom": "Keith Richards",
+     "pays": "ANG",
+     "age": 83
+    },
+    "bruce-willis": {
+     "nom": "Bruce Willis",
+     "pays": "USA",
+     "age": 70
+    },
+    "lil-wayne": {
+     "nom": "Lil Wayne",
+     "pays": "USA",
+     "age": 43
+    },
+    "judith-magre": {
+     "nom": "Judith Magre",
+     "pays": "FRA",
+     "age": 99
+    },
+    "edouard-balladur": {
+     "nom": "Edouard Balladur",
+     "pays": "FRA",
+     "age": 96
+    },
+    "sophia-loren": {
+     "nom": "Sophia Loren",
+     "pays": "ITA",
+     "age": 91
+    },
+    "esther-rantzen": {
+     "nom": "Esther Rantzen",
+     "pays": "ANG",
+     "age": 85
+    },
+    "marie-rose-tessier": {
+     "nom": "Marie-Rose Tessier",
+     "pays": "FRA",
+     "age": 115
+    },
+    "noam-chomsky": {
+     "nom": "Noam Chomsky",
+     "pays": "USA",
+     "age": 97
+    },
+    "george-soros": {
+     "nom": "George Soros",
+     "pays": "USA",
+     "age": 95
+    },
+    "jose-sarney": {
+     "nom": "José Sarney",
+     "pays": "BRA",
+     "age": 95
+    },
+    "raul-castro": {
+     "nom": "Raul Castro",
+     "pays": "CUB",
+     "age": 94
+    },
+    "jany-le-pen": {
+     "nom": "Jany Le Pen",
+     "pays": "FRA",
+     "age": 93
+    },
+    "bob-dylan": {
+     "nom": "Bob Dylan",
+     "pays": "USA",
+     "age": 84
+    },
+    "hu-jintao": {
+     "nom": "Hu Jintao",
+     "pays": "CHI",
+     "age": 83
+    },
+    "john-major": {
+     "nom": "John Major",
+     "pays": "ANG",
+     "age": 82
+    },
+    "omar-el-bechir": {
+     "nom": "Omar el-Bechir",
+     "pays": "SOU",
+     "age": 81
+    },
+    "ethel-caterham": {
+     "nom": "Ethel Caterham",
+     "pays": "ANG",
+     "age": 116
+    },
+    "alan-greenspan": {
+     "nom": "Alan Greenspan",
+     "pays": "USA",
+     "age": 99
+    },
+    "desmond-morris": {
+     "nom": "Desmond Morris",
+     "pays": "ANG",
+     "age": 97
+    },
+    "stuart-hall": {
+     "nom": "Stuart Hall",
+     "pays": "ANG",
+     "age": 96
+    },
+    "michel-drucker": {
+     "nom": "Michel Drucker",
+     "pays": "FRA",
+     "age": 83
+    },
+    "jacques-dutronc": {
+     "nom": "Jacques Dutronc",
+     "pays": "FRA",
+     "age": 82
+    },
+    "donald-trump": {
+     "nom": "Donald Trump",
+     "pays": "USA",
+     "age": 79
+    },
+    "khalil-al-hayya": {
+     "nom": "Khalil al-Hayya",
+     "pays": "PAL",
+     "age": 65
+    },
+    "ben-sasse": {
+     "nom": "Ben Sasse",
+     "pays": "USA",
+     "age": 53
+    },
+    "hugues-aufray": {
+     "nom": "Hugues Aufray",
+     "pays": "FRA",
+     "age": 96
+    },
+    "buzz-aldrin": {
+     "nom": "Buzz Aldrin",
+     "pays": "USA",
+     "age": 95
+    },
+    "gerard-depardieu": {
+     "nom": "Gérard Depardieu",
+     "pays": "FRA",
+     "age": 77
+    },
+    "olivia-williams": {
+     "nom": "Olivia Williams",
+     "pays": "ANG",
+     "age": 57
+    },
+    "loana": {
+     "nom": "Loana",
+     "pays": "FRA",
+     "age": 48
+    },
+    "marthe-villalonga": {
+     "nom": "Marthe Villalonga",
+     "pays": "FRA",
+     "age": 93
+    },
+    "pierre-richard": {
+     "nom": "Pierre Richard",
+     "pays": "FRA",
+     "age": 91
+    },
+    "nana-mouskouri": {
+     "nom": "Nana Mouskouri",
+     "pays": "GRC",
+     "age": 91
+    },
+    "camilla-parker-bowles": {
+     "nom": "Camilla Parker Bowles",
+     "pays": "ANG",
+     "age": 78
+    },
+    "michael-j.-fox": {
+     "nom": "Michael J. Fox",
+     "pays": "CAN",
+     "age": 64
+    },
+    "charlie-sheen": {
+     "nom": "Charlie Sheen",
+     "pays": "USA",
+     "age": 60
+    },
+    "adam-pearson": {
+     "nom": "Adam Pearson",
+     "pays": "ANG",
+     "age": 40
+    },
+    "morgan-freeman": {
+     "nom": "Morgan Freeman",
+     "pays": "USA",
+     "age": 88
+    },
+    "paddy-reilly": {
+     "nom": "Paddy Reilly",
+     "pays": "IRL",
+     "age": 86
+    },
+    "naomi-whitehead": {
+     "nom": "Naomi Whitehead",
+     "pays": "USA",
+     "age": 115
+    },
+    "monique-levi-strauss": {
+     "nom": "Monique Levi-Strauss",
+     "pays": "FRA",
+     "age": 99
+    },
+    "alex-katz": {
+     "nom": "Alex Katz",
+     "pays": "USA",
+     "age": 98
+    },
+    "pierre-alechinsky": {
+     "nom": "Pierre Alechinsky",
+     "pays": "BEL",
+     "age": 98
+    },
+    "julio-le-parc": {
+     "nom": "Julio Le Parc",
+     "pays": "ARG",
+     "age": 97
+    },
+    "alejandro-jodorowsky": {
+     "nom": "Alejandro Jodorowsky",
+     "pays": "CHI",
+     "age": 96
+    },
+    "andre-brasilier": {
+     "nom": "André Brasilier",
+     "pays": "FRA",
+     "age": 96
+    },
+    "jasper-johns": {
+     "nom": "Jasper Johns",
+     "pays": "USA",
+     "age": 95
+    },
+    "joni-mitchell": {
+     "nom": "Joni Mitchell",
+     "pays": "CAN",
+     "age": 82
+    },
+    "michael-tilson-thomas": {
+     "nom": "Michael Tilson Thomas",
+     "pays": "USA",
+     "age": 81
+    },
+    "dave-mason": {
+     "nom": "Dave Mason",
+     "pays": "ANG",
+     "age": 79
+    },
+    "michael-bolton": {
+     "nom": "Michael Bolton",
+     "pays": "USA",
+     "age": 72
+    },
+    "naim-qassem": {
+     "nom": "Naïm Qassem",
+     "pays": "LIB",
+     "age": 72
+    },
+    "william-shatner": {
+     "nom": "William Shatner",
+     "pays": "CAN",
+     "age": 94
+    },
+    "willie-nelson": {
+     "nom": "Willie Nelson",
+     "pays": "USA",
+     "age": 92
+    },
+    "caroline-receveur": {
+     "nom": "Caroline Receveur",
+     "pays": "FRA",
+     "age": 35
+    },
+    "edward-de-kent": {
+     "nom": "Edward de Kent",
+     "pays": "ANG",
+     "age": 90
+    },
+    "phil-collins": {
+     "nom": "Phil Collins",
+     "pays": "USA",
+     "age": 74
+    },
+    "olivier-lejeune": {
+     "nom": "Olivier Lejeune",
+     "pays": "FRA",
+     "age": 74
+    },
+    "renaud": {
+     "nom": "Renaud",
+     "pays": "FRA",
+     "age": 73
+    },
+    "david-hasselhoff": {
+     "nom": "David Hasselhoff",
+     "pays": "USA",
+     "age": 73
+    },
+    "james-pickens-jr.": {
+     "nom": "James Pickens Jr.",
+     "pays": "USA",
+     "age": 71
+    },
+    "dolph-lundgren": {
+     "nom": "Dolph Lundgren",
+     "pays": "SUE",
+     "age": 68
+    }
+   }
+  }
+ ],
+ "a_confirmer": [
+  "Règles 2021 à 2023 supposées identiques à 2020",
+  "2024, Jean-Baptiste : 4 décès, déduit de sa liste (absent du PDF et du message de Gaël)",
+  "Herbert Blomstedt (4/11/2026) : date ajoutée après la validation de Gaël"
+ ]
+}

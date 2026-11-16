@@ -1,0 +1,1797 @@
+/* FICHIER GÉNÉRÉ par Outils\THEMATOR3000 (themes.bat construire) : ne pas modifier ici, modifier le catalogue de l'outil.
+   Contrat : variables de couleur sur :root, choix du thème par l'attribut data-theme de <html>. Sans attribut = « auto »
+   (clair, ou sombre si le système le demande). */
+:root{--rayon:12px;--mono:ui-monospace,Menlo,Consolas,monospace}
+:root{
+  --ok-bg:color-mix(in srgb,var(--good) 15%,var(--surface));
+  --att-bg:color-mix(in srgb,var(--warn) 20%,var(--surface));
+  --pan-bg:color-mix(in srgb,var(--crit) 14%,var(--surface));
+  --info-bg:color-mix(in srgb,var(--accent) 14%,var(--surface));
+  --neutre-bg:var(--surface-2);
+}
+
+/* auto : clair par défaut (thème « light »), sombre si le système le demande (thème « dark ») */
+:root{
+  color-scheme:light;
+  --page:#f6f6f3;
+  --surface:#fcfcfb;
+  --surface-2:#f1f0ec;
+  --ink:#0b0b0b;
+  --ink-2:#52514e;
+  --muted:#898781;
+  --grid:#e1e0d9;
+  --axis:#c3c2b7;
+  --border:rgba(11,11,11,.10);
+  --border-strong:rgba(11,11,11,.18);
+  --median:#6e6d68;
+  --accent:#2a78d6;
+  --accent-ink:#1c5cab;
+  --accent-track:#cde2fb;
+  --good:#0ca30c;
+  --good-ink:#006300;
+  --warn:#fab219;
+  --warn-ink:#8a5a00;
+  --serious:#ec835a;
+  --crit:#d03b3b;
+  --crit-ink:#b02a2a;
+  --violet:#6250d6;
+  --neg:#d95f5f;
+  --neg-track:#f6d6d6;
+  --ombre:0 1px 2px rgba(11,11,11,.05),0 6px 18px rgba(11,11,11,.05);
+  --bouton:#1f6bc4;
+  --sur-bouton:#ffffff;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme]){
+  color-scheme:dark;
+  --page:#0d0d0d;
+  --surface:#1a1a19;
+  --surface-2:#242422;
+  --ink:#f0efec;
+  --ink-2:#c3c2b7;
+  --muted:#898781;
+  --grid:#2c2c2a;
+  --axis:#383835;
+  --border:rgba(255,255,255,.10);
+  --border-strong:rgba(255,255,255,.2);
+  --median:#d9d8d2;
+  --accent:#3987e5;
+  --accent-ink:#86b6ef;
+  --accent-track:#16304f;
+  --good:#0ca30c;
+  --good-ink:#3cc43c;
+  --warn:#fab219;
+  --warn-ink:#fab219;
+  --serious:#ec835a;
+  --crit:#d03b3b;
+  --crit-ink:#ee6a6a;
+  --violet:#9085e9;
+  --neg:#e06c6c;
+  --neg-track:#4a2222;
+  --ombre:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.35);
+  --bouton:#3987e5;
+  --sur-bouton:#0b0b0b;
+}}
+
+/* ══ light : standard, clair, intensité 1, AA ══ */
+:root[data-theme="light"]{
+  color-scheme:light;
+  --page:#f6f6f3;
+  --surface:#fcfcfb;
+  --surface-2:#f1f0ec;
+  --ink:#0b0b0b;
+  --ink-2:#52514e;
+  --muted:#898781;
+  --grid:#e1e0d9;
+  --axis:#c3c2b7;
+  --border:rgba(11,11,11,.10);
+  --border-strong:rgba(11,11,11,.18);
+  --median:#6e6d68;
+  --accent:#2a78d6;
+  --accent-ink:#1c5cab;
+  --accent-track:#cde2fb;
+  --good:#0ca30c;
+  --good-ink:#006300;
+  --warn:#fab219;
+  --warn-ink:#8a5a00;
+  --serious:#ec835a;
+  --crit:#d03b3b;
+  --crit-ink:#b02a2a;
+  --violet:#6250d6;
+  --neg:#d95f5f;
+  --neg-track:#f6d6d6;
+  --ombre:0 1px 2px rgba(11,11,11,.05),0 6px 18px rgba(11,11,11,.05);
+  --bouton:#1f6bc4;
+  --sur-bouton:#ffffff;
+}
+
+/* ══ dark : standard, sombre, intensité 1, AA ══ */
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --page:#0d0d0d;
+  --surface:#1a1a19;
+  --surface-2:#242422;
+  --ink:#f0efec;
+  --ink-2:#c3c2b7;
+  --muted:#898781;
+  --grid:#2c2c2a;
+  --axis:#383835;
+  --border:rgba(255,255,255,.10);
+  --border-strong:rgba(255,255,255,.2);
+  --median:#d9d8d2;
+  --accent:#3987e5;
+  --accent-ink:#86b6ef;
+  --accent-track:#16304f;
+  --good:#0ca30c;
+  --good-ink:#3cc43c;
+  --warn:#fab219;
+  --warn-ink:#fab219;
+  --serious:#ec835a;
+  --crit:#d03b3b;
+  --crit-ink:#ee6a6a;
+  --violet:#9085e9;
+  --neg:#e06c6c;
+  --neg-track:#4a2222;
+  --ombre:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.35);
+  --bouton:#3987e5;
+  --sur-bouton:#0b0b0b;
+}
+
+/* ══ aube : confort, clair, intensité 1, AA ══ */
+:root[data-theme="aube"]{
+  color-scheme:light;
+  --page:#fbf3ea;
+  --surface:#fffaf3;
+  --surface-2:#f3e6d6;
+  --ink:#3a2e28;
+  --ink-2:#6b5a4f;
+  --muted:#9c948e;
+  --grid:#ebe6df;
+  --axis:#d4cdc6;
+  --border:rgba(58,46,40,.10);
+  --border-strong:rgba(58,46,40,.18);
+  --median:#7f756f;
+  --accent:#d9723a;
+  --accent-ink:#a8481a;
+  --accent-track:#f7dcca;
+  --good:#4f9a52;
+  --good-ink:#2f6b33;
+  --warn:#e0a526;
+  --warn-ink:#7a5200;
+  --serious:#ec835a;
+  --crit:#cc4a3a;
+  --crit-ink:#a8321f;
+  --violet:#8a63b8;
+  --neg:#cc4a3a;
+  --neg-track:#f6dad2;
+  --ombre:0 1px 2px rgba(11,11,11,.05),0 6px 18px rgba(11,11,11,.05);
+  --bouton:#b04a1b;
+  --sur-bouton:#ffffff;
+}
+
+/* ══ brume : confort, clair, intensité 1, AA ══ */
+:root[data-theme="brume"]{
+  color-scheme:light;
+  --page:#eef2f5;
+  --surface:#f8fafb;
+  --surface-2:#e3e9ee;
+  --ink:#1f2a33;
+  --ink-2:#51606c;
+  --muted:#8c9297;
+  --grid:#e2e5e7;
+  --axis:#c8cccf;
+  --border:rgba(31,42,51,.10);
+  --border-strong:rgba(31,42,51,.18);
+  --median:#6b7379;
+  --accent:#4b86b4;
+  --accent-ink:#25587f;
+  --accent-track:#d2e0eb;
+  --good:#3f9a6a;
+  --good-ink:#1f6b45;
+  --warn:#d9a21f;
+  --warn-ink:#765000;
+  --serious:#ec835a;
+  --crit:#cf4f4f;
+  --crit-ink:#a62f2f;
+  --violet:#7566c9;
+  --neg:#cf4f4f;
+  --neg-track:#f1dbdc;
+  --ombre:0 1px 2px rgba(11,11,11,.05),0 6px 18px rgba(11,11,11,.05);
+  --bouton:#2f6b99;
+  --sur-bouton:#ffffff;
+}
+
+/* ══ papier : confort, clair, intensité 1, AA ══ */
+:root[data-theme="papier"]{
+  color-scheme:light;
+  --page:#efe6d3;
+  --surface:#f9f3e6;
+  --surface-2:#efe5cf;
+  --ink:#2b2620;
+  --ink-2:#5b5244;
+  --muted:#867b69;
+  --grid:#e2d6bd;
+  --axis:#c8b998;
+  --border:rgba(60,45,20,.13);
+  --border-strong:rgba(60,45,20,.24);
+  --median:#6d6352;
+  --accent:#2f6db5;
+  --accent-ink:#22528a;
+  --accent-track:#d9e2ec;
+  --good:#2e8b2e;
+  --good-ink:#1c641c;
+  --warn:#d99a1e;
+  --warn-ink:#744e00;
+  --serious:#d9774f;
+  --crit:#c0392b;
+  --crit-ink:#9c2a1f;
+  --violet:#6a55c9;
+  --neg:#c85a4a;
+  --neg-track:#f0d4c8;
+  --ombre:0 1px 2px rgba(60,45,20,.06),0 6px 18px rgba(60,45,20,.05);
+  --bouton:#2f6db5;
+  --sur-bouton:#ffffff;
+}
+
+/* ══ cafe : confort, sombre, intensité 1, AA ══ */
+:root[data-theme="cafe"]{
+  color-scheme:dark;
+  --page:#1d1612;
+  --surface:#271e18;
+  --surface-2:#32261f;
+  --ink:#eadbc8;
+  --ink-2:#b9a58f;
+  --muted:#887c70;
+  --grid:#3a312a;
+  --axis:#52483f;
+  --border:rgba(234,219,200,.10);
+  --border-strong:rgba(234,219,200,.20);
+  --median:#cdbfae;
+  --accent:#c98a52;
+  --accent-ink:#e0a870;
+  --accent-track:#4b3625;
+  --good:#7fa65a;
+  --good-ink:#a3c97b;
+  --warn:#d9a53a;
+  --warn-ink:#e8c070;
+  --serious:#ec835a;
+  --crit:#cf6a55;
+  --crit-ink:#ee9a86;
+  --violet:#a98bc4;
+  --neg:#cf6a55;
+  --neg-track:#452c23;
+  --ombre:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.35);
+  --bouton:#c98a52;
+  --sur-bouton:#1d1612;
+}
+
+/* ══ minuit-doux : confort, sombre, intensité 1, AA ══ */
+:root[data-theme="minuit-doux"]{
+  color-scheme:dark;
+  --page:#14181f;
+  --surface:#1b212a;
+  --surface-2:#242c37;
+  --ink:#dbe2ea;
+  --ink-2:#a0acba;
+  --muted:#7b828a;
+  --grid:#2e343d;
+  --axis:#454b54;
+  --border:rgba(219,226,234,.10);
+  --border-strong:rgba(219,226,234,.20);
+  --median:#bec5cd;
+  --accent:#6f9bd1;
+  --accent-ink:#9bbce3;
+  --accent-track:#2d3c4f;
+  --good:#3fa56a;
+  --good-ink:#86d19f;
+  --warn:#d9a53a;
+  --warn-ink:#e8c070;
+  --serious:#ec835a;
+  --crit:#d05a5a;
+  --crit-ink:#f09a9a;
+  --violet:#a592e0;
+  --neg:#d05a5a;
+  --neg-track:#3c2b33;
+  --ombre:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.35);
+  --bouton:#7fa7d6;
+  --sur-bouton:#10151c;
+}
+
+/* ══ penombre : confort, sombre, intensité 1, AA ══ */
+:root[data-theme="penombre"]{
+  color-scheme:dark;
+  --page:#1b1d21;
+  --surface:#23262b;
+  --surface-2:#2b2f35;
+  --ink:#dcd9d2;
+  --ink-2:#aaa69e;
+  --muted:#7f7c76;
+  --grid:#33373e;
+  --axis:#444950;
+  --border:rgba(255,255,255,.08);
+  --border-strong:rgba(255,255,255,.16);
+  --median:#c9c6bf;
+  --accent:#6d9fd6;
+  --accent-ink:#9cc0e8;
+  --accent-track:#22364d;
+  --good:#4f9d5a;
+  --good-ink:#86c890;
+  --warn:#c9a14a;
+  --warn-ink:#dcb866;
+  --serious:#c98060;
+  --crit:#c46060;
+  --crit-ink:#e59494;
+  --violet:#9a8fd8;
+  --neg:#c46a6a;
+  --neg-track:#4a2a2a;
+  --ombre:0 1px 2px rgba(0,0,0,.35),0 6px 18px rgba(0,0,0,.25);
+  --bouton:#6d9fd6;
+  --sur-bouton:#14161a;
+}
+
+/* ══ encre : accessibilite, clair, intensité 2, AA ══ */
+:root[data-theme="encre"]{
+  color-scheme:light;
+  --page:#ffffff;
+  --surface:#ffffff;
+  --surface-2:#eeeeee;
+  --ink:#000000;
+  --ink-2:#2b2b2b;
+  --muted:#808080;
+  --grid:#e6e6e6;
+  --axis:#c7c7c7;
+  --border:rgba(0,0,0,.10);
+  --border-strong:rgba(0,0,0,.18);
+  --median:#595959;
+  --accent:#0033cc;
+  --accent-ink:#0033cc;
+  --accent-track:#c7d2f4;
+  --good:#008000;
+  --good-ink:#004800;
+  --warn:#e6a800;
+  --warn-ink:#4a3000;
+  --serious:#ec835a;
+  --crit:#c00020;
+  --crit-ink:#780014;
+  --violet:#5b21b6;
+  --neg:#c00020;
+  --neg-track:#f4d1d7;
+  --ombre:0 1px 2px rgba(11,11,11,.05),0 6px 18px rgba(11,11,11,.05);
+  --bouton:#0033cc;
+  --sur-bouton:#ffffff;
+}
+/* Encre : bordures franches, liens soulignés, focus épais. Aucun effet. */
+:root[data-theme="encre"] a{text-decoration:underline}
+:root[data-theme="encre"] :focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+:root[data-theme="encre"] .carte,:root[data-theme="encre"] .tuile-kpi{border:2px solid var(--ink);border-radius:6px;box-shadow:none}
+:root[data-theme="encre"] button,:root[data-theme="encre"] select,:root[data-theme="encre"] input[type=search],:root[data-theme="encre"] input[type=text],:root[data-theme="encre"] input[type=date],:root[data-theme="encre"] input[type=number]{border:2px solid var(--ink)}
+:root[data-theme="encre"] th{border-bottom:2px solid var(--ink)}
+:root[data-theme="encre"] .entete{border-color:var(--ink)}
+:root[data-theme="encre"] nav.menu a[aria-current="page"]{background:var(--ink);color:var(--surface)}
+:root[data-theme="encre"] nav.outils a[aria-current="true"]{background:var(--ink);color:var(--surface)}
+:root[data-theme="encre"] .piste{border:1px solid var(--ink)}
+
+/* ══ contraste-nuit : accessibilite, sombre, intensité 2, AAA ══ */
+:root[data-theme="contraste-nuit"]{
+  color-scheme:dark;
+  --page:#000000;
+  --surface:#0a0a0a;
+  --surface-2:#1a1a1a;
+  --ink:#ffffff;
+  --ink-2:#e0e0e0;
+  --muted:#848484;
+  --grid:#222222;
+  --axis:#404040;
+  --border:rgba(255,255,255,.10);
+  --border-strong:rgba(255,255,255,.20);
+  --median:#dadada;
+  --accent:#ffd400;
+  --accent-ink:#ffd400;
+  --accent-track:#403608;
+  --good:#00c853;
+  --good-ink:#69ff8f;
+  --warn:#ffb000;
+  --warn-ink:#ffcc4d;
+  --serious:#ec835a;
+  --crit:#ff4d4d;
+  --crit-ink:#ff8a8a;
+  --violet:#c9a6ff;
+  --neg:#ff4d4d;
+  --neg-track:#361616;
+  --ombre:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.35);
+  --bouton:#ffd400;
+  --sur-bouton:#000000;
+}
+/* Contraste nuit : blanc et jaune sur noir, bordures franches, focus jaune épais. Aucun effet. */
+:root[data-theme="contraste-nuit"] a{text-decoration:underline}
+:root[data-theme="contraste-nuit"] :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+:root[data-theme="contraste-nuit"] .carte,:root[data-theme="contraste-nuit"] .tuile-kpi{border:2px solid var(--ink);border-radius:6px;box-shadow:none}
+:root[data-theme="contraste-nuit"] button,:root[data-theme="contraste-nuit"] select,:root[data-theme="contraste-nuit"] input[type=search],:root[data-theme="contraste-nuit"] input[type=text],:root[data-theme="contraste-nuit"] input[type=date],:root[data-theme="contraste-nuit"] input[type=number]{border:2px solid var(--ink)}
+:root[data-theme="contraste-nuit"] th{border-bottom:2px solid var(--ink)}
+:root[data-theme="contraste-nuit"] .entete{border-color:var(--ink)}
+:root[data-theme="contraste-nuit"] nav.menu a[aria-current="page"]{background:var(--accent);color:#000}
+:root[data-theme="contraste-nuit"] nav.outils a[aria-current="true"]{background:var(--accent);color:#000}
+:root[data-theme="contraste-nuit"] .piste{border:1px solid var(--ink)}
+
+/* ══ desert : nature, clair, intensité 2, AA ══ */
+:root[data-theme="desert"]{
+  color-scheme:light;
+  --page:#f5e9d7;
+  --surface:#fbf3e6;
+  --surface-2:#ecdcc0;
+  --ink:#3b2a1a;
+  --ink-2:#6d5a44;
+  --muted:#9b8e80;
+  --grid:#e8dfd2;
+  --axis:#d1c7b9;
+  --border:rgba(59,42,26,.10);
+  --border-strong:rgba(59,42,26,.18);
+  --median:#7e7061;
+  --accent:#c4622d;
+  --accent-ink:#98431a;
+  --accent-track:#efd3bd;
+  --good:#6b8f3a;
+  --good-ink:#44601c;
+  --warn:#d99a1e;
+  --warn-ink:#6e4900;
+  --serious:#ec835a;
+  --crit:#c0392b;
+  --crit-ink:#9a2a1d;
+  --violet:#8a5a8f;
+  --neg:#c0392b;
+  --neg-track:#f0d2c4;
+  --ombre:0 1px 2px rgba(11,11,11,.05),0 6px 18px rgba(11,11,11,.05);
+  --bouton:#a8481a;
+  --sur-bouton:#ffffff;
+}
+/* Désert : ciel chaud en haut de page, cartes à angles francs avec filet de terre cuite, soleil en logo. */
+:root[data-theme="desert"] body{background:linear-gradient(180deg,#f9dcae 0,var(--page) 300px) fixed,var(--page)}
+:root[data-theme="desert"] h1,:root[data-theme="desert"] h2,:root[data-theme="desert"] h3{font-family:"Trebuchet MS","Segoe UI",sans-serif;letter-spacing:.02em}
+:root[data-theme="desert"] .carte,:root[data-theme="desert"] .tuile-kpi{border-radius:3px;border-color:rgba(196,98,45,.3);border-top:3px solid var(--accent)}
+:root[data-theme="desert"] .marque i{background:radial-gradient(circle at 40% 40%,#f3b46a,#c4622d);border-radius:50%}
+:root[data-theme="desert"] .entete{background:var(--surface);border-right:3px solid rgba(196,98,45,.45)}
+
+/* ══ lagon : nature, clair, intensité 2, AA ══ */
+:root[data-theme="lagon"]{
+  color-scheme:light;
+  --page:#e6f7f6;
+  --surface:#f6fffe;
+  --surface-2:#d3eeec;
+  --ink:#0d3338;
+  --ink-2:#3f6a6e;
+  --muted:#82999b;
+  --grid:#dfebea;
+  --axis:#c3d2d2;
+  --border:rgba(13,51,56,.10);
+  --border-strong:rgba(13,51,56,.18);
+  --median:#5f7a7d;
+  --accent:#0e9794;
+  --accent-ink:#0b6d6b;
+  --accent-track:#c3e8e7;
+  --good:#2fa36b;
+  --good-ink:#1a6f48;
+  --warn:#e0a526;
+  --warn-ink:#7a5200;
+  --serious:#ec835a;
+  --crit:#d4574a;
+  --crit-ink:#a8321f;
+  --violet:#6c63c9;
+  --neg:#d4574a;
+  --neg-track:#f0e1de;
+  --ombre:0 1px 2px rgba(11,11,11,.05),0 6px 18px rgba(11,11,11,.05);
+  --bouton:#0b7f7c;
+  --sur-bouton:#ffffff;
+}
+/* Lagon : eau claire en haut de page, cartes à coins asymétriques. */
+:root[data-theme="lagon"] body{background:linear-gradient(180deg,#c9f1ee 0,var(--page) 380px) fixed,var(--page)}
+:root[data-theme="lagon"] .entete{background:linear-gradient(180deg,#c4efeb,var(--surface) 70%)}
+:root[data-theme="lagon"] .carte,:root[data-theme="lagon"] .tuile-kpi{border-radius:22px 22px 22px 6px;border-color:rgba(14,151,148,.28)}
+:root[data-theme="lagon"] .marque i{background:linear-gradient(135deg,#34d1c8,#0b7f7c);border-radius:50% 50% 50% 8px}
+:root[data-theme="lagon"] h1{color:var(--accent-ink)}
+
+/* ══ sakura : nature, clair, intensité 3, AA ══ */
+:root[data-theme="sakura"]{
+  color-scheme:light;
+  --page:#fdf0f3;
+  --surface:#fffafb;
+  --surface-2:#f8dfe6;
+  --ink:#3d2630;
+  --ink-2:#78545f;
+  --muted:#9e9096;
+  --grid:#ece5e7;
+  --axis:#d4cbce;
+  --border:rgba(61,38,48,.10);
+  --border-strong:rgba(61,38,48,.18);
+  --median:#817077;
+  --accent:#d6567f;
+  --accent-ink:#a8335a;
+  --accent-track:#f6d6e0;
+  --good:#4f9a62;
+  --good-ink:#2c6b3d;
+  --warn:#e0a526;
+  --warn-ink:#7a5200;
+  --serious:#ec835a;
+  --crit:#cc3a4a;
+  --crit-ink:#a81f33;
+  --violet:#8a63b8;
+  --neg:#cc3a4a;
+  --neg-track:#f6d7db;
+  --ombre:0 1px 2px rgba(11,11,11,.05),0 6px 18px rgba(11,11,11,.05);
+  --bouton:#b83a63;
+  --sur-bouton:#ffffff;
+}
+/* Sakura : pétales semés dans le fond (fixes), fleur à côté du nom, coins très arrondis. */
+:root[data-theme="sakura"] body{background:radial-gradient(circle at 8% 12%,rgba(255,170,195,.55) 0 7px,transparent 8px),radial-gradient(circle at 92% 22%,rgba(255,170,195,.45) 0 5px,transparent 6px),radial-gradient(circle at 78% 82%,rgba(255,170,195,.5) 0 9px,transparent 10px),radial-gradient(circle at 20% 90%,rgba(255,170,195,.4) 0 6px,transparent 7px),radial-gradient(circle at 55% 6%,rgba(255,170,195,.35) 0 4px,transparent 5px),var(--page);background-attachment:fixed}
+:root[data-theme="sakura"] .marque span::after{content:" \1F338"}
+:root[data-theme="sakura"] .carte,:root[data-theme="sakura"] .tuile-kpi{border-radius:20px;border-color:rgba(214,86,127,.22)}
+:root[data-theme="sakura"] .marque i{background:linear-gradient(135deg,#ff9fbd,#d6567f);border-radius:50% 50% 50% 4px}
+:root[data-theme="sakura"] h1{color:var(--accent-ink)}
+:root[data-theme="sakura"] button,:root[data-theme="sakura"] select{border-radius:99px}
+
+/* ══ aurore : nature, sombre, intensité 3, AAA ══ */
+:root[data-theme="aurore"]{
+  color-scheme:dark;
+  --page:#08101c;
+  --surface:#0f1a2b;
+  --surface-2:#172539;
+  --ink:#e6f2f5;
+  --ink-2:#a3b9c4;
+  --muted:#7a8690;
+  --grid:#24303f;
+  --axis:#3e4a57;
+  --border:rgba(230,242,245,.10);
+  --border-strong:rgba(230,242,245,.20);
+  --median:#c6d2d7;
+  --accent:#3ee0b0;
+  --accent-ink:#5eeac0;
+  --accent-track:#194648;
+  --good:#3ee08a;
+  --good-ink:#6ff0a8;
+  --warn:#f0c040;
+  --warn-ink:#f5d060;
+  --serious:#ec835a;
+  --crit:#ff6f7a;
+  --crit-ink:#ff9aa2;
+  --violet:#a58bff;
+  --neg:#ff6f7a;
+  --neg-track:#3a2939;
+  --ombre:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.35);
+  --bouton:#3ee0b0;
+  --sur-bouton:#06121a;
+}
+/* Aurore boréale : deux voiles de lumière qui dérivent très lentement ; cartes en verre. Immobile si le système demande moins d'animations. */
+:root[data-theme="aurore"] body{background:radial-gradient(ellipse 70% 50% at 20% -5%,rgba(62,224,176,.32),transparent 70%),radial-gradient(ellipse 60% 45% at 85% -10%,rgba(165,139,255,.32),transparent 70%),var(--page);background-attachment:fixed}
+@media (prefers-reduced-motion:no-preference){:root[data-theme="aurore"] body{background-size:140% 140%,140% 140%,auto;animation:aurore-voile 30s ease-in-out infinite alternate}}
+@keyframes aurore-voile{from{background-position:0 0,100% 0,0 0}to{background-position:35% 0,65% 0,0 0}}
+:root[data-theme="aurore"] .carte,:root[data-theme="aurore"] .tuile-kpi{background:color-mix(in srgb,var(--surface) 86%,transparent);backdrop-filter:blur(8px);border-color:rgba(94,234,192,.18)}
+:root[data-theme="aurore"] .marque i{background:linear-gradient(135deg,#3ee0b0,#a58bff);color:#06121a}
+:root[data-theme="aurore"] h1{background:linear-gradient(90deg,#5eeac0,#b3a8ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ══ foret : nature, sombre, intensité 2, AA ══ */
+:root[data-theme="foret"]{
+  color-scheme:dark;
+  --page:#0f1a14;
+  --surface:#15231b;
+  --surface-2:#1d3026;
+  --ink:#dfeadf;
+  --ink-2:#a4baa8;
+  --muted:#7a867d;
+  --grid:#29372f;
+  --axis:#414f46;
+  --border:rgba(223,234,223,.10);
+  --border-strong:rgba(223,234,223,.20);
+  --median:#c1ccc2;
+  --accent:#5fae6e;
+  --accent-ink:#7fcb8d;
+  --accent-track:#25422d;
+  --good:#4fae6a;
+  --good-ink:#7fd096;
+  --warn:#d6b04a;
+  --warn-ink:#e3c46a;
+  --serious:#ec835a;
+  --crit:#d9776a;
+  --crit-ink:#f0a094;
+  --violet:#a08fd0;
+  --neg:#d9776a;
+  --neg-track:#383229;
+  --ombre:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.35);
+  --bouton:#5fae6e;
+  --sur-bouton:#0b150f;
+}
+/* Forêt : lueurs de mousse dans les coins, grands coins arrondis, logo en feuille. */
+:root[data-theme="foret"] body{background:radial-gradient(ellipse at 0 0,rgba(95,174,110,.15),transparent 50%),radial-gradient(ellipse at 100% 100%,rgba(60,120,80,.14),transparent 55%),var(--page);background-attachment:fixed}
+:root[data-theme="foret"] .carte,:root[data-theme="foret"] .tuile-kpi{border-radius:16px;border-color:rgba(127,203,141,.22)}
+:root[data-theme="foret"] .marque i{background:linear-gradient(135deg,#7fcb8d,#2f6b45);border-radius:60% 8px 60% 8px}
+:root[data-theme="foret"] button,:root[data-theme="foret"] select{border-radius:99px}
+
+/* ══ annees-70 : retro, clair, intensité 2, AA ══ */
+:root[data-theme="annees-70"]{
+  color-scheme:light;
+  --page:#f3e3c3;
+  --surface:#fbf0d9;
+  --surface-2:#ecd3a0;
+  --ink:#4a2c14;
+  --ink-2:#6b4524;
+  --muted:#a28e76;
+  --grid:#e9dcc5;
+  --axis:#d4c5ae;
+  --border:rgba(74,44,20,.10);
+  --border-strong:rgba(74,44,20,.18);
+  --median:#887159;
+  --accent:#c5701a;
+  --accent-ink:#9a4e0a;
+  --accent-track:#efd4af;
+  --good:#7b8f2a;
+  --good-ink:#4c5a14;
+  --warn:#e2a900;
+  --warn-ink:#6e5000;
+  --serious:#ec835a;
+  --crit:#b8421f;
+  --crit-ink:#8f2f12;
+  --violet:#7a4a8a;
+  --neg:#b8421f;
+  --neg-track:#efd1b8;
+  --ombre:0 1px 2px rgba(11,11,11,.05),0 6px 18px rgba(11,11,11,.05);
+  --bouton:#a4540c;
+  --sur-bouton:#ffffff;
+}
+/* Années 70 : très arrondi, ombres pleines orange, bande orange, moutarde et avocat, logo en cercles concentriques. */
+:root[data-theme="annees-70"] body{font-family:"Trebuchet MS","Segoe UI",sans-serif}
+:root[data-theme="annees-70"] h1,:root[data-theme="annees-70"] h2,:root[data-theme="annees-70"] h3{font-weight:800;letter-spacing:-.01em}
+:root[data-theme="annees-70"] .carte,:root[data-theme="annees-70"] .tuile-kpi{border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 #d9822b}
+:root[data-theme="annees-70"] .entete{border-right:12px solid transparent;border-image:linear-gradient(90deg,#d9822b 0 33%,#e2a900 33% 66%,#7b8f2a 66%) 1}
+:root[data-theme="annees-70"] .marque i{border-radius:50%;background:radial-gradient(circle,#7b8f2a 0 28%,#e2a900 28% 58%,#d9822b 58%);color:transparent}
+:root[data-theme="annees-70"] button,:root[data-theme="annees-70"] select{border-radius:99px}
+:root[data-theme="annees-70"] .piste,:root[data-theme="annees-70"] .piste>i{height:10px}
+
+/* ══ lcd : retro, clair, intensité 3, AA ══ */
+:root[data-theme="lcd"]{
+  color-scheme:light;
+  --page:#cfc8b8;
+  --surface:#b9c4a9;
+  --surface-2:#acb89b;
+  --ink:#1d2418;
+  --ink-2:#36402f;
+  --muted:#566250;
+  --grid:#a3af94;
+  --axis:#8a9679;
+  --border:rgba(29,36,24,.22);
+  --border-strong:rgba(29,36,24,.45);
+  --median:#1d2418;
+  --accent:#1d2418;
+  --accent-ink:#1d2418;
+  --accent-track:#a6b296;
+  --good:#2f5d2a;
+  --good-ink:#1f4a1c;
+  --warn:#8a5a10;
+  --warn-ink:#4a3003;
+  --serious:#8a3a10;
+  --crit:#8c1c13;
+  --crit-ink:#7a1610;
+  --violet:#8c1c13;
+  --neg:#8c1c13;
+  --neg-track:#c9b0a2;
+  --ombre:inset 0 2px 6px rgba(0,0,0,.25);
+  --bouton:#1d2418;
+  --sur-bouton:#ffffff;
+}
+/* LCD rétro : décor repris du Dashboard (style.css, 13/11/2026), règles de la famille comprises. */
+:root[data-theme="lcd"] body{background:linear-gradient(180deg,#ddd7c9,#c4bdac 60%,#b9b19f) fixed}
+:root[data-theme="lcd"] .entete{background:#d8d1c1;border-bottom:4px solid #8c1c13;box-shadow:0 2px 0 #b2aa97}
+:root[data-theme="lcd"] .marque i{background:#8c1c13;border-radius:50%;box-shadow:inset 0 -2px 0 rgba(0,0,0,.35),0 1px 0 #fff8}
+:root[data-theme="lcd"] .carte,:root[data-theme="lcd"] .tuile-kpi{border:6px solid #d9d2c2;outline:1px solid #9f9785;border-radius:8px; background:radial-gradient(ellipse at 30% 20%,#c3cdb3,#b4bfa4 70%)}
+:root[data-theme="lcd"] h1,:root[data-theme="lcd"] h2,:root[data-theme="lcd"] h3{text-transform:uppercase;letter-spacing:.14em}
+:root[data-theme="lcd"] h1{color:#8c1c13}
+:root[data-theme="lcd"] .num,:root[data-theme="lcd"] .tuile-kpi .val,:root[data-theme="lcd"] .barre-val .v{font-family:var(--mono);letter-spacing:.04em}
+:root[data-theme="lcd"] .tuile-kpi .val{text-shadow:2px 2px 0 rgba(29,36,24,.12)}
+:root[data-theme="lcd"] .piste{background:repeating-linear-gradient(90deg,rgba(29,36,24,.08) 0 6px,transparent 6px 8px)}
+:root[data-theme="lcd"] .piste i:not(.neg){background:repeating-linear-gradient(90deg,#1d2418 0 6px,transparent 6px 8px)}
+:root[data-theme="lcd"] .piste,:root[data-theme="lcd"] .piste>i{border-radius:0}
+:root[data-theme="lcd"] button.primaire{background:#8c1c13;border-color:#5e120c;border-radius:99px;box-shadow:inset 0 -3px 0 rgba(0,0,0,.3)}
+:root[data-theme="lcd"] th{background:transparent}
+
+/* ══ sepia : retro, clair, intensité 2, AA ══ */
+:root[data-theme="sepia"]{
+  color-scheme:light;
+  --page:#efe3c8;
+  --surface:#f6ecd5;
+  --surface-2:#e6d6b3;
+  --ink:#3b2d1c;
+  --ink-2:#6a5538;
+  --muted:#988c78;
+  --grid:#e3d9c3;
+  --axis:#cdc2ac;
+  --border:rgba(59,45,28,.10);
+  --border-strong:rgba(59,45,28,.18);
+  --median:#7c705d;
+  --accent:#8b4a2b;
+  --accent-ink:#7a3d20;
+  --accent-track:#dec8b0;
+  --good:#5c7a2e;
+  --good-ink:#3d5619;
+  --warn:#c98a10;
+  --warn-ink:#6a4500;
+  --serious:#ec835a;
+  --crit:#a83225;
+  --crit-ink:#8c2518;
+  --violet:#6b4f8a;
+  --neg:#a83225;
+  --neg-track:#e8cbb5;
+  --ombre:0 1px 2px rgba(11,11,11,.05),0 6px 18px rgba(11,11,11,.05);
+  --bouton:#7a3d20;
+  --sur-bouton:#fbf3df;
+}
+/* Vieux livre : papier jauni, police à empattements, cadres à double filet, titres en petites capitales. */
+:root[data-theme="sepia"] body{font-family:"Palatino Linotype",Palatino,Georgia,serif;font-size:15px;background:repeating-linear-gradient(0deg,rgba(90,60,20,.03) 0 2px,transparent 2px 4px),var(--page)}
+:root[data-theme="sepia"] h1,:root[data-theme="sepia"] h2,:root[data-theme="sepia"] h3{font-family:Georgia,"Times New Roman",serif;font-variant:small-caps;letter-spacing:.04em}
+:root[data-theme="sepia"] h2{text-transform:none}
+:root[data-theme="sepia"] th{font-variant:small-caps;text-transform:none;letter-spacing:.04em;font-size:13px}
+:root[data-theme="sepia"] .carte,:root[data-theme="sepia"] .tuile-kpi{border:3px double #b99a62;border-radius:3px;box-shadow:2px 3px 0 rgba(90,60,20,.15)}
+:root[data-theme="sepia"] .entete{border-right:3px double #b99a62}
+:root[data-theme="sepia"] .marque i{background:var(--accent-ink);border-radius:3px}
+
+/* ══ arcade : retro, sombre, intensité 3, AA ══ */
+:root[data-theme="arcade"]{
+  color-scheme:dark;
+  --page:#0b0b1a;
+  --surface:#14142b;
+  --surface-2:#1d1d3d;
+  --ink:#f4f4ff;
+  --ink-2:#b7b7e0;
+  --muted:#848495;
+  --grid:#2a2a40;
+  --axis:#45455a;
+  --border:rgba(244,244,255,.10);
+  --border-strong:rgba(244,244,255,.20);
+  --median:#d2d2df;
+  --accent:#ffd400;
+  --accent-ink:#ffd400;
+  --accent-track:#483e22;
+  --good:#39e05a;
+  --good-ink:#6dff8a;
+  --warn:#ff9f1c;
+  --warn-ink:#ffb84d;
+  --serious:#ec835a;
+  --crit:#ff4040;
+  --crit-ink:#ff7a7a;
+  --violet:#b36bff;
+  --neg:#ff4040;
+  --neg-track:#3e1c2f;
+  --ombre:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.35);
+  --bouton:#ffd400;
+  --sur-bouton:#14142b;
+}
+/* Arcade : police de machine, angles droits, ombres rouges décalées, barres en briques, manette à côté du nom. */
+:root[data-theme="arcade"] body{font-family:"Courier New",Consolas,monospace;background:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px) 0 0/100% 4px,var(--page)}
+:root[data-theme="arcade"] h1,:root[data-theme="arcade"] h2,:root[data-theme="arcade"] h3,:root[data-theme="arcade"] th,:root[data-theme="arcade"] .tuile-kpi .lib{text-transform:uppercase;letter-spacing:.1em}
+:root[data-theme="arcade"] h1{color:var(--accent-ink);text-shadow:3px 3px 0 #ff3b3b}
+:root[data-theme="arcade"] .carte,:root[data-theme="arcade"] .tuile-kpi{border:3px solid var(--ink);border-radius:0;box-shadow:5px 5px 0 #ff3b3b}
+:root[data-theme="arcade"] .marque i{border-radius:0;background:#ff3b3b;color:#fff}
+:root[data-theme="arcade"] .marque span::after{content:" \1F579"}
+:root[data-theme="arcade"] button,:root[data-theme="arcade"] select,:root[data-theme="arcade"] input[type=search],:root[data-theme="arcade"] input[type=text],:root[data-theme="arcade"] input[type=date],:root[data-theme="arcade"] input[type=number]{border-radius:0;border:2px solid var(--ink);text-transform:uppercase}
+:root[data-theme="arcade"] .piste,:root[data-theme="arcade"] .piste>i{border-radius:0}
+:root[data-theme="arcade"] .piste i:not(.neg){background:repeating-linear-gradient(90deg,var(--accent) 0 8px,transparent 8px 10px)}
+:root[data-theme="arcade"] .badge,:root[data-theme="arcade"] .pastille{border-radius:0}
+
+/* ══ synthwave : retro, sombre, intensité 3, AA ══ */
+:root[data-theme="synthwave"]{
+  color-scheme:dark;
+  --page:#14062a;
+  --surface:#1c0b36;
+  --surface-2:#271046;
+  --ink:#fbe9ff;
+  --ink-2:#cba6e3;
+  --muted:#8d6ba8;
+  --grid:#2f1752;
+  --axis:#46217a;
+  --border:rgba(255,92,205,.2);
+  --border-strong:rgba(255,92,205,.42);
+  --median:#ffb3ec;
+  --accent:#ff5ccd;
+  --accent-ink:#ff9be3;
+  --accent-track:#45123d;
+  --good:#36f9f6;
+  --good-ink:#7ffcfa;
+  --warn:#fede5d;
+  --warn-ink:#fff08f;
+  --serious:#ff9f5a;
+  --crit:#ff7a45;
+  --crit-ink:#ffa37f;
+  --violet:#7a3cff;
+  --neg:#ff7a45;
+  --neg-track:#45180c;
+  --ombre:0 0 0 1px rgba(255,92,205,.08),0 10px 30px rgba(20,0,40,.5);
+  --bouton:#c2389b;
+  --sur-bouton:#ffffff;
+}
+/* Synthwave : décor repris du Dashboard (style.css, 13/11/2026), règles de la famille comprises. */
+:root[data-theme="synthwave"] body{background:linear-gradient(180deg,#14062a 0%,#2a0b4d 55%,#5a1460 85%,#ff6a88 140%) fixed}
+:root[data-theme="synthwave"] body::before{content:"";position:fixed;left:-50%;right:-50%;bottom:0;height:42vh;z-index:-1;pointer-events:none; background:linear-gradient(rgba(255,92,205,.35) 1px,transparent 1px) 0 0/100% 34px,linear-gradient(90deg,rgba(54,249,246,.28) 1px,transparent 1px) 0 0/60px 100%; transform:perspective(320px) rotateX(62deg);transform-origin:bottom;mask-image:linear-gradient(transparent,#000 70%);-webkit-mask-image:linear-gradient(transparent,#000 70%)}
+:root[data-theme="synthwave"] .entete{background:rgba(20,6,42,.85);border-bottom:2px solid transparent;border-image:linear-gradient(90deg,#ff5ccd,#fede5d,#36f9f6) 1}
+:root[data-theme="synthwave"] .marque i{background:linear-gradient(180deg,#fede5d,#ff5ccd 60%,#7a3cff)}
+:root[data-theme="synthwave"] h1{font-style:italic;letter-spacing:.06em;text-transform:uppercase;background:linear-gradient(180deg,#fede5d,#ff5ccd);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 8px rgba(255,92,205,.6))}
+:root[data-theme="synthwave"] h2,:root[data-theme="synthwave"] h3{letter-spacing:.08em;text-transform:uppercase}
+:root[data-theme="synthwave"] .carte,:root[data-theme="synthwave"] .tuile-kpi{background:rgba(28,11,54,.88)}
+:root[data-theme="synthwave"] .tuile-kpi .val{color:#36f9f6;text-shadow:0 0 10px rgba(54,249,246,.5)}
+:root[data-theme="synthwave"] button.primaire{background:linear-gradient(90deg,#c2389b,#5b2bd6);border-color:transparent}
+
+/* ══ glace : techno, clair, intensité 3, AA ══ */
+:root[data-theme="glace"]{
+  color-scheme:light;
+  --page:#eaf6fb;
+  --surface:#fbfeff;
+  --surface-2:#e0f0f8;
+  --ink:#0b2a3a;
+  --ink-2:#3d5f73;
+  --muted:#83949c;
+  --grid:#e3e9eb;
+  --axis:#c6cfd4;
+  --border:rgba(11,42,58,.10);
+  --border-strong:rgba(11,42,58,.18);
+  --median:#5f747f;
+  --accent:#0094c8;
+  --accent-ink:#00668c;
+  --accent-track:#c4e7f3;
+  --good:#1f9d6b;
+  --good-ink:#12684a;
+  --warn:#d9a21f;
+  --warn-ink:#6e4900;
+  --serious:#ec835a;
+  --crit:#cf4a5a;
+  --crit-ink:#a62f40;
+  --violet:#6c63c9;
+  --neg:#cf4a5a;
+  --neg-track:#f3dee1;
+  --ombre:0 1px 2px rgba(11,11,11,.05),0 6px 18px rgba(11,11,11,.05);
+  --bouton:#00739e;
+  --sur-bouton:#ffffff;
+}
+/* Glace polaire : fond dégradé glacé, cartes en verre dépoli avec filet cyan, titre fin, logo en losange. */
+:root[data-theme="glace"] body{background:linear-gradient(135deg,#dff3fb 0%,#f4fbff 45%,#d6ecf7 100%) fixed,var(--page)}
+:root[data-theme="glace"] .carte,:root[data-theme="glace"] .tuile-kpi{background:rgba(255,255,255,.66);backdrop-filter:blur(14px) saturate(1.3);border:1px solid rgba(255,255,255,.9);border-top:2px solid var(--accent);border-radius:6px;box-shadow:0 8px 30px rgba(0,102,140,.10)}
+:root[data-theme="glace"] .entete{background:rgba(255,255,255,.6);backdrop-filter:blur(14px)}
+:root[data-theme="glace"] h1{font-weight:300;font-size:22px;letter-spacing:.02em}
+:root[data-theme="glace"] .marque i{background:linear-gradient(135deg,#7fdcff,#0094c8);border-radius:0;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+:root[data-theme="glace"] .piste i:not(.neg){background:linear-gradient(90deg,#7fdcff,var(--accent))}
+
+/* ══ holo : techno, clair, intensité 3, AA ══ */
+:root[data-theme="holo"]{
+  color-scheme:light;
+  --page:#eef3f8;
+  --surface:#ffffff;
+  --surface-2:#e8eef6;
+  --ink:#0f1b2d;
+  --ink-2:#46566c;
+  --muted:#7f8ea3;
+  --grid:#dde5ef;
+  --axis:#c3cfdd;
+  --border:rgba(80,110,160,.18);
+  --border-strong:rgba(80,110,160,.3);
+  --median:#5b6b82;
+  --accent:#3a6df0;
+  --accent-ink:#2448b8;
+  --accent-track:#d6e0fb;
+  --good:#10a37f;
+  --good-ink:#086650;
+  --warn:#e3a008;
+  --warn-ink:#7a5200;
+  --serious:#ee7b4a;
+  --crit:#e5484d;
+  --crit-ink:#b4232a;
+  --violet:#8b5cf6;
+  --neg:#e5484d;
+  --neg-track:#fbd9da;
+  --ombre:0 1px 1px rgba(255,255,255,.8) inset,0 8px 28px rgba(60,90,150,.12);
+  --bouton:#3a6df0;
+  --sur-bouton:#ffffff;
+}
+/* Holographique : décor repris du Dashboard (style.css, 13/11/2026), règles de la famille comprises. */
+:root[data-theme="holo"]{--surface:rgba(255,255,255,.72)}
+:root[data-theme="holo"] body{background:radial-gradient(circle at 12% 18%,#c8f1ff 0,transparent 38%),radial-gradient(circle at 88% 12%,#f3d4ff 0,transparent 40%), radial-gradient(circle at 70% 85%,#d4ffe9 0,transparent 40%),radial-gradient(circle at 20% 90%,#ffe6d4 0,transparent 35%),#eef3f8 fixed}
+:root[data-theme="holo"] .carte,:root[data-theme="holo"] .tuile-kpi{backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);border:1px solid rgba(255,255,255,.75);border-radius:18px}
+:root[data-theme="holo"] th{background:transparent}
+:root[data-theme="holo"] .entete{background:rgba(255,255,255,.55)}
+:root[data-theme="holo"] .marque i{background:conic-gradient(from 200deg,#7cd4ff,#b79bff,#ff9bd5,#ffd59b,#9bffcf,#7cd4ff)}
+:root[data-theme="holo"] h1{background:linear-gradient(90deg,#2448b8,#8b5cf6,#0ea5b7);-webkit-background-clip:text;background-clip:text;color:transparent}
+:root[data-theme="holo"] .piste i:not(.neg){background:linear-gradient(90deg,#5aa8ff,#8b5cf6)}
+
+/* ══ cyberpunk : techno, sombre, intensité 3, AA ══ */
+:root[data-theme="cyberpunk"]{
+  color-scheme:dark;
+  --page:#0a0a0a;
+  --surface:#121212;
+  --surface-2:#1c1c1c;
+  --ink:#f2f2e9;
+  --ink-2:#b9b8a8;
+  --muted:#77766a;
+  --grid:#262626;
+  --axis:#3a3a3a;
+  --border:rgba(252,238,10,.18);
+  --border-strong:rgba(252,238,10,.42);
+  --median:#fcee0a;
+  --accent:#fcee0a;
+  --accent-ink:#fff35c;
+  --accent-track:#3a3700;
+  --good:#00f0ff;
+  --good-ink:#5cf7ff;
+  --warn:#ff9f1c;
+  --warn-ink:#ffbe5c;
+  --serious:#ff7a1c;
+  --crit:#ff003c;
+  --crit-ink:#ff5c7a;
+  --violet:#00f0ff;
+  --neg:#ff003c;
+  --neg-track:#3d0010;
+  --ombre:none;
+  --bouton:#fcee0a;
+  --sur-bouton:#000000;
+}
+/* Cyberpunk : décor repris du Dashboard (style.css, 13/11/2026), règles de la famille comprises. */
+:root[data-theme="cyberpunk"] body{background:repeating-linear-gradient(-45deg,#0a0a0a 0 22px,#0d0d0d 22px 44px) fixed}
+:root[data-theme="cyberpunk"] .entete{background:rgba(10,10,10,.92);border-bottom:2px solid #fcee0a}
+:root[data-theme="cyberpunk"] .marque i{background:#fcee0a;color:#000;border-radius:0;clip-path:polygon(0 0,100% 0,100% 70%,70% 100%,0 100%)}
+:root[data-theme="cyberpunk"] .carte,:root[data-theme="cyberpunk"] .tuile-kpi{border-radius:0;border-left:3px solid #fcee0a; clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px))}
+:root[data-theme="cyberpunk"] h1{display:inline-block;background:#fcee0a;color:#000;padding:0 10px;text-transform:uppercase;letter-spacing:.08em}
+:root[data-theme="cyberpunk"] h2,:root[data-theme="cyberpunk"] h3{text-transform:uppercase;letter-spacing:.1em}
+:root[data-theme="cyberpunk"] .num,:root[data-theme="cyberpunk"] .tuile-kpi .val,:root[data-theme="cyberpunk"] .barre-val .v{font-family:var(--mono)}
+:root[data-theme="cyberpunk"] button.primaire{color:#000;border-radius:0}
+:root[data-theme="cyberpunk"] nav.menu a[aria-current="page"]{box-shadow:inset 0 -2px 0 #fcee0a;border-radius:0}
+
+/* ══ espace : techno, sombre, intensité 3, AA ══ */
+:root[data-theme="espace"]{
+  color-scheme:dark;
+  --page:#05060f;
+  --surface:#0e1028;
+  --surface-2:#1a1d4a;
+  --ink:#e9ebff;
+  --ink-2:#aab0e6;
+  --muted:#7c7e94;
+  --grid:#24263e;
+  --axis:#3e4057;
+  --border:rgba(233,235,255,.10);
+  --border-strong:rgba(233,235,255,.20);
+  --median:#c8cadf;
+  --accent:#8b7bff;
+  --accent-ink:#b3a8ff;
+  --accent-track:#2a2857;
+  --good:#3fd68a;
+  --good-ink:#6ff0ae;
+  --warn:#ffc24a;
+  --warn-ink:#ffd477;
+  --serious:#ec835a;
+  --crit:#ff6b85;
+  --crit-ink:#ff9aae;
+  --violet:#d58bff;
+  --neg:#ff6b85;
+  --neg-track:#392039;
+  --ombre:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.35);
+  --bouton:#6d5cf0;
+  --sur-bouton:#ffffff;
+}
+/* Espace : ciel étoilé (étoiles fixes), nébuleuse violette et bleue dans les coins, cartes translucides, fusée à côté du nom. */
+:root[data-theme="espace"] body{background:radial-gradient(1px 1px at 23px 41px,#fff,transparent 60%) 0 0/233px 233px,radial-gradient(1.5px 1.5px at 101px 17px,#dfe3ff,transparent 60%) 0 0/311px 311px,radial-gradient(1px 1px at 170px 120px,#fff,transparent 60%) 0 0/197px 197px,radial-gradient(1px 1px at 60px 150px,#bfc8ff,transparent 60%) 0 0/271px 271px,radial-gradient(ellipse 60% 50% at 85% 0,rgba(109,92,240,.30),transparent 70%),radial-gradient(ellipse 50% 45% at 0 100%,rgba(0,170,255,.16),transparent 70%),var(--page);background-attachment:fixed}
+:root[data-theme="espace"] .carte,:root[data-theme="espace"] .tuile-kpi{background:color-mix(in srgb,var(--surface) 84%,transparent);backdrop-filter:blur(6px);border-color:rgba(179,168,255,.22)}
+:root[data-theme="espace"] .marque span::after{content:" \1F680"}
+:root[data-theme="espace"] .marque i{background:radial-gradient(circle at 35% 35%,#b3a8ff,#6d5cf0 60%,#2a1f8f);border-radius:50%}
+:root[data-theme="espace"] h1{letter-spacing:.08em;text-shadow:0 0 14px rgba(139,123,255,.6)}
+
+/* ══ futuriste : techno, sombre, intensité 3, AA ══ */
+:root[data-theme="futuriste"]{
+  color-scheme:dark;
+  --page:#05070f;
+  --surface:#0a1020;
+  --surface-2:#101834;
+  --ink:#d8f3ff;
+  --ink-2:#8fb6cc;
+  --muted:#5e7d92;
+  --grid:#16213d;
+  --axis:#22325c;
+  --border:rgba(0,229,255,.16);
+  --border-strong:rgba(0,229,255,.34);
+  --median:#7fe7ff;
+  --accent:#00d8f0;
+  --accent-ink:#5ff0ff;
+  --accent-track:#073246;
+  --good:#18e39a;
+  --good-ink:#3dffb0;
+  --warn:#ffd23f;
+  --warn-ink:#ffdf6e;
+  --serious:#ff8a4c;
+  --crit:#ff3d81;
+  --crit-ink:#ff78a8;
+  --violet:#b14dff;
+  --neg:#ff3d81;
+  --neg-track:#3a0f25;
+  --ombre:0 0 0 1px rgba(var(--lueur),.06),0 0 26px rgba(var(--lueur),.07);
+  --bouton:#00d8f0;
+  --sur-bouton:#05070f;
+  --lueur:0,229,255;
+  --lueur-2:#b14dff;
+  --haut:#0d1838;
+}
+/* Futuriste : décor repris du Dashboard (style.css, 13/11/2026), règles de la famille comprises. */
+:root[data-theme="futuriste"] body{background: linear-gradient(rgba(var(--lueur),.035) 1px,transparent 1px) 0 0/32px 32px, linear-gradient(90deg,rgba(var(--lueur),.035) 1px,transparent 1px) 0 0/32px 32px, radial-gradient(ellipse at top,var(--haut),var(--page) 60%) fixed}
+:root[data-theme="futuriste"] .entete{background:color-mix(in srgb,var(--page) 85%,transparent);border-bottom:1px solid rgba(var(--lueur),.35);box-shadow:0 0 18px rgba(var(--lueur),.15)}
+:root[data-theme="futuriste"] .marque i{background:linear-gradient(135deg,rgb(var(--lueur)),var(--lueur-2));box-shadow:0 0 12px rgba(var(--lueur),.6)}
+:root[data-theme="futuriste"] h1,:root[data-theme="futuriste"] h2,:root[data-theme="futuriste"] h3{letter-spacing:.12em;text-transform:uppercase}
+:root[data-theme="futuriste"] h1{text-shadow:0 0 12px rgba(var(--lueur),.55)}
+:root[data-theme="futuriste"] .num,:root[data-theme="futuriste"] .tuile-kpi .val,:root[data-theme="futuriste"] .barre-val .v{font-family:var(--mono)}
+:root[data-theme="futuriste"] .tuile-kpi .val{color:var(--accent-ink);text-shadow:0 0 10px rgba(var(--lueur),.45)}
+:root[data-theme="futuriste"] .carte,:root[data-theme="futuriste"] .tuile-kpi{border-radius:4px;background:linear-gradient(180deg,color-mix(in srgb,var(--surface-2) 92%,transparent),color-mix(in srgb,var(--surface) 92%,transparent))}
+:root[data-theme="futuriste"] button.primaire{color:var(--page);box-shadow:0 0 12px rgba(var(--lueur),.5)}
+:root[data-theme="futuriste"] .piste i{box-shadow:0 0 6px currentColor}
+
+/* ══ futur-ambre : techno, sombre, intensité 3, AAA ══ */
+:root[data-theme="futur-ambre"]{
+  color-scheme:dark;
+  --page:#0c0802;
+  --surface:#160f05;
+  --surface-2:#22180a;
+  --ink:#ffe9c4;
+  --ink-2:#d1ad74;
+  --muted:#8f7448;
+  --grid:#2a1e0d;
+  --axis:#3d2c12;
+  --border:rgba(255,170,40,.18);
+  --border-strong:rgba(255,170,40,.36);
+  --median:#ffc66b;
+  --accent:#ffae1f;
+  --accent-ink:#ffc865;
+  --accent-track:#3a2606;
+  --good:#7ee05a;
+  --good-ink:#a6f07e;
+  --warn:#ffe14d;
+  --warn-ink:#fff08a;
+  --serious:#ff8a4c;
+  --crit:#ff4d3d;
+  --crit-ink:#ff8a7a;
+  --violet:#ff5a1f;
+  --neg:#ff4d3d;
+  --neg-track:#3a120c;
+  --ombre:0 0 0 1px rgba(var(--lueur),.06),0 0 26px rgba(var(--lueur),.07);
+  --bouton:#ffae1f;
+  --sur-bouton:#0c0802;
+  --lueur:255,170,40;
+  --lueur-2:#ff5a1f;
+  --haut:#241505;
+}
+/* Futuriste ambre : décor repris du Dashboard (style.css, 13/11/2026), règles de la famille comprises. */
+:root[data-theme="futur-ambre"] body{background: linear-gradient(rgba(var(--lueur),.035) 1px,transparent 1px) 0 0/32px 32px, linear-gradient(90deg,rgba(var(--lueur),.035) 1px,transparent 1px) 0 0/32px 32px, radial-gradient(ellipse at top,var(--haut),var(--page) 60%) fixed}
+:root[data-theme="futur-ambre"] .entete{background:color-mix(in srgb,var(--page) 85%,transparent);border-bottom:1px solid rgba(var(--lueur),.35);box-shadow:0 0 18px rgba(var(--lueur),.15)}
+:root[data-theme="futur-ambre"] .marque i{background:linear-gradient(135deg,rgb(var(--lueur)),var(--lueur-2));box-shadow:0 0 12px rgba(var(--lueur),.6)}
+:root[data-theme="futur-ambre"] h1,:root[data-theme="futur-ambre"] h2,:root[data-theme="futur-ambre"] h3{letter-spacing:.12em;text-transform:uppercase}
+:root[data-theme="futur-ambre"] h1{text-shadow:0 0 12px rgba(var(--lueur),.55)}
+:root[data-theme="futur-ambre"] .num,:root[data-theme="futur-ambre"] .tuile-kpi .val,:root[data-theme="futur-ambre"] .barre-val .v{font-family:var(--mono)}
+:root[data-theme="futur-ambre"] .tuile-kpi .val{color:var(--accent-ink);text-shadow:0 0 10px rgba(var(--lueur),.45)}
+:root[data-theme="futur-ambre"] .carte,:root[data-theme="futur-ambre"] .tuile-kpi{border-radius:4px;background:linear-gradient(180deg,color-mix(in srgb,var(--surface-2) 92%,transparent),color-mix(in srgb,var(--surface) 92%,transparent))}
+:root[data-theme="futur-ambre"] button.primaire{color:var(--page);box-shadow:0 0 12px rgba(var(--lueur),.5)}
+:root[data-theme="futur-ambre"] .piste i{box-shadow:0 0 6px currentColor}
+
+/* ══ futur-confort : techno, sombre, intensité 2, AA ══ */
+:root[data-theme="futur-confort"]{
+  color-scheme:dark;
+  --page:#16181c;
+  --surface:#1d2025;
+  --surface-2:#252930;
+  --ink:#e6dfcc;
+  --ink-2:#b2ab96;
+  --muted:#827d6f;
+  --grid:#2c3038;
+  --axis:#3b4048;
+  --border:rgba(217,178,95,.13);
+  --border-strong:rgba(217,178,95,.26);
+  --median:#d6c9a4;
+  --accent:#d9b25f;
+  --accent-ink:#e8c97f;
+  --accent-track:#3a3220;
+  --good:#7fb98a;
+  --good-ink:#a2d1aa;
+  --warn:#e0a458;
+  --warn-ink:#ebbd7c;
+  --serious:#d9906a;
+  --crit:#d47f6f;
+  --crit-ink:#e6a395;
+  --violet:#7fb3c8;
+  --neg:#d47f6f;
+  --neg-track:#3d2622;
+  --ombre:0 0 0 1px rgba(var(--lueur),.06),0 0 26px rgba(var(--lueur),.07);
+  --bouton:#d9b25f;
+  --sur-bouton:#16181c;
+  --lueur:217,178,95;
+  --lueur-2:#7fb3c8;
+  --haut:#20242b;
+}
+/* Futuriste confort sombre : décor repris du Dashboard (style.css, 13/11/2026), règles de la famille comprises. */
+:root[data-theme="futur-confort"] body{background: linear-gradient(rgba(var(--lueur),.035) 1px,transparent 1px) 0 0/32px 32px, linear-gradient(90deg,rgba(var(--lueur),.035) 1px,transparent 1px) 0 0/32px 32px, radial-gradient(ellipse at top,var(--haut),var(--page) 60%) fixed}
+:root[data-theme="futur-confort"] .entete{background:color-mix(in srgb,var(--page) 85%,transparent);border-bottom:1px solid rgba(var(--lueur),.35);box-shadow:0 0 18px rgba(var(--lueur),.15)}
+:root[data-theme="futur-confort"] .marque i{background:linear-gradient(135deg,rgb(var(--lueur)),var(--lueur-2));box-shadow:0 0 12px rgba(var(--lueur),.6)}
+:root[data-theme="futur-confort"] h1,:root[data-theme="futur-confort"] h2,:root[data-theme="futur-confort"] h3{letter-spacing:.12em;text-transform:uppercase}
+:root[data-theme="futur-confort"] h1{text-shadow:0 0 12px rgba(var(--lueur),.55)}
+:root[data-theme="futur-confort"] .num,:root[data-theme="futur-confort"] .tuile-kpi .val,:root[data-theme="futur-confort"] .barre-val .v{font-family:var(--mono)}
+:root[data-theme="futur-confort"] .tuile-kpi .val{color:var(--accent-ink);text-shadow:0 0 10px rgba(var(--lueur),.45)}
+:root[data-theme="futur-confort"] .carte,:root[data-theme="futur-confort"] .tuile-kpi{border-radius:4px;background:linear-gradient(180deg,color-mix(in srgb,var(--surface-2) 92%,transparent),color-mix(in srgb,var(--surface) 92%,transparent))}
+:root[data-theme="futur-confort"] button.primaire{color:var(--page);box-shadow:0 0 12px rgba(var(--lueur),.5)}
+:root[data-theme="futur-confort"] .piste i{box-shadow:0 0 6px currentColor}
+:root[data-theme="futur-confort"] body{background: linear-gradient(rgba(var(--lueur),.022) 1px,transparent 1px) 0 0/32px 32px, linear-gradient(90deg,rgba(var(--lueur),.022) 1px,transparent 1px) 0 0/32px 32px, radial-gradient(ellipse at top,var(--haut),var(--page) 60%) fixed}
+:root[data-theme="futur-confort"] h1,:root[data-theme="futur-confort"] .tuile-kpi .val{text-shadow:none}
+:root[data-theme="futur-confort"] h1,:root[data-theme="futur-confort"] h2,:root[data-theme="futur-confort"] h3{letter-spacing:.08em}
+:root[data-theme="futur-confort"] .entete,:root[data-theme="futur-confort"] .marque i,:root[data-theme="futur-confort"] .piste i,:root[data-theme="futur-confort"] button.primaire{box-shadow:none}
+
+/* ══ futur-confort-ardoise : techno, sombre, intensité 2, AA ══ */
+:root[data-theme="futur-confort-ardoise"]{
+  color-scheme:dark;
+  --page:#16181c;
+  --surface:#1d2025;
+  --surface-2:#252930;
+  --ink:#e6dfcc;
+  --ink-2:#b2ab96;
+  --muted:#827d6f;
+  --grid:#2c3038;
+  --axis:#3b4048;
+  --border:rgba(126,163,196,.13);
+  --border-strong:rgba(126,163,196,.26);
+  --median:#d6c9a4;
+  --accent:#7ea3c4;
+  --accent-ink:#a8c4dc;
+  --accent-track:#253240;
+  --good:#7fb98a;
+  --good-ink:#a2d1aa;
+  --warn:#e0a458;
+  --warn-ink:#ebbd7c;
+  --serious:#d9906a;
+  --crit:#d47f6f;
+  --crit-ink:#e6a395;
+  --violet:#7fb3c8;
+  --neg:#d47f6f;
+  --neg-track:#3d2622;
+  --ombre:0 0 0 1px rgba(var(--lueur),.06),0 0 26px rgba(var(--lueur),.07);
+  --bouton:#7ea3c4;
+  --sur-bouton:#16181c;
+  --lueur:126,163,196;
+  --lueur-2:#9c98cf;
+  --haut:#20242b;
+}
+/* Futuriste confort · ardoise : décor repris du Dashboard (style.css, 13/11/2026), règles de la famille comprises. */
+:root[data-theme="futur-confort-ardoise"] body{background: linear-gradient(rgba(var(--lueur),.035) 1px,transparent 1px) 0 0/32px 32px, linear-gradient(90deg,rgba(var(--lueur),.035) 1px,transparent 1px) 0 0/32px 32px, radial-gradient(ellipse at top,var(--haut),var(--page) 60%) fixed}
+:root[data-theme="futur-confort-ardoise"] .entete{background:color-mix(in srgb,var(--page) 85%,transparent);border-bottom:1px solid rgba(var(--lueur),.35);box-shadow:0 0 18px rgba(var(--lueur),.15)}
+:root[data-theme="futur-confort-ardoise"] .marque i{background:linear-gradient(135deg,rgb(var(--lueur)),var(--lueur-2));box-shadow:0 0 12px rgba(var(--lueur),.6)}
+:root[data-theme="futur-confort-ardoise"] h1,:root[data-theme="futur-confort-ardoise"] h2,:root[data-theme="futur-confort-ardoise"] h3{letter-spacing:.12em;text-transform:uppercase}
+:root[data-theme="futur-confort-ardoise"] h1{text-shadow:0 0 12px rgba(var(--lueur),.55)}
+:root[data-theme="futur-confort-ardoise"] .num,:root[data-theme="futur-confort-ardoise"] .tuile-kpi .val,:root[data-theme="futur-confort-ardoise"] .barre-val .v{font-family:var(--mono)}
+:root[data-theme="futur-confort-ardoise"] .tuile-kpi .val{color:var(--accent-ink);text-shadow:0 0 10px rgba(var(--lueur),.45)}
+:root[data-theme="futur-confort-ardoise"] .carte,:root[data-theme="futur-confort-ardoise"] .tuile-kpi{border-radius:4px;background:linear-gradient(180deg,color-mix(in srgb,var(--surface-2) 92%,transparent),color-mix(in srgb,var(--surface) 92%,transparent))}
+:root[data-theme="futur-confort-ardoise"] button.primaire{color:var(--page);box-shadow:0 0 12px rgba(var(--lueur),.5)}
+:root[data-theme="futur-confort-ardoise"] .piste i{box-shadow:0 0 6px currentColor}
+:root[data-theme="futur-confort-ardoise"] body{background: linear-gradient(rgba(var(--lueur),.022) 1px,transparent 1px) 0 0/32px 32px, linear-gradient(90deg,rgba(var(--lueur),.022) 1px,transparent 1px) 0 0/32px 32px, radial-gradient(ellipse at top,var(--haut),var(--page) 60%) fixed}
+:root[data-theme="futur-confort-ardoise"] h1,:root[data-theme="futur-confort-ardoise"] .tuile-kpi .val{text-shadow:none}
+:root[data-theme="futur-confort-ardoise"] h1,:root[data-theme="futur-confort-ardoise"] h2,:root[data-theme="futur-confort-ardoise"] h3{letter-spacing:.08em}
+:root[data-theme="futur-confort-ardoise"] .entete,:root[data-theme="futur-confort-ardoise"] .marque i,:root[data-theme="futur-confort-ardoise"] .piste i,:root[data-theme="futur-confort-ardoise"] button.primaire{box-shadow:none}
+:root[data-theme="futur-confort-ardoise"] .tuile-kpi .val{color:var(--ink)}
+
+/* ══ futur-confort-ivoire : techno, sombre, intensité 2, AA ══ */
+:root[data-theme="futur-confort-ivoire"]{
+  color-scheme:dark;
+  --page:#16181c;
+  --surface:#1d2025;
+  --surface-2:#252930;
+  --ink:#e6dfcc;
+  --ink-2:#b2ab96;
+  --muted:#827d6f;
+  --grid:#2c3038;
+  --axis:#3b4048;
+  --border:rgba(189,181,160,.12);
+  --border-strong:rgba(189,181,160,.24);
+  --median:#d6c9a4;
+  --accent:#b8b09b;
+  --accent-ink:#ddd5c0;
+  --accent-track:#34322c;
+  --good:#7fb98a;
+  --good-ink:#a2d1aa;
+  --warn:#e0a458;
+  --warn-ink:#ebbd7c;
+  --serious:#d9906a;
+  --crit:#d47f6f;
+  --crit-ink:#e6a395;
+  --violet:#7fb3c8;
+  --neg:#d47f6f;
+  --neg-track:#3d2622;
+  --ombre:0 0 0 1px rgba(var(--lueur),.06),0 0 26px rgba(var(--lueur),.07);
+  --bouton:#b8b09b;
+  --sur-bouton:#16181c;
+  --lueur:189,181,160;
+  --lueur-2:#8fa3b0;
+  --haut:#20242b;
+}
+/* Futuriste confort · ivoire : décor repris du Dashboard (style.css, 13/11/2026), règles de la famille comprises. */
+:root[data-theme="futur-confort-ivoire"] body{background: linear-gradient(rgba(var(--lueur),.035) 1px,transparent 1px) 0 0/32px 32px, linear-gradient(90deg,rgba(var(--lueur),.035) 1px,transparent 1px) 0 0/32px 32px, radial-gradient(ellipse at top,var(--haut),var(--page) 60%) fixed}
+:root[data-theme="futur-confort-ivoire"] .entete{background:color-mix(in srgb,var(--page) 85%,transparent);border-bottom:1px solid rgba(var(--lueur),.35);box-shadow:0 0 18px rgba(var(--lueur),.15)}
+:root[data-theme="futur-confort-ivoire"] .marque i{background:linear-gradient(135deg,rgb(var(--lueur)),var(--lueur-2));box-shadow:0 0 12px rgba(var(--lueur),.6)}
+:root[data-theme="futur-confort-ivoire"] h1,:root[data-theme="futur-confort-ivoire"] h2,:root[data-theme="futur-confort-ivoire"] h3{letter-spacing:.12em;text-transform:uppercase}
+:root[data-theme="futur-confort-ivoire"] h1{text-shadow:0 0 12px rgba(var(--lueur),.55)}
+:root[data-theme="futur-confort-ivoire"] .num,:root[data-theme="futur-confort-ivoire"] .tuile-kpi .val,:root[data-theme="futur-confort-ivoire"] .barre-val .v{font-family:var(--mono)}
+:root[data-theme="futur-confort-ivoire"] .tuile-kpi .val{color:var(--accent-ink);text-shadow:0 0 10px rgba(var(--lueur),.45)}
+:root[data-theme="futur-confort-ivoire"] .carte,:root[data-theme="futur-confort-ivoire"] .tuile-kpi{border-radius:4px;background:linear-gradient(180deg,color-mix(in srgb,var(--surface-2) 92%,transparent),color-mix(in srgb,var(--surface) 92%,transparent))}
+:root[data-theme="futur-confort-ivoire"] button.primaire{color:var(--page);box-shadow:0 0 12px rgba(var(--lueur),.5)}
+:root[data-theme="futur-confort-ivoire"] .piste i{box-shadow:0 0 6px currentColor}
+:root[data-theme="futur-confort-ivoire"] body{background: linear-gradient(rgba(var(--lueur),.022) 1px,transparent 1px) 0 0/32px 32px, linear-gradient(90deg,rgba(var(--lueur),.022) 1px,transparent 1px) 0 0/32px 32px, radial-gradient(ellipse at top,var(--haut),var(--page) 60%) fixed}
+:root[data-theme="futur-confort-ivoire"] h1,:root[data-theme="futur-confort-ivoire"] .tuile-kpi .val{text-shadow:none}
+:root[data-theme="futur-confort-ivoire"] h1,:root[data-theme="futur-confort-ivoire"] h2,:root[data-theme="futur-confort-ivoire"] h3{letter-spacing:.08em}
+:root[data-theme="futur-confort-ivoire"] .entete,:root[data-theme="futur-confort-ivoire"] .marque i,:root[data-theme="futur-confort-ivoire"] .piste i,:root[data-theme="futur-confort-ivoire"] button.primaire{box-shadow:none}
+:root[data-theme="futur-confort-ivoire"] .tuile-kpi .val{color:var(--ink)}
+
+/* ══ futur-confort-pervenche : techno, sombre, intensité 2, AA ══ */
+:root[data-theme="futur-confort-pervenche"]{
+  color-scheme:dark;
+  --page:#16181c;
+  --surface:#1d2025;
+  --surface-2:#252930;
+  --ink:#e6dfcc;
+  --ink-2:#b2ab96;
+  --muted:#827d6f;
+  --grid:#2c3038;
+  --axis:#3b4048;
+  --border:rgba(154,152,208,.13);
+  --border-strong:rgba(154,152,208,.26);
+  --median:#d6c9a4;
+  --accent:#9a98d0;
+  --accent-ink:#c0bfe8;
+  --accent-track:#2d2c42;
+  --good:#7fb98a;
+  --good-ink:#a2d1aa;
+  --warn:#e0a458;
+  --warn-ink:#ebbd7c;
+  --serious:#d9906a;
+  --crit:#d47f6f;
+  --crit-ink:#e6a395;
+  --violet:#7fb3c8;
+  --neg:#d47f6f;
+  --neg-track:#3d2622;
+  --ombre:0 0 0 1px rgba(var(--lueur),.06),0 0 26px rgba(var(--lueur),.07);
+  --bouton:#9a98d0;
+  --sur-bouton:#16181c;
+  --lueur:154,152,208;
+  --lueur-2:#7ea3c4;
+  --haut:#20242b;
+}
+/* Futuriste confort · pervenche : décor repris du Dashboard (style.css, 13/11/2026), règles de la famille comprises. */
+:root[data-theme="futur-confort-pervenche"] body{background: linear-gradient(rgba(var(--lueur),.035) 1px,transparent 1px) 0 0/32px 32px, linear-gradient(90deg,rgba(var(--lueur),.035) 1px,transparent 1px) 0 0/32px 32px, radial-gradient(ellipse at top,var(--haut),var(--page) 60%) fixed}
+:root[data-theme="futur-confort-pervenche"] .entete{background:color-mix(in srgb,var(--page) 85%,transparent);border-bottom:1px solid rgba(var(--lueur),.35);box-shadow:0 0 18px rgba(var(--lueur),.15)}
+:root[data-theme="futur-confort-pervenche"] .marque i{background:linear-gradient(135deg,rgb(var(--lueur)),var(--lueur-2));box-shadow:0 0 12px rgba(var(--lueur),.6)}
+:root[data-theme="futur-confort-pervenche"] h1,:root[data-theme="futur-confort-pervenche"] h2,:root[data-theme="futur-confort-pervenche"] h3{letter-spacing:.12em;text-transform:uppercase}
+:root[data-theme="futur-confort-pervenche"] h1{text-shadow:0 0 12px rgba(var(--lueur),.55)}
+:root[data-theme="futur-confort-pervenche"] .num,:root[data-theme="futur-confort-pervenche"] .tuile-kpi .val,:root[data-theme="futur-confort-pervenche"] .barre-val .v{font-family:var(--mono)}
+:root[data-theme="futur-confort-pervenche"] .tuile-kpi .val{color:var(--accent-ink);text-shadow:0 0 10px rgba(var(--lueur),.45)}
+:root[data-theme="futur-confort-pervenche"] .carte,:root[data-theme="futur-confort-pervenche"] .tuile-kpi{border-radius:4px;background:linear-gradient(180deg,color-mix(in srgb,var(--surface-2) 92%,transparent),color-mix(in srgb,var(--surface) 92%,transparent))}
+:root[data-theme="futur-confort-pervenche"] button.primaire{color:var(--page);box-shadow:0 0 12px rgba(var(--lueur),.5)}
+:root[data-theme="futur-confort-pervenche"] .piste i{box-shadow:0 0 6px currentColor}
+:root[data-theme="futur-confort-pervenche"] body{background: linear-gradient(rgba(var(--lueur),.022) 1px,transparent 1px) 0 0/32px 32px, linear-gradient(90deg,rgba(var(--lueur),.022) 1px,transparent 1px) 0 0/32px 32px, radial-gradient(ellipse at top,var(--haut),var(--page) 60%) fixed}
+:root[data-theme="futur-confort-pervenche"] h1,:root[data-theme="futur-confort-pervenche"] .tuile-kpi .val{text-shadow:none}
+:root[data-theme="futur-confort-pervenche"] h1,:root[data-theme="futur-confort-pervenche"] h2,:root[data-theme="futur-confort-pervenche"] h3{letter-spacing:.08em}
+:root[data-theme="futur-confort-pervenche"] .entete,:root[data-theme="futur-confort-pervenche"] .marque i,:root[data-theme="futur-confort-pervenche"] .piste i,:root[data-theme="futur-confort-pervenche"] button.primaire{box-shadow:none}
+:root[data-theme="futur-confort-pervenche"] .tuile-kpi .val{color:var(--ink)}
+
+/* ══ futur-vert : techno, sombre, intensité 3, AAA ══ */
+:root[data-theme="futur-vert"]{
+  color-scheme:dark;
+  --page:#020a04;
+  --surface:#04140a;
+  --surface-2:#072011;
+  --ink:#c8ffd8;
+  --ink-2:#7fcf98;
+  --muted:#4f8a62;
+  --grid:#0b2a16;
+  --axis:#124022;
+  --border:rgba(57,255,120,.16);
+  --border-strong:rgba(57,255,120,.34);
+  --median:#7dffa6;
+  --accent:#39ff78;
+  --accent-ink:#8affb0;
+  --accent-track:#08361a;
+  --good:#d4ff5e;
+  --good-ink:#e2ff8f;
+  --warn:#ffd23f;
+  --warn-ink:#ffe27a;
+  --serious:#ff9f4c;
+  --crit:#ff5f56;
+  --crit-ink:#ff8f88;
+  --violet:#00e0c0;
+  --neg:#ff5f56;
+  --neg-track:#3a1210;
+  --ombre:0 0 0 1px rgba(var(--lueur),.06),0 0 26px rgba(var(--lueur),.07);
+  --bouton:#39ff78;
+  --sur-bouton:#020a04;
+  --lueur:57,255,120;
+  --lueur-2:#00e0c0;
+  --haut:#06200f;
+}
+/* Futuriste terminal : décor repris du Dashboard (style.css, 13/11/2026), règles de la famille comprises. */
+:root[data-theme="futur-vert"] body{background: linear-gradient(rgba(var(--lueur),.035) 1px,transparent 1px) 0 0/32px 32px, linear-gradient(90deg,rgba(var(--lueur),.035) 1px,transparent 1px) 0 0/32px 32px, radial-gradient(ellipse at top,var(--haut),var(--page) 60%) fixed}
+:root[data-theme="futur-vert"] .entete{background:color-mix(in srgb,var(--page) 85%,transparent);border-bottom:1px solid rgba(var(--lueur),.35);box-shadow:0 0 18px rgba(var(--lueur),.15)}
+:root[data-theme="futur-vert"] .marque i{background:linear-gradient(135deg,rgb(var(--lueur)),var(--lueur-2));box-shadow:0 0 12px rgba(var(--lueur),.6)}
+:root[data-theme="futur-vert"] h1,:root[data-theme="futur-vert"] h2,:root[data-theme="futur-vert"] h3{letter-spacing:.12em;text-transform:uppercase}
+:root[data-theme="futur-vert"] h1{text-shadow:0 0 12px rgba(var(--lueur),.55)}
+:root[data-theme="futur-vert"] .num,:root[data-theme="futur-vert"] .tuile-kpi .val,:root[data-theme="futur-vert"] .barre-val .v{font-family:var(--mono)}
+:root[data-theme="futur-vert"] .tuile-kpi .val{color:var(--accent-ink);text-shadow:0 0 10px rgba(var(--lueur),.45)}
+:root[data-theme="futur-vert"] .carte,:root[data-theme="futur-vert"] .tuile-kpi{border-radius:4px;background:linear-gradient(180deg,color-mix(in srgb,var(--surface-2) 92%,transparent),color-mix(in srgb,var(--surface) 92%,transparent))}
+:root[data-theme="futur-vert"] button.primaire{color:var(--page);box-shadow:0 0 12px rgba(var(--lueur),.5)}
+:root[data-theme="futur-vert"] .piste i{box-shadow:0 0 6px currentColor}
+:root[data-theme="futur-vert"] body{font-family:var(--mono);font-size:13px}
+:root[data-theme="futur-vert"] h1{text-shadow:0 0 8px rgba(57,255,120,.8)}
+
+/* ══ futur-violet : techno, sombre, intensité 3, AA ══ */
+:root[data-theme="futur-violet"]{
+  color-scheme:dark;
+  --page:#08040f;
+  --surface:#120a20;
+  --surface-2:#1b1030;
+  --ink:#efe2ff;
+  --ink-2:#b79ad8;
+  --muted:#7b6596;
+  --grid:#241640;
+  --axis:#34205a;
+  --border:rgba(190,110,255,.18);
+  --border-strong:rgba(190,110,255,.36);
+  --median:#d6a8ff;
+  --accent:#b66dff;
+  --accent-ink:#d5a8ff;
+  --accent-track:#2b1450;
+  --good:#2ee6a8;
+  --good-ink:#5cf5c0;
+  --warn:#ffd23f;
+  --warn-ink:#ffe27a;
+  --serious:#ff8a4c;
+  --crit:#ff4f9a;
+  --crit-ink:#ff86b8;
+  --violet:#00d8f0;
+  --neg:#ff4f9a;
+  --neg-track:#3a0f25;
+  --ombre:0 0 0 1px rgba(var(--lueur),.06),0 0 26px rgba(var(--lueur),.07);
+  --bouton:#b66dff;
+  --sur-bouton:#08040f;
+  --lueur:182,109,255;
+  --lueur-2:#00d8f0;
+  --haut:#1d0d3a;
+}
+/* Futuriste violet : décor repris du Dashboard (style.css, 13/11/2026), règles de la famille comprises. */
+:root[data-theme="futur-violet"] body{background: linear-gradient(rgba(var(--lueur),.035) 1px,transparent 1px) 0 0/32px 32px, linear-gradient(90deg,rgba(var(--lueur),.035) 1px,transparent 1px) 0 0/32px 32px, radial-gradient(ellipse at top,var(--haut),var(--page) 60%) fixed}
+:root[data-theme="futur-violet"] .entete{background:color-mix(in srgb,var(--page) 85%,transparent);border-bottom:1px solid rgba(var(--lueur),.35);box-shadow:0 0 18px rgba(var(--lueur),.15)}
+:root[data-theme="futur-violet"] .marque i{background:linear-gradient(135deg,rgb(var(--lueur)),var(--lueur-2));box-shadow:0 0 12px rgba(var(--lueur),.6)}
+:root[data-theme="futur-violet"] h1,:root[data-theme="futur-violet"] h2,:root[data-theme="futur-violet"] h3{letter-spacing:.12em;text-transform:uppercase}
+:root[data-theme="futur-violet"] h1{text-shadow:0 0 12px rgba(var(--lueur),.55)}
+:root[data-theme="futur-violet"] .num,:root[data-theme="futur-violet"] .tuile-kpi .val,:root[data-theme="futur-violet"] .barre-val .v{font-family:var(--mono)}
+:root[data-theme="futur-violet"] .tuile-kpi .val{color:var(--accent-ink);text-shadow:0 0 10px rgba(var(--lueur),.45)}
+:root[data-theme="futur-violet"] .carte,:root[data-theme="futur-violet"] .tuile-kpi{border-radius:4px;background:linear-gradient(180deg,color-mix(in srgb,var(--surface-2) 92%,transparent),color-mix(in srgb,var(--surface) 92%,transparent))}
+:root[data-theme="futur-violet"] button.primaire{color:var(--page);box-shadow:0 0 12px rgba(var(--lueur),.5)}
+:root[data-theme="futur-violet"] .piste i{box-shadow:0 0 6px currentColor}
+
+/* ══ mercure : techno, sombre, intensité 2, AA ══ */
+:root[data-theme="mercure"]{
+  color-scheme:dark;
+  --page:#121417;
+  --surface:#1f2226;
+  --surface-2:#2b3036;
+  --ink:#e8ebee;
+  --ink-2:#aab1b8;
+  --muted:#84868a;
+  --grid:#33363a;
+  --axis:#4b4e52;
+  --border:rgba(232,235,238,.10);
+  --border-strong:rgba(232,235,238,.20);
+  --median:#cacdd0;
+  --accent:#b8c4d0;
+  --accent-ink:#d3dce5;
+  --accent-track:#41464b;
+  --good:#5fbf8a;
+  --good-ink:#86d9aa;
+  --warn:#d9b04a;
+  --warn-ink:#e8c670;
+  --serious:#ec835a;
+  --crit:#d9675f;
+  --crit-ink:#f09a94;
+  --violet:#9aa6d9;
+  --neg:#d9675f;
+  --neg-track:#402e30;
+  --ombre:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.35);
+  --bouton:#c9d1d9;
+  --sur-bouton:#16181b;
+}
+/* Mercure : métal brossé, titres espacés en capitales, titre et bouton chromés. */
+:root[data-theme="mercure"] body{background:linear-gradient(180deg,#1b1e22,#121417) fixed,var(--page)}
+:root[data-theme="mercure"] .carte,:root[data-theme="mercure"] .tuile-kpi{background:linear-gradient(180deg,#2a2f35,#1f2327);border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 1px 0 rgba(255,255,255,.10),0 6px 18px rgba(0,0,0,.45);border-radius:6px}
+:root[data-theme="mercure"] h1,:root[data-theme="mercure"] h2,:root[data-theme="mercure"] h3{letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+:root[data-theme="mercure"] h1{background:linear-gradient(180deg,#ffffff,#9aa4ae);-webkit-background-clip:text;background-clip:text;color:transparent}
+:root[data-theme="mercure"] .marque i{background:linear-gradient(135deg,#e6ebf0,#8a949e 50%,#d4dae0);color:#16181b}
+:root[data-theme="mercure"] button.primaire{background:linear-gradient(180deg,#e2e8ee,#aab4be);border-color:#8a949e;color:#16181b}
+:root[data-theme="mercure"] .piste i:not(.neg){background:linear-gradient(180deg,#dfe5ea,#9aa4ae)}
+
+/* ══ blueprint : techno, sombre, intensité 3, AA ══ */
+:root[data-theme="blueprint"]{
+  color-scheme:dark;
+  --page:#0f3a6b;
+  --surface:#124a85;
+  --surface-2:#1a5a9e;
+  --ink:#eaf4ff;
+  --ink-2:#c4dcf5;
+  --muted:#7e9fc2;
+  --grid:#285b91;
+  --axis:#426fa0;
+  --border:rgba(234,244,255,.10);
+  --border-strong:rgba(234,244,255,.20);
+  --median:#cadaed;
+  --accent:#8fd3ff;
+  --accent-ink:#b3e1ff;
+  --accent-track:#2e68a0;
+  --good:#7fe0a0;
+  --good-ink:#9bf0b8;
+  --warn:#ffd166;
+  --warn-ink:#ffdf8a;
+  --serious:#ec835a;
+  --crit:#ff9a8a;
+  --crit-ink:#ffb8ac;
+  --violet:#c6a8ff;
+  --neg:#ff9a8a;
+  --neg-track:#3d5886;
+  --ombre:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.35);
+  --bouton:#8fd3ff;
+  --sur-bouton:#0b2f55;
+}
+/* Plan d'architecte : quadrillage fin, police de plan, cartes en pointillés, titres espacés. */
+:root[data-theme="blueprint"] body{font-family:"Lucida Console","Courier New",monospace;font-size:13px;background:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px) 0 0/24px 24px,linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px) 0 0/24px 24px,var(--page)}
+:root[data-theme="blueprint"] .carte,:root[data-theme="blueprint"] .tuile-kpi{border:1px dashed rgba(234,244,255,.55);border-radius:2px;box-shadow:none}
+:root[data-theme="blueprint"] h1,:root[data-theme="blueprint"] h2,:root[data-theme="blueprint"] h3,:root[data-theme="blueprint"] th{text-transform:uppercase;letter-spacing:.1em}
+:root[data-theme="blueprint"] .marque i{border-radius:0;background:none;border:2px solid var(--ink);color:var(--ink)}
+:root[data-theme="blueprint"] button,:root[data-theme="blueprint"] select,:root[data-theme="blueprint"] input[type=search],:root[data-theme="blueprint"] input[type=text],:root[data-theme="blueprint"] input[type=date],:root[data-theme="blueprint"] input[type=number]{border-radius:2px}
+:root[data-theme="blueprint"] .piste,:root[data-theme="blueprint"] .piste>i{border-radius:0}
+
+/* ══ cartoon : ludique, clair, intensité 3, AA ══ */
+:root[data-theme="cartoon"]{
+  color-scheme:light;
+  --page:#fff6dc;
+  --surface:#ffffff;
+  --surface-2:#fff1c2;
+  --ink:#1a1a1a;
+  --ink-2:#3b3b3b;
+  --muted:#6b6b6b;
+  --grid:#efe0ad;
+  --axis:#1a1a1a;
+  --border:rgba(26,26,26,.22);
+  --border-strong:#1a1a1a;
+  --median:#1a1a1a;
+  --accent:#2f80ed;
+  --accent-ink:#1655b0;
+  --accent-track:#d6e6ff;
+  --good:#27ae60;
+  --good-ink:#167a3e;
+  --warn:#f2c94c;
+  --warn-ink:#7d5c00;
+  --serious:#f2994a;
+  --crit:#eb5757;
+  --crit-ink:#b3261e;
+  --violet:#9b51e0;
+  --neg:#eb5757;
+  --neg-track:#ffd9d9;
+  --ombre:5px 5px 0 #1a1a1a;
+  --bouton:#6aa5f5;
+  --sur-bouton:#1a1a1a;
+  --rayon:16px;
+}
+/* Cartoon : décor repris du Dashboard (style.css, 13/11/2026), règles de la famille comprises. */
+:root[data-theme="cartoon"] body{background:radial-gradient(rgba(242,153,74,.22) 1.6px,transparent 1.8px) 0 0/16px 16px,#fff6dc}
+:root[data-theme="cartoon"] .entete{background:#ffd23f;border-bottom:4px solid #1a1a1a}
+:root[data-theme="cartoon"] .marque i{background:#eb5757;border:3px solid #1a1a1a;border-radius:50%;width:30px;height:30px;font-weight:900}
+:root[data-theme="cartoon"] .marque span,:root[data-theme="cartoon"] h1,:root[data-theme="cartoon"] h2,:root[data-theme="cartoon"] h3,:root[data-theme="cartoon"] .tuile-kpi .val{font-family:"Comic Sans MS","Comic Neue","Chalkboard SE","Segoe Print",cursive}
+:root[data-theme="cartoon"] h1{font-size:24px;text-shadow:3px 3px 0 #ffd23f}
+:root[data-theme="cartoon"] .carte,:root[data-theme="cartoon"] .tuile-kpi{border:3px solid #1a1a1a}
+:root[data-theme="cartoon"] .tuile-kpi:nth-child(5n+1){background:#d6e6ff}
+:root[data-theme="cartoon"] .tuile-kpi:nth-child(5n+2){background:#d9f5e3}
+:root[data-theme="cartoon"] .tuile-kpi:nth-child(5n+3){background:#fff1c2}
+:root[data-theme="cartoon"] .tuile-kpi:nth-child(5n+4){background:#ffe0e0}
+:root[data-theme="cartoon"] .tuile-kpi:nth-child(5n+5){background:#eedcff}
+:root[data-theme="cartoon"] button,:root[data-theme="cartoon"] select,:root[data-theme="cartoon"] input[type=search],:root[data-theme="cartoon"] input[type=text],:root[data-theme="cartoon"] input[type=date]{border:2px solid #1a1a1a;box-shadow:2px 2px 0 #1a1a1a}
+:root[data-theme="cartoon"] button.discret,:root[data-theme="cartoon"] select.choix-theme{border-color:transparent;box-shadow:none}
+:root[data-theme="cartoon"] button:active{transform:translate(2px,2px);box-shadow:none}
+:root[data-theme="cartoon"] .piste i{box-shadow:inset 0 0 0 2px #1a1a1a;border-radius:6px}
+:root[data-theme="cartoon"] .badge{border:2px solid #1a1a1a}
+:root[data-theme="cartoon"] th{color:#1a1a1a;font-weight:800}
+
+/* ══ licorne : ludique, clair, intensité 3, AA ══ */
+:root[data-theme="licorne"]{
+  color-scheme:light;
+  --page:#fdf2fb;
+  --surface:#fffaff;
+  --surface-2:#f6e8f7;
+  --ink:#3b2445;
+  --ink-2:#6a4f75;
+  --muted:#9c86a5;
+  --grid:#efdcf1;
+  --axis:#dcc3e0;
+  --border:rgba(120,60,140,.14);
+  --border-strong:rgba(120,60,140,.26);
+  --median:#86659a;
+  --accent:#b545cf;
+  --accent-ink:#8e2aa6;
+  --accent-track:#f1d2f7;
+  --good:#1fae95;
+  --good-ink:#0b6656;
+  --warn:#f4a73b;
+  --warn-ink:#94560a;
+  --serious:#f08a6a;
+  --crit:#e94f86;
+  --crit-ink:#b8285c;
+  --violet:#7b6cf0;
+  --neg:#e94f86;
+  --neg-track:#fbd5e4;
+  --ombre:0 1px 2px rgba(150,70,170,.08),0 8px 22px rgba(150,70,170,.10);
+  --bouton:#a8379b;
+  --sur-bouton:#ffffff;
+}
+/* Licorne : décor repris du Dashboard (style.css, 13/11/2026), règles de la famille comprises. */
+:root[data-theme="licorne"] body{background:linear-gradient(135deg,#fdeef9 0%,#efe9ff 35%,#e6f7f6 70%,#fff6e6 100%) fixed}
+:root[data-theme="licorne"] .entete{border-bottom:3px solid transparent;border-image:linear-gradient(90deg,#ff9ad5,#c49bff,#8fd3ff,#8ff0c8,#ffe08a) 1}
+:root[data-theme="licorne"] .marque i{background:linear-gradient(135deg,#ff8fd0,#b98cff 45%,#7cc8ff 75%,#7fe8c0)}
+:root[data-theme="licorne"] .marque span::after{content:" 🦄"}
+:root[data-theme="licorne"] h1{background:linear-gradient(90deg,#c13fb3,#7b5cf0,#2a9fd6);-webkit-background-clip:text;background-clip:text;color:transparent}
+:root[data-theme="licorne"] .carte{border-radius:18px}
+:root[data-theme="licorne"] button.primaire{background:linear-gradient(90deg,#a8379b,#6a4fd0);border-color:transparent}
+
+/* ══ licorne-hard : ludique, clair, intensité 3, AA ══ */
+:root[data-theme="licorne-hard"]{
+  color-scheme:light;
+  --page:#ffe0f2;
+  --surface:#fff6fb;
+  --surface-2:#ffe6f4;
+  --ink:#4b0a3d;
+  --ink-2:#7a2a68;
+  --muted:#b0679f;
+  --grid:#ffd0ea;
+  --axis:#f7b3da;
+  --border:rgba(255,20,147,.22);
+  --border-strong:rgba(255,20,147,.42);
+  --median:#c0499f;
+  --accent:#e6178f;
+  --accent-ink:#ad006b;
+  --accent-track:#ffc9e8;
+  --good:#14a883;
+  --good-ink:#00704f;
+  --warn:#ffa21f;
+  --warn-ink:#985000;
+  --serious:#ff7a59;
+  --crit:#ff2d6f;
+  --crit-ink:#b5003f;
+  --violet:#9b4dff;
+  --neg:#ff2d6f;
+  --neg-track:#ffd0de;
+  --ombre:0 3px 0 #ffb3df,0 10px 28px rgba(255,20,147,.22);
+  --bouton:#c8007a;
+  --sur-bouton:#ffffff;
+}
+/* Licorne Hard : la licorne sans retenue. Fond arc-en-ciel pastel pailleté, pluie de cœurs, licornes et arcs-en-ciel qui descend doucement,
+   titre arc-en-ciel qui défile, cartes bonbon avec un cœur qui bat, boutons pilule. Tout le mouvement s'arrête si le système demande moins d'animations. */
+:root[data-theme="licorne-hard"] body{background:radial-gradient(circle,rgba(255,255,255,.95) 0 1.5px,transparent 2.5px) 0 0/70px 70px,radial-gradient(circle,rgba(255,255,255,.8) 0 1px,transparent 2px) 35px 35px/70px 70px,linear-gradient(135deg,#ffb8e2 0%,#ffd1ee 18%,#ead0ff 36%,#cfe6ff 54%,#cdfbe4 72%,#fff1b8 90%,#ffc6e6 100%);background-attachment:fixed}
+:root[data-theme="licorne-hard"] body::before{content:"💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐ 💖 🦄 🌈 ✨ 💕 🎀 🍭 💗 🌸 ⭐";position:fixed;top:-60%;left:-20%;width:140%;height:220%;z-index:-1;pointer-events:none;overflow:hidden;font-size:34px;line-height:84px;word-spacing:40px;text-align:center;opacity:.38;transform:rotate(-10deg)}
+@media (prefers-reduced-motion:no-preference){:root[data-theme="licorne-hard"] body::before{animation:licorne-hard-pluie 12s linear infinite}:root[data-theme="licorne-hard"] h1{animation:licorne-hard-arc 6s linear infinite}:root[data-theme="licorne-hard"] .carte::after{animation:licorne-hard-coeur 1.6s ease-in-out infinite}}
+@keyframes licorne-hard-pluie{from{transform:rotate(-10deg) translateY(0)}to{transform:rotate(-10deg) translateY(84px)}}
+@keyframes licorne-hard-arc{from{background-position:0 0}to{background-position:400px 0}}
+@keyframes licorne-hard-coeur{0%,100%{transform:rotate(14deg) scale(1)}50%{transform:rotate(14deg) scale(1.25)}}
+:root[data-theme="licorne-hard"] .entete{border-bottom:5px solid transparent;border-image:linear-gradient(90deg,#ff4fa8,#ff9a3c,#ffd93c,#4fd67a,#3cb4ff,#a46bff,#ff4fa8) 1}
+:root[data-theme="licorne-hard"] .marque i{border-radius:50%;background:linear-gradient(135deg,#ff4fa8,#ffb03c 30%,#ffe14d 45%,#4fd67a 60%,#3cb4ff 78%,#a46bff);box-shadow:0 0 0 2px #fff,0 0 12px rgba(255,79,168,.6)}
+:root[data-theme="licorne-hard"] .marque span::after{content:" 🦄🌈💖"}
+:root[data-theme="licorne-hard"] h1,:root[data-theme="licorne-hard"] h2,:root[data-theme="licorne-hard"] h3{font-family:"Segoe Print","Comic Sans MS",cursive}
+:root[data-theme="licorne-hard"] h1{font-size:26px;font-weight:700;background:linear-gradient(90deg,#e8178f,#ff7a1a,#e0a800,#1fa65a,#1a86e0,#8a3cff,#e8178f) 0 0/400px 100%;-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 0 #fff)}
+:root[data-theme="licorne-hard"] h2::after{content:" 💕"}
+:root[data-theme="licorne-hard"] .carte,:root[data-theme="licorne-hard"] .tuile-kpi{position:relative;border:2px solid #ff9fd6;border-radius:26px}
+:root[data-theme="licorne-hard"] .carte::after{content:"💖";position:absolute;top:-12px;right:-8px;font-size:24px;line-height:1;pointer-events:none;transform:rotate(14deg)}
+:root[data-theme="licorne-hard"] .tuile-kpi .val{color:#c8007a;text-shadow:0 2px 0 #ffd1ec}
+:root[data-theme="licorne-hard"] button,:root[data-theme="licorne-hard"] select,:root[data-theme="licorne-hard"] input[type=search],:root[data-theme="licorne-hard"] input[type=text],:root[data-theme="licorne-hard"] input[type=date],:root[data-theme="licorne-hard"] input[type=number]{border-radius:999px}
+:root[data-theme="licorne-hard"] button.primaire{background:linear-gradient(90deg,#c8007a,#8a2be2);border-color:transparent;box-shadow:0 3px 0 #ff9fd6}
+:root[data-theme="licorne-hard"] .piste,:root[data-theme="licorne-hard"] .piste>i{border-radius:999px}
+:root[data-theme="licorne-hard"] .piste i:not(.neg){background:linear-gradient(90deg,#ff4fa8,#ff9a3c,#ffd93c,#4fd67a,#3cb4ff,#a46bff)}
+:root[data-theme="licorne-hard"] .badge,:root[data-theme="licorne-hard"] .pastille{border-radius:999px}
+
+/* ══ manga : ludique, clair, intensité 3, AA ══ */
+:root[data-theme="manga"]{
+  color-scheme:light;
+  --page:#f6f6f6;
+  --surface:#ffffff;
+  --surface-2:#ececec;
+  --ink:#111111;
+  --ink-2:#444444;
+  --muted:#888888;
+  --grid:#e7e7e7;
+  --axis:#cbcbcb;
+  --border:rgba(17,17,17,.10);
+  --border-strong:rgba(17,17,17,.18);
+  --median:#646464;
+  --accent:#d9001b;
+  --accent-ink:#b00016;
+  --accent-track:#f7c7cd;
+  --good:#1a7f37;
+  --good-ink:#14602a;
+  --warn:#e6a000;
+  --warn-ink:#6e4900;
+  --serious:#ec835a;
+  --crit:#d9001b;
+  --crit-ink:#b00016;
+  --violet:#4b3a8f;
+  --neg:#d9001b;
+  --neg-track:#f8d1d6;
+  --ombre:0 1px 2px rgba(11,11,11,.05),0 6px 18px rgba(11,11,11,.05);
+  --bouton:#c8001a;
+  --sur-bouton:#ffffff;
+}
+/* Manga : trame de points, noir et blanc, titres en lettres penchées, ombres pleines, barres hachurées. */
+:root[data-theme="manga"] body{background:radial-gradient(circle,rgba(0,0,0,.14) 1px,transparent 1.4px) 0 0/7px 7px,var(--page)}
+:root[data-theme="manga"] h1,:root[data-theme="manga"] h2,:root[data-theme="manga"] h3{font-family:Impact,"Arial Black",sans-serif;font-weight:400;letter-spacing:.03em;text-transform:uppercase}
+:root[data-theme="manga"] h1{font-size:26px;display:inline-block;transform:skew(-6deg)}
+:root[data-theme="manga"] .carte,:root[data-theme="manga"] .tuile-kpi{border:2px solid #111;border-radius:0;box-shadow:4px 4px 0 #111}
+:root[data-theme="manga"] .marque i{border-radius:0;background:#111;clip-path:polygon(0 0,100% 8%,92% 100%,6% 92%)}
+:root[data-theme="manga"] button,:root[data-theme="manga"] select,:root[data-theme="manga"] input[type=search],:root[data-theme="manga"] input[type=text],:root[data-theme="manga"] input[type=date],:root[data-theme="manga"] input[type=number]{border:2px solid #111;border-radius:0}
+:root[data-theme="manga"] button:not(.discret){box-shadow:2px 2px 0 #111}
+:root[data-theme="manga"] .piste{border:1px solid #111;background:#fff}
+:root[data-theme="manga"] .piste,:root[data-theme="manga"] .piste>i{border-radius:0}
+:root[data-theme="manga"] .piste i:not(.neg){background:repeating-linear-gradient(45deg,#111 0 3px,#fff 3px 6px)}
+
+/* ══ memphis : ludique, clair, intensité 3, AA ══ */
+:root[data-theme="memphis"]{
+  color-scheme:light;
+  --page:#fff7e6;
+  --surface:#ffffff;
+  --surface-2:#fdeccf;
+  --ink:#1b1b3a;
+  --ink-2:#4a4a72;
+  --muted:#8d8d9c;
+  --grid:#e8e8eb;
+  --axis:#cdcdd4;
+  --border:rgba(27,27,58,.10);
+  --border-strong:rgba(27,27,58,.18);
+  --median:#6b6b7f;
+  --accent:#e0307f;
+  --accent-ink:#b01560;
+  --accent-track:#f8d1e3;
+  --good:#00a896;
+  --good-ink:#00695e;
+  --warn:#f2b705;
+  --warn-ink:#6e4900;
+  --serious:#ec835a;
+  --crit:#e0353a;
+  --crit-ink:#b3222a;
+  --violet:#6c3fd1;
+  --neg:#e0353a;
+  --neg-track:#f9dbdc;
+  --ombre:0 1px 2px rgba(11,11,11,.05),0 6px 18px rgba(11,11,11,.05);
+  --bouton:#cc2070;
+  --sur-bouton:#ffffff;
+}
+/* Memphis : confettis géométriques en fond, cartes cernées de bleu nuit avec ombre de couleur, titre ondulé. */
+:root[data-theme="memphis"] body{background:linear-gradient(135deg,transparent 0 46%,rgba(255,79,154,.16) 46% 54%,transparent 54%) 0 0/90px 90px,radial-gradient(circle at 20px 20px,rgba(0,184,169,.22) 0 8px,transparent 9px) 0 0/120px 120px,radial-gradient(circle at 70px 80px,rgba(255,210,63,.35) 0 6px,transparent 7px) 0 0/120px 120px,var(--page)}
+:root[data-theme="memphis"] .carte,:root[data-theme="memphis"] .tuile-kpi{border:3px solid var(--ink);border-radius:14px;box-shadow:6px 6px 0 #00b8a9}
+:root[data-theme="memphis"] .tuile-kpi:nth-child(3n+2){box-shadow:6px 6px 0 #ff4f9a}
+:root[data-theme="memphis"] .tuile-kpi:nth-child(3n+3){box-shadow:6px 6px 0 #ffd23f}
+:root[data-theme="memphis"] h1{text-decoration:underline wavy #ff4f9a;text-decoration-thickness:3px;text-underline-offset:6px}
+:root[data-theme="memphis"] .marque i{border-radius:0;background:linear-gradient(135deg,#ff4f9a 50%,#00b8a9 50%);transform:rotate(-8deg)}
+:root[data-theme="memphis"] button.primaire{box-shadow:3px 3px 0 var(--ink)}
+:root[data-theme="memphis"] button,:root[data-theme="memphis"] select{border-radius:99px}
+
+/* ══ death-metal : ludique, sombre, intensité 3, AA ══ */
+:root[data-theme="death-metal"]{
+  color-scheme:dark;
+  --page:#0b0809;
+  --surface:#161113;
+  --surface-2:#211a1c;
+  --ink:#ece4dc;
+  --ink-2:#b9aca3;
+  --muted:#85776f;
+  --grid:#2a2124;
+  --axis:#3d3134;
+  --border:rgba(255,40,40,.18);
+  --border-strong:rgba(255,40,40,.36);
+  --median:#9a8a80;
+  --accent:#e0242c;
+  --accent-ink:#ff5f5f;
+  --accent-track:#3a1416;
+  --good:#3fbf6a;
+  --good-ink:#6ee08f;
+  --warn:#e8a020;
+  --warn-ink:#f5be55;
+  --serious:#e8642a;
+  --crit:#ff2d55;
+  --crit-ink:#ff7088;
+  --violet:#a66bff;
+  --neg:#ff2d55;
+  --neg-track:#3d1520;
+  --ombre:0 0 0 1px rgba(255,30,30,.08),0 10px 30px rgba(0,0,0,.6);
+  --bouton:#8f0d12;
+  --sur-bouton:#ffffff;
+}
+/* Death Metal : Hard Licorne sans la licorne. Noir et rouge sang, titres gothiques, sang qui coule sous le titre de la page,
+   pluie lente et discrète de cercueils, crânes, roses fanées, chandelles et araignées teintés de rouge, vol de chauves-souris en haut,
+   chauve-souris qui bat des ailes sur les cartes, chandelle qui vacille sur les tuiles, lueur rouge qui pulse sur le titre.
+   Tout le mouvement s'arrête si le système demande moins d'animations. */
+:root[data-theme="death-metal"] body{background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(150,0,10,.45),transparent 70%),radial-gradient(ellipse 60% 50% at 50% 120%,rgba(90,0,0,.5),transparent 70%),repeating-linear-gradient(115deg,rgba(255,255,255,.012) 0 2px,transparent 2px 9px),#0b0809;background-attachment:fixed}
+:root[data-theme="death-metal"] body::before{content:"⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️ ⚰️ 💀 🥀 🕯️ 🦇 ✝️ 🕷️ 🩸 ⛓️ 🗡️";position:fixed;top:-60%;left:-20%;width:140%;height:220%;z-index:-1;pointer-events:none;overflow:hidden;font-size:26px;line-height:96px;word-spacing:70px;text-align:center;opacity:.2;transform:rotate(8deg);filter:grayscale(1) sepia(1) saturate(6) hue-rotate(-45deg) brightness(.75)}
+:root[data-theme="death-metal"] body::after{content:"🦇          🦇    🦇                    🦇        🦇                 🦇      🦇               🦇          🦇    🦇                    🦇        🦇                 🦇      🦇               ";white-space:pre;position:fixed;top:64px;left:0;width:max-content;height:60px;z-index:-1;pointer-events:none;overflow:hidden;font-size:22px;line-height:60px;opacity:.6;filter:grayscale(1) brightness(.6) drop-shadow(0 0 4px rgba(255,0,0,.8))}
+@media (prefers-reduced-motion:no-preference){:root[data-theme="death-metal"] body::before{animation:death-metal-pluie 18s linear infinite}:root[data-theme="death-metal"] body::after{animation:death-metal-vol 40s linear infinite}:root[data-theme="death-metal"] h1{animation:death-metal-lueur 2.4s ease-in-out infinite}:root[data-theme="death-metal"] .carte::after{animation:death-metal-ailes .5s ease-in-out infinite}:root[data-theme="death-metal"] .tuile-kpi::after{animation:death-metal-flamme 1.3s ease-in-out infinite}}
+@keyframes death-metal-pluie{from{transform:rotate(8deg) translateY(0)}to{transform:rotate(8deg) translateY(96px)}}
+@keyframes death-metal-vol{from{transform:translateX(-30%) translateY(0)}25%{transform:translateX(10vw) translateY(14px)}50%{transform:translateX(35vw) translateY(-6px)}75%{transform:translateX(60vw) translateY(10px)}to{transform:translateX(100vw) translateY(0)}}
+@keyframes death-metal-lueur{0%,100%{text-shadow:0 0 6px rgba(255,0,0,.45),2px 3px 0 #000}50%{text-shadow:0 0 16px rgba(255,0,0,.9),2px 3px 0 #000}}
+@keyframes death-metal-ailes{0%,100%{transform:rotate(-12deg) scaleX(1)}50%{transform:rotate(-12deg) scaleX(.55) translateY(-2px)}}
+@keyframes death-metal-flamme{0%,100%{opacity:.9;filter:drop-shadow(0 0 4px rgba(255,140,0,.7))}30%{opacity:.6;filter:drop-shadow(0 0 2px rgba(255,80,0,.5))}60%{opacity:1;filter:drop-shadow(0 0 8px rgba(255,160,0,.9))}}
+:root[data-theme="death-metal"] .entete{background:rgba(12,6,7,.94);border-bottom:2px solid #8f0d12}
+:root[data-theme="death-metal"] .titre-page::after{content:"";display:block;width:min(560px,100%);height:22px;margin-top:6px;pointer-events:none;background:linear-gradient(#8f0d12,#8f0d12) 0 0/100% 3px no-repeat,radial-gradient(ellipse 4px 12px at 50% 0,#8f0d12 98%,transparent) 0 0/37px 100% repeat-x,radial-gradient(ellipse 3px 19px at 50% 0,#a8121a 98%,transparent) 13px 0/53px 100% repeat-x,radial-gradient(ellipse 6px 8px at 50% 0,#7a0a0e 98%,transparent) 26px 0/71px 100% repeat-x}
+:root[data-theme="death-metal"] .marque i{border-radius:0;background:#000;color:#ff2a2a;border:1px solid #8f0d12;box-shadow:0 0 10px rgba(255,0,0,.5);font-family:"Old English Text MT","Chiller",Impact,serif;font-size:18px}
+:root[data-theme="death-metal"] .marque span{font-family:"Old English Text MT","Chiller",Impact,serif;font-weight:400;font-size:20px;letter-spacing:.02em}
+:root[data-theme="death-metal"] .marque span::after{content:" ⚰️🦇💀"}
+:root[data-theme="death-metal"] h1,:root[data-theme="death-metal"] h2,:root[data-theme="death-metal"] h3{font-family:"Old English Text MT","Chiller",Impact,serif;font-weight:400;letter-spacing:.02em}
+:root[data-theme="death-metal"] h1{font-size:30px;color:#ff2a2a;text-shadow:0 0 6px rgba(255,0,0,.55),2px 3px 0 #000}
+:root[data-theme="death-metal"] h1::before{content:"⚰️ "}
+:root[data-theme="death-metal"] h1::after{content:" ⚰️"}
+:root[data-theme="death-metal"] h2{font-size:20px;color:#ff5f5f}
+:root[data-theme="death-metal"] h2::after{content:" 🩸"}
+:root[data-theme="death-metal"] .carte,:root[data-theme="death-metal"] .tuile-kpi{position:relative;background:rgba(22,17,19,.93);border:1px solid #4a0d10;border-top:2px solid #8f0d12;border-radius:0;box-shadow:0 0 0 1px #000,0 10px 30px rgba(0,0,0,.7),inset 0 0 40px rgba(120,0,0,.12)}
+:root[data-theme="death-metal"] .carte::after{content:"🦇";position:absolute;top:-13px;right:-6px;font-size:20px;line-height:1;pointer-events:none;transform:rotate(-12deg);filter:brightness(.4) drop-shadow(0 0 4px rgba(255,0,0,.8))}
+:root[data-theme="death-metal"] .tuile-kpi::after{content:"🕯️";position:absolute;top:6px;right:8px;font-size:16px;line-height:1;pointer-events:none;opacity:.9}
+:root[data-theme="death-metal"] .tuile-kpi .val{color:#ff3b3b;text-shadow:0 0 10px rgba(255,0,0,.45)}
+:root[data-theme="death-metal"] th{text-transform:uppercase;letter-spacing:.12em}
+:root[data-theme="death-metal"] button,:root[data-theme="death-metal"] select,:root[data-theme="death-metal"] input[type=search],:root[data-theme="death-metal"] input[type=text],:root[data-theme="death-metal"] input[type=date],:root[data-theme="death-metal"] input[type=number]{border-radius:0}
+:root[data-theme="death-metal"] button.primaire{background:linear-gradient(180deg,#b3121a,#5c0508);border-color:#ff2a2a;text-transform:uppercase;letter-spacing:.1em}
+:root[data-theme="death-metal"] .piste,:root[data-theme="death-metal"] .piste>i{border-radius:0}
+:root[data-theme="death-metal"] .piste i:not(.neg){background:linear-gradient(90deg,#3d0003,#8f0d12 45%,#ff2a2a)}
+:root[data-theme="death-metal"] .badge,:root[data-theme="death-metal"] .pastille{border-radius:0}
+
+/* ══ hard-licorne : ludique, sombre, intensité 3, AA ══ */
+:root[data-theme="hard-licorne"]{
+  color-scheme:dark;
+  --page:#0b0809;
+  --surface:#161113;
+  --surface-2:#211a1c;
+  --ink:#ece4dc;
+  --ink-2:#b9aca3;
+  --muted:#85776f;
+  --grid:#2a2124;
+  --axis:#3d3134;
+  --border:rgba(255,40,40,.18);
+  --border-strong:rgba(255,40,40,.36);
+  --median:#9a8a80;
+  --accent:#e0242c;
+  --accent-ink:#ff5f5f;
+  --accent-track:#3a1416;
+  --good:#3fbf6a;
+  --good-ink:#6ee08f;
+  --warn:#e8a020;
+  --warn-ink:#f5be55;
+  --serious:#e8642a;
+  --crit:#ff2d55;
+  --crit-ink:#ff7088;
+  --violet:#a66bff;
+  --neg:#ff2d55;
+  --neg-track:#3d1520;
+  --ombre:0 0 0 1px rgba(255,30,30,.08),0 10px 30px rgba(0,0,0,.6);
+  --bouton:#8f0d12;
+  --sur-bouton:#ffffff;
+}
+/* Hard Licorne : la licorne version death metal. Noir et rouge sang, titres gothiques, sang qui coule sous le titre de la page,
+   et une licorne qui headbangue en vomissant un arc-en-ciel en bas de l'écran.
+   Tout le mouvement s'arrête si le système demande moins d'animations. */
+:root[data-theme="hard-licorne"] body{background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(150,0,10,.45),transparent 70%),radial-gradient(ellipse 60% 50% at 50% 120%,rgba(90,0,0,.5),transparent 70%),repeating-linear-gradient(115deg,rgba(255,255,255,.012) 0 2px,transparent 2px 9px),#0b0809;background-attachment:fixed}
+:root[data-theme="hard-licorne"] body::before{content:"";position:fixed;right:104px;bottom:58px;width:380px;height:36px;z-index:50;pointer-events:none;transform-origin:100% 50%;transform:rotate(-20deg);clip-path:polygon(100% 30%,100% 70%,0 100%,0 0);background:repeating-linear-gradient(90deg,rgba(0,0,0,.28) 0 8px,transparent 8px 26px),linear-gradient(180deg,#ff1a1a 0 16.6%,#ff8c00 16.6% 33.3%,#ffe600 33.3% 50%,#00d84a 50% 66.6%,#1a8cff 66.6% 83.3%,#a020f0 83.3%);filter:drop-shadow(0 0 6px rgba(255,255,255,.25))}
+:root[data-theme="hard-licorne"] body::after{content:"🦄";position:fixed;right:14px;bottom:30px;z-index:51;pointer-events:none;font-size:96px;line-height:1;filter:grayscale(1) brightness(.55) contrast(1.6) drop-shadow(0 0 3px #ff1a1a) drop-shadow(0 0 14px rgba(255,0,0,.85));transform-origin:70% 90%}
+@media (prefers-reduced-motion:no-preference){:root[data-theme="hard-licorne"] body::before{animation:hard-licorne-vomi .35s linear infinite}:root[data-theme="hard-licorne"] body::after{animation:hard-licorne-headbang .9s ease-in-out infinite}}
+@keyframes hard-licorne-vomi{from{background-position:0 0,0 0}to{background-position:-26px 0,0 0}}
+@keyframes hard-licorne-headbang{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(16deg) translateY(6px)}}
+:root[data-theme="hard-licorne"] .entete{background:rgba(12,6,7,.94);border-bottom:2px solid #8f0d12}
+:root[data-theme="hard-licorne"] .titre-page::after{content:"";display:block;width:min(560px,100%);height:22px;margin-top:6px;pointer-events:none;background:linear-gradient(#8f0d12,#8f0d12) 0 0/100% 3px no-repeat,radial-gradient(ellipse 4px 12px at 50% 0,#8f0d12 98%,transparent) 0 0/37px 100% repeat-x,radial-gradient(ellipse 3px 19px at 50% 0,#a8121a 98%,transparent) 13px 0/53px 100% repeat-x,radial-gradient(ellipse 6px 8px at 50% 0,#7a0a0e 98%,transparent) 26px 0/71px 100% repeat-x}
+:root[data-theme="hard-licorne"] .marque i{border-radius:0;background:#000;color:#ff2a2a;border:1px solid #8f0d12;box-shadow:0 0 10px rgba(255,0,0,.5);font-family:"Old English Text MT","Chiller",Impact,serif;font-size:18px}
+:root[data-theme="hard-licorne"] .marque span{font-family:"Old English Text MT","Chiller",Impact,serif;font-weight:400;font-size:20px;letter-spacing:.02em}
+:root[data-theme="hard-licorne"] .marque span::after{content:" 🤘💀🤘"}
+:root[data-theme="hard-licorne"] h1,:root[data-theme="hard-licorne"] h2,:root[data-theme="hard-licorne"] h3{font-family:"Old English Text MT","Chiller",Impact,serif;font-weight:400;letter-spacing:.02em}
+:root[data-theme="hard-licorne"] h1{font-size:30px;color:#ff2a2a;text-shadow:0 0 6px rgba(255,0,0,.55),2px 3px 0 #000}
+:root[data-theme="hard-licorne"] h1::before{content:"🤘 "}
+:root[data-theme="hard-licorne"] h1::after{content:" 🤘"}
+:root[data-theme="hard-licorne"] h2{font-size:20px;color:#ff5f5f}
+:root[data-theme="hard-licorne"] .carte,:root[data-theme="hard-licorne"] .tuile-kpi{background:rgba(22,17,19,.93);border:1px solid #4a0d10;border-top:2px solid #8f0d12;border-radius:0;box-shadow:0 0 0 1px #000,0 10px 30px rgba(0,0,0,.7),inset 0 0 40px rgba(120,0,0,.12)}
+:root[data-theme="hard-licorne"] .tuile-kpi .val{color:#ff3b3b;text-shadow:0 0 10px rgba(255,0,0,.45)}
+:root[data-theme="hard-licorne"] th{text-transform:uppercase;letter-spacing:.12em}
+:root[data-theme="hard-licorne"] button,:root[data-theme="hard-licorne"] select,:root[data-theme="hard-licorne"] input[type=search],:root[data-theme="hard-licorne"] input[type=text],:root[data-theme="hard-licorne"] input[type=date],:root[data-theme="hard-licorne"] input[type=number]{border-radius:0}
+:root[data-theme="hard-licorne"] button.primaire{background:linear-gradient(180deg,#b3121a,#5c0508);border-color:#ff2a2a;text-transform:uppercase;letter-spacing:.1em}
+:root[data-theme="hard-licorne"] .piste,:root[data-theme="hard-licorne"] .piste>i{border-radius:0}
+:root[data-theme="hard-licorne"] .piste i:not(.neg){background:linear-gradient(90deg,#ff1a1a,#ff8c00,#ffe600,#00d84a,#1a8cff,#a020f0)}
+:root[data-theme="hard-licorne"] .badge,:root[data-theme="hard-licorne"] .pastille{border-radius:0}

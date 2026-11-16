@@ -130,6 +130,21 @@ function htmlAnalyse(a, ed) {
 
 // ───────────── affichage ─────────────
 
+// Année du tableur vierge : une année déjà créée mais sans aucun nom saisi, sinon l'année qui suit la dernière.
+function prochaineAnnee(d) {
+  const vides = d.editions.filter(e => avecListes(e) && !e.participants.some(p => p.liste.length)).map(e => e.annee);
+  return vides.length ? Math.max(...vides) : Math.max(...d.editions.map(e => e.annee)) + 1;
+}
+
+// Joueurs et listes à écrire dans le tableur d'une année : ceux de l'année si elle a des joueurs,
+// sinon les joueurs de la dernière année jouée avant elle, sans noms.
+function contenuTableur(d, a) {
+  const ed = d.editions.find(e => e.annee === a);
+  if (ed && ed.participants.length) return { epoque: ed.epoque, joueurs: ed.participants.map(p => ({ nom: p.joueurs[0], liste: p.liste.map(id => ed.personnalites[id] || {}) })) };
+  const prec = d.editions.filter(e => e.annee < a && e.participants.length).pop();
+  return { epoque: ed ? ed.epoque : prec.epoque, joueurs: prec.participants.map(p => ({ nom: p.joueurs[0], liste: [] })) };
+}
+
 function vueAdmin() {
   const b = brouillon(), d = b.donnees;
   const annees = d.editions.filter(avecListes).map(e => e.annee);
@@ -138,10 +153,23 @@ function vueAdmin() {
   const garde = !!lireBrouillon();
   const baseChangee = garde && b.base !== empreinte(PUBLIE);
   const nbModifs = b.journal.length;
+  const derniere = d.editions.filter(e => e.participants.length && e.annee <= prochaineAnnee(d)).pop() || ed;
+  const prochaine = prochaineAnnee(d);
 
   return `
   <section class="bandeau info"><b>Mode essai.</b> Tout ce que tu saisis ici reste dans ce navigateur : rien n'est envoyé, la page des joueurs ne change pas. La publication sera branchée plus tard.</section>
   <div id="a-message"></div>
+
+  <section class="carte" data-sec="a-tableur">
+    <h2>Listes par tableur Excel</h2>
+    <div class="barre boutons">
+      <button type="button" class="principal" data-act="modele-tableur" data-a="${prochaine}">📄 Tableur vierge ${prochaine} (listes_${prochaine}.xlsx)</button>
+      <button type="button" data-act="modele-tableur" data-a="${anneeAdmin}">📊 Tableur ${anneeAdmin} (avec ce qui est déjà saisi)</button>
+      <button type="button" class="principal" data-act="importer-tableur">📥 Importer un tableur rempli</button>
+      <input type="file" id="a-fichier-tableur" accept=".xlsx,.csv" hidden>
+    </div>
+    <p class="sous">Tableur vierge ${prochaine} : les joueurs de ${derniere.annee} déjà écrits (${(REGLES_LISTE[derniere.epoque] || {}).noms || 15} lignes chacun), les personnalités à remplir. Remplis les colonnes Personnalité, Pays et Âge sans toucher aux titres, enregistre, puis importe-le ici : la page reconnaît l'année du tableur (et la crée si besoin), et met à jour les listes de tous les joueurs du fichier d'un coup. Un nouveau joueur : écris son prénom dans la colonne Joueur ; un joueur qui ne rejoue pas : laisse ses lignes vides.</p>
+  </section>
 
   <section class="carte" data-sec="a-etat">
     <h2>Brouillon${nbModifs ? ` (${nbModifs} modification${nbModifs > 1 ? "s" : ""} non publiée${nbModifs > 1 ? "s" : ""})` : ""}</h2>
@@ -150,17 +178,10 @@ function vueAdmin() {
     <label class="case"><input type="checkbox" data-act="apercu"${apercuActif() ? " checked" : ""}${nbModifs ? "" : " disabled"}> Voir les onglets de suivi avec mes modifications (aperçu)</label>
     <div class="barre boutons">
       <button type="button" class="principal" disabled title="Pas encore branché : il faut d'abord installer le jeton">Publier</button>
-      <button type="button" data-act="telecharger">Télécharger le fichier de données</button>
       <button type="button" data-act="abandonner"${nbModifs ? "" : " disabled"}>Abandonner mes modifications</button>
+      <button type="button" class="petit" data-act="telecharger" title="Fichier technique lu par la page, pas un tableur">Sauvegarde technique (.json)</button>
     </div>
-    <p class="sous">Publier : bientôt. Ce bouton mettra la page à jour pour tout le monde (visible au bout de 1 à 2 minutes), avec un bouton pour annuler la dernière publication. Télécharger : une copie du fichier avec tes modifications, à garder ou à envoyer.</p>
-    <h3>Listes ${anneeAdmin} par tableur Excel</h3>
-    <div class="barre boutons">
-      <button type="button" data-act="modele-tableur">Télécharger le tableur à remplir (${anneeAdmin})</button>
-      <button type="button" data-act="importer-tableur">Importer le tableur rempli</button>
-      <input type="file" id="a-fichier-tableur" accept=".xlsx,.csv" hidden>
-    </div>
-    <p class="sous">Le tableur contient déjà les joueurs inscrits en ${anneeAdmin} (${REGLES_LISTE[ed.epoque] && REGLES_LISTE[ed.epoque].noms || 15} lignes chacun) et ce qui est déjà saisi. Remplis les colonnes Personnalité, Pays et Âge sans toucher aux titres, enregistre, puis importe-le ici : les listes de tous les joueurs du fichier sont mises à jour d'un coup. Un nouveau joueur : écris son prénom dans la colonne Joueur. L'année se choisit plus bas.</p>
+    <p class="sous">Publier : bientôt. Ce bouton mettra la page à jour pour tout le monde (visible au bout de 1 à 2 minutes), avec un bouton pour annuler la dernière publication. Sauvegarde technique : le fichier de données de la page avec tes modifications (pas un tableur), utile seulement en cas de souci.</p>
   </section>
 
   <section class="carte" data-sec="a-annee">
@@ -322,18 +343,18 @@ const ACTIONS = {
     normaliser(d);
     telechargerBlob(new Blob([JSON.stringify(d, null, 1)], { type: "application/json" }), "deathlist.json");
   },
-  "modele-tableur"() {
-    const ed = edB(brouillon().donnees), a = ed.annee, n = (REGLES_LISTE[ed.epoque] || {}).noms || 15;
+  "modele-tableur"(el) {
+    const a = Number(el.dataset.a), c = contenuTableur(brouillon().donnees, a), n = (REGLES_LISTE[c.epoque] || {}).noms || 15;
     const lignes = [
       [{ v: `Listes ${a} : une ligne par personnalité`, s: 2 }],
       [{ v: `Remplir Personnalité, Pays (FRA, USA...) et Âge au 1er janvier ${a}. Ne pas modifier la ligne des titres. Nouveau joueur : son prénom dans la colonne Joueur.`, s: 3 }],
       [{ v: "Joueur", s: 1 }, { v: "Personnalité", s: 1 }, { v: "Pays", s: 1 }, { v: `Âge au 1er janvier ${a}`, s: 1 }],
     ];
-    ed.participants.slice().sort((x, y) => x.joueurs[0].localeCompare(y.joueurs[0], "fr")).forEach(p => {
-      const total = Math.max(n, p.liste.length);
+    c.joueurs.sort((x, y) => x.nom.localeCompare(y.nom, "fr")).forEach(j => {
+      const total = Math.max(n, j.liste.length);
       for (let i = 0; i < total; i++) {
-        const x = p.liste[i] ? ed.personnalites[p.liste[i]] || {} : {};
-        lignes.push([{ v: p.joueurs[0] }, { v: x.nom || "", s: 4 }, { v: x.pays || "", s: 4 }, { v: x.age != null ? x.age : "", s: 4 }]);
+        const x = j.liste[i] || {};
+        lignes.push([{ v: j.nom }, { v: x.nom || "", s: 4 }, { v: x.pays || "", s: 4 }, { v: x.age != null ? x.age : "", s: 4 }]);
       }
     });
     const blob = Tableur.creer({ feuille: `Listes ${a}`, lignes, largeurs: [18, 34, 10, 22], figer: 3,
@@ -380,7 +401,15 @@ async function importerTableur(fichier) {
     if (nom) parJoueur.get(courant).push([nom, col.pays >= 0 ? String(l[col.pays] || "").trim() : "",
       col.age >= 0 ? String(l[col.age] || "").trim().replace(/[.,]0+$/, "") : ""].join("\t"));
   });
-  const d = brouillon().donnees, ed = edB(d);
+  // Année du tableur : écrite dans le titre et dans la colonne Âge (« Âge au 1er janvier 2027 »).
+  const trouvee = lignes.slice(0, iTitre + 1).flat().join(" ").match(/\b(20\d\d)\b/);
+  const annee = trouvee ? Number(trouvee[1]) : anneeAdmin;
+  const d = brouillon().donnees, maxi = Math.max(...d.editions.map(e => e.annee));
+  let ed = d.editions.find(e => e.annee === annee);
+  const creer = !ed;
+  if (ed && !avecListes(ed)) { alert(`L'année ${annee} n'a pas de listes détaillées : on ne peut pas y importer de tableur.`); return; }
+  if (creer && annee !== maxi + 1) { alert(`Le tableur est pour ${annee} : on ne peut créer que l'année ${maxi + 1}.`); return; }
+  if (creer) ed = { annee, epoque: d.editions[d.editions.length - 1].epoque, source_points: "listes et décès saisis par l'administrateur", participants: [], personnalites: {} };
   const aImporter = [...parJoueur].filter(([, ls]) => ls.length);
   if (!aImporter.length) { alert("Aucune personnalité trouvée dans le tableur."); return; }
   const erreurs = [], alertes = [], nouveaux = [], resultats = [];
@@ -395,14 +424,17 @@ async function importerTableur(fichier) {
   });
   if (erreurs.length) { alert("Rien n'a été importé. À corriger dans le tableur :\n\n" + erreurs.join("\n")); return; }
   const nbNoms = resultats.reduce((s, r) => s + r.lignes.length, 0);
-  const message = `Importer ${resultats.length} liste(s) ${anneeAdmin} (${nbNoms} noms) ?`
+  const message = `Importer ${resultats.length} liste(s) ${annee} (${nbNoms} noms) ?`
+    + (creer ? `\n\nL'année ${annee} sera créée (mêmes règles que ${maxi}).` : "")
     + (nouveaux.length ? `\n\nNouveaux joueurs : ${nouveaux.join(", ")}` : "")
     + (alertes.length ? `\n\nÀ vérifier (n'empêche pas l'import) :\n${alertes.slice(0, 15).join("\n")}${alertes.length > 15 ? `\n... et ${alertes.length - 15} autre(s)` : ""}` : "")
     + "\n\nLes listes de ces joueurs seront remplacées par celles du tableur.";
   if (!confirm(message)) return;
   joueurEdite = null;
-  modifier(`${anneeAdmin} : tableur importé (${resultats.length} listes, ${nbNoms} noms${nouveaux.length ? ", nouveaux : " + nouveaux.join(", ") : ""})`, dd => {
-    const e = edB(dd);
+  anneeAdmin = annee;
+  modifier(`${annee} : tableur importé (${resultats.length} listes, ${nbNoms} noms${creer ? ", année créée" : ""}${nouveaux.length ? ", nouveaux : " + nouveaux.join(", ") : ""})`, dd => {
+    let e = dd.editions.find(x => x.annee === annee);
+    if (!e) { e = cloner(ed); dd.editions.push(e); }
     resultats.forEach(r => {
       let p = e.participants.find(x => x.joueurs[0] === r.nom);
       if (!p) { p = { joueurs: [r.nom], points: 0, deces: 0, liste: [] }; e.participants.push(p); }

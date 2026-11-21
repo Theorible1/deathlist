@@ -8,7 +8,9 @@ const MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août"
 // Podium à 4 marches : images de page\images (cercueil d'or, crâne d'argent, croix à l'envers de bronze, tombe violette).
 const MEDAILLES = ["1re place : cercueil d'or", "2e place : crâne d'argent", "3e place : croix à l'envers de bronze", "4e place : tombe"];
 
-const esc = s => String(s).replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
+// Description d'une époque : nom, barème et nombre de nominés par liste (demande de Gaël, 21/11/2026).
+const descEpoque = ep => `${ep.libelle} : ${ep.bareme}. ${ep.noms_par_liste} nominés.`;
+const esc = s =>String(s).replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
 const nb = x => (Math.round(x * 100) / 100).toLocaleString("fr-FR");
 const pts = x => nb(x) + (Math.abs(x) >= 2 ? " points" : " point");
 const dateFr = iso => { const [a, m, j] = iso.split("-"); return Number(j) + " " + MOIS[Number(m) - 1] + " " + a; };
@@ -146,7 +148,7 @@ function miniCourbe(rangs, nbJoueurs, nom) {
 }
 
 // Blocs enroulables : clic sur le titre ; état gardé dans le navigateur de chacun.
-const REPLIS_DEFAUT = { deces: true, global: true, "a-aide": true };
+const REPLIS_DEFAUT = { montees: true, global: true, "a-aide": true }; // Résurrections repliées par défaut (demande de Gaël, 21/11/2026)
 const CLE_REPLIS = "deathlist.replis";
 function lireReplis() { try { return JSON.parse(localStorage.getItem(CLE_REPLIS)) || {}; } catch (e) { return {}; } }
 function appliquerReplis() {
@@ -243,9 +245,105 @@ function vueGlobale() {
       <thead><tr><th class="num">Date</th><th>Personnalité</th><th>Nommée par</th><th class="num">Valeur</th></tr></thead>
       <tbody>${parDeces || `<tr><td colspan="4" class="vide">Aucun décès pour l'instant.</td></tr>`}</tbody>
     </table></div>
-  </section>
+  </section>`;
+}
 
-  <section class="carte" id="bloc-histo" data-sec="histo"></section>
+// ───────────── onglet « Hall of fame » : trophées de l'année et records de toutes les éditions ─────────────
+// Noms et définitions : demande de Gaël, 21/11/2026. Icônes : page\images\tr_<id>.webp (dessinées par Quentin ;
+// tant que le fichier n'existe pas, la carte s'affiche sans icône).
+const f1 = x => nb(x);
+const TROPHEES = {
+  gachette: ["Fou de la gâchette", "premier à ouvrir son compteur", "Le premier joueur dont une personnalité de la liste est morte dans l'année.", null],
+  quatrevingtdixplus5: ["90+5", "dernier à engranger des points", "Le joueur qui a marqué des points le plus récemment : il change à chaque nouveau décès.", null],
+  "peril-jeune": ["Le péril jeune", "liste la plus jeune", "La liste avec la moyenne d'âge la plus basse (âge au 1er janvier).", v => nb(v) + " ans de moyenne"],
+  "old-timer": ["Old timer", "liste la plus âgée", "La liste avec la moyenne d'âge la plus élevée (âge au 1er janvier).", v => nb(v) + " ans de moyenne"],
+  diplomatico: ["Diplomatico", "le plus de nationalités", "La liste avec le plus de nationalités différentes représentées.", v => v + " nationalités"],
+  france: ["La France, et pas n'importe laquelle", "le plus de Français", "La liste avec le plus de personnalités françaises.", v => v + " Français"],
+  orfevre: ["Chercheur d'or / Orfèvre", "le plus de nominés solitaires", "La liste avec le plus de personnalités nommées par elle seule (2 points chacune).", v => v + " nominés solitaires"],
+  "captain-obvious": ["Captain obvious", "le plus de nominés multiples", "La liste avec le plus de personnalités nommées dans plus de deux listes (1 point chacune).", v => v + " nominés multiples"],
+  "we-can-do-it": ["We can do it !", "le plus de femmes", "La liste avec le plus de femmes nommées.", v => v + (v > 1 ? " femmes" : " femme")],
+};
+const RECORDS = {
+  "serial-faucheur": ["Serial faucheur", "le plus d'éditions gagnées de suite", "Le joueur qui a remporté le plus d'éditions consécutives (2018 et 2020 se suivent : pas d'édition 2019).", v => v + (v > 1 ? " éditions de suite" : " édition")],
+  "maitre-de-la-mort": ["Le maître de la mort", "le plus d'éditions gagnées", "Le joueur qui a remporté le plus d'éditions.", v => v + (v > 1 ? " victoires" : " victoire")],
+  "one-shot": ["One shot, one kill", "meilleur taux de réussite sur une édition", "Décès de la liste divisés par le nombre de noms de la liste, sur une seule édition.", v => nb(v * 100) + " %"],
+  hitman: ["Hitman", "le plus de points sur une édition", "Le plus grand nombre de points marqués par un joueur sur une seule édition.", v => pts(v)],
+  poulidor: ["Le Poulidor d'or", "meilleur score d'une 2e place", "Le meilleur score obtenu par un joueur classé deuxième.", v => pts(v)],
+  "oeil-du-tigre": ["L'œil du tigre", "meilleur score d'une 3e place", "Le meilleur score obtenu par un joueur classé troisième.", v => pts(v)],
+  "derniere-minute": ["Dernière minute", "décès le plus tardif", "La personnalité morte le plus tard dans l'année (jour et mois), toutes éditions confondues.", null],
+  "tombeau-ouvert": ["À tombeau ouvert", "décès le plus rapide", "La personnalité morte le plus tôt dans l'année (jour et mois), toutes éditions confondues.", null],
+  "youth-the-force": ["Youth the force", "liste gagnante la plus jeune", "La liste gagnante avec la moyenne d'âge la plus basse.", v => nb(v) + " ans de moyenne"],
+  "strict-minimum": ["Strict minimum", "victoire avec le moins de points", "L'édition gagnée avec le moins de points.", v => pts(v)],
+  "dream-team": ["Dream team", "meilleure performance d'équipe (ratio)", "Tous les joueurs d'une année ensemble : décès divisés par le nombre total de noms nommés. Années terminées seulement.", v => nb(v * 100) + " %"],
+  "pas-de-quartier": ["Pas de quartier", "meilleure performance d'équipe (points)", "Tous les joueurs d'une année ensemble : le total de points le plus élevé. Années terminées seulement.", v => pts(v)],
+};
+
+// Identifiants dont l'icône existe dans page\images\ (à compléter quand Quentin livre les dessins).
+const ICONES_HALL = new Set([]);
+function carteHall(meta, id, corps, suite, libre) {
+  const [jeu, detail, info] = meta[id];
+  return `<div class="hall-carte${libre ? " libre" : ""}">
+    ${ICONES_HALL.has(id) ? `<div class="ico"><img src="images/tr_${id}.webp" alt="" height="64" loading="lazy"></div>` : ""}
+    <h3>${titre(jeu, detail, info)}</h3>${corps}${suite ? `<div class="suite">${suite}</div>` : ""}</div>`;
+}
+
+function blocTrophees(annee, dateLimite, enCours) {
+  const T = M.trophees(D, annee, dateLimite);
+  const cartes = T.map(t => {
+    const fmt = TROPHEES[t.id][3];
+    if (!t.gagnants.length) return carteHall(TROPHEES, t.id, `<div class="qui">Personne pour l'instant</div>`, "", true);
+    const g0 = t.gagnants[0];
+    const val = fmt ? fmt(g0.valeur) : g0.detail.replace(/\d{4}-\d{2}-\d{2}/, dateFr);
+    const suivants = fmt ? t.classement.slice(t.gagnants.length, t.gagnants.length + 3).map(x => `${esc(x.joueur)} (${fmt(x.valeur)})`).join(" · ") : "";
+    return carteHall(TROPHEES, t.id, `<div class="qui">${t.gagnants.map(g => esc(g.joueur)).join(", ")}${t.gagnants.length > 1 ? " <small>(ex aequo)</small>" : ""}</div>
+      <div class="val">${esc(val)}</div>`, suivants ? "Ensuite : " + suivants : "");
+  }).join("");
+  return `<div class="hall">${cartes}</div>`;
+}
+
+let archiveTrophees = null;
+function vueHall() {
+  const eds = D.editions.filter(e => e.personnalites && e.annee < ANNEE).map(e => e.annee).sort((a, b) => b - a);
+  return `<section class="carte" data-sec="h-trophees">
+      <h2>${titre("Les trophées", `année ${ANNEE}, remis en jeu chaque année`,
+        "Les trophées de l'année en cours. Ils changent de main au fil des décès et seront remis à zéro à chaque nouvelle année.")}</h2>
+      ${blocTrophees(ANNEE, AUJ)}
+    </section>
+    <section class="carte" data-sec="h-records">
+      <h2>${titre("Les records", "toutes éditions confondues",
+        "Records de toutes les éditions terminées. L'année en cours n'y entre qu'une fois finie, sauf les deux records de date (décès le plus tardif et le plus rapide).")}</h2>
+      <div class="hall">${blocRecords()}</div>
+    </section>
+    ${eds.length ? `<section class="carte" data-sec="h-archives-trophees" id="bloc-arch-trophees"></section>` : ""}`;
+}
+
+function blocRecords() {
+  return M.records(D, H, AUJ).map(r => {
+    const meta = RECORDS[r.id], fmt = meta[3];
+    if (!r.gagnants.length) return carteHall(RECORDS, r.id, `<div class="qui">Pas encore de record</div>`, "", true);
+    const lignes = r.dates
+      ? r.gagnants.map(g => `<div class="qui" style="font-size:15px">${esc(g.nom)}</div><div class="val">${dateFr(g.date)} · ${g.joueurs.map(esc).join(", ")}</div>`).join("")
+      : r.gagnants.map(g => `<div class="qui">${g.joueur === String(g.annee) ? "Année " + g.annee : esc(g.joueur) + (g.annee ? ` <small>${g.annee}</small>` : "")}</div>
+          <div class="val">${fmt(g.valeur)}${g.detail ? " · " + esc(g.detail) : ""}</div>`).join("");
+    return carteHall(RECORDS, r.id, lignes, "");
+  }).join("");
+}
+
+// Archives des trophées : les années terminées, à partir de 2026 (visible dès que 2027 commence).
+function blocArchivesTrophees() {
+  const sec = document.getElementById("bloc-arch-trophees"); if (!sec) return;
+  const eds = D.editions.filter(e => e.personnalites && e.annee < ANNEE).map(e => e.annee).sort((a, b) => b - a);
+  if (!eds.includes(Number(archiveTrophees))) archiveTrophees = eds[0];
+  sec.innerHTML = `<h2>${titre("Les archives des trophées", "année par année", "Les trophées de chaque année terminée, tels qu'ils étaient au 31 décembre.")}</h2>
+    <div class="barre">${puces("p-arch-tr", eds.map(a => [a, String(a)]), archiveTrophees)}</div>
+    ${blocTrophees(Number(archiveTrophees), archiveTrophees + "-12-31")}`;
+  brancherPuces("p-arch-tr", v => { archiveTrophees = v; blocArchivesTrophees(); appliquerReplis(); });
+}
+
+// ───────────── onglet « Archives » : les trois rubriques d'histoire, déplacées telles quelles ─────────────
+
+function vueArchives() {
+  return `<section class="carte" id="bloc-histo" data-sec="histo"></section>
   <section class="carte" id="bloc-global" data-sec="global"></section>
   <section class="carte" id="bloc-taux" data-sec="taux"></section>`;
 }
@@ -257,7 +355,7 @@ function blocHistorique(annee) {
     <h2>${titre("Les archives du cimetière", "classements année par année",
       "Classement et tableau de chasse de chaque année. Les règles ont changé selon les époques (rappel sous les boutons). Pas d'édition en 2019.")}</h2>
     <div class="barre">${puces("p-histo", H.map(e => [e.annee, e.annee + (e.enCours ? " (en cours)" : "")]), annee)}</div>
-    <p class="sous">${esc(D.epoques.find(e => e.id === et.epoque).libelle)} : ${esc(D.epoques.find(e => e.id === et.epoque).bareme)}.</p>
+    <p class="sous">${esc(descEpoque(D.epoques.find(e => e.id === et.epoque)))}</p>
     <div class="grille">
       <div class="sous-bloc"><h3>Classement des fossoyeurs <small class="glose">(points)</small></h3>${podium(et.principal, l => pts(l.points))}
         <table><thead><tr><th class="centre">Rang</th><th>Joueur</th><th>Points</th><th class="num">Décès</th></tr></thead>
@@ -294,6 +392,7 @@ function blocTaux() {
       `Points (ou décès) divisés par le nombre d'années jouées, époque par époque, car les règles changent d'une époque à l'autre. Pas de minimum de participations : un taux sur une ou deux années dépend beaucoup de l'année jouée.${etats.some(e => e.enCours) ? " L'année en cours est comptée." : ""}`)}</h2>
     <div class="barre">${puces("p-epoque", D.epoques.map(e => [e.id, e.libelle]), tauxEpoque)}
       ${puces("p-cle", [["tauxPoints", "Points par participation"], ["tauxDeces", "Décès par participation"]], tauxCle)}</div>
+    <p class="sous">${esc(descEpoque(ep))}</p>
     <div class="defil"><table>
       <thead><tr><th class="centre">Rang</th><th>Joueur</th><th>${tauxCle === "tauxPoints" ? "Points" : "Décès"} par participation</th><th class="num">Participations</th></tr></thead>
       <tbody>${t.map(c => `<tr><td class="rang">${c.rang}</td><td>${esc(c.joueur)}</td><td>${barre(c[tauxCle], max)}</td><td class="num">${c.participations}</td></tr>`).join("")}</tbody>
@@ -362,14 +461,44 @@ function fiche() {
           <td class="num">${nomin[id]}</td><td class="num">${nb(M.bareme(et.epoque, nomin[id]))}</td><td>${mort ? "☠ " + dateFr(mort) : ""}</td></tr>`; }).join("")}</tbody>
     </table></div><p class="sous">${ligne.deces} décès, ${pts(ligne.points)}. « Listes » : nombre de joueurs qui ont nommé la personne ; la valeur en dépend.</p></section>`;
   }
+  html += `<section class="carte" id="bloc-arch-listes" data-sec="j-archives"></section>`;
   document.getElementById("fiche").innerHTML = html;
+  blocArchivesListes();
   appliquerReplis();
+}
+
+// Archives des listes personnelles : la liste de chaque année passée, avec les décès annoncés dans l'année
+// (pas de date : seulement mort ou pas). Demande de Gaël, 21/11/2026.
+let archiveAnnee = null;
+function blocArchivesListes() {
+  const j = joueurChoisi;
+  const annees = D.editions.filter(e => e.participants.some(p => p.joueurs[0] === j && p.liste_archive)).map(e => e.annee).sort((a, b) => b - a);
+  const sec = document.getElementById("bloc-arch-listes");
+  if (!annees.length) { sec.style.display = "none"; return; }
+  sec.style.display = "";
+  if (!annees.includes(Number(archiveAnnee))) archiveAnnee = annees[0];
+  const e = D.editions.find(x => x.annee === Number(archiveAnnee));
+  const p = e.participants.find(x => x.joueurs[0] === j);
+  const liste = p.liste_archive, morts = liste.filter(x => x.mort).length;
+  const ages = liste.map(x => x.age), moy = ages.reduce((s, a) => s + a, 0) / ages.length;
+  const avecPays = liste.some(x => x.pays);
+  const ep = D.epoques.find(x => x.id === e.epoque);
+  sec.innerHTML = `<h2>${titre("Les anciennes listes noires", `${esc(j)}, année par année`,
+    "La liste personnelle de chaque année passée, barrée quand la personne est morte dans l'année. Seuls comptent les décès annoncés dans l'année (pas de date). Âge : celui indiqué dans la liste de l'année.")}</h2>
+    <div class="barre">${puces("p-arch", annees.map(a => [a, String(a)]), archiveAnnee)}</div>
+    <p class="sous">${esc(ep.libelle)}${p.liste_commune_avec ? ` · liste commune avec ${esc(p.liste_commune_avec)}` : ""}</p>
+    <div class="defil"><table>
+      <thead><tr><th>Personnalité</th>${avecPays ? "<th>Pays</th>" : ""}<th class="num">Âge</th><th>Décès</th></tr></thead>
+      <tbody>${liste.map(x => `<tr><td class="${x.mort ? "mort" : ""}">${esc(x.nom)}</td>${avecPays ? `<td>${esc(x.pays || "")}</td>` : ""}<td class="num">${x.age}</td><td>${x.mort ? "☠ annoncé" : ""}</td></tr>`).join("")}</tbody>
+    </table></div>
+    <p class="sous">${e.annee} : ${morts} décès annoncé${morts > 1 ? "s" : ""} sur ${liste.length} noms, âge moyen de la liste ${nb(moy)} ans.</p>`;
+  brancherPuces("p-arch", v => { archiveAnnee = v; blocArchivesListes(); appliquerReplis(); });
 }
 
 // ───────────── navigation ─────────────
 
 function afficher() {
-  const onglet = location.hash === "#joueur" ? "joueur" : location.hash === "#admin" ? "admin" : "global";
+  const onglet = { "#joueur": "joueur", "#archives": "archives", "#hall": "hall", "#admin": "admin" }[location.hash] || "global";
   document.querySelectorAll("nav.menu a").forEach(a => a.toggleAttribute("aria-current", a.dataset.onglet === onglet));
   if (onglet === "admin") {
     document.getElementById("titre").textContent = "La morgue (administration)";
@@ -377,6 +506,15 @@ function afficher() {
   } else if (onglet === "global") {
     document.getElementById("titre").textContent = "Suivi mortuaire";
     document.getElementById("contenu").innerHTML = vueGlobale();
+    appliquerReplis();
+  } else if (onglet === "hall") {
+    document.getElementById("titre").textContent = "Hall of fame";
+    document.getElementById("contenu").innerHTML = vueHall();
+    blocArchivesTrophees();
+    appliquerReplis();
+  } else if (onglet === "archives") {
+    document.getElementById("titre").textContent = "Les archives";
+    document.getElementById("contenu").innerHTML = vueArchives();
     blocHistorique(ANNEE);
     blocGlobal();
     blocTaux();

@@ -68,8 +68,12 @@
         };
       });
     } else {
+      // Années passées : points et décès enregistrés. L'âge moyen de la liste départage à égalité depuis 2023
+      // (règle introduite cette année-là, d'après Gaël) ; avant, égalité de points et de décès = ex aequo.
       lignes = ed.participants.map(function (p) {
-        return { joueur: p.joueurs[0], nom: nomAffiche(p), points: p.points, deces: p.deces, ageMoyen: null };
+        var ages = annee >= 2023 && p.liste_archive ? p.liste_archive.map(function (x) { return x.age; }) : [];
+        return { joueur: p.joueurs[0], nom: nomAffiche(p), points: p.points, deces: p.deces,
+                 ageMoyen: ages.length ? ages.reduce(function (s, a) { return s + a; }, 0) / ages.length : null };
       });
     }
     lignes.sort(function (a, b) { return a.nom.localeCompare(b.nom, "fr"); }); // ordre stable à égalité
@@ -179,7 +183,125 @@
     return joue.some(function (v, i) { return v && joue[i + 1]; });
   }
 
+  // ───────────── Hall of fame ─────────────
+
+  // Meilleurs d'un critère : lignes triées [{joueur, valeur, detail}], meilleure valeur d'abord (sens = 1 : le plus grand
+  // gagne, -1 : le plus petit). Les ex aequo gagnent ensemble. Les lignes sans valeur (null) ne comptent pas.
+  function meilleurs(lignes, sens) {
+    var l = lignes.filter(function (x) { return x.valeur != null; })
+      .sort(function (a, b) { return sens * (b.valeur - a.valeur) || a.joueur.localeCompare(b.joueur, "fr"); });
+    var gagnants = l.length ? l.filter(function (x) { return x.valeur === l[0].valeur; }) : [];
+    return { classement: l, gagnants: gagnants };
+  }
+
+  // Trophées d'une année (remis en jeu chaque année), à la date donnée (incluse). Chaque trophée :
+  // {id, gagnants: [{joueur, valeur, detail}], classement}. Un trophée sans valeur (personne n'a marqué, par exemple)
+  // a une liste de gagnants vide.
+  function trophees(donnees, annee, dateLimite) {
+    var ed = edition(donnees, annee);
+    var perso = ed.personnalites || {};
+    var nomin = nominations(ed);
+    var morts = decesDeLAnnee(donnees, annee, dateLimite);
+    var et = etatAnnee(donnees, annee, dateLimite);
+    var age = {};
+    et.principal.forEach(function (l) { age[l.joueur] = l.ageMoyen; });
+    function parJoueur(f) {
+      return ed.participants.map(function (p) { var r = f(p.liste, p.joueurs[0]); return { joueur: p.joueurs[0], valeur: r.valeur, detail: r.detail || "" }; });
+    }
+    function dates(liste) { return liste.filter(function (id) { return morts[id]; }).map(function (id) { return { id: id, date: morts[id].date }; }).sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : 0; }); }
+    function jour(iso) { return Number(iso.slice(0, 4)) * 372 + Number(iso.slice(5, 7)) * 31 + Number(iso.slice(8, 10)); } // pour comparer des dates comme des nombres
+    function compte(liste, f) { return liste.filter(function (id) { return perso[id] && f(perso[id], id); }).length; }
+    var def = [
+      ["gachette", -1, function (l) { var d = dates(l)[0]; return d ? { valeur: jour(d.date), detail: perso[d.id].nom + ", " + d.date } : {}; }],
+      ["quatrevingtdixplus5", 1, function (l) { var d = dates(l).pop(); return d ? { valeur: jour(d.date), detail: perso[d.id].nom + ", " + d.date } : {}; }],
+      ["peril-jeune", -1, function (l, j) { return { valeur: age[j] }; }],
+      ["old-timer", 1, function (l, j) { return { valeur: age[j] }; }],
+      ["diplomatico", 1, function (l) { var s = {}; l.forEach(function (id) { if (perso[id] && perso[id].pays) s[perso[id].pays] = 1; }); return { valeur: Object.keys(s).length }; }],
+      ["france", 1, function (l) { return { valeur: compte(l, function (p) { return p.pays === "FRA"; }) }; }],
+      ["orfevre", 1, function (l) { return { valeur: compte(l, function (p, id) { return nomin[id] === 1; }) }; }],
+      ["captain-obvious", 1, function (l) { return { valeur: compte(l, function (p, id) { return nomin[id] > 2; }) }; }], // plus de deux listes = 1 point
+      ["we-can-do-it", 1, function (l) { return { valeur: compte(l, function (p) { return p.sexe === "F"; }) }; }],
+    ];
+    return def.map(function (d) {
+      var m = meilleurs(parJoueur(d[2]), d[1]);
+      return { id: d[0], gagnants: m.gagnants, classement: m.classement };
+    });
+  }
+
+  // Records de toutes les éditions terminées (l'année en cours n'y entre pas tant qu'elle n'est pas finie), sauf les
+  // records de date, qui comptent aussi les décès de l'année en cours. Chaque record : {id, gagnants: [{...}]}.
+  function records(donnees, etats, aujourdhui) {
+    var finies = etats.filter(function (e) { return !e.enCours; });
+    var epoques = {};
+    donnees.epoques.forEach(function (e) { epoques[e.id] = e; });
+    function lignes(f) { // une ligne par (édition, joueur)
+      var r = [];
+      finies.forEach(function (et) {
+        var ed = edition(donnees, et.annee);
+        et.principal.forEach(function (l) {
+          var p = ed.participants.find(function (x) { return x.joueurs[0] === l.joueur; });
+          var v = f(et, l, p, ed);
+          if (v != null) r.push({ joueur: l.joueur, annee: et.annee, valeur: v.valeur != null ? v.valeur : v, detail: v.detail || "" });
+        });
+      });
+      return r;
+    }
+    function ageListe(p) { return p && p.liste_archive ? p.liste_archive.reduce(function (s, x) { return s + x.age; }, 0) / p.liste_archive.length : null; }
+    var nbNoms = function (et) { return epoques[et.epoque].noms_par_liste; };
+    var res = [];
+    function ajouter(id, sens, l) { var m = meilleurs(l, sens); res.push({ id: id, gagnants: m.gagnants, classement: m.classement }); }
+
+    // victoires par joueur, et plus longue série d'éditions gagnées de suite (2018 puis 2020 se suivent : pas d'édition 2019)
+    var victoires = {}, serie = {}, serieEnCours = {};
+    finies.forEach(function (et) {
+      var gagnants = et.principal.filter(function (l) { return l.rang === 1; }).map(function (l) { return l.joueur; });
+      et.principal.forEach(function (l) {
+        var g = gagnants.indexOf(l.joueur) >= 0;
+        victoires[l.joueur] = (victoires[l.joueur] || 0) + (g ? 1 : 0);
+        serieEnCours[l.joueur] = g ? (serieEnCours[l.joueur] || 0) + 1 : 0;
+        serie[l.joueur] = Math.max(serie[l.joueur] || 0, serieEnCours[l.joueur]);
+      });
+      Object.keys(serieEnCours).forEach(function (j) { if (!et.principal.some(function (l) { return l.joueur === j; })) serieEnCours[j] = 0; });
+    });
+    ajouter("serial-faucheur", 1, Object.keys(serie).map(function (j) { return { joueur: j, valeur: serie[j], detail: "" }; }));
+    ajouter("maitre-de-la-mort", 1, Object.keys(victoires).map(function (j) { return { joueur: j, valeur: victoires[j], detail: "" }; }));
+    ajouter("one-shot", 1, lignes(function (et, l) { return { valeur: l.deces / nbNoms(et), detail: l.deces + " décès sur " + nbNoms(et) + " noms" }; }));
+    ajouter("hitman", 1, lignes(function (et, l) { return l.points; }));
+    ajouter("poulidor", 1, lignes(function (et, l) { return l.rang === 2 ? l.points : null; }));
+    ajouter("oeil-du-tigre", 1, lignes(function (et, l) { return l.rang === 3 ? l.points : null; }));
+    ajouter("youth-the-force", -1, lignes(function (et, l, p) { var a = ageListe(p); return l.rang === 1 && a != null ? a : null; }));
+    ajouter("strict-minimum", -1, lignes(function (et, l) { return l.rang === 1 ? l.points : null; }));
+    // équipe : tous les joueurs d'une année ensemble
+    function equipe(f) { return finies.map(function (et) { return { joueur: String(et.annee), annee: et.annee, valeur: f(et), detail: "" }; }); }
+    ajouter("dream-team", 1, equipe(function (et) { var d = et.principal.reduce(function (s, l) { return s + l.deces; }, 0); return d / (et.principal.length * nbNoms(et)); }).map(function (x) {
+      var et = finies.find(function (e) { return e.annee === x.annee; }), d = et.principal.reduce(function (s, l) { return s + l.deces; }, 0);
+      x.detail = d + " décès sur " + et.principal.length * nbNoms(et) + " noms"; return x; }));
+    ajouter("pas-de-quartier", 1, equipe(function (et) { return et.principal.reduce(function (s, l) { return s + l.points; }, 0); }));
+
+    // dates : décès le plus rapide / le plus tardif de l'année (jour et mois), anciens relevés + année en cours
+    var rem = donnees.deces_remarquables || { plus_rapide: [], plus_tardif: [] };
+    var tous = rem.plus_rapide.concat(rem.plus_tardif);
+    donnees.editions.filter(function (e) { return e.personnalites; }).forEach(function (e) {
+      var n = nominations(e), morts = decesDeLAnnee(donnees, e.annee, aujourdhui);
+      Object.keys(morts).forEach(function (id) {
+        tous.push({ nom: e.personnalites[id].nom, date: morts[id].date,
+                    joueurs: e.participants.filter(function (p) { return p.liste.indexOf(id) >= 0; }).map(function (p) { return p.joueurs[0]; }) });
+      });
+    });
+    function md(iso) { return iso.slice(5); }
+    function parDate(sens) {
+      var vus = {}, uniques = tous.filter(function (x) { var k = x.nom + x.date; if (vus[k]) return false; vus[k] = 1; return true; });
+      var m = uniques.map(function (x) { return { x: x, v: Number(md(x.date).slice(0, 2)) * 100 + Number(md(x.date).slice(3)) }; })
+        .sort(function (a, b) { return sens * (b.v - a.v); });
+      return m.filter(function (z) { return z.v === m[0].v; }).map(function (z) { return z.x; });
+    }
+    res.push({ id: "derniere-minute", gagnants: parDate(1), dates: true });
+    res.push({ id: "tombeau-ouvert", gagnants: parDate(-1), dates: true });
+    return res;
+  }
+
   return {
+    trophees: trophees, records: records,
     bareme: bareme, etatAnnee: etatAnnee, evolutionMensuelle: evolutionMensuelle, historique: historique,
     classementGlobal: classementGlobal, classementTaux: classementTaux, parcoursJoueur: parcoursJoueur,
     aJoueDeuxAnneesDeSuite: aJoueDeuxAnneesDeSuite, finDeMois: finDeMois,

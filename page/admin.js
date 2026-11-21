@@ -219,7 +219,7 @@ function vueAdmin() {
     <h2>${titre("Le calendrier funèbre", "année travaillée", "L'année choisie ici sert aux blocs du dessous (décès, joueurs et listes). Nouvelle année : crée l'année suivante avec les mêmes règles.")}</h2>
     <div class="barre">${puces("p-annee-admin", annees.map(a => [a, String(a)]), anneeAdmin)}
       <button type="button" data-act="nouvelle-annee">+ Nouvelle année ${Math.max(...d.editions.map(e => e.annee)) + 1}</button></div>
-    <p class="sous">${esc((d.epoques.find(e => e.id === ed.epoque) || {}).libelle || ed.epoque)} : ${esc((d.epoques.find(e => e.id === ed.epoque) || {}).bareme || "")}.</p>
+    <p class="sous">${esc((d.epoques.find(e => e.id === ed.epoque) || {}).libelle || ed.epoque)} : ${esc((d.epoques.find(e => e.id === ed.epoque) || {}).bareme || "")}. ${(d.epoques.find(e => e.id === ed.epoque) || {}).noms_par_liste || ""} nominés.</p>
   </section>
 
   ${blocDecesAdmin(d, ed)}

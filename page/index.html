@@ -10,8 +10,8 @@
 <script>
   window.THEMES_CLE = "deathlist.theme";
   window.THEMES_SANS_COMMUN = true; // page publique : pas de thème commun aux outils du PC
-  // Thème par défaut de la page (choix de Quentin, 16/11/2026) : Death Metal sombre, tant que le visiteur n'en a pas choisi un autre.
-  try { if (!localStorage.getItem(window.THEMES_CLE)) localStorage.setItem(window.THEMES_CLE, "death-metal"); } catch (e) { /* mémoire refusée */ }
+  // Thème par défaut de la page (demande de Gaël, 21/11/2026) : Minuit doux (sombre), tant que le visiteur n'en a pas choisi un autre.
+  try { if (!localStorage.getItem(window.THEMES_CLE)) localStorage.setItem(window.THEMES_CLE, "minuit-doux"); } catch (e) { /* mémoire refusée */ }
 </script>
 <script src="themes.js"></script>
 </head>
@@ -22,6 +22,8 @@
     <nav class="menu" aria-label="Onglets">
       <a href="#global" data-onglet="global">Suivi mortuaire</a>
       <a href="#joueur" data-onglet="joueur">Fiche du fossoyeur</a>
+      <a href="#archives" data-onglet="archives">Archives</a>
+      <a href="#hall" data-onglet="hall">Hall of fame</a>
       <a href="#admin" data-onglet="admin">La morgue (admin)</a>
     </nav>
     <div class="droite"><select id="theme" class="choix-theme" aria-label="Thème d'affichage"></select></div>

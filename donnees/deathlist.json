@@ -4,7 +4,7 @@
  "epoques": [
   {
    "id": "test2018",
-   "libelle": "Année test (2018)",
+   "libelle": "An 1 (2018)",
    "annees": [
     2018
    ],
@@ -14,7 +14,7 @@
   },
   {
    "id": "epoque1",
-   "libelle": "Époque 1 (2020 à 2023)",
+   "libelle": "Deuxième âge (2020 à 2023)",
    "annees": [
     2020,
     2021,
@@ -27,7 +27,7 @@
   },
   {
    "id": "epoque2",
-   "libelle": "Époque 2 (2024 à aujourd'hui)",
+   "libelle": "Troisième âge (2024 à aujourd'hui)",
    "annees": [
     2024,
     2025,
@@ -255,7 +255,69 @@
       "Charles"
      ],
      "points": 1,
-     "deces": 1
+     "deces": 1,
+     "liste_archive": [
+      {
+       "nom": "Jacques Chirac",
+       "age": 85,
+       "mort": false
+      },
+      {
+       "nom": "Philip Mountbatten",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Valéry Giscard d'Estaing",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Charles Aznavour",
+       "age": 93,
+       "mort": true
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "age": 89,
+       "mort": false
+      },
+      {
+       "nom": "Robert Mugabe",
+       "age": 93,
+       "mort": false
+      },
+      {
+       "nom": "Elizabeth II",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Kim Jong-un",
+       "age": 34,
+       "mort": false
+      },
+      {
+       "nom": "Kirk Douglas",
+       "age": 101,
+       "mort": false
+      },
+      {
+       "nom": "Jimmy Carter",
+       "age": 93,
+       "mort": false
+      },
+      {
+       "nom": "Abdelaziz Bouteflika",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Paul Belmondo",
+       "age": 84,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
@@ -263,35 +325,345 @@
      ],
      "points": 2,
      "deces": 2,
-     "liste_commune_avec": "Sophie"
+     "liste_commune_avec": "Sophie",
+     "liste_archive": [
+      {
+       "nom": "Jacques Chirac",
+       "age": 85,
+       "mort": false
+      },
+      {
+       "nom": "Philip Mountbatten",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Charles Aznavour",
+       "age": 93,
+       "mort": true
+      },
+      {
+       "nom": "Joseph Ratzinger",
+       "age": 90,
+       "mort": false
+      },
+      {
+       "nom": "Elizabeth II",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Renaud",
+       "age": 65,
+       "mort": false
+      },
+      {
+       "nom": "Stephen Hawking",
+       "age": 76,
+       "mort": true
+      },
+      {
+       "nom": "Kim Jong-un",
+       "age": 34,
+       "mort": false
+      },
+      {
+       "nom": "Henry Kissinger",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Michel Sardou",
+       "age": 70,
+       "mort": false
+      },
+      {
+       "nom": "Pierre Soulages",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Stromae",
+       "age": 35,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "François"
      ],
      "points": 2,
-     "deces": 2
+     "deces": 2,
+     "liste_archive": [
+      {
+       "nom": "Jacques Chirac",
+       "age": 85,
+       "mort": false
+      },
+      {
+       "nom": "Philip Mountbatten",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Valéry Giscard d'Estaing",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Joseph Ratzinger",
+       "age": 90,
+       "mort": false
+      },
+      {
+       "nom": "Robert Mugabe",
+       "age": 93,
+       "mort": false
+      },
+      {
+       "nom": "Line Renaud",
+       "age": 89,
+       "mort": false
+      },
+      {
+       "nom": "Kirk Douglas",
+       "age": 101,
+       "mort": false
+      },
+      {
+       "nom": "Jimmy Carter",
+       "age": 93,
+       "mort": false
+      },
+      {
+       "nom": "George Bush Sr.",
+       "age": 93,
+       "mort": true
+      },
+      {
+       "nom": "Kevin Spacey",
+       "age": 58,
+       "mort": false
+      },
+      {
+       "nom": "Robert Marchand",
+       "age": 106,
+       "mort": false
+      },
+      {
+       "nom": "Stan Lee",
+       "age": 95,
+       "mort": true
+      }
+     ]
     },
     {
      "joueurs": [
       "Jean-Baptiste"
      ],
      "points": 0,
-     "deces": 0
+     "deces": 0,
+     "liste_archive": [
+      {
+       "nom": "Jacques Chirac",
+       "age": 85,
+       "mort": false
+      },
+      {
+       "nom": "Philip Mountbatten",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Joseph Ratzinger",
+       "age": 90,
+       "mort": false
+      },
+      {
+       "nom": "Robert Mugabe",
+       "age": 93,
+       "mort": false
+      },
+      {
+       "nom": "Renaud",
+       "age": 65,
+       "mort": false
+      },
+      {
+       "nom": "Michael Schumacher",
+       "age": 49,
+       "mort": false
+      },
+      {
+       "nom": "Henry Kissinger",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Bernard Tapie",
+       "age": 74,
+       "mort": false
+      },
+      {
+       "nom": "Paul Gascoigne",
+       "age": 50,
+       "mort": false
+      },
+      {
+       "nom": "Robert Hossein",
+       "age": 90,
+       "mort": false
+      },
+      {
+       "nom": "Hosni Mubarak",
+       "age": 89,
+       "mort": false
+      },
+      {
+       "nom": "Michael J. Fox",
+       "age": 56,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Pierre-Yves"
      ],
      "points": 4,
-     "deces": 4
+     "deces": 4,
+     "liste_archive": [
+      {
+       "nom": "Jacques Chirac",
+       "age": 85,
+       "mort": false
+      },
+      {
+       "nom": "Valéry Giscard d'Estaing",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Charles Aznavour",
+       "age": 93,
+       "mort": true
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "age": 89,
+       "mort": false
+      },
+      {
+       "nom": "Elizabeth II",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Line Renaud",
+       "age": 89,
+       "mort": false
+      },
+      {
+       "nom": "Stephen Hawking",
+       "age": 76,
+       "mort": true
+      },
+      {
+       "nom": "Michael Schumacher",
+       "age": 49,
+       "mort": false
+      },
+      {
+       "nom": "Edith Cresson",
+       "age": 83,
+       "mort": false
+      },
+      {
+       "nom": "Claude Sarraute",
+       "age": 90,
+       "mort": false
+      },
+      {
+       "nom": "John McCain",
+       "age": 81,
+       "mort": true
+      },
+      {
+       "nom": "Serge Dassault",
+       "age": 92,
+       "mort": true
+      }
+     ]
     },
     {
      "joueurs": [
       "Thomas"
      ],
      "points": 0,
-     "deces": 0
+     "deces": 0,
+     "liste_archive": [
+      {
+       "nom": "Jacques Chirac",
+       "age": 85,
+       "mort": false
+      },
+      {
+       "nom": "Valéry Giscard d'Estaing",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "age": 89,
+       "mort": false
+      },
+      {
+       "nom": "Line Renaud",
+       "age": 89,
+       "mort": false
+      },
+      {
+       "nom": "Brigitte Bardot",
+       "age": 83,
+       "mort": false
+      },
+      {
+       "nom": "Roman Polanski",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Pierre Raffarin",
+       "age": 69,
+       "mort": false
+      },
+      {
+       "nom": "Michel Drucker",
+       "age": 75,
+       "mort": false
+      },
+      {
+       "nom": "Eric Zemmour",
+       "age": 59,
+       "mort": false
+      },
+      {
+       "nom": "Jeannie Longo",
+       "age": 59,
+       "mort": false
+      },
+      {
+       "nom": "Ramzan Kadyrov",
+       "age": 41,
+       "mort": false
+      },
+      {
+       "nom": "Jacques Lizène",
+       "age": 71,
+       "mort": false
+      }
+     ]
     }
    ]
   },
@@ -305,49 +677,483 @@
       "Charles"
      ],
      "points": 2,
-     "deces": 2
+     "deces": 2,
+     "liste_archive": [
+      {
+       "nom": "Kirk Douglas",
+       "age": 103,
+       "mort": true
+      },
+      {
+       "nom": "Philip Mountbatten",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Valéry Giscard d'Estaing",
+       "age": 93,
+       "mort": true
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Paul Belmondo",
+       "age": 86,
+       "mort": false
+      },
+      {
+       "nom": "Alain Delon",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Abdelaziz Bouteflika",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Bulle Ogier",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Bernard Tapie",
+       "age": 76,
+       "mort": false
+      },
+      {
+       "nom": "Jacques Dutronc",
+       "age": 76,
+       "mort": false
+      },
+      {
+       "nom": "Renaud",
+       "age": 67,
+       "mort": false
+      },
+      {
+       "nom": "Damien Saez",
+       "age": 42,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "François"
      ],
      "points": 4,
-     "deces": 2
+     "deces": 2,
+     "liste_archive": [
+      {
+       "nom": "René de Obaldia",
+       "age": 101,
+       "mort": false
+      },
+      {
+       "nom": "Daniel Cordier",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Philip Mountbatten",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Henry Kissinger",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Vanessa Redgrave",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Abdelaziz Bouteflika",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Tommy Chong",
+       "age": 81,
+       "mort": false
+      },
+      {
+       "nom": "Ali Khamenei",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Tina Turner",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Nobby Stiles",
+       "age": 77,
+       "mort": true
+      },
+      {
+       "nom": "Leon Sprinks",
+       "age": 66,
+       "mort": false
+      },
+      {
+       "nom": "Tom Smith",
+       "age": 48,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Gaël"
      ],
      "points": 1,
-     "deces": 1
+     "deces": 1,
+     "liste_archive": [
+      {
+       "nom": "René de Obaldia",
+       "age": 101,
+       "mort": false
+      },
+      {
+       "nom": "Valéry Giscard d'Estaing",
+       "age": 93,
+       "mort": true
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Hélène Carrère d'Encausse",
+       "age": 90,
+       "mort": false
+      },
+      {
+       "nom": "Bernadette Chirac",
+       "age": 86,
+       "mort": false
+      },
+      {
+       "nom": "Bernard Tapie",
+       "age": 76,
+       "mort": false
+      },
+      {
+       "nom": "Ismael Zambada Garcia",
+       "age": 72,
+       "mort": false
+      },
+      {
+       "nom": "George R. R. Martin",
+       "age": 71,
+       "mort": false
+      },
+      {
+       "nom": "Gérard Depardieu",
+       "age": 71,
+       "mort": false
+      },
+      {
+       "nom": "Renaud",
+       "age": 67,
+       "mort": false
+      },
+      {
+       "nom": "Moqtada al-Sadr",
+       "age": 46,
+       "mort": false
+      },
+      {
+       "nom": "Alexeï Navalny",
+       "age": 43,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Jean-Baptiste"
      ],
      "points": 5,
-     "deces": 3
+     "deces": 3,
+     "liste_archive": [
+      {
+       "nom": "Olivia de Havilland",
+       "age": 103,
+       "mort": true
+      },
+      {
+       "nom": "Valéry Giscard d'Estaing",
+       "age": 93,
+       "mort": true
+      },
+      {
+       "nom": "Hosni Moubarak",
+       "age": 91,
+       "mort": true
+      },
+      {
+       "nom": "Desmond Tutu",
+       "age": 88,
+       "mort": false
+      },
+      {
+       "nom": "Larry King",
+       "age": 86,
+       "mort": false
+      },
+      {
+       "nom": "Abdelaziz Bouteflika",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Tina Turner",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Bernard Tapie",
+       "age": 76,
+       "mort": false
+      },
+      {
+       "nom": "Jacques Dutronc",
+       "age": 76,
+       "mort": false
+      },
+      {
+       "nom": "Olivia Newton-John",
+       "age": 71,
+       "mort": false
+      },
+      {
+       "nom": "Leon Sprinks",
+       "age": 66,
+       "mort": false
+      },
+      {
+       "nom": "Tom Smith",
+       "age": 48,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Marion"
      ],
      "points": 2,
-     "deces": 1
+     "deces": 1,
+     "liste_archive": [
+      {
+       "nom": "Philip Mountbatten",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Jimmy Carter",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Jacques Delors",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Luc Godard",
+       "age": 89,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Louis Trintignant",
+       "age": 89,
+       "mort": false
+      },
+      {
+       "nom": "Abdelaziz Bouteflika",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "John Lewis",
+       "age": 79,
+       "mort": true
+      },
+      {
+       "nom": "Bernard Tapie",
+       "age": 76,
+       "mort": false
+      },
+      {
+       "nom": "Catherine Deneuve",
+       "age": 76,
+       "mort": false
+      },
+      {
+       "nom": "Véronique Sanson",
+       "age": 70,
+       "mort": false
+      },
+      {
+       "nom": "Renaud",
+       "age": 67,
+       "mort": false
+      },
+      {
+       "nom": "Damien Saez",
+       "age": 42,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Pierre"
      ],
      "points": 4,
-     "deces": 3
+     "deces": 3,
+     "liste_archive": [
+      {
+       "nom": "Kirk Douglas",
+       "age": 103,
+       "mort": true
+      },
+      {
+       "nom": "Philip Mountbatten",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Pierre Cardin",
+       "age": 97,
+       "mort": true
+      },
+      {
+       "nom": "Valéry Giscard d'Estaing",
+       "age": 93,
+       "mort": true
+      },
+      {
+       "nom": "Bernadette Chirac",
+       "age": 86,
+       "mort": false
+      },
+      {
+       "nom": "Abdelaziz Bouteflika",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Tina Turner",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Michel Drucker",
+       "age": 77,
+       "mort": false
+      },
+      {
+       "nom": "Bernard Tapie",
+       "age": 76,
+       "mort": false
+      },
+      {
+       "nom": "Véronique Sanson",
+       "age": 70,
+       "mort": false
+      },
+      {
+       "nom": "Michael Schumacher",
+       "age": 51,
+       "mort": false
+      },
+      {
+       "nom": "Tom Smith",
+       "age": 48,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Pierre-Yves"
      ],
      "points": 0,
-     "deces": 0
+     "deces": 0,
+     "liste_archive": [
+      {
+       "nom": "Renée Deneuve",
+       "age": 108,
+       "mort": false
+      },
+      {
+       "nom": "Anne Vernon",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Claude Sarraute",
+       "age": 92,
+       "mort": false
+      },
+      {
+       "nom": "Robert Badinter",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Jany Le Pen",
+       "age": 87,
+       "mort": false
+      },
+      {
+       "nom": "Catherine Lalumière",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Salmane ben Abdelaziz Al Saoud",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Ali Khamenei",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Henri Dès",
+       "age": 79,
+       "mort": false
+      },
+      {
+       "nom": "Omar el-Bechir",
+       "age": 76,
+       "mort": false
+      },
+      {
+       "nom": "Catherine Deneuve",
+       "age": 76,
+       "mort": false
+      },
+      {
+       "nom": "Pone",
+       "age": 46,
+       "mort": false
+      }
+     ]
     }
    ]
   },
@@ -361,70 +1167,690 @@
       "Capucine"
      ],
      "points": 3,
-     "deces": 3
+     "deces": 3,
+     "liste_archive": [
+      {
+       "nom": "Renée Simonot",
+       "age": 109,
+       "mort": true
+      },
+      {
+       "nom": "Edgar Morin",
+       "age": 99,
+       "mort": false
+      },
+      {
+       "nom": "Jimmy Carter",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "age": 92,
+       "mort": false
+      },
+      {
+       "nom": "Abdelaziz Bouteflika",
+       "age": 83,
+       "mort": true
+      },
+      {
+       "nom": "Tina Turner",
+       "age": 81,
+       "mort": false
+      },
+      {
+       "nom": "Bernard Tapie",
+       "age": 77,
+       "mort": true
+      },
+      {
+       "nom": "Françoise Hardy",
+       "age": 76,
+       "mort": false
+      },
+      {
+       "nom": "Abdrabbo Mansour Hadi",
+       "age": 75,
+       "mort": false
+      },
+      {
+       "nom": "Patrick Sébastien",
+       "age": 67,
+       "mort": false
+      },
+      {
+       "nom": "Hugh Grant",
+       "age": 60,
+       "mort": false
+      },
+      {
+       "nom": "Damien Saez",
+       "age": 43,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Charles"
      ],
      "points": 5,
-     "deces": 3
+     "deces": 3,
+     "liste_archive": [
+      {
+       "nom": "Françoise Gilot",
+       "age": 99,
+       "mort": false
+      },
+      {
+       "nom": "Jimmy Carter",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Robert Badinter",
+       "age": 92,
+       "mort": false
+      },
+      {
+       "nom": "Raoni Metuktire",
+       "age": 88,
+       "mort": false
+      },
+      {
+       "nom": "Just Fontaine",
+       "age": 87,
+       "mort": false
+      },
+      {
+       "nom": "Bernie Sanders",
+       "age": 79,
+       "mort": false
+      },
+      {
+       "nom": "Michel Fourniret",
+       "age": 78,
+       "mort": true
+      },
+      {
+       "nom": "Bernard Tapie",
+       "age": 77,
+       "mort": true
+      },
+      {
+       "nom": "Bill Clinton",
+       "age": 74,
+       "mort": false
+      },
+      {
+       "nom": "Ozzy Osbourne",
+       "age": 72,
+       "mort": false
+      },
+      {
+       "nom": "Lisa Montgomery",
+       "age": 52,
+       "mort": true
+      },
+      {
+       "nom": "Julian Assange",
+       "age": 49,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Charlène"
      ],
      "points": 2,
-     "deces": 2
+     "deces": 2,
+     "liste_archive": [
+      {
+       "nom": "Renée Simonot",
+       "age": 109,
+       "mort": true
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "age": 92,
+       "mort": false
+      },
+      {
+       "nom": "Line Renaud",
+       "age": 92,
+       "mort": false
+      },
+      {
+       "nom": "Brigitte Bardot",
+       "age": 86,
+       "mort": false
+      },
+      {
+       "nom": "Abdelaziz Bouteflika",
+       "age": 83,
+       "mort": true
+      },
+      {
+       "nom": "Morgan Freeman",
+       "age": 83,
+       "mort": false
+      },
+      {
+       "nom": "Anthony Hopkins",
+       "age": 83,
+       "mort": false
+      },
+      {
+       "nom": "Mick Jagger",
+       "age": 77,
+       "mort": false
+      },
+      {
+       "nom": "Jean Reno",
+       "age": 72,
+       "mort": false
+      },
+      {
+       "nom": "Gérard Depardieu",
+       "age": 72,
+       "mort": false
+      },
+      {
+       "nom": "Fanny Ardant",
+       "age": 71,
+       "mort": false
+      },
+      {
+       "nom": "Pete Doherty",
+       "age": 41,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "François"
      ],
      "points": 8,
-     "deces": 5
+     "deces": 5,
+     "liste_archive": [
+      {
+       "nom": "Tava Colo",
+       "age": 118,
+       "mort": true
+      },
+      {
+       "nom": "Philip Mountbatten",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Edgar Morin",
+       "age": 99,
+       "mort": false
+      },
+      {
+       "nom": "Bob Dole",
+       "age": 97,
+       "mort": true
+      },
+      {
+       "nom": "Jimmy Carter",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "age": 92,
+       "mort": false
+      },
+      {
+       "nom": "Abdelaziz Bouteflika",
+       "age": 83,
+       "mort": true
+      },
+      {
+       "nom": "Jimmy Greaves",
+       "age": 80,
+       "mort": true
+      },
+      {
+       "nom": "Pelé",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Dick Cheney",
+       "age": 79,
+       "mort": false
+      },
+      {
+       "nom": "Pervez Musharraf",
+       "age": 77,
+       "mort": false
+      },
+      {
+       "nom": "Tom Smith",
+       "age": 49,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Gaël"
      ],
      "points": 5,
-     "deces": 4
+     "deces": 4,
+     "liste_archive": [
+      {
+       "nom": "René de Obaldia",
+       "age": 102,
+       "mort": false
+      },
+      {
+       "nom": "Micheline Presle",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Jimmy Carter",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Joseph Kittinger",
+       "age": 92,
+       "mort": false
+      },
+      {
+       "nom": "Alejandro Jodorowsky",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Larry King",
+       "age": 87,
+       "mort": true
+      },
+      {
+       "nom": "Frederik de Klerk",
+       "age": 84,
+       "mort": true
+      },
+      {
+       "nom": "Abdelaziz Bouteflika",
+       "age": 83,
+       "mort": true
+      },
+      {
+       "nom": "Alberto Fujimori",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Joe Biden",
+       "age": 78,
+       "mort": false
+      },
+      {
+       "nom": "Bernard Tapie",
+       "age": 77,
+       "mort": true
+      },
+      {
+       "nom": "Alexeï Navalny",
+       "age": 44,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Jean-Baptiste"
      ],
      "points": 14,
-     "deces": 9
+     "deces": 9,
+     "liste_archive": [
+      {
+       "nom": "Norman Lloyd",
+       "age": 106,
+       "mort": true
+      },
+      {
+       "nom": "Philip Mountbatten",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Dilip Kumar",
+       "age": 98,
+       "mort": true
+      },
+      {
+       "nom": "Philippe Bouvard",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Carlos Menem",
+       "age": 90,
+       "mort": true
+      },
+      {
+       "nom": "Larry King",
+       "age": 87,
+       "mort": true
+      },
+      {
+       "nom": "Abdelaziz Bouteflika",
+       "age": 83,
+       "mort": true
+      },
+      {
+       "nom": "Billy Connolly",
+       "age": 78,
+       "mort": false
+      },
+      {
+       "nom": "Bernard Tapie",
+       "age": 77,
+       "mort": true
+      },
+      {
+       "nom": "Vesa-Matti Loiri",
+       "age": 75,
+       "mort": false
+      },
+      {
+       "nom": "Rush Limbaugh",
+       "age": 69,
+       "mort": true
+      },
+      {
+       "nom": "Sarah Harding",
+       "age": 39,
+       "mort": true
+      }
+     ]
     },
     {
      "joueurs": [
       "Marion"
      ],
      "points": 2,
-     "deces": 2
+     "deces": 2,
+     "liste_archive": [
+      {
+       "nom": "Philip Mountbatten",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Edgar Morin",
+       "age": 99,
+       "mort": false
+      },
+      {
+       "nom": "Jimmy Carter",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "age": 92,
+       "mort": false
+      },
+      {
+       "nom": "Edouard Balladur",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Bernadette Chirac",
+       "age": 87,
+       "mort": false
+      },
+      {
+       "nom": "Giorgio Moroder",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Bernard Tapie",
+       "age": 77,
+       "mort": true
+      },
+      {
+       "nom": "Ozzy Osbourne",
+       "age": 72,
+       "mort": false
+      },
+      {
+       "nom": "Renaud",
+       "age": 68,
+       "mort": false
+      },
+      {
+       "nom": "Vladimir Poutine",
+       "age": 68,
+       "mort": false
+      },
+      {
+       "nom": "Shannen Doherty",
+       "age": 49,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Philippe"
      ],
      "points": 2,
-     "deces": 2
+     "deces": 2,
+     "liste_archive": [
+      {
+       "nom": "Kane Tanaka",
+       "age": 117,
+       "mort": false
+      },
+      {
+       "nom": "Philippe De Gaulle",
+       "age": 99,
+       "mort": false
+      },
+      {
+       "nom": "Betty White",
+       "age": 98,
+       "mort": true
+      },
+      {
+       "nom": "Angela Lansbury",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Joseph Ratzinger",
+       "age": 93,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "age": 92,
+       "mort": false
+      },
+      {
+       "nom": "Silvio Berlusconi",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Harald V de Norvège",
+       "age": 83,
+       "mort": false
+      },
+      {
+       "nom": "Abdelaziz Bouteflika",
+       "age": 83,
+       "mort": true
+      },
+      {
+       "nom": "Terence Hill",
+       "age": 81,
+       "mort": false
+      },
+      {
+       "nom": "Pelé",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Kim Jong Un",
+       "age": 36,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Pierre"
      ],
      "points": 4,
-     "deces": 3
+     "deces": 3,
+     "liste_archive": [
+      {
+       "nom": "Hubert Germain",
+       "age": 100,
+       "mort": true
+      },
+      {
+       "nom": "Philip Mountbatten",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Jimmy Carter",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Jacques Delors",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Joseph Ratzinger",
+       "age": 93,
+       "mort": false
+      },
+      {
+       "nom": "Enrico Macias",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Brigitte Fontaine",
+       "age": 81,
+       "mort": false
+      },
+      {
+       "nom": "Tina Turner",
+       "age": 81,
+       "mort": false
+      },
+      {
+       "nom": "Michel Drucker",
+       "age": 78,
+       "mort": false
+      },
+      {
+       "nom": "Bernard Tapie",
+       "age": 77,
+       "mort": true
+      },
+      {
+       "nom": "Rod Stewart",
+       "age": 75,
+       "mort": false
+      },
+      {
+       "nom": "Shannen Doherty",
+       "age": 49,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Pierre-Yves"
      ],
      "points": 5,
-     "deces": 5
+     "deces": 5,
+     "liste_archive": [
+      {
+       "nom": "Renée Simonot",
+       "age": 109,
+       "mort": true
+      },
+      {
+       "nom": "Philip Mountbatten",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Betty White",
+       "age": 98,
+       "mort": true
+      },
+      {
+       "nom": "Anne Vernon",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Dick Van Dyke",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Robert Badinter",
+       "age": 92,
+       "mort": false
+      },
+      {
+       "nom": "Abdelaziz Bouteflika",
+       "age": 83,
+       "mort": true
+      },
+      {
+       "nom": "Joe Biden",
+       "age": 78,
+       "mort": false
+      },
+      {
+       "nom": "Bernard Tapie",
+       "age": 77,
+       "mort": true
+      },
+      {
+       "nom": "Donald Trump",
+       "age": 74,
+       "mort": false
+      },
+      {
+       "nom": "Jack Ma",
+       "age": 56,
+       "mort": false
+      },
+      {
+       "nom": "Kim Jong Un",
+       "age": 36,
+       "mort": false
+      }
+     ]
     }
    ]
   },
@@ -438,42 +1864,414 @@
       "Charles"
      ],
      "points": 3,
-     "deces": 2
+     "deces": 2,
+     "liste_archive": [
+      {
+       "nom": "Jimmy Carter",
+       "age": 97,
+       "mort": false
+      },
+      {
+       "nom": "Tony Bennett",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Rupert Murdoch",
+       "age": 90,
+       "mort": false
+      },
+      {
+       "nom": "Pierre Richard",
+       "age": 87,
+       "mort": false
+      },
+      {
+       "nom": "Brigitte Bardot",
+       "age": 87,
+       "mort": false
+      },
+      {
+       "nom": "Bobby Charlton",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Pelé",
+       "age": 81,
+       "mort": true
+      },
+      {
+       "nom": "Bernadette Després",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Jesse Jackson",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Robert Durst",
+       "age": 78,
+       "mort": true
+      },
+      {
+       "nom": "Allan Peiper",
+       "age": 61,
+       "mort": false
+      },
+      {
+       "nom": "Shannen Doherty",
+       "age": 50,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "François"
      ],
      "points": 3,
-     "deces": 2
+     "deces": 2,
+     "liste_archive": [
+      {
+       "nom": "Stanislas Kowalski",
+       "age": 111,
+       "mort": true
+      },
+      {
+       "nom": "Elizabeth II",
+       "age": 95,
+       "mort": true
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "age": 93,
+       "mort": false
+      },
+      {
+       "nom": "François Cheng",
+       "age": 92,
+       "mort": false
+      },
+      {
+       "nom": "Don King",
+       "age": 90,
+       "mort": false
+      },
+      {
+       "nom": "Salmane Al Saoud",
+       "age": 86,
+       "mort": false
+      },
+      {
+       "nom": "Paul Dijoud",
+       "age": 83,
+       "mort": false
+      },
+      {
+       "nom": "Guy Roux",
+       "age": 83,
+       "mort": false
+      },
+      {
+       "nom": "Dick Cheney",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Iron Sheik",
+       "age": 79,
+       "mort": false
+      },
+      {
+       "nom": "George Foreman",
+       "age": 72,
+       "mort": false
+      },
+      {
+       "nom": "Paul Gascoigne",
+       "age": 54,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Gaël"
      ],
      "points": 5,
-     "deces": 4
+     "deces": 4,
+     "liste_archive": [
+      {
+       "nom": "René de Obaldia",
+       "age": 103,
+       "mort": true
+      },
+      {
+       "nom": "Micheline Presle",
+       "age": 99,
+       "mort": false
+      },
+      {
+       "nom": "Bob Barker",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Thich Nhat Hanh",
+       "age": 95,
+       "mort": true
+      },
+      {
+       "nom": "Claude Sarraute",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Bernadette Chirac",
+       "age": 88,
+       "mort": false
+      },
+      {
+       "nom": "Alberto Fujimori",
+       "age": 83,
+       "mort": false
+      },
+      {
+       "nom": "Pelé",
+       "age": 81,
+       "mort": true
+      },
+      {
+       "nom": "Michel Drucker",
+       "age": 79,
+       "mort": false
+      },
+      {
+       "nom": "Françoise Hardy",
+       "age": 77,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Pierre Pernaut",
+       "age": 71,
+       "mort": true
+      },
+      {
+       "nom": "Shannen Doherty",
+       "age": 50,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Jean-Baptiste"
      ],
      "points": 10,
-     "deces": 5
+     "deces": 5,
+     "liste_archive": [
+      {
+       "nom": "Marsha Hunt",
+       "age": 104,
+       "mort": true
+      },
+      {
+       "nom": "Henry Kissinger",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Jiang Zemin",
+       "age": 95,
+       "mort": true
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "age": 93,
+       "mort": false
+      },
+      {
+       "nom": "Philippe Bouvard",
+       "age": 92,
+       "mort": false
+      },
+      {
+       "nom": "Monica Vitti",
+       "age": 90,
+       "mort": true
+      },
+      {
+       "nom": "Carlos Bilardo",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Vesa-Matti Loiri",
+       "age": 76,
+       "mort": true
+      },
+      {
+       "nom": "George Pérez",
+       "age": 67,
+       "mort": true
+      },
+      {
+       "nom": "George Alagiah",
+       "age": 66,
+       "mort": false
+      },
+      {
+       "nom": "Joe Exotic",
+       "age": 58,
+       "mort": false
+      },
+      {
+       "nom": "Necro Butcher",
+       "age": 48,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Julie"
      ],
      "points": 4,
-     "deces": 3
+     "deces": 3,
+     "liste_archive": [
+      {
+       "nom": "René de Obaldia",
+       "age": 103,
+       "mort": true
+      },
+      {
+       "nom": "Henry Kissinger",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Jimmy Carter",
+       "age": 97,
+       "mort": false
+      },
+      {
+       "nom": "Dick Van Dyke",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "David Attenborough",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Rosalynn Carter",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Claude Allègre",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Pelé",
+       "age": 81,
+       "mort": true
+      },
+      {
+       "nom": "Bruno Latour",
+       "age": 74,
+       "mort": true
+      },
+      {
+       "nom": "Catherine Laborde",
+       "age": 70,
+       "mort": false
+      },
+      {
+       "nom": "Michael Schumacher",
+       "age": 52,
+       "mort": false
+      },
+      {
+       "nom": "Shannen Doherty",
+       "age": 50,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Marion"
      ],
      "points": 3,
-     "deces": 3
+     "deces": 3,
+     "liste_archive": [
+      {
+       "nom": "Elizabeth II",
+       "age": 95,
+       "mort": true
+      },
+      {
+       "nom": "Benoit XVI",
+       "age": 94,
+       "mort": true
+      },
+      {
+       "nom": "Edouard Balladur",
+       "age": 92,
+       "mort": false
+      },
+      {
+       "nom": "Akihito",
+       "age": 88,
+       "mort": false
+      },
+      {
+       "nom": "Bernadette Chirac",
+       "age": 88,
+       "mort": false
+      },
+      {
+       "nom": "Alain Delon",
+       "age": 86,
+       "mort": false
+      },
+      {
+       "nom": "Pelé",
+       "age": 81,
+       "mort": true
+      },
+      {
+       "nom": "Bob Dylan",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Michel Drucker",
+       "age": 79,
+       "mort": false
+      },
+      {
+       "nom": "Françoise Hardy",
+       "age": 77,
+       "mort": false
+      },
+      {
+       "nom": "Renaud Séchan",
+       "age": 69,
+       "mort": false
+      },
+      {
+       "nom": "Michael Schumacher",
+       "age": 52,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
@@ -481,28 +2279,276 @@
      ],
      "points": 4,
      "deces": 4,
-     "liste_commune_avec": "Étienne"
+     "liste_commune_avec": "Étienne",
+     "liste_archive": [
+      {
+       "nom": "Jimmy Carter",
+       "age": 97,
+       "mort": false
+      },
+      {
+       "nom": "Jacques Delors",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Dick Van Dyke",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Benoit XVI",
+       "age": 94,
+       "mort": true
+      },
+      {
+       "nom": "Pelé",
+       "age": 81,
+       "mort": true
+      },
+      {
+       "nom": "Jacques Dutronc",
+       "age": 78,
+       "mort": false
+      },
+      {
+       "nom": "Françoise Hardy",
+       "age": 77,
+       "mort": false
+      },
+      {
+       "nom": "Kareem Abdul-Jabbar",
+       "age": 74,
+       "mort": false
+      },
+      {
+       "nom": "Olivia Newton-John",
+       "age": 73,
+       "mort": true
+      },
+      {
+       "nom": "Jean-Pierre Pernaut",
+       "age": 71,
+       "mort": true
+      },
+      {
+       "nom": "Michael Schumacher",
+       "age": 52,
+       "mort": false
+      },
+      {
+       "nom": "Shannen Doherty",
+       "age": 50,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Philippe"
      ],
      "points": 5,
-     "deces": 4
+     "deces": 4,
+     "liste_archive": [
+      {
+       "nom": "Kane Tanaka",
+       "age": 119,
+       "mort": true
+      },
+      {
+       "nom": "Glynis Johns",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Angela Lansbury",
+       "age": 96,
+       "mort": true
+      },
+      {
+       "nom": "Alix de Foresta",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Benoit XVI",
+       "age": 94,
+       "mort": true
+      },
+      {
+       "nom": "Buzz Aldrin",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Guy Marchand",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Pelé",
+       "age": 81,
+       "mort": true
+      },
+      {
+       "nom": "Cornel Otelea",
+       "age": 81,
+       "mort": false
+      },
+      {
+       "nom": "Lech Walesa",
+       "age": 78,
+       "mort": false
+      },
+      {
+       "nom": "Mick Mars",
+       "age": 70,
+       "mort": false
+      },
+      {
+       "nom": "Kim Jong Un",
+       "age": 38,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Pierre"
      ],
      "points": 7,
-     "deces": 6
+     "deces": 6,
+     "liste_archive": [
+      {
+       "nom": "Colette Maze",
+       "age": 107,
+       "mort": false
+      },
+      {
+       "nom": "Jimmy Carter",
+       "age": 97,
+       "mort": false
+      },
+      {
+       "nom": "Angela Lansbury",
+       "age": 96,
+       "mort": true
+      },
+      {
+       "nom": "Dick Van Dyke",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Elizabeth II",
+       "age": 95,
+       "mort": true
+      },
+      {
+       "nom": "Akihito",
+       "age": 88,
+       "mort": false
+      },
+      {
+       "nom": "Ali Khamenei",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Claude Gaudin",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Pelé",
+       "age": 81,
+       "mort": true
+      },
+      {
+       "nom": "Olivia Newton-John",
+       "age": 73,
+       "mort": true
+      },
+      {
+       "nom": "Jean-Pierre Pernaut",
+       "age": 71,
+       "mort": true
+      },
+      {
+       "nom": "Tom Smith",
+       "age": 50,
+       "mort": true
+      }
+     ]
     },
     {
      "joueurs": [
       "Pierre-Yves"
      ],
      "points": 1,
-     "deces": 1
+     "deces": 1,
+     "liste_archive": [
+      {
+       "nom": "Lucile Randon",
+       "age": 117,
+       "mort": false
+      },
+      {
+       "nom": "Henry Kissinger",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Edouard Balladur",
+       "age": 92,
+       "mort": false
+      },
+      {
+       "nom": "Anne-Aymone Giscard d'Estaing",
+       "age": 88,
+       "mort": false
+      },
+      {
+       "nom": "Brigitte Bardot",
+       "age": 87,
+       "mort": false
+      },
+      {
+       "nom": "Alain Delon",
+       "age": 86,
+       "mort": false
+      },
+      {
+       "nom": "Michelle Mercier",
+       "age": 83,
+       "mort": false
+      },
+      {
+       "nom": "Tina Turner",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Pelé",
+       "age": 81,
+       "mort": true
+      },
+      {
+       "nom": "Françoise Hardy",
+       "age": 77,
+       "mort": false
+      },
+      {
+       "nom": "Iggy Pop",
+       "age": 74,
+       "mort": false
+      },
+      {
+       "nom": "Michael Schumacher",
+       "age": 52,
+       "mort": false
+      }
+     ]
     }
    ]
   },
@@ -516,98 +2562,966 @@
       "Alexis"
      ],
      "points": 2,
-     "deces": 2
+     "deces": 2,
+     "liste_archive": [
+      {
+       "nom": "Lucile Randon",
+       "age": 118,
+       "mort": true
+      },
+      {
+       "nom": "Jimmy Carter",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Philippe Bouvard",
+       "age": 93,
+       "mort": false
+      },
+      {
+       "nom": "Akihito",
+       "age": 89,
+       "mort": false
+      },
+      {
+       "nom": "Françoise Hardy",
+       "age": 78,
+       "mort": false
+      },
+      {
+       "nom": "Steven Tyler",
+       "age": 74,
+       "mort": false
+      },
+      {
+       "nom": "Catherine Laborde",
+       "age": 71,
+       "mort": false
+      },
+      {
+       "nom": "Shane MacGowan",
+       "age": 65,
+       "mort": true
+      },
+      {
+       "nom": "Andy Taylor",
+       "age": 61,
+       "mort": false
+      },
+      {
+       "nom": "Shannen Doherty",
+       "age": 51,
+       "mort": false
+      },
+      {
+       "nom": "Loana Petrucciani",
+       "age": 45,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Charles"
      ],
      "points": 4,
-     "deces": 3
+     "deces": 3,
+     "liste_archive": [
+      {
+       "nom": "Henry Kissinger",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Tony Bennett",
+       "age": 96,
+       "mort": true
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Edouard Balladur",
+       "age": 93,
+       "mort": false
+      },
+      {
+       "nom": "Bobby Charlton",
+       "age": 85,
+       "mort": true
+      },
+      {
+       "nom": "Jane Fonda",
+       "age": 85,
+       "mort": false
+      },
+      {
+       "nom": "Stephen Breyer",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Guy Roux",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Martina Navratilova",
+       "age": 66,
+       "mort": false
+      },
+      {
+       "nom": "Allan Peiper",
+       "age": 62,
+       "mort": false
+      },
+      {
+       "nom": "Pone",
+       "age": 49,
+       "mort": false
+      },
+      {
+       "nom": "Chicandier",
+       "age": 44,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Eva"
      ],
      "points": 2,
-     "deces": 2
+     "deces": 2,
+     "liste_archive": [
+      {
+       "nom": "Henry Kissinger",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Line Renaud",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Bernadette Chirac",
+       "age": 89,
+       "mort": false
+      },
+      {
+       "nom": "Tina Turner",
+       "age": 83,
+       "mort": true
+      },
+      {
+       "nom": "Jean Reno",
+       "age": 74,
+       "mort": false
+      },
+      {
+       "nom": "Catherine Laborde",
+       "age": 71,
+       "mort": false
+      },
+      {
+       "nom": "Renaud",
+       "age": 70,
+       "mort": false
+      },
+      {
+       "nom": "Bruce Willis",
+       "age": 67,
+       "mort": false
+      },
+      {
+       "nom": "Michael J. Fox",
+       "age": 61,
+       "mort": false
+      },
+      {
+       "nom": "Florent Pagny",
+       "age": 61,
+       "mort": false
+      },
+      {
+       "nom": "Shannen Doherty",
+       "age": 51,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "François"
      ],
      "points": 5,
-     "deces": 3
+     "deces": 3,
+     "liste_archive": [
+      {
+       "nom": "Juan Vicente Pérez Mora",
+       "age": 113,
+       "mort": false
+      },
+      {
+       "nom": "Henry Kissinger",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Jimmy Carter",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Mel Brooks",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Buzz Aldrin",
+       "age": 92,
+       "mort": false
+      },
+      {
+       "nom": "Geneviève de Fontenay",
+       "age": 90,
+       "mort": true
+      },
+      {
+       "nom": "Tommy Chong",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "David Crosby",
+       "age": 81,
+       "mort": true
+      },
+      {
+       "nom": "Marianne Faithfull",
+       "age": 76,
+       "mort": false
+      },
+      {
+       "nom": "Jake Roberts",
+       "age": 67,
+       "mort": false
+      },
+      {
+       "nom": "Michael J. Fox",
+       "age": 61,
+       "mort": false
+      },
+      {
+       "nom": "Abou Mohammed al-Joulani",
+       "age": 38,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Gaël"
      ],
      "points": 5,
-     "deces": 3
+     "deces": 3,
+     "liste_archive": [
+      {
+       "nom": "Micheline Presle",
+       "age": 100,
+       "mort": false
+      },
+      {
+       "nom": "Bob Barker",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Jimmy Carter",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Claude Sarraute",
+       "age": 95,
+       "mort": true
+      },
+      {
+       "nom": "Jamshid ben Abdallah",
+       "age": 93,
+       "mort": false
+      },
+      {
+       "nom": "Buzz Aldrin",
+       "age": 92,
+       "mort": false
+      },
+      {
+       "nom": "Alberto Fujimori",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Chuck Norris",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Dick Cheney",
+       "age": 81,
+       "mort": false
+      },
+      {
+       "nom": "Charles Sobhraj",
+       "age": 78,
+       "mort": false
+      },
+      {
+       "nom": "Ryuichi Sakamoto",
+       "age": 70,
+       "mort": true
+      },
+      {
+       "nom": "Alexei Navalny",
+       "age": 46,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Jean-Baptiste"
      ],
      "points": 6,
-     "deces": 4
+     "deces": 4,
+     "liste_archive": [
+      {
+       "nom": "Fauja Singh",
+       "age": 111,
+       "mort": false
+      },
+      {
+       "nom": "Glynis Johns",
+       "age": 99,
+       "mort": false
+      },
+      {
+       "nom": "Harry Belafonte",
+       "age": 95,
+       "mort": true
+      },
+      {
+       "nom": "Imelda Marcos",
+       "age": 93,
+       "mort": false
+      },
+      {
+       "nom": "François Englert",
+       "age": 90,
+       "mort": false
+      },
+      {
+       "nom": "Bernadette Chirac",
+       "age": 89,
+       "mort": false
+      },
+      {
+       "nom": "Constantin II de Grèce",
+       "age": 82,
+       "mort": true
+      },
+      {
+       "nom": "Hu Jintao",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "George Alagiah",
+       "age": 67,
+       "mort": true
+      },
+      {
+       "nom": "Shane MacGowan",
+       "age": 65,
+       "mort": true
+      },
+      {
+       "nom": "Andy Taylor",
+       "age": 61,
+       "mort": false
+      },
+      {
+       "nom": "Fedez",
+       "age": 33,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Karen"
      ],
      "points": 2,
-     "deces": 2
+     "deces": 2,
+     "liste_archive": [
+      {
+       "nom": "Roland Dumas",
+       "age": 100,
+       "mort": false
+      },
+      {
+       "nom": "Jimmy Carter",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Jacques Delors",
+       "age": 97,
+       "mort": true
+      },
+      {
+       "nom": "Tony Bennett",
+       "age": 96,
+       "mort": true
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Alain Delon",
+       "age": 87,
+       "mort": false
+      },
+      {
+       "nom": "Jacques Dutronc",
+       "age": 79,
+       "mort": false
+      },
+      {
+       "nom": "Françoise Hardy",
+       "age": 78,
+       "mort": false
+      },
+      {
+       "nom": "Catherine Laborde",
+       "age": 71,
+       "mort": false
+      },
+      {
+       "nom": "Michael J. Fox",
+       "age": 61,
+       "mort": false
+      },
+      {
+       "nom": "Dominique Farrugia",
+       "age": 60,
+       "mort": false
+      },
+      {
+       "nom": "Shannen Doherty",
+       "age": 51,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Nina"
      ],
      "points": 1,
-     "deces": 1
+     "deces": 1,
+     "liste_archive": [
+      {
+       "nom": "André Ludwig",
+       "age": 110,
+       "mort": false
+      },
+      {
+       "nom": "Jimmy Carter",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Jacques Delors",
+       "age": 97,
+       "mort": true
+      },
+      {
+       "nom": "Laurent de Brunhoff",
+       "age": 97,
+       "mort": false
+      },
+      {
+       "nom": "Dick Van Dyke",
+       "age": 97,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Jacques Dutronc",
+       "age": 79,
+       "mort": false
+      },
+      {
+       "nom": "Françoise Hardy",
+       "age": 78,
+       "mort": false
+      },
+      {
+       "nom": "Charles III",
+       "age": 74,
+       "mort": false
+      },
+      {
+       "nom": "Catherine Laborde",
+       "age": 71,
+       "mort": false
+      },
+      {
+       "nom": "Florent Pagny",
+       "age": 61,
+       "mort": false
+      },
+      {
+       "nom": "Shannen Doherty",
+       "age": 51,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Philippe"
      ],
      "points": 3,
-     "deces": 2
+     "deces": 2,
+     "liste_archive": [
+      {
+       "nom": "Edgar Morin",
+       "age": 101,
+       "mort": false
+      },
+      {
+       "nom": "Henry Kissinger",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Glynis Johns",
+       "age": 99,
+       "mort": false
+      },
+      {
+       "nom": "Alix de Foresta",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Buzz Aldrin",
+       "age": 92,
+       "mort": false
+      },
+      {
+       "nom": "Guy Marchand",
+       "age": 85,
+       "mort": true
+      },
+      {
+       "nom": "Alpha Condé",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Enrico Macias",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Cornel Otelea",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Lech Walesa",
+       "age": 79,
+       "mort": false
+      },
+      {
+       "nom": "Florent Pagny",
+       "age": 61,
+       "mort": false
+      },
+      {
+       "nom": "Michael Schumacher",
+       "age": 54,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Pierre"
      ],
      "points": 4,
-     "deces": 2
+     "deces": 2,
+     "liste_archive": [
+      {
+       "nom": "Colette Maze",
+       "age": 108,
+       "mort": true
+      },
+      {
+       "nom": "Jimmy Carter",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Dick Van Dyke",
+       "age": 97,
+       "mort": false
+      },
+      {
+       "nom": "Line Renaud",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Just Fontaine",
+       "age": 89,
+       "mort": true
+      },
+      {
+       "nom": "Akihito",
+       "age": 89,
+       "mort": false
+      },
+      {
+       "nom": "Guy Roux",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Ali Khamenei",
+       "age": 83,
+       "mort": false
+      },
+      {
+       "nom": "Michel Drucker",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Nigel Starmer-Smith",
+       "age": 78,
+       "mort": false
+      },
+      {
+       "nom": "Céline Dion",
+       "age": 54,
+       "mort": false
+      },
+      {
+       "nom": "Shannen Doherty",
+       "age": 51,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Pierre-Yves"
      ],
      "points": 4,
-     "deces": 4
+     "deces": 4,
+     "liste_archive": [
+      {
+       "nom": "Lucile Randon",
+       "age": 118,
+       "mort": true
+      },
+      {
+       "nom": "Henry Kissinger",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Claude Sarraute",
+       "age": 95,
+       "mort": true
+      },
+      {
+       "nom": "Robert Badinter",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Bernadette Chirac",
+       "age": 89,
+       "mort": false
+      },
+      {
+       "nom": "Ali Khamenei",
+       "age": 83,
+       "mort": false
+      },
+      {
+       "nom": "Tina Turner",
+       "age": 83,
+       "mort": true
+      },
+      {
+       "nom": "Hu Jintao",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Françoise Hardy",
+       "age": 78,
+       "mort": false
+      },
+      {
+       "nom": "Vladimir Poutine",
+       "age": 70,
+       "mort": false
+      },
+      {
+       "nom": "Céline Dion",
+       "age": 54,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Sophie"
      ],
      "points": 5,
-     "deces": 4
+     "deces": 4,
+     "liste_archive": [
+      {
+       "nom": "Lucile Randon",
+       "age": 118,
+       "mort": true
+      },
+      {
+       "nom": "Jimmy Carter",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Harry Belafonte",
+       "age": 95,
+       "mort": true
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Milan Kundera",
+       "age": 93,
+       "mort": true
+      },
+      {
+       "nom": "André Brasilier",
+       "age": 93,
+       "mort": false
+      },
+      {
+       "nom": "Tina Turner",
+       "age": 83,
+       "mort": true
+      },
+      {
+       "nom": "Françoise Hardy",
+       "age": 78,
+       "mort": false
+      },
+      {
+       "nom": "Marianne Faithfull",
+       "age": 76,
+       "mort": false
+      },
+      {
+       "nom": "Bruce Willis",
+       "age": 67,
+       "mort": false
+      },
+      {
+       "nom": "Michael J. Fox",
+       "age": 61,
+       "mort": false
+      },
+      {
+       "nom": "Volodymyr Zelensky",
+       "age": 44,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Thibaut"
      ],
      "points": 0,
-     "deces": 0
+     "deces": 0,
+     "liste_archive": [
+      {
+       "nom": "Jean-Marie Le Pen",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Neil Young",
+       "age": 77,
+       "mort": false
+      },
+      {
+       "nom": "Gérard Depardieu",
+       "age": 74,
+       "mort": false
+      },
+      {
+       "nom": "Catherine Laborde",
+       "age": 71,
+       "mort": false
+      },
+      {
+       "nom": "Renaud",
+       "age": 70,
+       "mort": false
+      },
+      {
+       "nom": "Michael J. Fox",
+       "age": 61,
+       "mort": false
+      },
+      {
+       "nom": "Florent Pagny",
+       "age": 61,
+       "mort": false
+      },
+      {
+       "nom": "Michael Schumacher",
+       "age": 54,
+       "mort": false
+      },
+      {
+       "nom": "Shannen Doherty",
+       "age": 51,
+       "mort": false
+      },
+      {
+       "nom": "John McGuinness",
+       "age": 50,
+       "mort": false
+      },
+      {
+       "nom": "Loana Petrucciani",
+       "age": 45,
+       "mort": false
+      },
+      {
+       "nom": "Volodymyr Zelensky",
+       "age": 44,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Étienne"
      ],
      "points": 3,
-     "deces": 2
+     "deces": 2,
+     "liste_archive": [
+      {
+       "nom": "Juan Vicente Pérez Mora",
+       "age": 113,
+       "mort": false
+      },
+      {
+       "nom": "Marcel Zanini",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Roger Guillemin",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Jacques Delors",
+       "age": 97,
+       "mort": true
+      },
+      {
+       "nom": "Jean-Charles Tacchella",
+       "age": 97,
+       "mort": false
+      },
+      {
+       "nom": "Abdoulaye Wade",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Alpha Condé",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Guy Roux",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Brigitte Fontaine",
+       "age": 83,
+       "mort": false
+      },
+      {
+       "nom": "Jacques Dutronc",
+       "age": 79,
+       "mort": false
+      },
+      {
+       "nom": "Kareem Abdul-Jabaar",
+       "age": 75,
+       "mort": false
+      },
+      {
+       "nom": "Shannen Doherty",
+       "age": 51,
+       "mort": false
+      }
+     ]
     }
    ]
   },
@@ -621,105 +3535,1485 @@
       "Alexis"
      ],
      "points": 5.5,
-     "deces": 5
+     "deces": 5,
+     "liste_archive": [
+      {
+       "nom": "Maria Branyas Morera",
+       "pays": "ESP",
+       "age": 116,
+       "mort": true
+      },
+      {
+       "nom": "Jimmy Carter",
+       "pays": "USA",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Mahathir Mohamad",
+       "pays": "MAL",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "pays": "FRA",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Philippe Bouvard",
+       "pays": "FRA",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Yoko Ono",
+       "pays": "JAP",
+       "age": 90,
+       "mort": false
+      },
+      {
+       "nom": "Pape François",
+       "pays": "ARG",
+       "age": 87,
+       "mort": false
+      },
+      {
+       "nom": "Tom Brokaw",
+       "pays": "USA",
+       "age": 83,
+       "mort": false
+      },
+      {
+       "nom": "Françoise Hardy",
+       "pays": "FRA",
+       "age": 79,
+       "mort": true
+      },
+      {
+       "nom": "Catherine Laborde",
+       "pays": "FRA",
+       "age": 72,
+       "mort": false
+      },
+      {
+       "nom": "Dolph Lundgren",
+       "pays": "SUE",
+       "age": 66,
+       "mort": false
+      },
+      {
+       "nom": "Linda Nolan",
+       "pays": "IRL",
+       "age": 64,
+       "mort": false
+      },
+      {
+       "nom": "Yahya Sinwar",
+       "pays": "PAL",
+       "age": 61,
+       "mort": true
+      },
+      {
+       "nom": "Shannen Doherty",
+       "pays": "USA",
+       "age": 52,
+       "mort": true
+      },
+      {
+       "nom": "Mark Hoppus",
+       "pays": "USA",
+       "age": 51,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Charles"
      ],
      "points": 6.5,
-     "deces": 5
+     "deces": 5,
+     "liste_archive": [
+      {
+       "nom": "Jimmy Carter",
+       "pays": "USA",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "pays": "FRA",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Willie Nelson",
+       "pays": "USA",
+       "age": 90,
+       "mort": false
+      },
+      {
+       "nom": "Alain Delon",
+       "pays": "FRA",
+       "age": 88,
+       "mort": true
+      },
+      {
+       "nom": "Pape François",
+       "pays": "ARG",
+       "age": 87,
+       "mort": false
+      },
+      {
+       "nom": "Guy Roux",
+       "pays": "FRA",
+       "age": 85,
+       "mort": false
+      },
+      {
+       "nom": "Ralph Lauren",
+       "pays": "USA",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Eddy Mitchell",
+       "pays": "FRA",
+       "age": 81,
+       "mort": false
+      },
+      {
+       "nom": "Paul Auster",
+       "pays": "USA",
+       "age": 76,
+       "mort": true
+      },
+      {
+       "nom": "Frédéric Mitterrand",
+       "pays": "FRA",
+       "age": 76,
+       "mort": true
+      },
+      {
+       "nom": "Dolph Lundgren",
+       "pays": "SUE",
+       "age": 66,
+       "mort": false
+      },
+      {
+       "nom": "Linda Nolan",
+       "pays": "IRL",
+       "age": 64,
+       "mort": false
+      },
+      {
+       "nom": "Allan Peiper",
+       "pays": "AUS",
+       "age": 63,
+       "mort": false
+      },
+      {
+       "nom": "Mohammed Deïf",
+       "pays": "PAL",
+       "age": 58,
+       "mort": true
+      },
+      {
+       "nom": "Pone",
+       "pays": "FRA",
+       "age": 50,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Eva"
      ],
      "points": 5.5,
-     "deces": 5
+     "deces": 5,
+     "liste_archive": [
+      {
+       "nom": "Philippe De Gaulle",
+       "pays": "FRA",
+       "age": 102,
+       "mort": true
+      },
+      {
+       "nom": "Robert Badinter",
+       "pays": "FRA",
+       "age": 95,
+       "mort": true
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "pays": "FRA",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Line Renaud",
+       "pays": "FRA",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Bernadette Chirac",
+       "pays": "FRA",
+       "age": 90,
+       "mort": false
+      },
+      {
+       "nom": "Alain Delon",
+       "pays": "FRA",
+       "age": 88,
+       "mort": true
+      },
+      {
+       "nom": "Pape François",
+       "pays": "ARG",
+       "age": 87,
+       "mort": false
+      },
+      {
+       "nom": "Bill Cosby",
+       "pays": "USA",
+       "age": 86,
+       "mort": false
+      },
+      {
+       "nom": "Jacques Dutronc",
+       "pays": "FRA",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Robert De Niro",
+       "pays": "USA",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Françoise Hardy",
+       "pays": "FRA",
+       "age": 79,
+       "mort": true
+      },
+      {
+       "nom": "Renaud",
+       "pays": "FRA",
+       "age": 71,
+       "mort": false
+      },
+      {
+       "nom": "Michael J. Fox",
+       "pays": "CAN",
+       "age": 62,
+       "mort": false
+      },
+      {
+       "nom": "Dominique Farrugia",
+       "pays": "FRA",
+       "age": 61,
+       "mort": false
+      },
+      {
+       "nom": "Shannen Doherty",
+       "pays": "USA",
+       "age": 52,
+       "mort": true
+      }
+     ]
     },
     {
      "joueurs": [
       "François"
      ],
      "points": 3,
-     "deces": 2
+     "deces": 2,
+     "liste_archive": [
+      {
+       "nom": "Philippe De Gaulle",
+       "pays": "FRA",
+       "age": 102,
+       "mort": true
+      },
+      {
+       "nom": "Dominique Fernandez",
+       "pays": "FRA",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Pierre Fourcade",
+       "pays": "FRA",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Lucien Mias",
+       "pays": "FRA",
+       "age": 93,
+       "mort": true
+      },
+      {
+       "nom": "Gabriel de Broglie",
+       "pays": "FRA",
+       "age": 92,
+       "mort": false
+      },
+      {
+       "nom": "Jean Tulard",
+       "pays": "FRA",
+       "age": 90,
+       "mort": false
+      },
+      {
+       "nom": "Gérard Chaliand",
+       "pays": "FRA",
+       "age": 89,
+       "mort": false
+      },
+      {
+       "nom": "Henry de Lumley",
+       "pays": "FRA",
+       "age": 89,
+       "mort": false
+      },
+      {
+       "nom": "Jean Djorkaeff",
+       "pays": "FRA",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Claude Dagens",
+       "pays": "FRA",
+       "age": 83,
+       "mort": false
+      },
+      {
+       "nom": "Daniel Rodighiero",
+       "pays": "FRA",
+       "age": 83,
+       "mort": false
+      },
+      {
+       "nom": "Nestor Combin",
+       "pays": "ARG",
+       "age": 83,
+       "mort": false
+      },
+      {
+       "nom": "Marc Agostino",
+       "pays": "FRA",
+       "age": 81,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Claude Golvin",
+       "pays": "FRA",
+       "age": 81,
+       "mort": false
+      },
+      {
+       "nom": "Serge Grouard",
+       "pays": "FRA",
+       "age": 64,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Gaël"
      ],
      "points": 9,
-     "deces": 6
+     "deces": 6,
+     "liste_archive": [
+      {
+       "nom": "Agnes Keleti",
+       "pays": "HON",
+       "age": 102,
+       "mort": false
+      },
+      {
+       "nom": "Jimmy Carter",
+       "pays": "USA",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Herbert Blomstedt",
+       "pays": "SUE",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "André Jobin \"Job\"",
+       "pays": "SUI",
+       "age": 96,
+       "mort": true
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "pays": "FRA",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Rupert Murdoch",
+       "pays": "AUS",
+       "age": 92,
+       "mort": false
+      },
+      {
+       "nom": "Pape François",
+       "pays": "ARG",
+       "age": 87,
+       "mort": false
+      },
+      {
+       "nom": "Alberto Fujimori",
+       "pays": "PER",
+       "age": 85,
+       "mort": true
+      },
+      {
+       "nom": "Jesse Jackson",
+       "pays": "USA",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Michel Drucker",
+       "pays": "FRA",
+       "age": 81,
+       "mort": false
+      },
+      {
+       "nom": "Paul Auster",
+       "pays": "USA",
+       "age": 76,
+       "mort": true
+      },
+      {
+       "nom": "Bruce Willis",
+       "pays": "USA",
+       "age": 68,
+       "mort": false
+      },
+      {
+       "nom": "Renaud Detressan",
+       "pays": "FRA",
+       "age": 67,
+       "mort": false
+      },
+      {
+       "nom": "Shannen Doherty",
+       "pays": "USA",
+       "age": 52,
+       "mort": true
+      },
+      {
+       "nom": "Alexei Navalny",
+       "pays": "RUS",
+       "age": 47,
+       "mort": true
+      }
+     ]
     },
     {
      "joueurs": [
       "Jean-Baptiste"
      ],
      "points": 6,
-     "deces": 4
+     "deces": 4,
+     "liste_archive": [
+      {
+       "nom": "Agnes Keleti",
+       "pays": "HON",
+       "age": 102,
+       "mort": false
+      },
+      {
+       "nom": "Jimmy Carter",
+       "pays": "USA",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Roger Corman",
+       "pays": "USA",
+       "age": 97,
+       "mort": true
+      },
+      {
+       "nom": "Leontyne Price",
+       "pays": "USA",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "pays": "FRA",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Gene Hackman",
+       "pays": "USA",
+       "age": 93,
+       "mort": false
+      },
+      {
+       "nom": "Emilio Fede",
+       "pays": "ITA",
+       "age": 92,
+       "mort": false
+      },
+      {
+       "nom": "Bernadette Chirac",
+       "pays": "FRA",
+       "age": 90,
+       "mort": false
+      },
+      {
+       "nom": "Carlos Bilardo",
+       "pays": "ARG",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Golden State Killer",
+       "pays": "USA",
+       "age": 78,
+       "mort": false
+      },
+      {
+       "nom": "Sam Neill",
+       "pays": "NZ",
+       "age": 76,
+       "mort": false
+      },
+      {
+       "nom": "Julie Walters",
+       "pays": "ANG",
+       "age": 73,
+       "mort": false
+      },
+      {
+       "nom": "Yasuhiko Funago",
+       "pays": "JAP",
+       "age": 66,
+       "mort": false
+      },
+      {
+       "nom": "Dikembe Mutombo",
+       "pays": "RDC",
+       "age": 57,
+       "mort": true
+      },
+      {
+       "nom": "Shannen Doherty",
+       "pays": "USA",
+       "age": 52,
+       "mort": true
+      }
+     ]
     },
     {
      "joueurs": [
       "Karen"
      ],
      "points": 5.5,
-     "deces": 5
+     "deces": 5,
+     "liste_archive": [
+      {
+       "nom": "Marie-Rose Tessier",
+       "pays": "FRA",
+       "age": 113,
+       "mort": false
+      },
+      {
+       "nom": "Roger Guillemin",
+       "pays": "FRA",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Jimmy Carter",
+       "pays": "USA",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Dick Van Dyke",
+       "pays": "USA",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "pays": "FRA",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Prunella Scales",
+       "pays": "ANG",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Bernadette Chirac",
+       "pays": "FRA",
+       "age": 90,
+       "mort": false
+      },
+      {
+       "nom": "Joan Collins",
+       "pays": "ANG",
+       "age": 90,
+       "mort": false
+      },
+      {
+       "nom": "Dick Vitale",
+       "pays": "USA",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Françoise Hardy",
+       "pays": "FRA",
+       "age": 79,
+       "mort": true
+      },
+      {
+       "nom": "Paul Auster",
+       "pays": "USA",
+       "age": 76,
+       "mort": true
+      },
+      {
+       "nom": "Catherine Laborde",
+       "pays": "FRA",
+       "age": 72,
+       "mort": false
+      },
+      {
+       "nom": "Bruce Willis",
+       "pays": "USA",
+       "age": 68,
+       "mort": false
+      },
+      {
+       "nom": "Linda Nolan",
+       "pays": "IRL",
+       "age": 64,
+       "mort": false
+      },
+      {
+       "nom": "Shannen Doherty",
+       "pays": "USA",
+       "age": 52,
+       "mort": true
+      }
+     ]
     },
     {
      "joueurs": [
       "Marion"
      ],
      "points": 5,
-     "deces": 4
+     "deces": 4,
+     "liste_archive": [
+      {
+       "nom": "Juan Vicente Pérez Morena",
+       "pays": "VEN",
+       "age": 114,
+       "mort": true
+      },
+      {
+       "nom": "Jimmy Carter",
+       "pays": "USA",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Cleo Laine",
+       "pays": "ANG",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Desmond Morris",
+       "pays": "ANG",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "pays": "FRA",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Bernadette Chirac",
+       "pays": "FRA",
+       "age": 90,
+       "mort": false
+      },
+      {
+       "nom": "Alain Delon",
+       "pays": "FRA",
+       "age": 88,
+       "mort": true
+      },
+      {
+       "nom": "Pape François",
+       "pays": "ARG",
+       "age": 87,
+       "mort": false
+      },
+      {
+       "nom": "Brigitte Fontaine",
+       "pays": "FRA",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Daniel Barenboim",
+       "pays": "ARG",
+       "age": 81,
+       "mort": false
+      },
+      {
+       "nom": "Françoise Hardy",
+       "pays": "FRA",
+       "age": 79,
+       "mort": true
+      },
+      {
+       "nom": "Jake Roberts",
+       "pays": "USA",
+       "age": 68,
+       "mort": false
+      },
+      {
+       "nom": "Linda Nolan",
+       "pays": "IRL",
+       "age": 64,
+       "mort": false
+      },
+      {
+       "nom": "Andy Taylor",
+       "pays": "ANG",
+       "age": 62,
+       "mort": false
+      },
+      {
+       "nom": "Florent Pagny",
+       "pays": "FRA",
+       "age": 62,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Maxime"
      ],
      "points": 1,
-     "deces": 1
+     "deces": 1,
+     "liste_archive": [
+      {
+       "nom": "Clint Eastwood",
+       "pays": "USA",
+       "age": 93,
+       "mort": false
+      },
+      {
+       "nom": "Marthe Villalonga",
+       "pays": "FRA",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Alain Delon",
+       "pays": "FRA",
+       "age": 88,
+       "mort": true
+      },
+      {
+       "nom": "Morgan Freeman",
+       "pays": "USA",
+       "age": 86,
+       "mort": false
+      },
+      {
+       "nom": "Beatrix des Pays-Bas",
+       "pays": "NL",
+       "age": 85,
+       "mort": false
+      },
+      {
+       "nom": "John Howard",
+       "pays": "AUS",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Joe Biden",
+       "pays": "USA",
+       "age": 81,
+       "mort": false
+      },
+      {
+       "nom": "John Major",
+       "pays": "ANG",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Dave",
+       "pays": "NL",
+       "age": 79,
+       "mort": false
+      },
+      {
+       "nom": "Daniel Pennac",
+       "pays": "FRA",
+       "age": 79,
+       "mort": false
+      },
+      {
+       "nom": "Gérard Larcher",
+       "pays": "FRA",
+       "age": 74,
+       "mort": false
+      },
+      {
+       "nom": "François Rebsamen",
+       "pays": "FRA",
+       "age": 72,
+       "mort": false
+      },
+      {
+       "nom": "Renaud",
+       "pays": "FRA",
+       "age": 71,
+       "mort": false
+      },
+      {
+       "nom": "Bruce Willis",
+       "pays": "USA",
+       "age": 68,
+       "mort": false
+      },
+      {
+       "nom": "Jérôme Lavrilleux",
+       "pays": "FRA",
+       "age": 54,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Philippe"
      ],
      "points": 5,
-     "deces": 4
+     "deces": 4,
+     "liste_archive": [
+      {
+       "nom": "Maria Branyas Morena",
+       "pays": "ESP",
+       "age": 116,
+       "mort": true
+      },
+      {
+       "nom": "Jimmy Carter",
+       "pays": "USA",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Dick Van Dyke",
+       "pays": "USA",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Alix de Foresta",
+       "pays": "FRA",
+       "age": 97,
+       "mort": false
+      },
+      {
+       "nom": "Cleo Laine",
+       "pays": "ANG",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Ethel Kennedy",
+       "pays": "USA",
+       "age": 95,
+       "mort": true
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "pays": "FRA",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Buzz Aldrin",
+       "pays": "USA",
+       "age": 93,
+       "mort": false
+      },
+      {
+       "nom": "Terence Hill",
+       "pays": "ITA",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Cornel Otelea",
+       "pays": "ROU",
+       "age": 83,
+       "mort": false
+      },
+      {
+       "nom": "Dick Cheney",
+       "pays": "USA",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Lech Walesa",
+       "pays": "POL",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Françoise Hardy",
+       "pays": "FRA",
+       "age": 79,
+       "mort": true
+      },
+      {
+       "nom": "Michael J. Fox",
+       "pays": "CAN",
+       "age": 62,
+       "mort": false
+      },
+      {
+       "nom": "Florent Pagny",
+       "pays": "FRA",
+       "age": 62,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Pierre"
      ],
      "points": 3,
-     "deces": 3
+     "deces": 3,
+     "liste_archive": [
+      {
+       "nom": "Marie-Rose Tessier",
+       "pays": "FRA",
+       "age": 113,
+       "mort": false
+      },
+      {
+       "nom": "Jimmy Carter",
+       "pays": "USA",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Dick Van Dyke",
+       "pays": "USA",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "pays": "FRA",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Edouard Balladur",
+       "pays": "FRA",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Michael Caine",
+       "pays": "ANG",
+       "age": 90,
+       "mort": false
+      },
+      {
+       "nom": "Alain Delon",
+       "pays": "FRA",
+       "age": 88,
+       "mort": true
+      },
+      {
+       "nom": "Anthony Hopkins",
+       "pays": "GAL",
+       "age": 86,
+       "mort": false
+      },
+      {
+       "nom": "Denis Law",
+       "pays": "ECO",
+       "age": 83,
+       "mort": false
+      },
+      {
+       "nom": "Bob Dylan",
+       "pays": "USA",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Michel Drucker",
+       "pays": "FRA",
+       "age": 81,
+       "mort": false
+      },
+      {
+       "nom": "Nigel Starmer-Smith",
+       "pays": "ANG",
+       "age": 79,
+       "mort": false
+      },
+      {
+       "nom": "Hamad ben Khalifa Al Thani",
+       "pays": "QAT",
+       "age": 72,
+       "mort": false
+      },
+      {
+       "nom": "Bruce Willis",
+       "pays": "USA",
+       "age": 68,
+       "mort": false
+      },
+      {
+       "nom": "Shannen Doherty",
+       "pays": "USA",
+       "age": 52,
+       "mort": true
+      }
+     ]
     },
     {
      "joueurs": [
       "Pierre-Yves"
      ],
      "points": 5.5,
-     "deces": 4
+     "deces": 4,
+     "liste_archive": [
+      {
+       "nom": "Maria Branyas Morera",
+       "pays": "ESP",
+       "age": 116,
+       "mort": true
+      },
+      {
+       "nom": "Jimmy Carter",
+       "pays": "USA",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Abdoulaye Wade",
+       "pays": "SEN",
+       "age": 97,
+       "mort": false
+      },
+      {
+       "nom": "Robert Badinter",
+       "pays": "FRA",
+       "age": 95,
+       "mort": true
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "pays": "FRA",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Louis Mermaz",
+       "pays": "FRA",
+       "age": 92,
+       "mort": true
+      },
+      {
+       "nom": "José Mujica",
+       "pays": "URU",
+       "age": 88,
+       "mort": false
+      },
+      {
+       "nom": "Ricardo Lagos",
+       "pays": "CHI",
+       "age": 85,
+       "mort": false
+      },
+      {
+       "nom": "Dick Cheney",
+       "pays": "USA",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Jacques Toubon",
+       "pays": "FRA",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Omar el-Bechir",
+       "pays": "SOU",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Charles Sobhraj",
+       "pays": "FRA",
+       "age": 79,
+       "mort": false
+      },
+      {
+       "nom": "Mireille Mathieu",
+       "pays": "FRA",
+       "age": 77,
+       "mort": false
+      },
+      {
+       "nom": "Laurent Fabius",
+       "pays": "FRA",
+       "age": 77,
+       "mort": false
+      },
+      {
+       "nom": "Michael Shcumacher",
+       "pays": "ALL",
+       "age": 54,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Sezni"
      ],
      "points": 7,
-     "deces": 5
+     "deces": 5,
+     "liste_archive": [
+      {
+       "nom": "Jimmy Carter",
+       "pays": "USA",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Dick Van Dyke",
+       "pays": "USA",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "David Attenborough",
+       "pays": "ANG",
+       "age": 97,
+       "mort": false
+      },
+      {
+       "nom": "Bob Newhart",
+       "pays": "USA",
+       "age": 94,
+       "mort": true
+      },
+      {
+       "nom": "Buzz Aldrin",
+       "pays": "USA",
+       "age": 93,
+       "mort": false
+      },
+      {
+       "nom": "Gene Hackman",
+       "pays": "USA",
+       "age": 93,
+       "mort": false
+      },
+      {
+       "nom": "Morgan Freeman",
+       "pays": "USA",
+       "age": 86,
+       "mort": false
+      },
+      {
+       "nom": "Margrethe II",
+       "pays": "DAN",
+       "age": 83,
+       "mort": false
+      },
+      {
+       "nom": "Françoise Hardy",
+       "pays": "FRA",
+       "age": 79,
+       "mort": true
+      },
+      {
+       "nom": "Kareem Abdul-Jabbar",
+       "pays": "USA",
+       "age": 76,
+       "mort": false
+      },
+      {
+       "nom": "Ozzy Osbourne",
+       "pays": "ANG",
+       "age": 75,
+       "mort": false
+      },
+      {
+       "nom": "Toby Keith",
+       "pays": "USA",
+       "age": 62,
+       "mort": true
+      },
+      {
+       "nom": "Céline Dion",
+       "pays": "CAN",
+       "age": 55,
+       "mort": false
+      },
+      {
+       "nom": "Shannen Doherty",
+       "pays": "USA",
+       "age": 52,
+       "mort": true
+      },
+      {
+       "nom": "Christina Applegate",
+       "pays": "USA",
+       "age": 52,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Sophie"
      ],
      "points": 7,
-     "deces": 5
+     "deces": 5,
+     "liste_archive": [
+      {
+       "nom": "Günther Schwägermann",
+       "pays": "ALL",
+       "age": 108,
+       "mort": false
+      },
+      {
+       "nom": "Jimmy Carter",
+       "pays": "USA",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Laurent de Brunhoff",
+       "pays": "FRA",
+       "age": 98,
+       "mort": true
+      },
+      {
+       "nom": "Dick Van Dyke",
+       "pays": "USA",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Arnaldo Pomodoro",
+       "pays": "ITA",
+       "age": 97,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "pays": "FRA",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Gene Hackman",
+       "pays": "USA",
+       "age": 93,
+       "mort": false
+      },
+      {
+       "nom": "Bernadette Chirac",
+       "pays": "FRA",
+       "age": 90,
+       "mort": false
+      },
+      {
+       "nom": "Dick Cheney",
+       "pays": "USA",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Steve Wozniak",
+       "pays": "USA",
+       "age": 73,
+       "mort": false
+      },
+      {
+       "nom": "Phil Collins",
+       "pays": "ANG",
+       "age": 72,
+       "mort": false
+      },
+      {
+       "nom": "Bruce Willis",
+       "pays": "USA",
+       "age": 68,
+       "mort": false
+      },
+      {
+       "nom": "Yahya Sinwar",
+       "pays": "PAL",
+       "age": 61,
+       "mort": true
+      },
+      {
+       "nom": "Mohammed Deïf",
+       "pays": "PAL",
+       "age": 58,
+       "mort": true
+      },
+      {
+       "nom": "Shannen Doherty",
+       "pays": "USA",
+       "age": 52,
+       "mort": true
+      }
+     ]
     },
     {
      "joueurs": [
       "Émeline"
      ],
      "points": 5,
-     "deces": 4
+     "deces": 4,
+     "liste_archive": [
+      {
+       "nom": "Philippe De Gaulle",
+       "pays": "FRA",
+       "age": 102,
+       "mort": true
+      },
+      {
+       "nom": "James Lovell",
+       "pays": "USA",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Marie Le Pen",
+       "pays": "FRA",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Line Renaud",
+       "pays": "FRA",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Edouard Balladur",
+       "pays": "FRA",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Philippe Bouvard",
+       "pays": "FRA",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Bernadette Chirac",
+       "pays": "FRA",
+       "age": 90,
+       "mort": false
+      },
+      {
+       "nom": "Maggie Smith",
+       "pays": "ANG",
+       "age": 89,
+       "mort": true
+      },
+      {
+       "nom": "Michel Drucker",
+       "pays": "FRA",
+       "age": 81,
+       "mort": false
+      },
+      {
+       "nom": "Françoise Hardy",
+       "pays": "FRA",
+       "age": 79,
+       "mort": true
+      },
+      {
+       "nom": "Bruce Willis",
+       "pays": "USA",
+       "age": 68,
+       "mort": false
+      },
+      {
+       "nom": "Michael J. Fox",
+       "pays": "CAN",
+       "age": 62,
+       "mort": false
+      },
+      {
+       "nom": "Charlie Sheen",
+       "pays": "USA",
+       "age": 58,
+       "mort": false
+      },
+      {
+       "nom": "Céline Dion",
+       "pays": "CAN",
+       "age": 55,
+       "mort": false
+      },
+      {
+       "nom": "Shannen Doherty",
+       "pays": "USA",
+       "age": 52,
+       "mort": true
+      }
+     ]
     },
     {
      "joueurs": [
@@ -727,7 +5021,99 @@
      ],
      "points": 10.5,
      "deces": 7,
-     "liste_commune_avec": "Nina"
+     "liste_commune_avec": "Nina",
+     "liste_archive": [
+      {
+       "nom": "Maria Branyas Morena",
+       "pays": "ESP",
+       "age": 116,
+       "mort": true
+      },
+      {
+       "nom": "Roger Guillemin",
+       "pays": "FRA",
+       "age": 99,
+       "mort": true
+      },
+      {
+       "nom": "Yvon Gattaz",
+       "pays": "FRA",
+       "age": 98,
+       "mort": true
+      },
+      {
+       "nom": "Mahathir Mohamad",
+       "pays": "MAL",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Charles Tacchella",
+       "pays": "FRA",
+       "age": 98,
+       "mort": true
+      },
+      {
+       "nom": "Abdoulaye Wade",
+       "pays": "SEN",
+       "age": 97,
+       "mort": false
+      },
+      {
+       "nom": "Mel Brooks",
+       "pays": "USA",
+       "age": 97,
+       "mort": false
+      },
+      {
+       "nom": "Alpha Condé",
+       "pays": "GUI",
+       "age": 85,
+       "mort": false
+      },
+      {
+       "nom": "Ali Khamenei",
+       "pays": "IRN",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Brigitte Fontaine",
+       "pays": "FRA",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Claude Gaudin",
+       "pays": "FRA",
+       "age": 84,
+       "mort": true
+      },
+      {
+       "nom": "Jacques Dutronc",
+       "pays": "FRA",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Françoise Hardy",
+       "pays": "FRA",
+       "age": 79,
+       "mort": true
+      },
+      {
+       "nom": "Kareem Abdul-Jabbar",
+       "pays": "USA",
+       "age": 76,
+       "mort": false
+      },
+      {
+       "nom": "Shannen Doherty",
+       "pays": "USA",
+       "age": 52,
+       "mort": true
+      }
+     ]
     }
    ]
   },
@@ -741,112 +5127,1584 @@
       "Alexis"
      ],
      "points": 5.5,
-     "deces": 4
+     "deces": 4,
+     "liste_archive": [
+      {
+       "nom": "Inah Canabarro Lucas",
+       "pays": "BRE",
+       "age": 116,
+       "mort": true
+      },
+      {
+       "nom": "Mahathir Mohamad",
+       "pays": "MAL",
+       "age": 99,
+       "mort": false
+      },
+      {
+       "nom": "Dick Van Dyke",
+       "pays": "USA",
+       "age": 99,
+       "mort": false
+      },
+      {
+       "nom": "Imelda Marcos",
+       "pays": "PHI",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Marthe Villalonga",
+       "pays": "FRA",
+       "age": 92,
+       "mort": false
+      },
+      {
+       "nom": "Clive Davis",
+       "pays": "USA",
+       "age": 92,
+       "mort": false
+      },
+      {
+       "nom": "Prunella Scales",
+       "pays": "ANG",
+       "age": 92,
+       "mort": true
+      },
+      {
+       "nom": "Yoko Ono",
+       "pays": "JAP",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Tom Brokaw",
+       "pays": "USA",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Dick Cheney",
+       "pays": "USA",
+       "age": 83,
+       "mort": true
+      },
+      {
+       "nom": "Benyamin Netanyahou",
+       "pays": "ISR",
+       "age": 75,
+       "mort": false
+      },
+      {
+       "nom": "Harvey Weinstein",
+       "pays": "USA",
+       "age": 72,
+       "mort": false
+      },
+      {
+       "nom": "Dolph Lundgren",
+       "pays": "SUE",
+       "age": 67,
+       "mort": false
+      },
+      {
+       "nom": "Linda Nolan",
+       "pays": "IRL",
+       "age": 65,
+       "mort": true
+      },
+      {
+       "nom": "Asma al-Assad",
+       "pays": "SYR",
+       "age": 49,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Charles"
      ],
      "points": 6,
-     "deces": 5
+     "deces": 5,
+     "liste_archive": [
+      {
+       "nom": "Willie Nelson",
+       "pays": "USA",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Pape François",
+       "pays": "ARG",
+       "age": 88,
+       "mort": true
+      },
+      {
+       "nom": "Guy Roux",
+       "pays": "FRA",
+       "age": 86,
+       "mort": false
+      },
+      {
+       "nom": "Ralph Lauren",
+       "pays": "USA",
+       "age": 85,
+       "mort": false
+      },
+      {
+       "nom": "Brian Wilson",
+       "pays": "USA",
+       "age": 82,
+       "mort": true
+      },
+      {
+       "nom": "Jacques Dutronc",
+       "pays": "FRA",
+       "age": 81,
+       "mort": false
+      },
+      {
+       "nom": "Gilbert Bouchet",
+       "pays": "FRA",
+       "age": 77,
+       "mort": true
+      },
+      {
+       "nom": "Jeane Manson",
+       "pays": "USA",
+       "age": 74,
+       "mort": false
+      },
+      {
+       "nom": "Naïm Qassem",
+       "pays": "LIB",
+       "age": 71,
+       "mort": false
+      },
+      {
+       "nom": "Linda Nolan",
+       "pays": "IRL",
+       "age": 65,
+       "mort": true
+      },
+      {
+       "nom": "Pone",
+       "pays": "FRA",
+       "age": 51,
+       "mort": false
+      },
+      {
+       "nom": "Asma al-Assad",
+       "pays": "SYR",
+       "age": 49,
+       "mort": false
+      },
+      {
+       "nom": "Chris Hoy",
+       "pays": "ECO",
+       "age": 48,
+       "mort": false
+      },
+      {
+       "nom": "Ramzan Kadyrov",
+       "pays": "RUS",
+       "age": 48,
+       "mort": false
+      },
+      {
+       "nom": "Emilie Dequenne",
+       "pays": "BEL",
+       "age": 43,
+       "mort": true
+      }
+     ]
     },
     {
      "joueurs": [
       "Eva"
      ],
      "points": 4,
-     "deces": 3
+     "deces": 3,
+     "liste_archive": [
+      {
+       "nom": "Pete Murray",
+       "pays": "ANG",
+       "age": 99,
+       "mort": false
+      },
+      {
+       "nom": "Mel Brooks",
+       "pays": "USA",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Line Renaud",
+       "pays": "FRA",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Clint Eastwood",
+       "pays": "USA",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Gérard Hernandez",
+       "pays": "ESP",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Yoko Ono",
+       "pays": "JAP",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Pape François",
+       "pays": "ARG",
+       "age": 88,
+       "mort": true
+      },
+      {
+       "nom": "Roberta Flack",
+       "pays": "USA",
+       "age": 87,
+       "mort": true
+      },
+      {
+       "nom": "Jacques Dutronc",
+       "pays": "FRA",
+       "age": 81,
+       "mort": false
+      },
+      {
+       "nom": "Charles III du Royaume-Uni",
+       "pays": "ANG",
+       "age": 76,
+       "mort": false
+      },
+      {
+       "nom": "Catherine Laborde",
+       "pays": "FRA",
+       "age": 73,
+       "mort": true
+      },
+      {
+       "nom": "Harvey Weinstein",
+       "pays": "USA",
+       "age": 72,
+       "mort": false
+      },
+      {
+       "nom": "Bruce Willis",
+       "pays": "USA",
+       "age": 69,
+       "mort": false
+      },
+      {
+       "nom": "Michael J. Fox",
+       "pays": "CAN",
+       "age": 63,
+       "mort": false
+      },
+      {
+       "nom": "Asma al-Assad",
+       "pays": "SYR",
+       "age": 49,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Fabien"
      ],
      "points": 0,
-     "deces": 0
+     "deces": 0,
+     "liste_archive": [
+      {
+       "nom": "Edgar Morin",
+       "pays": "FRA",
+       "age": 103,
+       "mort": false
+      },
+      {
+       "nom": "Abdoulaye Wade",
+       "pays": "SEN",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Mel Brooks",
+       "pays": "USA",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Line Renaud",
+       "pays": "FRA",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Philippe Bouvard",
+       "pays": "FRA",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Bernie Ecclestone",
+       "pays": "ANG",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Paul Biya",
+       "pays": "CAM",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Salmane ben Abdelaziz Al Saoud",
+       "pays": "SAU",
+       "age": 89,
+       "mort": false
+      },
+      {
+       "nom": "Harvey Weinstein",
+       "pays": "USA",
+       "age": 72,
+       "mort": false
+      },
+      {
+       "nom": "Bruce Willis",
+       "pays": "USA",
+       "age": 69,
+       "mort": false
+      },
+      {
+       "nom": "Dominique Farrugia",
+       "pays": "FRA",
+       "age": 62,
+       "mort": false
+      },
+      {
+       "nom": "Pierre Ménès",
+       "pays": "FRA",
+       "age": 61,
+       "mort": false
+      },
+      {
+       "nom": "Asma al-Assad",
+       "pays": "SYR",
+       "age": 49,
+       "mort": false
+      },
+      {
+       "nom": "Emmanuel Macron",
+       "pays": "FRA",
+       "age": 47,
+       "mort": false
+      },
+      {
+       "nom": "Abou Mohammed al-Joulani",
+       "pays": "SYR",
+       "age": 42,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Gaël"
      ],
      "points": 1.5,
-     "deces": 1
+     "deces": 1,
+     "liste_archive": [
+      {
+       "nom": "Whang-od",
+       "pays": "PHI",
+       "age": 107,
+       "mort": false
+      },
+      {
+       "nom": "Herbert Blomstedt",
+       "pays": "SUE",
+       "age": 97,
+       "mort": false
+      },
+      {
+       "nom": "Gyalo Thondup",
+       "pays": "TIB",
+       "age": 97,
+       "mort": true
+      },
+      {
+       "nom": "Noam Chomsky",
+       "pays": "USA",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Vanja Blomberg",
+       "pays": "SUE",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Marisa Borini",
+       "pays": "ITA",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Simon Gronowski",
+       "pays": "BEL",
+       "age": 93,
+       "mort": false
+      },
+      {
+       "nom": "Bernadette Chirac",
+       "pays": "FRA",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Calypso Rose",
+       "pays": "TRI",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Jesse Jackson",
+       "pays": "USA",
+       "age": 83,
+       "mort": false
+      },
+      {
+       "nom": "Daniel Barenboim",
+       "pays": "ARG",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Harvey Weinstein",
+       "pays": "USA",
+       "age": 72,
+       "mort": false
+      },
+      {
+       "nom": "Bruce Willis",
+       "pays": "USA",
+       "age": 69,
+       "mort": false
+      },
+      {
+       "nom": "Renaud Detressan",
+       "pays": "FRA",
+       "age": 68,
+       "mort": false
+      },
+      {
+       "nom": "André Venter",
+       "pays": "AFS",
+       "age": 54,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Jean-Baptiste"
      ],
      "points": 5,
-     "deces": 3
+     "deces": 3,
+     "liste_archive": [
+      {
+       "nom": "Song Ping",
+       "pays": "CHI",
+       "age": 107,
+       "mort": false
+      },
+      {
+       "nom": "Ginette Kolinka",
+       "pays": "FRA",
+       "age": 99,
+       "mort": false
+      },
+      {
+       "nom": "Leontyne Price",
+       "pays": "USA",
+       "age": 97,
+       "mort": false
+      },
+      {
+       "nom": "Ahmad Jannati",
+       "pays": "IRN",
+       "age": 97,
+       "mort": false
+      },
+      {
+       "nom": "Gyalo Thondup",
+       "pays": "TIB",
+       "age": 97,
+       "mort": true
+      },
+      {
+       "nom": "Gene Hackman",
+       "pays": "USA",
+       "age": 94,
+       "mort": true
+      },
+      {
+       "nom": "Isabel Martínez de Perón",
+       "pays": "ARG",
+       "age": 93,
+       "mort": false
+      },
+      {
+       "nom": "Emilio Fede",
+       "pays": "ITA",
+       "age": 93,
+       "mort": true
+      },
+      {
+       "nom": "Eric Braeden",
+       "pays": "ALL",
+       "age": 83,
+       "mort": false
+      },
+      {
+       "nom": "Richard Bohringer",
+       "pays": "FRA",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Serge Lama",
+       "pays": "FRA",
+       "age": 81,
+       "mort": false
+      },
+      {
+       "nom": "Julie Walters",
+       "pays": "ANG",
+       "age": 74,
+       "mort": false
+      },
+      {
+       "nom": "Louis van Gaal",
+       "pays": "PB",
+       "age": 73,
+       "mort": false
+      },
+      {
+       "nom": "Narges Mohammadi",
+       "pays": "IRN",
+       "age": 52,
+       "mort": false
+      },
+      {
+       "nom": "Jimmy Chérizier",
+       "pays": "HAI",
+       "age": 47,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Karen"
      ],
      "points": 6.5,
-     "deces": 4
+     "deces": 5,
+     "liste_archive": [
+      {
+       "nom": "Marthe Cohn",
+       "pays": "FRA",
+       "age": 104,
+       "mort": true
+      },
+      {
+       "nom": "Brigitte Auber",
+       "pays": "FRA",
+       "age": 99,
+       "mort": false
+      },
+      {
+       "nom": "Dick Van Dyke",
+       "pays": "USA",
+       "age": 99,
+       "mort": false
+      },
+      {
+       "nom": "Stanley Baxter",
+       "pays": "ECO",
+       "age": 98,
+       "mort": true
+      },
+      {
+       "nom": "Serge Rezvani",
+       "pays": "FRA",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Edouard Balladur",
+       "pays": "FRA",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Philippe Bouvard",
+       "pays": "FRA",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Yoko Ono",
+       "pays": "JAP",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Daniel Barenboim",
+       "pays": "ARG",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Nigel Starmer-Smith",
+       "pays": "ANG",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Gilbert Bouchet",
+       "pays": "FRA",
+       "age": 77,
+       "mort": true
+      },
+      {
+       "nom": "Catherine Laborde",
+       "pays": "FRA",
+       "age": 73,
+       "mort": true
+      },
+      {
+       "nom": "Bruce Willis",
+       "pays": "USA",
+       "age": 69,
+       "mort": false
+      },
+      {
+       "nom": "Linda Nolan",
+       "pays": "IRL",
+       "age": 65,
+       "mort": true
+      },
+      {
+       "nom": "Asma al-Assad",
+       "pays": "SYR",
+       "age": 49,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Nicolas"
      ],
      "points": 2.5,
-     "deces": 2
+     "deces": 2,
+     "liste_archive": [
+      {
+       "nom": "Dick Van Dyke",
+       "pays": "USA",
+       "age": 99,
+       "mort": false
+      },
+      {
+       "nom": "Line Renaud",
+       "pays": "FRA",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Edouard Balladur",
+       "pays": "FRA",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Philippe Bouvard",
+       "pays": "FRA",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Gérard Hernandez",
+       "pays": "ESP",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Bernadette Chirac",
+       "pays": "FRA",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Giorgio Armani",
+       "pays": "ITA",
+       "age": 90,
+       "mort": true
+      },
+      {
+       "nom": "Pape François",
+       "pays": "ARG",
+       "age": 88,
+       "mort": true
+      },
+      {
+       "nom": "Charles III du Royaume-Uni",
+       "pays": "ANG",
+       "age": 76,
+       "mort": false
+      },
+      {
+       "nom": "Gérard Depardieu",
+       "pays": "FRA",
+       "age": 76,
+       "mort": false
+      },
+      {
+       "nom": "Phil Collins",
+       "pays": "ANG",
+       "age": 73,
+       "mort": false
+      },
+      {
+       "nom": "Renaud",
+       "pays": "FRA",
+       "age": 72,
+       "mort": false
+      },
+      {
+       "nom": "Florent Pagny",
+       "pays": "FRA",
+       "age": 63,
+       "mort": false
+      },
+      {
+       "nom": "Michael Schumacher",
+       "pays": "ALL",
+       "age": 55,
+       "mort": false
+      },
+      {
+       "nom": "Loana",
+       "pays": "FRA",
+       "age": 47,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Pierre"
      ],
      "points": 4,
-     "deces": 4
+     "deces": 4,
+     "liste_archive": [
+      {
+       "nom": "Edgar Morin",
+       "pays": "FRA",
+       "age": 103,
+       "mort": false
+      },
+      {
+       "nom": "Dick Van Dyke",
+       "pays": "USA",
+       "age": 99,
+       "mort": false
+      },
+      {
+       "nom": "Pape François",
+       "pays": "ARG",
+       "age": 88,
+       "mort": true
+      },
+      {
+       "nom": "Michel Drucker",
+       "pays": "FRA",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Nigel Starmer-Smith",
+       "pays": "ANG",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Gilbert Bouchet",
+       "pays": "FRA",
+       "age": 77,
+       "mort": true
+      },
+      {
+       "nom": "Isabelle Balkany",
+       "pays": "FRA",
+       "age": 77,
+       "mort": false
+      },
+      {
+       "nom": "Hamad ben Khalifa Al Thani",
+       "pays": "QAT",
+       "age": 73,
+       "mort": false
+      },
+      {
+       "nom": "Bruce Willis",
+       "pays": "USA",
+       "age": 69,
+       "mort": false
+      },
+      {
+       "nom": "Yasuhiko Funago",
+       "pays": "JAP",
+       "age": 67,
+       "mort": false
+      },
+      {
+       "nom": "Linda Nolan",
+       "pays": "IRL",
+       "age": 65,
+       "mort": true
+      },
+      {
+       "nom": "Olivier Goy",
+       "pays": "FRA",
+       "age": 50,
+       "mort": false
+      },
+      {
+       "nom": "Asma al-Assad",
+       "pays": "SYR",
+       "age": 49,
+       "mort": false
+      },
+      {
+       "nom": "Chris Hoy",
+       "pays": "ECO",
+       "age": 48,
+       "mort": false
+      },
+      {
+       "nom": "Emilie Dequenne",
+       "pays": "BEL",
+       "age": 43,
+       "mort": true
+      }
+     ]
     },
     {
      "joueurs": [
       "Pierre-Yves"
      ],
      "points": 2,
-     "deces": 1
+     "deces": 1,
+     "liste_archive": [
+      {
+       "nom": "Marie-Rose Tessier",
+       "pays": "FRA",
+       "age": 114,
+       "mort": false
+      },
+      {
+       "nom": "Dick Van Dyke",
+       "pays": "USA",
+       "age": 99,
+       "mort": false
+      },
+      {
+       "nom": "Abdoulaye Wade",
+       "pays": "SEN",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Noam Chomsky",
+       "pays": "USA",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Raúl Castro",
+       "pays": "CUB",
+       "age": 93,
+       "mort": false
+      },
+      {
+       "nom": "Jany Le Pen",
+       "pays": "FRA",
+       "age": 92,
+       "mort": false
+      },
+      {
+       "nom": "Bernadette Chirac",
+       "pays": "FRA",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "José Mujica",
+       "pays": "URU",
+       "age": 89,
+       "mort": true
+      },
+      {
+       "nom": "Arlette Laguiller",
+       "pays": "FRA",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Joe Biden",
+       "pays": "USA",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Hu Jintao",
+       "pays": "CHI",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "John Major",
+       "pays": "ANG",
+       "age": 81,
+       "mort": false
+      },
+      {
+       "nom": "Omar el-Bechir",
+       "pays": "SOU",
+       "age": 81,
+       "mort": false
+      },
+      {
+       "nom": "Harvey Weinstein",
+       "pays": "USA",
+       "age": 72,
+       "mort": false
+      },
+      {
+       "nom": "Alain Robert",
+       "pays": "FRA",
+       "age": 62,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Sezni"
      ],
      "points": 5.5,
-     "deces": 4
+     "deces": 4,
+     "liste_archive": [
+      {
+       "nom": "Edgar Morin",
+       "pays": "FRA",
+       "age": 103,
+       "mort": false
+      },
+      {
+       "nom": "Dick Van Dyke",
+       "pays": "USA",
+       "age": 99,
+       "mort": false
+      },
+      {
+       "nom": "David Attenborough",
+       "pays": "ANG",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Mel Brooks",
+       "pays": "USA",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Buzz Aldrin",
+       "pays": "USA",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Gene Hackman",
+       "pays": "USA",
+       "age": 94,
+       "mort": true
+      },
+      {
+       "nom": "Bernadette Chirac",
+       "pays": "FRA",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Paddy Reilly",
+       "pays": "IRL",
+       "age": 85,
+       "mort": false
+      },
+      {
+       "nom": "Richard Bohringer",
+       "pays": "FRA",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Ozzy Osbourne",
+       "pays": "ANG",
+       "age": 76,
+       "mort": true
+      },
+      {
+       "nom": "Gérard Depardieu",
+       "pays": "FRA",
+       "age": 76,
+       "mort": false
+      },
+      {
+       "nom": "Harvey Weinstein",
+       "pays": "USA",
+       "age": 72,
+       "mort": false
+      },
+      {
+       "nom": "Linda Nolan",
+       "pays": "IRL",
+       "age": 65,
+       "mort": true
+      },
+      {
+       "nom": "Asma al-Assad",
+       "pays": "SYR",
+       "age": 49,
+       "mort": false
+      },
+      {
+       "nom": "Emilie Dequenne",
+       "pays": "BEL",
+       "age": 43,
+       "mort": true
+      }
+     ]
     },
     {
      "joueurs": [
       "Simon"
      ],
      "points": 1.5,
-     "deces": 1
+     "deces": 1,
+     "liste_archive": [
+      {
+       "nom": "Ethel Caterham",
+       "pays": "ANG",
+       "age": 115,
+       "mort": false
+      },
+      {
+       "nom": "Alan Greenspan",
+       "pays": "USA",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "David Attenborough",
+       "pays": "ANG",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Stanley Baxter",
+       "pays": "ECO",
+       "age": 98,
+       "mort": true
+      },
+      {
+       "nom": "Abdoulaye Wade",
+       "pays": "SEN",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Desmond Morris",
+       "pays": "ANG",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Alejandro Jodorowsky",
+       "pays": "CHL",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Stuart Hall",
+       "pays": "ANG",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Michel Drucker",
+       "pays": "FRA",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Jacques Dutronc",
+       "pays": "FRA",
+       "age": 81,
+       "mort": false
+      },
+      {
+       "nom": "Jean-Pierre Léaud",
+       "pays": "FRA",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Nigel Starmer-Smith",
+       "pays": "ANG",
+       "age": 80,
+       "mort": false
+      },
+      {
+       "nom": "Harvey Weinstein",
+       "pays": "USA",
+       "age": 72,
+       "mort": false
+      },
+      {
+       "nom": "Khalil al-Hayya",
+       "pays": "PAL",
+       "age": 64,
+       "mort": false
+      },
+      {
+       "nom": "Chris Hoy",
+       "pays": "ECO",
+       "age": 48,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Sophie"
      ],
      "points": 8.5,
-     "deces": 5
+     "deces": 5,
+     "liste_archive": [
+      {
+       "nom": "Inah Canabarro Lucas",
+       "pays": "BRE",
+       "age": 116,
+       "mort": true
+      },
+      {
+       "nom": "Dick Van Dyke",
+       "pays": "USA",
+       "age": 99,
+       "mort": false
+      },
+      {
+       "nom": "Arnaldo Pomodoro",
+       "pays": "ITA",
+       "age": 98,
+       "mort": true
+      },
+      {
+       "nom": "Mel Brooks",
+       "pays": "USA",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Robert Birenbaum",
+       "pays": "FRA",
+       "age": 98,
+       "mort": true
+      },
+      {
+       "nom": "Katherine Jackson",
+       "pays": "USA",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Jasper Johns",
+       "pays": "USA",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Bernadette Chirac",
+       "pays": "FRA",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Dick Cheney",
+       "pays": "USA",
+       "age": 83,
+       "mort": true
+      },
+      {
+       "nom": "Naïm Qassem",
+       "pays": "LIB",
+       "age": 71,
+       "mort": false
+      },
+      {
+       "nom": "Khalil al-Hayya",
+       "pays": "PAL",
+       "age": 64,
+       "mort": false
+      },
+      {
+       "nom": "Asma al-Assad",
+       "pays": "SYR",
+       "age": 49,
+       "mort": false
+      },
+      {
+       "nom": "Chris Hoy",
+       "pays": "ECO",
+       "age": 48,
+       "mort": false
+      },
+      {
+       "nom": "Ramzan Kadyrov",
+       "pays": "RUS",
+       "age": 48,
+       "mort": false
+      },
+      {
+       "nom": "Naâman",
+       "pays": "FRA",
+       "age": 34,
+       "mort": true
+      }
+     ]
     },
     {
      "joueurs": [
       "Thibaut"
      ],
      "points": 1.5,
-     "deces": 1
+     "deces": 1,
+     "liste_archive": [
+      {
+       "nom": "Edgar Morin",
+       "pays": "FRA",
+       "age": 103,
+       "mort": false
+      },
+      {
+       "nom": "Mel Brooks",
+       "pays": "USA",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Edouard Balladur",
+       "pays": "FRA",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Clint Eastwood",
+       "pays": "USA",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Bernadette Chirac",
+       "pays": "FRA",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Giorgio Armani",
+       "pays": "ITA",
+       "age": 90,
+       "mort": true
+      },
+      {
+       "nom": "Donald Trump",
+       "pays": "USA",
+       "age": 78,
+       "mort": false
+      },
+      {
+       "nom": "Isabelle Balkany",
+       "pays": "FRA",
+       "age": 77,
+       "mort": false
+      },
+      {
+       "nom": "Gérard Depardieu",
+       "pays": "FRA",
+       "age": 76,
+       "mort": false
+      },
+      {
+       "nom": "Harvey Weinstein",
+       "pays": "USA",
+       "age": 72,
+       "mort": false
+      },
+      {
+       "nom": "Dolph Lundgren",
+       "pays": "SUE",
+       "age": 67,
+       "mort": false
+      },
+      {
+       "nom": "Sarah Ferguson",
+       "pays": "ANG",
+       "age": 65,
+       "mort": false
+      },
+      {
+       "nom": "Florent Pagny",
+       "pays": "FRA",
+       "age": 63,
+       "mort": false
+      },
+      {
+       "nom": "Asma al-Assad",
+       "pays": "SYR",
+       "age": 49,
+       "mort": false
+      },
+      {
+       "nom": "Loana",
+       "pays": "FRA",
+       "age": 47,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Émeline"
      ],
      "points": 3,
-     "deces": 2
+     "deces": 2,
+     "liste_archive": [
+      {
+       "nom": "Marie-Rose Tessier",
+       "pays": "FRA",
+       "age": 114,
+       "mort": false
+      },
+      {
+       "nom": "Dick Van Dyke",
+       "pays": "USA",
+       "age": 99,
+       "mort": false
+      },
+      {
+       "nom": "James Lovell",
+       "pays": "USA",
+       "age": 96,
+       "mort": true
+      },
+      {
+       "nom": "Line Renaud",
+       "pays": "FRA",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Edouard Balladur",
+       "pays": "FRA",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Clint Eastwood",
+       "pays": "USA",
+       "age": 94,
+       "mort": false
+      },
+      {
+       "nom": "Bernadette Chirac",
+       "pays": "FRA",
+       "age": 91,
+       "mort": false
+      },
+      {
+       "nom": "Michel Drucker",
+       "pays": "FRA",
+       "age": 82,
+       "mort": false
+      },
+      {
+       "nom": "Camilla Parker Bowles",
+       "pays": "ANG",
+       "age": 77,
+       "mort": false
+      },
+      {
+       "nom": "Catherine Laborde",
+       "pays": "FRA",
+       "age": 73,
+       "mort": true
+      },
+      {
+       "nom": "Patrick Sébastien",
+       "pays": "FRA",
+       "age": 71,
+       "mort": false
+      },
+      {
+       "nom": "Bruce Willis",
+       "pays": "USA",
+       "age": 69,
+       "mort": false
+      },
+      {
+       "nom": "Michael J. Fox",
+       "pays": "CAN",
+       "age": 63,
+       "mort": false
+      },
+      {
+       "nom": "Charlie Sheen",
+       "pays": "USA",
+       "age": 59,
+       "mort": false
+      },
+      {
+       "nom": "Adam Pearson",
+       "pays": "ANG",
+       "age": 39,
+       "mort": false
+      }
+     ]
     },
     {
      "joueurs": [
       "Étienne"
      ],
      "points": 1,
-     "deces": 1
+     "deces": 1,
+     "liste_archive": [
+      {
+       "nom": "Inah Canabarro Lucas",
+       "pays": "BRE",
+       "age": 116,
+       "mort": true
+      },
+      {
+       "nom": "Mahathir Mohamad",
+       "pays": "MAL",
+       "age": 99,
+       "mort": false
+      },
+      {
+       "nom": "Dick Van Dyke",
+       "pays": "USA",
+       "age": 99,
+       "mort": false
+      },
+      {
+       "nom": "Abdoulaye Wade",
+       "pays": "SEN",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Mel Brooks",
+       "pays": "USA",
+       "age": 98,
+       "mort": false
+      },
+      {
+       "nom": "Michel Barbey",
+       "pays": "FRA",
+       "age": 97,
+       "mort": false
+      },
+      {
+       "nom": "Noam Chomsky",
+       "pays": "USA",
+       "age": 96,
+       "mort": false
+      },
+      {
+       "nom": "Philippe Bouvard",
+       "pays": "FRA",
+       "age": 95,
+       "mort": false
+      },
+      {
+       "nom": "Al Pacino",
+       "pays": "USA",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Patrick Stewart",
+       "pays": "ANG",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "James Brolin",
+       "pays": "USA",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Michel Temer",
+       "pays": "BRE",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Terry Gilliam",
+       "pays": "ANG",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Henri Dès",
+       "pays": "SUI",
+       "age": 84,
+       "mort": false
+      },
+      {
+       "nom": "Pone",
+       "pays": "FRA",
+       "age": 51,
+       "mort": false
+      }
+     ]
     }
    ]
   },
@@ -1221,667 +7079,832 @@
     "lucien-lazare": {
      "nom": "Lucien Lazare",
      "pays": "FRA",
-     "age": 101
+     "age": 101,
+     "sexe": "H"
     },
     "david-attenborough": {
      "nom": "David Attenborough",
      "pays": "ANG",
-     "age": 99
+     "age": 99,
+     "sexe": "H"
     },
     "herbert-blomstedt": {
      "nom": "Herbert Blomstedt",
      "pays": "SUE",
-     "age": 98
+     "age": 98,
+     "sexe": "H"
     },
     "anthea-fraser": {
      "nom": "Anthea Fraser",
      "pays": "ANG",
-     "age": 95
+     "age": 95,
+     "sexe": "F"
     },
     "marisa-borini": {
      "nom": "Marisa Borini",
      "pays": "ITA",
-     "age": 95
+     "age": 95,
+     "sexe": "F"
     },
     "simon-gronowski": {
      "nom": "Simon Gronowski",
      "pays": "BEL",
-     "age": 94
+     "age": 94,
+     "sexe": "H"
     },
     "bernadette-chirac": {
      "nom": "Bernadette Chirac",
      "pays": "FRA",
-     "age": 92
+     "age": 92,
+     "sexe": "F"
     },
     "jean-renard": {
      "nom": "Jean Renard",
      "pays": "FRA",
-     "age": 92
+     "age": 92,
+     "sexe": "H"
     },
     "miriam-margolyes": {
      "nom": "Miriam Margolyes",
      "pays": "ANG",
-     "age": 84
+     "age": 84,
+     "sexe": "F"
     },
     "jesse-jackson": {
      "nom": "Jesse Jackson",
      "pays": "USA",
-     "age": 84
+     "age": 84,
+     "sexe": "H"
     },
     "daniel-barenboim": {
      "nom": "Daniel Barenboim",
      "pays": "ARG",
-     "age": 83
+     "age": 83,
+     "sexe": "H"
     },
     "renaud-detressan": {
      "nom": "Renaud Detressan",
      "pays": "FRA",
-     "age": 69
+     "age": 69,
+     "sexe": "H"
     },
     "eric-dane": {
      "nom": "Eric Dane",
      "pays": "USA",
-     "age": 53
+     "age": 53,
+     "sexe": "H"
     },
     "lewis-moody": {
      "nom": "Lewis Moody",
      "pays": "ANG",
-     "age": 47
+     "age": 47,
+     "sexe": "H"
     },
     "brad-arnold": {
      "nom": "Brad Arnold",
      "pays": "USA",
-     "age": 47
+     "age": 47,
+     "sexe": "H"
     },
     "jacques-salome": {
      "nom": "Jacques Salomé",
      "pays": "FRA",
-     "age": 90
+     "age": 90,
+     "sexe": "H"
     },
     "eddy-mitchell": {
      "nom": "Eddy Mitchell",
      "pays": "FRA",
-     "age": 83
+     "age": 83,
+     "sexe": "H"
     },
     "joe-biden": {
      "nom": "Joe Biden",
      "pays": "USA",
-     "age": 83
+     "age": 83,
+     "sexe": "H"
     },
     "barry-manilow": {
      "nom": "Barry Manilow",
      "pays": "USA",
-     "age": 82
+     "age": 82,
+     "sexe": "H"
     },
     "charles-iii": {
      "nom": "Charles III",
      "pays": "ANG",
-     "age": 77
+     "age": 77,
+     "sexe": "H"
     },
     "vladimir-poutine": {
      "nom": "Vladimir Poutine",
      "pays": "RUS",
-     "age": 73
+     "age": 73,
+     "sexe": "H"
     },
     "chris-foreman": {
      "nom": "Chris Foreman",
      "pays": "ANG",
-     "age": 69
+     "age": 69,
+     "sexe": "H"
     },
     "pone": {
      "nom": "Pone",
      "pays": "FRA",
-     "age": 52
+     "age": 52,
+     "sexe": "?"
     },
     "asma-al-assad": {
      "nom": "Asma al-Assad",
      "pays": "SYR",
-     "age": 50
+     "age": 50,
+     "sexe": "F"
     },
     "chris-hoy": {
      "nom": "Chris Hoy",
      "pays": "ECO",
-     "age": 49
+     "age": 49,
+     "sexe": "H"
     },
     "ramzan-kadyrov": {
      "nom": "Ramzan Kadyrov",
      "pays": "RUS",
-     "age": 49
+     "age": 49,
+     "sexe": "H"
     },
     "james-van-der-beek": {
      "nom": "James Van der Beek",
      "pays": "USA",
-     "age": 48
+     "age": 48,
+     "sexe": "H"
     },
     "jason-collins": {
      "nom": "Jason Collins",
      "pays": "USA",
-     "age": 47
+     "age": 47,
+     "sexe": "H"
     },
     "jeremy-flores": {
      "nom": "Jérémy Florès",
      "pays": "FRA",
-     "age": 37
+     "age": 37,
+     "sexe": "H"
     },
     "song-ping": {
      "nom": "Song Ping",
      "pays": "CHI",
-     "age": 108
+     "age": 108,
+     "sexe": "H"
     },
     "leontyne-price": {
      "nom": "Leontyne Price",
      "pays": "USA",
-     "age": 98
+     "age": 98,
+     "sexe": "F"
     },
     "jacques-borel": {
      "nom": "Jacques Borel",
      "pays": "FRA",
-     "age": 98
+     "age": 98,
+     "sexe": "H"
     },
     "ahmad-jannati": {
      "nom": "Ahmad Jannati",
      "pays": "IRN",
-     "age": 98
+     "age": 98,
+     "sexe": "H"
     },
     "philippe-bouvard": {
      "nom": "Philippe Bouvard",
      "pays": "FRA",
-     "age": 96
+     "age": 96,
+     "sexe": "H"
     },
     "berry-gordy": {
      "nom": "Berry Gordy",
      "pays": "USA",
-     "age": 96
+     "age": 96,
+     "sexe": "H"
     },
     "jean-becker": {
      "nom": "Jean Becker",
      "pays": "FRA",
-     "age": 92
+     "age": 92,
+     "sexe": "H"
     },
     "pat-boone": {
      "nom": "Pat  Boone",
      "pays": "USA",
-     "age": 91
+     "age": 91,
+     "sexe": "H"
     },
     "richard-bohringer": {
      "nom": "Richard Bohringer",
      "pays": "FRA",
-     "age": 83
+     "age": 83,
+     "sexe": "H"
     },
     "richard-dreyfuss": {
      "nom": "Richard Dreyfuss",
      "pays": "USA",
-     "age": 78
+     "age": 78,
+     "sexe": "H"
     },
     "andy-taylor": {
      "nom": "Andy Taylor",
      "pays": "ANG",
-     "age": 64
+     "age": 64,
+     "sexe": "H"
     },
     "jimmy-cherizier": {
      "nom": "Jimmy Chérizier",
      "pays": "HAI",
-     "age": 48
+     "age": 48,
+     "sexe": "H"
     },
     "gaelynn-lea": {
      "nom": "Gaelynn Lea",
      "pays": "USA",
-     "age": 41
+     "age": 41,
+     "sexe": "F"
     },
     "edgar-morin": {
      "nom": "Edgar Morin",
      "pays": "FRA",
-     "age": 104
+     "age": 104,
+     "sexe": "H"
     },
     "fernanda-montenegro": {
      "nom": "Fernanda Montenegro",
      "pays": "BRA",
-     "age": 96
+     "age": 96,
+     "sexe": "F"
     },
     "jean-tulard": {
      "nom": "Jean Tulard",
      "pays": "FRA",
-     "age": 92
+     "age": 92,
+     "sexe": "H"
     },
     "akihito": {
      "nom": "Akihito",
      "pays": "JPN",
-     "age": 92
+     "age": 92,
+     "sexe": "H"
     },
     "ralph-lauren": {
      "nom": "Ralph Lauren",
      "pays": "USA",
-     "age": 86
+     "age": 86,
+     "sexe": "H"
     },
     "nigel-starmer-smith": {
      "nom": "Nigel Starmer-Smith",
      "pays": "ANG",
-     "age": 81
+     "age": 81,
+     "sexe": "H"
     },
     "yasuhiko-funago": {
      "nom": "Yasuhiko Funago",
      "pays": "JAP",
-     "age": 68
+     "age": 68,
+     "sexe": "H"
     },
     "billy-porter": {
      "nom": "Billy Porter",
      "pays": "USA",
-     "age": 56
+     "age": 56,
+     "sexe": "H"
     },
     "narges-mohammadi": {
      "nom": "Narges Mohammadi",
      "pays": "IRN",
-     "age": 53
+     "age": 53,
+     "sexe": "F"
     },
     "abdelhak-nouri": {
      "nom": "Abdelhak Nouri",
      "pays": "NLD",
-     "age": 28
+     "age": 28,
+     "sexe": "H"
     },
     "ginette-kolinka": {
      "nom": "Ginette Kolinka",
      "pays": "FRA",
-     "age": 100
+     "age": 100,
+     "sexe": "F"
     },
     "abdoulaye-wade": {
      "nom": "Abdoulaye Wade",
      "pays": "SEN",
-     "age": 99
+     "age": 99,
+     "sexe": "H"
     },
     "line-renaud": {
      "nom": "Line Renaud",
      "pays": "FRA",
-     "age": 97
+     "age": 97,
+     "sexe": "F"
     },
     "costa-gavras": {
      "nom": "Costa-Gavras",
      "pays": "GRC",
-     "age": 92
+     "age": 92,
+     "sexe": "H"
     },
     "yoko-ono": {
      "nom": "Yoko Ono",
      "pays": "USA",
-     "age": 92
+     "age": 92,
+     "sexe": "F"
     },
     "hassanal-bolkiah": {
      "nom": "Hassanal Bolkiah",
      "pays": "BRU",
-     "age": 79
+     "age": 79,
+     "sexe": "H"
     },
     "harvey-weinstein": {
      "nom": "Harvey Weinstein",
      "pays": "USA",
-     "age": 73
+     "age": 73,
+     "sexe": "H"
     },
     "pierre-menes": {
      "nom": "Pierre Ménès",
      "pays": "FRA",
-     "age": 62
+     "age": 62,
+     "sexe": "H"
     },
     "mohammed-vi": {
      "nom": "Mohammed VI",
      "pays": "MAR",
-     "age": 62
+     "age": 62,
+     "sexe": "H"
     },
     "olivier-goy": {
      "nom": "Olivier Goy",
      "pays": "FRA",
-     "age": 51
+     "age": 51,
+     "sexe": "H"
     },
     "vladimir-ossetchkine": {
      "nom": "Vladimir Ossetchkine",
      "pays": "RUS",
-     "age": 44
+     "age": 44,
+     "sexe": "H"
     },
     "dick-van-dyke": {
      "nom": "Dick Van  Dyke",
      "pays": "USA",
-     "age": 100
+     "age": 100,
+     "sexe": "H"
     },
     "mel-brooks": {
      "nom": "Mel Brooks",
      "pays": "USA",
-     "age": 99
+     "age": 99,
+     "sexe": "H"
     },
     "rosemary-harris": {
      "nom": "Rosemary Harris",
      "pays": "ANG",
-     "age": 98
+     "age": 98,
+     "sexe": "F"
     },
     "clint-eastwood": {
      "nom": "Clint Eastwood",
      "pays": "USA",
-     "age": 95
+     "age": 95,
+     "sexe": "H"
     },
     "john-towner-williams": {
      "nom": "John Towner Williams",
      "pays": "USA",
-     "age": 93
+     "age": 93,
+     "sexe": "H"
     },
     "ted-turner": {
      "nom": "Ted Turner",
      "pays": "USA",
-     "age": 87
+     "age": 87,
+     "sexe": "H"
     },
     "keith-richards": {
      "nom": "Keith Richards",
      "pays": "ANG",
-     "age": 83
+     "age": 83,
+     "sexe": "H"
     },
     "bruce-willis": {
      "nom": "Bruce Willis",
      "pays": "USA",
-     "age": 70
+     "age": 70,
+     "sexe": "H"
     },
     "lil-wayne": {
      "nom": "Lil Wayne",
      "pays": "USA",
-     "age": 43
+     "age": 43,
+     "sexe": "H"
     },
     "judith-magre": {
      "nom": "Judith Magre",
      "pays": "FRA",
-     "age": 99
+     "age": 99,
+     "sexe": "F"
     },
     "edouard-balladur": {
      "nom": "Edouard Balladur",
      "pays": "FRA",
-     "age": 96
+     "age": 96,
+     "sexe": "H"
     },
     "sophia-loren": {
      "nom": "Sophia Loren",
      "pays": "ITA",
-     "age": 91
+     "age": 91,
+     "sexe": "F"
     },
     "esther-rantzen": {
      "nom": "Esther Rantzen",
      "pays": "ANG",
-     "age": 85
+     "age": 85,
+     "sexe": "F"
     },
     "marie-rose-tessier": {
      "nom": "Marie-Rose Tessier",
      "pays": "FRA",
-     "age": 115
+     "age": 115,
+     "sexe": "F"
     },
     "noam-chomsky": {
      "nom": "Noam Chomsky",
      "pays": "USA",
-     "age": 97
+     "age": 97,
+     "sexe": "H"
     },
     "george-soros": {
      "nom": "George Soros",
      "pays": "USA",
-     "age": 95
+     "age": 95,
+     "sexe": "H"
     },
     "jose-sarney": {
      "nom": "José Sarney",
      "pays": "BRA",
-     "age": 95
+     "age": 95,
+     "sexe": "H"
     },
     "raul-castro": {
      "nom": "Raul Castro",
      "pays": "CUB",
-     "age": 94
+     "age": 94,
+     "sexe": "H"
     },
     "jany-le-pen": {
      "nom": "Jany Le Pen",
      "pays": "FRA",
-     "age": 93
+     "age": 93,
+     "sexe": "F"
     },
     "bob-dylan": {
      "nom": "Bob Dylan",
      "pays": "USA",
-     "age": 84
+     "age": 84,
+     "sexe": "H"
     },
     "hu-jintao": {
      "nom": "Hu Jintao",
      "pays": "CHI",
-     "age": 83
+     "age": 83,
+     "sexe": "H"
     },
     "john-major": {
      "nom": "John Major",
      "pays": "ANG",
-     "age": 82
+     "age": 82,
+     "sexe": "H"
     },
     "omar-el-bechir": {
      "nom": "Omar el-Bechir",
      "pays": "SOU",
-     "age": 81
+     "age": 81,
+     "sexe": "H"
     },
     "ethel-caterham": {
      "nom": "Ethel Caterham",
      "pays": "ANG",
-     "age": 116
+     "age": 116,
+     "sexe": "F"
     },
     "alan-greenspan": {
      "nom": "Alan Greenspan",
      "pays": "USA",
-     "age": 99
+     "age": 99,
+     "sexe": "H"
     },
     "desmond-morris": {
      "nom": "Desmond Morris",
      "pays": "ANG",
-     "age": 97
+     "age": 97,
+     "sexe": "H"
     },
     "stuart-hall": {
      "nom": "Stuart Hall",
      "pays": "ANG",
-     "age": 96
+     "age": 96,
+     "sexe": "H"
     },
     "michel-drucker": {
      "nom": "Michel Drucker",
      "pays": "FRA",
-     "age": 83
+     "age": 83,
+     "sexe": "H"
     },
     "jacques-dutronc": {
      "nom": "Jacques Dutronc",
      "pays": "FRA",
-     "age": 82
+     "age": 82,
+     "sexe": "H"
     },
     "donald-trump": {
      "nom": "Donald Trump",
      "pays": "USA",
-     "age": 79
+     "age": 79,
+     "sexe": "H"
     },
     "khalil-al-hayya": {
      "nom": "Khalil al-Hayya",
      "pays": "PAL",
-     "age": 65
+     "age": 65,
+     "sexe": "H"
     },
     "ben-sasse": {
      "nom": "Ben Sasse",
      "pays": "USA",
-     "age": 53
+     "age": 53,
+     "sexe": "H"
     },
     "hugues-aufray": {
      "nom": "Hugues Aufray",
      "pays": "FRA",
-     "age": 96
+     "age": 96,
+     "sexe": "H"
     },
     "buzz-aldrin": {
      "nom": "Buzz Aldrin",
      "pays": "USA",
-     "age": 95
+     "age": 95,
+     "sexe": "H"
     },
     "gerard-depardieu": {
      "nom": "Gérard Depardieu",
      "pays": "FRA",
-     "age": 77
+     "age": 77,
+     "sexe": "H"
     },
     "olivia-williams": {
      "nom": "Olivia Williams",
      "pays": "ANG",
-     "age": 57
+     "age": 57,
+     "sexe": "F"
     },
     "loana": {
      "nom": "Loana",
      "pays": "FRA",
-     "age": 48
+     "age": 48,
+     "sexe": "F"
     },
     "marthe-villalonga": {
      "nom": "Marthe Villalonga",
      "pays": "FRA",
-     "age": 93
+     "age": 93,
+     "sexe": "F"
     },
     "pierre-richard": {
      "nom": "Pierre Richard",
      "pays": "FRA",
-     "age": 91
+     "age": 91,
+     "sexe": "H"
     },
     "nana-mouskouri": {
      "nom": "Nana Mouskouri",
      "pays": "GRC",
-     "age": 91
+     "age": 91,
+     "sexe": "F"
     },
     "camilla-parker-bowles": {
      "nom": "Camilla Parker Bowles",
      "pays": "ANG",
-     "age": 78
+     "age": 78,
+     "sexe": "F"
     },
     "michael-j.-fox": {
      "nom": "Michael J. Fox",
      "pays": "CAN",
-     "age": 64
+     "age": 64,
+     "sexe": "H"
     },
     "charlie-sheen": {
      "nom": "Charlie Sheen",
      "pays": "USA",
-     "age": 60
+     "age": 60,
+     "sexe": "H"
     },
     "adam-pearson": {
      "nom": "Adam Pearson",
      "pays": "ANG",
-     "age": 40
+     "age": 40,
+     "sexe": "H"
     },
     "morgan-freeman": {
      "nom": "Morgan Freeman",
      "pays": "USA",
-     "age": 88
+     "age": 88,
+     "sexe": "H"
     },
     "paddy-reilly": {
      "nom": "Paddy Reilly",
      "pays": "IRL",
-     "age": 86
+     "age": 86,
+     "sexe": "H"
     },
     "naomi-whitehead": {
      "nom": "Naomi Whitehead",
      "pays": "USA",
-     "age": 115
+     "age": 115,
+     "sexe": "F"
     },
     "monique-levi-strauss": {
      "nom": "Monique Levi-Strauss",
      "pays": "FRA",
-     "age": 99
+     "age": 99,
+     "sexe": "F"
     },
     "alex-katz": {
      "nom": "Alex Katz",
      "pays": "USA",
-     "age": 98
+     "age": 98,
+     "sexe": "H"
     },
     "pierre-alechinsky": {
      "nom": "Pierre Alechinsky",
      "pays": "BEL",
-     "age": 98
+     "age": 98,
+     "sexe": "H"
     },
     "julio-le-parc": {
      "nom": "Julio Le Parc",
      "pays": "ARG",
-     "age": 97
+     "age": 97,
+     "sexe": "H"
     },
     "alejandro-jodorowsky": {
      "nom": "Alejandro Jodorowsky",
      "pays": "CHI",
-     "age": 96
+     "age": 96,
+     "sexe": "H"
     },
     "andre-brasilier": {
      "nom": "André Brasilier",
      "pays": "FRA",
-     "age": 96
+     "age": 96,
+     "sexe": "H"
     },
     "jasper-johns": {
      "nom": "Jasper Johns",
      "pays": "USA",
-     "age": 95
+     "age": 95,
+     "sexe": "H"
     },
     "joni-mitchell": {
      "nom": "Joni Mitchell",
      "pays": "CAN",
-     "age": 82
+     "age": 82,
+     "sexe": "F"
     },
     "michael-tilson-thomas": {
      "nom": "Michael Tilson Thomas",
      "pays": "USA",
-     "age": 81
+     "age": 81,
+     "sexe": "H"
     },
     "dave-mason": {
      "nom": "Dave Mason",
      "pays": "ANG",
-     "age": 79
+     "age": 79,
+     "sexe": "H"
     },
     "michael-bolton": {
      "nom": "Michael Bolton",
      "pays": "USA",
-     "age": 72
+     "age": 72,
+     "sexe": "H"
     },
     "naim-qassem": {
      "nom": "Naïm Qassem",
      "pays": "LIB",
-     "age": 72
+     "age": 72,
+     "sexe": "H"
     },
     "william-shatner": {
      "nom": "William Shatner",
      "pays": "CAN",
-     "age": 94
+     "age": 94,
+     "sexe": "H"
     },
     "willie-nelson": {
      "nom": "Willie Nelson",
      "pays": "USA",
-     "age": 92
+     "age": 92,
+     "sexe": "H"
     },
     "caroline-receveur": {
      "nom": "Caroline Receveur",
      "pays": "FRA",
-     "age": 35
+     "age": 35,
+     "sexe": "F"
     },
     "edward-de-kent": {
      "nom": "Edward de Kent",
      "pays": "ANG",
-     "age": 90
+     "age": 90,
+     "sexe": "H"
     },
     "phil-collins": {
      "nom": "Phil Collins",
      "pays": "USA",
-     "age": 74
+     "age": 74,
+     "sexe": "H"
     },
     "olivier-lejeune": {
      "nom": "Olivier Lejeune",
      "pays": "FRA",
-     "age": 74
+     "age": 74,
+     "sexe": "H"
     },
     "renaud": {
      "nom": "Renaud",
      "pays": "FRA",
-     "age": 73
+     "age": 73,
+     "sexe": "H"
     },
     "david-hasselhoff": {
      "nom": "David Hasselhoff",
      "pays": "USA",
-     "age": 73
+     "age": 73,
+     "sexe": "H"
     },
     "james-pickens-jr.": {
      "nom": "James Pickens Jr.",
      "pays": "USA",
-     "age": 71
+     "age": 71,
+     "sexe": "H"
     },
     "dolph-lundgren": {
      "nom": "Dolph Lundgren",
      "pays": "SUE",
-     "age": 68
+     "age": 68,
+     "sexe": "H"
     }
    }
   }
  ],
+ "deces_remarquables": {
+  "plus_rapide": [
+   {
+    "nom": "Constantin II de Grèce",
+    "date": "2023-01-10",
+    "joueurs": [
+     "Jean-Baptiste"
+    ]
+   }
+  ],
+  "plus_tardif": [
+   {
+    "nom": "Betty White",
+    "date": "2021-12-31",
+    "joueurs": [
+     "Philippe",
+     "Pierre-Yves"
+    ]
+   },
+   {
+    "nom": "Benoît XVI",
+    "date": "2022-12-31",
+    "joueurs": [
+     "Philippe",
+     "Marion",
+     "Nina"
+    ]
+   }
+  ]
+ },
  "a_confirmer": [
+  "2025 Karen : 4 décès au tableur et dans le message, 5 lignes grises dans le PDF final : 5 retenus, à confirmer par Gaël",
+  "Sexe des 132 personnalités 2026 relevé par Claude (trophée « We can do it ! ») : à vérifier ; Pone : sexe non établi, ne compte pas",
+  "Record « Dream team » : avec décès / (listes x noms), 2021 fait 31,7 % (38 sur 120) et 2022 28,3 % ; Gaël annonce 2022 à 28,6 %",
   "Règles 2021 à 2023 supposées identiques à 2020",
   "2024, Jean-Baptiste : 4 décès, déduit de sa liste (absent du PDF et du message de Gaël)",
   "Herbert Blomstedt (4/11/2026) : date ajoutée après la validation de Gaël"

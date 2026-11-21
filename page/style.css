@@ -14,12 +14,12 @@ h3{margin:0 0 8px;font-size:15px}
 /* en-tête */
 .entete{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--surface) 92%,transparent);
   backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--border)}
-.entete-in{max-width:1200px;margin:0 auto;padding:10px 16px;display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center}
+.entete-in{max-width:1200px;margin:0 auto;padding:10px 16px;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
 .marque{display:flex;align-items:center;gap:10px;color:var(--ink);font-weight:700;letter-spacing:-.01em}
 .marque i{width:26px;height:26px;border-radius:8px;display:grid;place-items:center;color:#fff;font-style:normal;font-size:14px;
   background:linear-gradient(135deg,var(--accent),var(--violet))}
 nav.menu{display:flex;gap:2px;flex-wrap:wrap}
-nav.menu a{color:var(--ink-2);padding:6px 12px;border-radius:8px;font-weight:550;cursor:pointer}
+nav.menu a{color:var(--ink-2);padding:6px 9px;border-radius:8px;font-weight:550;cursor:pointer}
 nav.menu a:hover{background:var(--surface-2);text-decoration:none;color:var(--ink)}
 nav.menu a[aria-current="page"]{color:var(--ink);background:var(--surface-2);box-shadow:inset 0 -2px 0 var(--accent)}
 .entete .droite{margin-left:auto;display:flex;align-items:center;gap:10px}
@@ -54,6 +54,17 @@ main{max-width:1200px;margin:0 auto;padding:16px 16px 56px;display:grid;gap:16px
 .marche.r1{order:2;padding-top:26px;border-color:var(--accent);box-shadow:inset 0 3px 0 var(--accent)}
 .marche.r2{order:1;padding-top:16px}.marche.r3{order:3;padding-top:8px}.marche.r4{order:4;padding-top:2px}
 @media (max-width:560px){.podium{grid-template-columns:repeat(2,minmax(0,1fr))!important}.marche.r1,.marche.r2,.marche.r3,.marche.r4{padding-top:10px}.marche.r1{order:1}.marche.r2{order:2}.marche.r3{order:3}.marche.r4{order:4}}
+
+/* Hall of fame : une carte par trophée ou par record */
+.hall{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr))}
+.hall-carte{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--rayon);padding:14px 14px 12px;min-width:0;
+  display:flex;flex-direction:column;gap:6px}
+.hall-carte .ico{height:64px;display:flex;align-items:center}.hall-carte .ico img{height:64px;width:auto;max-width:100%;object-fit:contain}
+.hall-carte h3{font-size:15px;margin:0}
+.hall-carte .qui{font-size:18px;font-weight:700;overflow-wrap:anywhere}
+.hall-carte .val{color:var(--ink-2);font-size:12px;font-variant-numeric:tabular-nums}
+.hall-carte .suite{color:var(--ink-2);font-size:12px;border-top:1px solid var(--grid);padding-top:6px;margin-top:auto}
+.hall-carte.libre .qui{color:var(--ink-2);font-style:italic;font-weight:500}
 
 /* tableaux */
 table{width:100%;border-collapse:collapse;font-size:13px}
